@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Menu } from 'lucide-react';
@@ -21,12 +20,12 @@ const Header = () => {
           {/* Logo */}
           <div className={`flex items-center ${direction === 'rtl' ? 'order-2' : 'order-1'}`}>
             <Link to="/" className="flex items-center space-x-2">
-              <img 
+              {/* <img 
                 src="https://www.fawrypayday.com/assets/images/logo/logo.png" 
                 alt="Dirac Systems" 
                 className="h-8 w-auto"
-              />
-              <span className="text-xl font-bold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
+              /> */}
+              <span className="text-xl font-bold bg-clip-text text-[#00699c]">
                 Dirac Systems
               </span>
             </Link>
@@ -49,16 +48,16 @@ const Header = () => {
               </button>
               
               <div className={`dropdown-menu ${isAboutDropdownOpen ? 'show' : ''}`}>
-                <Link to="/career" className="dropdown-item">
+                <Link to="/career" className="dropdown-item transition-all duration-200 hover:translate-x-1 rtl:hover:-translate-x-1 hover:bg-[#f3f6f8] hover:text-[#00699c] rounded-md px-4">
                   {t('career')}
                 </Link>
-                <Link to="/contact" className="dropdown-item">
+                <Link to="/contact" className="dropdown-item transition-all duration-200 hover:translate-x-1 rtl:hover:-translate-x-1 hover:bg-[#f3f6f8] hover:text-[#00699c] rounded-md px-4">
                   {t('contactUs')}
                 </Link>
-                <Link to="/clients" className="dropdown-item">
+                <Link to="/clients" className="dropdown-item transition-all duration-200 hover:translate-x-1 rtl:hover:-translate-x-1 hover:bg-[#f3f6f8] hover:text-[#00699c] rounded-md px-4">
                   {t('ourClients')}
                 </Link>
-                <Link to="/partners" className="dropdown-item">
+                <Link to="/partners" className="dropdown-item transition-all duration-200 hover:translate-x-1 rtl:hover:-translate-x-1 hover:bg-[#f3f6f8] hover:text-[#00699c] rounded-md px-4">
                   {t('ourPartners')}
                 </Link>
               </div>
