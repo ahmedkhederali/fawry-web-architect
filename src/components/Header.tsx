@@ -33,7 +33,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className={`hidden lg:flex items-center space-x-8 ${direction === 'rtl' ? 'space-x-reverse order-2 justify-center flex-1' : 'order-2 justify-center flex-1'}`}> 
-            <Link to="/" className="text-gray-700 hover:text-[#ffd300] transition-colors">
+            <Link to="/" className="text-[#00699c] hover:text-[#ffd300] transition-colors">
               {t('home')}
             </Link>
             
@@ -42,7 +42,7 @@ const Header = () => {
               onMouseEnter={() => setIsAboutDropdownOpen(true)}
               onMouseLeave={() => setIsAboutDropdownOpen(false)}
             >
-              <button className="flex items-center text-gray-700 hover:text-[#ffd300] transition-colors">
+              <button className="flex items-center text-[#00699c] hover:text-[#ffd300] transition-colors">
                 {t('aboutUs')}
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
@@ -63,13 +63,13 @@ const Header = () => {
               </div>
             </div>
 
-            <Link to="/solutions" className="text-gray-700 hover:text-[#ffd300] transition-colors">
+            <Link to="/solutions" className="text-[#00699c] hover:text-[#ffd300] transition-colors">
               {t('serviceSolutions')}
             </Link>
-            <Link to="/products" className="text-gray-700 hover:text-[#ffd300] transition-colors">
+            <Link to="/products" className="text-[#00699c] hover:text-[#ffd300] transition-colors">
               {t('products')}
             </Link>
-            <Link to="/blog" className="text-gray-700 hover:text-[#ffd300] transition-colors">
+            <Link to="/blog" className="text-[#00699c] hover:text-[#ffd300] transition-colors">
               {t('blog')}
             </Link>
           </nav>
