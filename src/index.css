@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Fawry-inspired color scheme */
+/* Dirac Systems color scheme */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -15,10 +15,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 48 100% 50%; /* Bright Yellow #FFD400 */
+    --primary: 48 100% 50%; /* Yellow #FFD400 */
     --primary-foreground: 210 40% 2%;
 
-    --secondary: 215 100% 32%; /* Deep Blue #0033A0 */
+    --secondary: 194 100% 31%; /* Blue #00699c */
     --secondary-foreground: 210 40% 98%;
 
     --muted: 210 40% 96.1%;
@@ -59,11 +59,25 @@
 
 @layer components {
   .gradient-bg {
-    background: linear-gradient(135deg, #FFD400 0%, #FFF 100%);
+    background: linear-gradient(135deg, #FFD400 0%, #00699c 100%);
   }
   
   .hero-gradient {
-    background: linear-gradient(135deg, #0033A0 0%, #FFD400 100%);
+    background: linear-gradient(135deg, #00699c 0%, #FFD400 100%);
+  }
+
+  .hero-3d-section {
+    background: linear-gradient(135deg, #00699c 0%, rgba(0, 105, 156, 0.8) 100%);
+    clip-path: polygon(0 0, 70% 0, 85% 100%, 0 100%);
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-intersect-section {
+    background: linear-gradient(135deg, rgba(255, 212, 0, 0.9) 0%, #FFD400 100%);
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 30% 100%);
+    position: relative;
+    z-index: 1;
   }
   
   .card-hover {
@@ -80,6 +94,22 @@
   
   .animate-bounce-slow {
     animation: bounce 3s infinite;
+  }
+
+  .testimonial-card {
+    @apply bg-white rounded-lg p-6 shadow-lg min-w-[350px] mx-4;
+  }
+
+  .dropdown-menu {
+    @apply absolute top-full left-0 w-48 bg-white rounded-md shadow-lg z-50 opacity-0 invisible transition-all duration-200;
+  }
+
+  .dropdown-menu.show {
+    @apply opacity-100 visible;
+  }
+
+  .dropdown-item {
+    @apply block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors;
   }
 }
 
@@ -100,4 +130,13 @@
 
 .scroll-animation {
   animation: scroll 20s linear infinite;
+}
+
+@keyframes testimonialScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.testimonial-scroll {
+  animation: testimonialScroll 30s linear infinite;
 }

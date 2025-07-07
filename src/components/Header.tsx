@@ -20,56 +20,57 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className={`flex items-center ${direction === 'rtl' ? 'order-2' : 'order-1'}`}>
-            <Link to="/" className="text-2xl font-bold text-secondary">
-              TechCorp
+            <Link to="/" className="flex items-center space-x-2">
+              <img 
+                src="https://www.fawrypayday.com/assets/images/logo/logo.png" 
+                alt="Dirac Systems" 
+                className="h-8 w-auto"
+              />
+              <span className="text-xl font-bold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
+                Dirac Systems
+              </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className={`hidden lg:flex items-center space-x-8 ${direction === 'rtl' ? 'space-x-reverse order-1' : 'order-2'}`}>
-            <Link to="/" className="text-gray-700 hover:text-primary transition-colors">
+            <Link to="/" className="text-gray-700 hover:text-secondary transition-colors">
               {t('home')}
             </Link>
             
-            <div className="relative group">
-              <button 
-                className="flex items-center text-gray-700 hover:text-primary transition-colors"
-                onMouseEnter={() => setIsAboutDropdownOpen(true)}
-                onMouseLeave={() => setIsAboutDropdownOpen(false)}
-              >
+            <div 
+              className="relative group"
+              onMouseEnter={() => setIsAboutDropdownOpen(true)}
+              onMouseLeave={() => setIsAboutDropdownOpen(false)}
+            >
+              <button className="flex items-center text-gray-700 hover:text-secondary transition-colors">
                 {t('aboutUs')}
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               
-              {isAboutDropdownOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50"
-                  onMouseEnter={() => setIsAboutDropdownOpen(true)}
-                  onMouseLeave={() => setIsAboutDropdownOpen(false)}
-                >
-                  <Link to="/career" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                    {t('career')}
-                  </Link>
-                  <Link to="/contact" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                    {t('contactUs')}
-                  </Link>
-                  <Link to="/clients" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                    {t('ourClients')}
-                  </Link>
-                  <Link to="/partners" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                    {t('ourPartners')}
-                  </Link>
-                </div>
-              )}
+              <div className={`dropdown-menu ${isAboutDropdownOpen ? 'show' : ''}`}>
+                <Link to="/career" className="dropdown-item">
+                  {t('career')}
+                </Link>
+                <Link to="/contact" className="dropdown-item">
+                  {t('contactUs')}
+                </Link>
+                <Link to="/clients" className="dropdown-item">
+                  {t('ourClients')}
+                </Link>
+                <Link to="/partners" className="dropdown-item">
+                  {t('ourPartners')}
+                </Link>
+              </div>
             </div>
 
-            <Link to="/solutions" className="text-gray-700 hover:text-primary transition-colors">
+            <Link to="/solutions" className="text-gray-700 hover:text-secondary transition-colors">
               {t('serviceSolutions')}
             </Link>
-            <Link to="/products" className="text-gray-700 hover:text-primary transition-colors">
+            <Link to="/products" className="text-gray-700 hover:text-secondary transition-colors">
               {t('products')}
             </Link>
-            <Link to="/blog" className="text-gray-700 hover:text-primary transition-colors">
+            <Link to="/blog" className="text-gray-700 hover:text-secondary transition-colors">
               {t('blog')}
             </Link>
           </nav>
@@ -80,7 +81,7 @@ const Header = () => {
               variant="outline"
               size="sm"
               onClick={toggleLanguage}
-              className="border-primary text-primary hover:bg-primary hover:text-white"
+              className="border-secondary text-secondary hover:bg-secondary hover:text-white"
             >
               {language === 'en' ? 'العربية' : 'English'}
             </Button>
@@ -99,28 +100,28 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t">
             <nav className="flex flex-col space-y-4">
-              <Link to="/" className="text-gray-700 hover:text-primary">
+              <Link to="/" className="text-gray-700 hover:text-secondary">
                 {t('home')}
               </Link>
-              <Link to="/career" className="text-gray-700 hover:text-primary">
+              <Link to="/career" className="text-gray-700 hover:text-secondary">
                 {t('career')}
               </Link>
-              <Link to="/contact" className="text-gray-700 hover:text-primary">
+              <Link to="/contact" className="text-gray-700 hover:text-secondary">
                 {t('contactUs')}
               </Link>
-              <Link to="/clients" className="text-gray-700 hover:text-primary">
+              <Link to="/clients" className="text-gray-700 hover:text-secondary">
                 {t('ourClients')}
               </Link>
-              <Link to="/partners" className="text-gray-700 hover:text-primary">
+              <Link to="/partners" className="text-gray-700 hover:text-secondary">
                 {t('ourPartners')}
               </Link>
-              <Link to="/solutions" className="text-gray-700 hover:text-primary">
+              <Link to="/solutions" className="text-gray-700 hover:text-secondary">
                 {t('serviceSolutions')}
               </Link>
-              <Link to="/products" className="text-gray-700 hover:text-primary">
+              <Link to="/products" className="text-gray-700 hover:text-secondary">
                 {t('products')}
               </Link>
-              <Link to="/blog" className="text-gray-700 hover:text-primary">
+              <Link to="/blog" className="text-gray-700 hover:text-secondary">
                 {t('blog')}
               </Link>
             </nav>
