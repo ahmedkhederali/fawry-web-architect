@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from './LanguageContext';
@@ -8,23 +7,21 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
-      <div className=" mx-auto px-4 py-16">
-        <div className="grid lg:grid-cols-5 gap-8">
+      <div className="mx-auto px-4 py-16">
+        <div className="flex flex-col lg:flex-row justify-between gap-12 w-full items-start">
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
+          <div className="lg:col-span-2 flex flex-col max-w-md w-full">
+            <div className="flex items-center space-x-4 mb-4">
               <img 
                 src="https://www.fawrypayday.com/assets/images/logo/logo.png" 
                 alt="Dirac Systems" 
                 className="h-8 w-auto"
               />
             </div>
-            <p className="text-gray-600 mb-8 text-sm leading-relaxed max-w-md">
+            <p className="text-gray-600 mb-6 text-x leading-relaxed max-w-md">
               Dirac Systems empowers teams to transform raw data into clear, compelling visuals — making insights easier to share, understand, and act on.
             </p>
-            
-            {/* Social Links */}
-            <div className="flex space-x-4 mb-8">
+            <div className="flex space-x-8 mb-8">
               <a href="#" className="text-gray-400 hover:text-secondary transition-colors">
                 <span className="sr-only">Twitter</span>
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -52,37 +49,50 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Product */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6 text-secondary">Product</h4>
-            <ul className="space-y-3">
-              <li><Link to="/solutions" className="text-gray-600 hover:text-secondary transition-colors text-sm">Features</Link></li>
-              <li><Link to="/solutions" className="text-gray-600 hover:text-secondary transition-colors text-sm">Pricing</Link></li>
-              <li><Link to="/solutions" className="text-gray-600 hover:text-secondary transition-colors text-sm">Integrations</Link></li>
-              <li><Link to="/solutions" className="text-gray-600 hover:text-secondary transition-colors text-sm">Changelog</Link></li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6 text-secondary">Resources</h4>
-            <ul className="space-y-3">
-              <li><Link to="/blog" className="text-gray-600 hover:text-secondary transition-colors text-sm">Documentation</Link></li>
-              <li><Link to="/blog" className="text-gray-600 hover:text-secondary transition-colors text-sm">Tutorials</Link></li>
-              <li><Link to="/blog" className="text-gray-600 hover:text-secondary transition-colors text-sm">Blog</Link></li>
-              <li><Link to="/contact" className="text-gray-600 hover:text-secondary transition-colors text-sm">Support</Link></li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6 text-secondary">Company</h4>
-            <ul className="space-y-3">
-              <li><Link to="/contact" className="text-gray-600 hover:text-secondary transition-colors text-sm">About</Link></li>
-              <li><Link to="/career" className="text-gray-600 hover:text-secondary transition-colors text-sm">Careers</Link></li>
-              <li><Link to="/contact" className="text-gray-600 hover:text-secondary transition-colors text-sm">Contact</Link></li>
-              <li><Link to="/partners" className="text-gray-600 hover:text-secondary transition-colors text-sm">Partners</Link></li>
-            </ul>
+          {/* Product, Resources, Company */}
+          <div className="flex flex-row gap-16 w-full justify-end items-start">
+            <div>
+              <h4 className="text-lg font-semibold mb-6 text-secondary">Product</h4>
+              <ul className="space-y-3">
+                <li><Link to="/solutions" className="text-gray-600 hover:text-secondary transition-colors text-sm">Features</Link></li>
+                <li><Link to="/solutions" className="text-gray-600 hover:text-secondary transition-colors text-sm">Pricing</Link></li>
+                <li><Link to="/solutions" className="text-gray-600 hover:text-secondary transition-colors text-sm">Integrations</Link></li>
+                <li><Link to="/solutions" className="text-gray-600 hover:text-secondary transition-colors text-sm">Changelog</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-6 text-secondary">Resources</h4>
+              <ul className="space-y-3">
+                <li><Link to="/blog" className="text-gray-600 hover:text-secondary transition-colors text-sm">Documentation</Link></li>
+                <li><Link to="/blog" className="text-gray-600 hover:text-secondary transition-colors text-sm">Tutorials</Link></li>
+                <li><Link to="/blog" className="text-gray-600 hover:text-secondary transition-colors text-sm">Blog</Link></li>
+                <li><Link to="/contact" className="text-gray-600 hover:text-secondary transition-colors text-sm">Support</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-6 text-secondary">Company</h4>
+              <ul className="space-y-3">
+                <li><Link to="/contact" className="text-gray-600 hover:text-secondary transition-colors text-sm">About</Link></li>
+                <li><Link to="/career" className="text-gray-600 hover:text-secondary transition-colors text-sm">Careers</Link></li>
+                <li><Link to="/contact" className="text-gray-600 hover:text-secondary transition-colors text-sm">Contact</Link></li>
+                <li><Link to="/partners" className="text-gray-600 hover:text-secondary transition-colors text-sm">Partners</Link></li>
+              </ul>
+            </div>
+            {/* Map at the right, larger size */}
+            <div className="ml-12 flex-shrink-0">
+              <div className="w-96 h-60 rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                <iframe
+                  title="Dirac Systems Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.0123456789!2d31.235711315115!3d30.0444199818797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60c2c1eaf%3A0x2e2b2b2b2b2b2b2b!2sDirac%20Systems!5e0!3m2!1sen!2seg!4v1689000000000!5m2!1sen!2seg"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={false}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
           </div>
         </div>
 
