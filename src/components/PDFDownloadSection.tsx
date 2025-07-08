@@ -1,11 +1,9 @@
-
-import React from 'react';
 import { useLanguage } from './LanguageContext';
 import { Button } from '@/components/ui/button';
 import { FileText } from 'lucide-react';
 
 const PDFDownloadSection = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const handleDownload = () => {
     // This would typically link to an actual PDF file
@@ -17,10 +15,10 @@ const PDFDownloadSection = () => {
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-secondary">
-            Company Profile
+            {t('profile_title')}
           </h2>
           <p className="text-gray-600 mb-8">
-            Download our comprehensive company profile to learn more about our services, expertise, and successful projects.
+            {t('profile_download')}
           </p>
           <Button 
             size="lg" 

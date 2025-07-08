@@ -1,45 +1,116 @@
-
-import React from 'react';
-import { useLanguage } from './LanguageContext';
+import React, { useEffect } from "react";
+import { useLanguage } from "./LanguageContext";
 
 const AboutSection = () => {
   const { t, direction } = useLanguage();
 
-  return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className={`grid lg:grid-cols-2 gap-12 items-center ${direction === 'rtl' ? 'lg:grid-cols-2' : ''}`}>
-          {/* Text Content */}
-          <div className={`animate-fade-in ${direction === 'rtl' ? 'lg:order-2 text-right' : 'lg:order-1 text-left'}`}>
-            <h2 className="text-4xl font-bold mb-6 text-secondary">
-              {t('aboutTitle')}
-            </h2>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              {t('aboutText')}
-            </p>
-            <p className="text-gray-600 mb-8">
-              With over a decade of experience in the software industry, we have successfully delivered hundreds of projects across various sectors, helping businesses achieve their digital transformation goals.
-            </p>
-            <div className="grid grid-cols-2 gap-8">
-              <div className="text-center">
-                <h3 className="text-3xl font-bold text-primary mb-2">500+</h3>
-                <p className="text-gray-600">Projects Completed</p>
-              </div>
-              <div className="text-center">
-                <h3 className="text-3xl font-bold text-primary mb-2">50+</h3>
-                <p className="text-gray-600">Happy Clients</p>
-              </div>
-            </div>
-          </div>
+  useEffect(() => {
+    const handleScroll = () => {
+      const text = document.getElementById("about-text");
+      const video = document.getElementById("about-video");
+      if (text && video) {
+        const rect = text.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          text.style.opacity = "1";
+          text.style.transform = "translateX(0)";
+          video.style.opacity = "1";
+          video.style.transform = "translateX(0)";
+        }
+      }
+    };
 
-          {/* Image */}
-          <div className={`animate-slide-up ${direction === 'rtl' ? 'lg:order-1' : 'lg:order-2'}`}>
-            <img
-              src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop"
-              alt="About us"
-              className="rounded-lg shadow-xl w-full"
-            />
-          </div>
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+console.log("direction", direction);
+  return (
+    <section className="py-20 bg-white" id="about">
+      <div className="container mx-auto px-4">
+        <div key={direction} className="grid lg:grid-cols-2 gap-12 items-center">
+          {direction === "rtl" ? (
+            <>
+             
+              {/* Text on right in AR */}
+              <div
+                id="about-text"
+                className="animate-fade-in transition-transform duration-1000 opacity-0 translate-x-[-80px] will-change-transform lg:col-start-1 lg:order-1 text-right"
+              >
+                <h2 className="text-4xl font-bold mb-6 text-secondary">
+                  {t("aboutTitle")}
+                </h2>
+                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                  {t("aboutText")}
+                </p>
+                <p className="text-gray-600 mb-8">{t("aboutExperience")}</p>
+                <div className="grid grid-cols-2 gap-8">
+                  <div className="text-center">
+                    <h3 className="text-3xl font-bold text-primary mb-2">500+</h3>
+                    <p className="text-gray-600">{t("aboutProjects")}</p>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-3xl font-bold text-primary mb-2">50+</h3>
+                    <p className="text-gray-600">{t("aboutClients")}</p>
+                  </div>
+                </div>
+              </div>
+               {/* Video on left in AR */}
+              <div
+                id="about-video"
+                className="animate-slide-up transition-transform duration-1000 opacity-0 translate-x-[80px] will-change-transform lg:col-start-2 lg:order-2"
+              >
+                <video
+                  src="https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-computer-4245-large.mp4"
+                  controls
+                  autoPlay
+                  muted
+                  loop
+                  className="rounded-lg shadow-xl w-full"
+                />
+              </div>
+            </>
+          ) : (
+            <>
+              {/* Text on left in EN */}
+              <div
+                id="about-text"
+                className="animate-fade-in transition-transform duration-1000 opacity-0 translate-x-[-80px] will-change-transform lg:col-start-1 lg:order-1 text-left"
+              >
+                <h2 className="text-4xl font-bold mb-6 text-secondary">
+                  {t("aboutTitle")}
+                </h2>
+                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                  {t("aboutText")}
+                </p>
+                <p className="text-gray-600 mb-8">{t("aboutExperience")}</p>
+                <div className="grid grid-cols-2 gap-8">
+                  <div className="text-center">
+                    <h3 className="text-3xl font-bold text-primary mb-2">500+</h3>
+                    <p className="text-gray-600">{t("aboutProjects")}</p>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-3xl font-bold text-primary mb-2">50+</h3>
+                    <p className="text-gray-600">{t("aboutClients")}</p>
+                  </div>
+                </div>
+              </div>
+              {/* Video on right in EN */}
+              <div
+                id="about-video"
+                className="animate-slide-up transition-transform duration-1000 opacity-0 translate-x-[80px] will-change-transform lg:col-start-2 lg:order-2"
+              >
+                <video
+                  src="https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-computer-4245-large.mp4"
+                  controls
+                  autoPlay
+                  muted
+                  loop
+                  className="rounded-lg shadow-xl w-full"
+                />
+              </div>
+            </>
+          )}
         </div>
       </div>
     </section>

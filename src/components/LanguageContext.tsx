@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 type Language = 'en' | 'ar';
@@ -29,6 +28,9 @@ const translations = {
     downloadPdf: 'Download PDF',
     aboutTitle: 'About Our Company',
     aboutText: 'We are a leading software company dedicated to delivering innovative solutions that transform businesses and drive digital success.',
+    aboutExperience: 'With over a decade of experience in the software industry, we have successfully delivered hundreds of projects across various sectors, helping businesses achieve their digital transformation goals.',
+    aboutProjects: 'Projects Completed',
+    aboutClients: 'Happy Clients',
     solutionsTitle: 'Our Solutions',
     clientsTitle: 'Our Trusted Clients',
     partnersTitle: 'Our Partners',
@@ -38,7 +40,9 @@ const translations = {
     quickLinks: 'Quick Links',
     services: 'Services',
     company: 'Company',
-    followUs: 'Follow Us'
+    followUs: 'Follow Us',
+    profile_title: 'Company Profile',
+    profile_download:'Download our comprehensive company profile to learn more about our services, expertise, and successful projects.'
   },
   ar: {
     home: 'الرئيسية',
@@ -57,6 +61,9 @@ const translations = {
     downloadPdf: 'تحميل PDF',
     aboutTitle: 'عن شركتنا',
     aboutText: 'نحن شركة برمجيات رائدة مكرسة لتقديم حلول مبتكرة تحول الأعمال وتحقق النجاح الرقمي.',
+    aboutExperience: 'مع أكثر من عقد من الخبرة في صناعة البرمجيات، قمنا بتنفيذ مئات المشاريع بنجاح عبر مختلف القطاعات، وساعدنا الشركات على تحقيق أهداف التحول الرقمي.',
+    aboutProjects: 'مشروع مكتمل',
+    aboutClients: 'عميل سعيد',
     solutionsTitle: 'حلولنا',
     clientsTitle: 'عملاؤنا الموثوقون',
     partnersTitle: 'شركاؤنا',
@@ -66,20 +73,38 @@ const translations = {
     quickLinks: 'روابط سريعة',
     services: 'الخدمات',
     company: 'الشركة',
-    followUs: 'تابعنا'
+    followUs: 'تابعنا',
+    profile_title:'الملف التعريفي للشركة',
+    profile_download:'قم بتنزيل الملف التعريفي الشامل لشركتنا للتعرف على خدماتنا وخبراتنا ومشاريعنا الناجحة.'
+
   }
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguageState] = useState<Language>(() => {
+    if (typeof window !== 'undefined') {
+      return (localStorage.getItem('lang') as Language) || 'en';
+    }
+    return 'en';
+  });
   const direction: Direction = language === 'ar' ? 'rtl' : 'ltr';
 
   useEffect(() => {
     document.documentElement.dir = direction;
     document.documentElement.lang = language;
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('lang', language);
+    }
   }, [language, direction]);
+
+  const setLanguage = (lang: Language) => {
+    setLanguageState(lang);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('lang', lang);
+    }
+  };
 
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations['en']] || key;

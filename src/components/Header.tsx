@@ -20,14 +20,14 @@ const Header = () => {
           {/* Logo */}
           <div className={`flex items-center ${direction === 'rtl' ? 'order-3' : 'order-1'}`}> 
             <Link to="/" className="flex items-center space-x-2">
-              {/* <img 
-                src="https://www.fawrypayday.com/assets/images/logo/logo.png" 
+              <img 
+                src="https://www.diracsystems.com/wp-content/uploads/2023/08/logo-Dirac-fawry-3.png" 
                 alt="Dirac Systems" 
                 className="h-8 w-auto"
-              /> */}
-              <span className="text-xl font-bold bg-clip-text text-[#00699c] hover:text-[#ffd300] transition-colors duration-200">
+              />
+              {/* <span className="text-xl font-bold bg-clip-text text-[#00699c] hover:text-[#ffd300] transition-colors duration-200">
                 Dirac Systems
-              </span>
+              </span> */}
             </Link>
           </div>
 
