@@ -11,16 +11,23 @@ import PartnersSection from '../components/PartnersSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
+import FawryHeaderHero from '@/components/FawryHero';
 
 const Index = () => {
   return (
     <LanguageProvider>
       <div className="min-h-screen">
-        <Header />
-        <HeroSection />
+        {/* <Header /> */}
+        <div className="relative w-full h-screen overflow-hidden">
+
+        <FawryHeaderHero/>
+        {/* <HeroSection /> */}
+        </div>
         <PDFDownloadSection />
+      
         <AboutSection />
-        <SolutionsSection />
+        
+         <SolutionsSection />
         <ClientsSection />
         <PartnersSection />
         <TestimonialsSection />

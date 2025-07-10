@@ -16,6 +16,7 @@ import Solutions from "./pages/Solutions";
 import Products from "./pages/Products";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
+import AboutUsPage from "./pages/AboutUspage/About";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,11 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/about" element={
+              <>
+                <Header />
+              <AboutUsPage />
+              </>} />
             <Route path="/career" element={
               <>
                 <Header />
