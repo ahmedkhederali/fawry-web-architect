@@ -23,7 +23,7 @@ const FawryHeaderHero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative w-full min-h-[80vh] flex flex-row overflow-hidden bg-white">
+    <section className="relative w-full min-h-[80vh] flex flex-row overflow-hidden bg-[#006b99]">
       {/* Left Side */}
       <div
         className="relative flex flex-col justify-between bg-[#ffd300] px-8 py-12  z-10"
@@ -69,7 +69,7 @@ const FawryHeaderHero: React.FC = () => {
         </div>
       </div>    
     <div
-    className="relative flex flex-col items-center justify-center"
+    className="relative flex flex-col items-center justify-center "
     style={{ width: '30%' }}
     >
     {/* Carousel Card */}

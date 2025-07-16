@@ -21,7 +21,7 @@ const HeroSection = () => {
   const prevSlide = () => setCurrent((prev) => (prev - 1 + total) % total);
 
   return (
-    <section className="relative min-h-[60vh] w-full flex items-center justify-center overflow-hidden pt-16">
+    <section className="relative min-h-[60vh] w-full flex items-center justify-center overflow-hidden pt-16 ">
       <div className="relative w-full h-[65vh] group">
         {carouselData.map((item, idx) => (
           <div

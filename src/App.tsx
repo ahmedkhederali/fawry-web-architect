@@ -16,7 +16,9 @@ import Solutions from "./pages/Solutions";
 import Products from "./pages/Products";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
-import AboutUsPage from "./pages/AboutUspage/About";
+import AboutHeroSection from "./pages/AboutUspage/AboutHeroSection";
+import AboutTimeLineSection from "./pages/AboutUspage/AboutTimeLineSection";
+import ClientsSection from "./components/ClientsSection";
 
 const queryClient = new QueryClient();
 
@@ -32,7 +34,10 @@ const App = () => (
             <Route path="/about" element={
               <>
                 <Header />
-              <AboutUsPage />
+                <AboutHeroSection />
+                <AboutTimeLineSection />
+                <ClientsSection />
+                <Footer />
               </>} />
             <Route path="/career" element={
               <>

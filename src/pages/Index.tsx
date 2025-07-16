@@ -18,7 +18,7 @@ const Index = () => {
     <LanguageProvider>
       <div className="min-h-screen">
         {/* <Header /> */}
-        <div className="relative w-full h-screen overflow-hidden">
+        <div className="relative w-full  overflow-hidden">
 
         <FawryHeaderHero/>
         {/* <HeroSection /> */}
