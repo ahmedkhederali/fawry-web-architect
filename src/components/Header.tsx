@@ -62,13 +62,13 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-
-            <Link to="/solutions" className="text-[#00699c] hover:text-[#ffd300] transition-colors">
-              {t('serviceSolutions')}
-            </Link>
             <Link to="/products" className="text-[#00699c] hover:text-[#ffd300] transition-colors">
               {t('products')}
             </Link>
+            <Link to="/solutions" className="text-[#00699c] hover:text-[#ffd300] transition-colors">
+              {t('serviceSolutions')}
+            </Link>
+           
             <Link to="/blog" className="text-[#00699c] hover:text-[#ffd300] transition-colors">
               {t('blog')}
             </Link>
@@ -114,12 +114,13 @@ const Header = () => {
               <Link to="/partners" className="text-gray-700 hover:text-[#ffd300]">
                 {t('ourPartners')}
               </Link>
-              <Link to="/solutions" className="text-gray-700 hover:text-[#ffd300]">
-                {t('serviceSolutions')}
-              </Link>
               <Link to="/products" className="text-gray-700 hover:text-[#ffd300]">
                 {t('products')}
               </Link>
+              <Link to="/solutions" className="text-gray-700 hover:text-[#ffd300]">
+                {t('serviceSolutions')}
+              </Link>
+              
               <Link to="/blog" className="text-gray-700 hover:text-[#ffd300]">
                 {t('blog')}
               </Link>
