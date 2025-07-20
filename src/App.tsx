@@ -16,6 +16,8 @@ import Solutions from "./pages/Solutions";
 import Products from "./pages/Products";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
+import SolutionParent from "./pages/SolutionParent";
+import SolutionChild from "./pages/SolutionChild";
 import AboutHeroSection from "./pages/AboutUspage/AboutHeroSection";
 import AboutTimeLineSection from "./pages/AboutUspage/AboutTimeLineSection";
 import ClientsSection from "./components/ClientsSection";
@@ -71,6 +73,20 @@ const App = () => (
               <>
                 <Header />
                 <Solutions />
+                <Footer />
+              </>
+            } />
+            <Route path="/solutions/:id" element={
+              <>
+                <Header />
+                <SolutionParent />
+                <Footer />
+              </>
+            } />
+            <Route path="/solutions/:parentId/:childId" element={
+              <>
+                <Header />
+                <SolutionChild />
                 <Footer />
               </>
             } />
