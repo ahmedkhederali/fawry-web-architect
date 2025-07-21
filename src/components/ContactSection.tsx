@@ -8,7 +8,7 @@ declare global {
 }
 
 const ContactSection = () => {
-  const { lang, t } = useLanguage(); // assumed lang is 'en' or 'ar'
+  const { language, t } = useLanguage(); // assumed lang is 'en' or 'ar'
   const formRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const ContactSection = () => {
       if (window.hbspt) {
         window.hbspt.forms.create({
           portalId: "140495086",
-          formId: lang === 'ar'
+          formId: language === 'ar'
             ? "64b9308d-6d38-4fdf-80c3-8c0ce4d99420" // Arabic
             : "0fa3d708-1edd-45d7-940c-47901b61691f", // English
           region: "eu1",
@@ -38,7 +38,7 @@ const ContactSection = () => {
         });
       }
     }
-  }, [lang]);
+  }, [language]);
 
   return (
     <section className="py-20 bg-white">
