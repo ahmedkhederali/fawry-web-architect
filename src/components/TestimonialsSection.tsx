@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from './LanguageContext';
 
 const TestimonialsSection = () => {
@@ -40,68 +39,101 @@ const TestimonialsSection = () => {
       company: 'Marketing Director at Global Corp',
       text: 'Professional, innovative, and results-driven. Our collaboration has transformed our digital presence completely.',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&h=60&fit=crop&crop=face'
+    },
+    {
+      id: 6,
+      name: 'Sarah Ahmed',
+      company: 'Marketing Director at Global Corp',
+      text: 'Professional, innovative, and results-driven. Our collaboration has transformed our digital presence completely.',
+      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&h=60&fit=crop&crop=face'
+    },
+    {
+      id: 7,
+      name: 'Sarah Ahmed',
+      company: 'Marketing Director at Global Corp',
+      text: 'Professional, innovative, and results-driven. Our collaboration has transformed our digital presence completely.',
+      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&h=60&fit=crop&crop=face'
+    },
+    {
+      id: 8,
+      name: 'Sarah Ahmed',
+      company: 'Marketing Director at Global Corp',
+      text: 'Professional, innovative, and results-driven. Our collaboration has transformed our digital presence completely.',
+      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&h=60&fit=crop&crop=face'
     }
   ];
 
+  const [startIdx, setStartIdx] = useState(0);
+
+  const handlePrev = () => {
+    setStartIdx((prev) => Math.max(prev - 1, 0));
+  };
+
+  const handleNext = () => {
+    setStartIdx((prev) => Math.min(prev + 1, testimonials.length - 1));
+  };
+
   return (
     <section className="py-20 bg-gray-50 overflow-hidden">
-      <div className="container mx-auto px-4 mb-16">
+      <div className="px-4 mb-16">
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6 text-secondary animate-fade-in">
             What Our Clients Say
           </h2>
         </div>
       </div>
-
-      {/* Infinite Carousel */}
-      <div className="relative">
-        <div className="flex testimonial-scroll">
-          {/* First set */}
-          {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="testimonial-card">
-              <div className="flex items-start space-x-4">
-                <img
-                  src={testimonial.avatar}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover"
-                />
-                <div className="flex-1">
-                  <div className="text-4xl text-secondary mb-2">"</div>
-                  <p className="text-gray-700 mb-4 leading-relaxed">
-                    {testimonial.text}
-                  </p>
-                  <div>
-                    <h4 className="font-bold text-secondary">{testimonial.name}</h4>
-                    <p className="text-gray-600 text-sm">{testimonial.company}</p>
+      <div className="relative flex">
+        {/* Left Arrow */}
+        <button
+          onClick={handlePrev}
+          disabled={startIdx === 0}
+          className="absolute left-0 top-1/2 -translate-y-1/2 bg-secondary text-white rounded-full p-2 shadow disabled:opacity-50"
+        >
+          &#8592;
+        </button>
+        {/* Carousel */}
+        <div className="overflow-hidden w-full px-8">
+          <div
+            className="flex gap-12 transition-transform duration-500 ease-in-out"
+            style={{
+              transform: `translateX(-${startIdx * 386}px)`, // 350px card + 36px gap
+              width: `${testimonials.length * 386}px`,
+            }}
+          >
+            {testimonials.map((testimonial) => (
+              <div
+                key={testimonial.id}
+                className="testimonial-card bg-white rounded-lg shadow p-6 w-[350px] max-w-full shrink-0"
+              >
+                <div className="flex items-start space-x-4">
+                  <img
+                    src={testimonial.avatar}
+                    alt={testimonial.name}
+                    className="w-12 h-12 rounded-full object-cover"
+                  />
+                  <div className="flex-1">
+                    <div className="text-4xl text-secondary mb-2">"</div>
+                    <p className="text-gray-700 mb-4 leading-relaxed">
+                      {testimonial.text}
+                    </p>
+                    <div>
+                      <h4 className="font-bold text-secondary">{testimonial.name}</h4>
+                      <p className="text-gray-600 text-sm">{testimonial.company}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-          
-          {/* Duplicate set for seamless loop */}
-          {testimonials.map((testimonial) => (
-            <div key={`${testimonial.id}-duplicate`} className="testimonial-card">
-              <div className="flex items-start space-x-4">
-                <img
-                  src={testimonial.avatar}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover"
-                />
-                <div className="flex-1">
-                  <div className="text-4xl text-secondary mb-2">"</div>
-                  <p className="text-gray-700 mb-4 leading-relaxed">
-                    {testimonial.text}
-                  </p>
-                  <div>
-                    <h4 className="font-bold text-secondary">{testimonial.name}</h4>
-                    <p className="text-gray-600 text-sm">{testimonial.company}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+        {/* Right Arrow */}
+        <button
+          onClick={handleNext}
+          disabled={startIdx + 4 >= testimonials.length}
+          className="absolute right-0 top-1/2 -translate-y-1/2 bg-secondary text-white rounded-full p-2 shadow disabled:opacity-50"
+        >
+          &#8594;
+        </button>
       </div>
     </section>
   );

@@ -8,8 +8,9 @@ const carouselImages = [
 
 const navLinks = [
   { label: "Home", href: "#" },
-  { label: "Solution", href: "#" },
-  { label: "About Us", href: "#" }
+  { label: "About Us", href: "#" },
+  { label: "Solutions", href: "#" },
+  { label: "Products", href: "#" }
 ];
 
 const FawryHeaderHero: React.FC = () => {
@@ -26,14 +27,14 @@ const FawryHeaderHero: React.FC = () => {
     <section className="relative w-full min-h-[80vh] flex flex-row overflow-hidden bg-[#006b99]">
       {/* Left Side */}
       <div
-        className="relative flex flex-col justify-between bg-[#ffd300] px-8 py-12  z-10"
+        className="relative flex flex-col justify-between bg-[#ffd300] px- py-12  z-10"
         style={{
           width: '60%',
           borderBottomRightRadius: '150px'
         }}
       >
         {/* Header */}
-        <div className="flex items-center justify-between mb-12" style={{ width: '70%' }}>
+        <div className="flex items-center justify-between mb-12 " style={{ width: '70%' }}>
           <span className="text-2xl font-bold text-[#0074d9]">Fawry</span>
           <nav className="hidden md:flex gap-8">
             {navLinks.map((link) => (
