@@ -48,124 +48,77 @@ const AboutSection = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  console.log("direction", direction);
+
+  const diracDescription  = `
+DIRAC Systems is a leading Egyptian shareholder company specializing in advanced strategic business software solutions that drive digital transformation across various organizations. Established in 2012, with a capital of 27 million EGP, DIRAC has quickly positioned itself as a pivotal player in the region's technology landscape. As a subsidiary of Fawry for Banking Technology and Electronic Payments S.A.E, DIRAC leverages robust financial backing to innovate and expand its offerings.
+
+At the forefront of digital transformation, DIRAC provides a comprehensive suite of Enterprise Resource Planning (ERP) solutions designed to enhance performance, efficiency, and competitiveness for businesses.
+
+As we continue to expand our offerings—including the recent launches of the Fawry Business HR and Accounting systems—DIRAC Systems remains focused on empowering businesses to improve products, enhance customer experiences, and enter new markets. Join us as we transform the future of business through cutting-edge digital solutions.
+`;
+
   return (
     <section className="py-20 bg-white" id="about">
       <div className="container mx-auto px-4">
         <div key={direction} className="grid lg:grid-cols-2 gap-12 items-center">
-          {direction === "rtl" ? (
-            <>
-              {/* Text on right in AR */}
-              <div
-                id="about-text"
-                className="animate-fade-in transition-transform duration-1000 opacity-0 translate-x-[-80px] will-change-transform lg:col-start-1 lg:order-1 text-right"
-              >
-                <h2 className="text-4xl font-bold mb-6 text-secondary">
-                  {t("aboutTitle")}
-                </h2>
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  {t("aboutText")}
-                </p>
-                <p className="text-gray-600 mb-8">{t("aboutExperience")}</p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">
-                  <div className="text-center">
-                    <h3 className="text-3xl font-bold text-primary mb-2">
-                      <Counter end={800} duration={1500} />+
-                    </h3>
-                    <p className="text-gray-600">Active Customers</p>
-                  </div>
-                  <div className="text-center">
-                    <h3 className="text-3xl font-bold text-primary mb-2">
-                      <Counter end={15} duration={1200} />+
-                    </h3>
-                    <p className="text-gray-600">Strategic Partners</p>
-                  </div>
-                  <div className="text-center">
-                    <h3 className="text-3xl font-bold text-primary mb-2">
-                      <Counter end={3000} duration={1800} />+
-                    </h3>
-                    <p className="text-gray-600">Product Demos Delivered</p>
-                  </div>
-                  <div className="text-center">
-                    <h3 className="text-3xl font-bold text-primary mb-2">
-                      <Counter end={25000} duration={2000} />+
-                    </h3>
-                    <p className="text-gray-600">System Users Across All Platforms</p>
-                  </div>
-                </div>
-              </div>
-              {/* Video on left in AR */}
-              <div
-                id="about-video"
-                className="animate-slide-up transition-transform duration-1000 opacity-0 translate-x-[80px] will-change-transform lg:col-start-2 lg:order-2"
-              >
-                <video
-                  src="https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-computer-4245-large.mp4"
-                  controls
-                  autoPlay
-                  muted
-                  loop
-                  className="rounded-lg shadow-xl w-full"
-                />
-              </div>
-            </>
-          ) : (
-            <>
-              {/* Text on left in EN */}
-              <div
-                id="about-text"
-                className="animate-fade-in transition-transform duration-1000 opacity-0 translate-x-[-80px] will-change-transform lg:col-start-1 lg:order-1 text-left"
-              >
-                <h2 className="text-4xl font-bold mb-6 text-secondary">
-                  {t("aboutTitle")}
-                </h2>
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  {t("aboutText")}
-                </p>
-                <p className="text-gray-600 mb-8">{t("aboutExperience")}</p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">
-                  <div className="text-center">
-                    <h3 className="text-3xl font-bold text-primary mb-2">
-                      <Counter end={800} duration={1500} />+
-                    </h3>
-                    <p className="text-gray-600">Active Customers</p>
-                  </div>
-                  <div className="text-center">
-                    <h3 className="text-3xl font-bold text-primary mb-2">
-                      <Counter end={15} duration={1200} />+
-                    </h3>
-                    <p className="text-gray-600">Strategic Partners</p>
-                  </div>
-                  <div className="text-center">
-                    <h3 className="text-3xl font-bold text-primary mb-2">
-                      <Counter end={3000} duration={1800} />+
-                    </h3>
-                    <p className="text-gray-600">Product Demos Delivered</p>
-                  </div>
-                  <div className="text-center">
-                    <h3 className="text-3xl font-bold text-primary mb-2">
-                      <Counter end={25000} duration={2000} />+
-                    </h3>
-                    <p className="text-gray-600">System Users Across All Platforms</p>
-                  </div>
-                </div>
-              </div>
-              {/* Video on right in EN */}
-              <div
-                id="about-video"
-                className="animate-slide-up transition-transform duration-1000 opacity-0 translate-x-[80px] will-change-transform lg:col-start-2 lg:order-2"
-              >
-                <video
-                  src="https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-computer-4245-large.mp4"
-                  controls
-                  autoPlay
-                  muted
-                  loop
-                  className="rounded-lg shadow-xl w-full"
-                />
-              </div>
-            </>
-          )}
+          {/* === Text Section === */}
+          <div
+            id="about-text"
+            className={`animate-fade-in transition-transform duration-1000 opacity-0 translate-x-[-80px] will-change-transform lg:col-start-1 lg:order-1 ${direction === "rtl" ? "text-right" : "text-left"}`}
+          >
+            <h2 className="text-4xl font-bold mb-6 text-[#f36c26]">
+              {t("aboutTitle")}
+            </h2>
+
+           <p className="text-secondary text-base leading-relaxed font-sans tracking-wide">
+             {diracDescription}
+           </p>
+          </div>
+
+          {/* === Video Section === */}
+          <div
+            id="about-video"
+            className={`animate-slide-up transition-transform duration-1000 opacity-0 translate-x-[80px] will-change-transform lg:col-start-2 lg:order-2`}
+          >
+            <video
+              src="https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-computer-4245-large.mp4"
+              controls
+              autoPlay
+              muted
+              loop
+              className="rounded-lg shadow-xl w-full"
+            />
+          </div>
+        </div>
+
+        {/* === Full Width Counter Section === */}
+        <div className="mt-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <h3 className="text-3xl font-bold text-[#f36c26] mb-2">
+                <Counter end={800} duration={1500} />+
+              </h3>
+              <p className="text-secondary">Active Customers</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-3xl font-bold text-[#f36c26] mb-2">
+                <Counter end={15} duration={1200} />+
+              </h3>
+              <p className="text-secondary">Strategic Partners</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-3xl font-bold text-[#f36c26] mb-2">
+                <Counter end={3000} duration={1800} />+
+              </h3>
+              <p className="text-secondary">Product Demos Delivered</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-3xl font-bold text-[#f36c26] mb-2">
+                <Counter end={25000} duration={2000} />+
+              </h3>
+              <p className="text-secondary">System Users Across All Platforms</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

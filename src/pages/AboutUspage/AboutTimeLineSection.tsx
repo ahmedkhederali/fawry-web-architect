@@ -2,89 +2,138 @@ import React from "react";
 
 const timeline = [
   {
-    year: "2008",
-    title: "Company Founded",
-    desc: "Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.",
-    icon: "🏠",
-  },
-  {
-    year: "2009",
-    title: "First Product Launch",
-    desc: "Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.",
-    icon: "✅",
-  },
-  {
-    year: "2011",
-    title: "Reached 100 Clients",
-    desc: "Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.",
-    icon: "ℹ️",
-  },
-  {
-    year: "2013",
-    title: "International Expansion",
-    desc: "Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.",
-    icon: "👥",
-  },
-  {
-    year: "2015",
-    title: "Launched ERP Solution",
-    desc: "Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.",
-    icon: "💻",
+    year: "2012–2014",
+    title: "DIRAC Systems Established",
+    desc: "Dirac Systems was officially established in 2014, based on a team that had been developing systems since 2012.",
+    icon: "🏢",
   },
   {
     year: "2016",
-    title: "500+ Projects Completed",
-    desc: "Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.",
-    icon: "💰",
+    title: "Digital Payment Integrations",
+    desc: "Became a leading company in enabling electronic integration for digital payments with Fawry and major Egyptian entities.",
+    icon: "💳",
   },
-];
+  {
+    year: "2017",
+    title: "ERP & Outsourcing Services Launched",
+    desc: "Launched the first ERP system for corrugated carton factories and introduced outsourcing services to Gulf countries.",
+    icon: "📦",
+  },
+  {
+    year: "2019",
+    title: "Digital Transformation Projects",
+    desc: "Expanded into digital transformation projects both locally and internationally.",
+    icon: "🌐",
+  },
+  {
+    year: "2020",
+    title: "Strategic Partnership with Fawry",
+    desc: "Formed a strategic SaaS partnership with Fawry, which acquired a 51% stake in Dirac.",
+    icon: "🤝",
+  },
+  {
+    year: "2023",
+    title: "Launch of Fawry Business HR",
+    desc: "Official launch of the HR system under Fawry Business.",
+    icon: "🧑‍💼",
+  },
+  {
+    year: "2024",
+    title: "Launch of Fawry Business Accounting",
+    desc: "Expanded the platform with the launch of Fawry Business Accounting system.",
+    icon: "📊",
+  },
+]
 
 const AboutTimeLineSection = () => (
-  <section className="py-16 bg-white">
+  <section className="py-16 bg-gray-50 relative overflow-hidden">
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-bold mb-12 text-center text-[#006b99]">Timeline Infographics</h2>
-      <div className="relative max-w-3xl mx-auto">
-        {/* Vertical line */}
-        <div className="absolute left-1/2 top-0 h-full w-1 bg-primary/40 -translate-x-1/2 z-0" />
-        <div className="space-y-12 relative z-10">
+      <h2 className="text-4xl font-bold mb-16 text-center text-gray-800">Our Journey</h2>
+
+      <div className="relative max-w-4xl mx-auto">
+        {/* Improved curved dashed line */}
+        <div className="absolute left-1/2 top-0 transform -translate-x-1/2 w-full h-full pointer-events-none">
+          <svg
+            className="w-full h-full"
+            viewBox="0 0 400 1600"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYStretch"
+          >
+            <path
+              d="M200 50 Q250 150 200 250 Q150 350 200 450 Q250 550 200 650 Q150 750 200 850 Q250 950 200 1050 Q150 1150 200 1250 Q250 1350 200 1450"
+              stroke="#00bcd4"
+              strokeWidth="4"
+              strokeDasharray="20,15"
+              fill="none"
+              strokeLinecap="round"
+            />
+          </svg>
+        </div>
+
+        <div className="space-y-24 relative z-10">
           {timeline.map((item, idx) => (
-            <div key={item.year} className="flex items-center w-full">
-              {/* Left side */}
-              <div className={`w-1/2 pr-6 text-right ${idx % 2 === 0 ? "" : "opacity-0 pointer-events-none"}`}>
-                {idx % 2 === 0 && (
-                  <div className="inline-block text-primary text-2xl mb-2">{item.icon}</div>
-                )}
-                {idx % 2 === 0 && (
-                  <>
-                    <h3 className="text-lg font-bold text-[#006b99]">{item.title}</h3>
-                    <span className="block text-sm font-semibold text-gray-500">{item.year}</span>
-                    <p className="text-gray-600 text-sm">{item.desc}</p>
-                  </>
-                )}
+            <div key={item.year} className="relative flex items-start">
+              {/* Timeline dot positioned on the curve */}
+              <div
+                className="absolute left-1/2 transform -translate-x-1/2 -translate-y-2 z-20"
+                style={{
+                  left: idx % 2 === 0 ? "calc(50% + 20px)" : "calc(50% - 20px)",
+                }}
+              >
+                <div className="w-5 h-5 bg-[#00bcd4] rounded-full border-4 border-white shadow-lg"></div>
               </div>
-              {/* Center dot */}
-              <div className="w-0 flex flex-col items-center">
-                <span className="block w-5 h-5 bg-[#006b99] rounded-full border-4 border-white shadow-lg z-10" />
+
+              {/* Content container */}
+              <div className={`w-full flex ${idx % 2 === 0 ? "justify-start pr-8" : "justify-end pl-8"}`}>
+                <div className={`max-w-md ${idx % 2 === 0 ? "mr-16" : "ml-16"}`}>
+                  {/* Year badge */}
+                  <div className="inline-block bg-[#00bcd4] text-white px-4 py-2 rounded-lg font-bold text-lg mb-4 shadow-lg">
+                    {item.year}
+                  </div>
+
+                  {/* Content card */}
+                  <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                    <div className="flex items-start gap-4">
+                      <div className="text-3xl flex-shrink-0">{item.icon}</div>
+                      <div>
+                        <h3 className="text-xl font-bold text-gray-800 mb-2 leading-tight">{item.title}</h3>
+                        <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Connecting line from dot to card */}
+                  <div
+                    className={`absolute top-8 w-12 h-0.5 bg-[#00bcd4] opacity-60 ${
+                      idx % 2 === 0 ? "left-1/2 ml-6" : "right-1/2 mr-6"
+                    }`}
+                  ></div>
+                </div>
               </div>
-              {/* Right side */}
-              <div className={`w-1/2 pl-6 text-left ${idx % 2 === 1 ? "" : "opacity-0 pointer-events-none"}`}>
-                {idx % 2 === 1 && (
-                  <div className="inline-block text-primary text-2xl mb-2">{item.icon}</div>
-                )}
-                {idx % 2 === 1 && (
-                  <>
-                    <h3 className="text-lg font-bold text-primary">{item.title}</h3>
-                    <span className="block text-sm font-semibold text-gray-500">{item.year}</span>
-                    <p className="text-gray-600 text-sm">{item.desc}</p>
-                  </>
-                )}
-              </div>
+
+              {/* Decorative paper plane for certain milestones */}
+              {(idx === 2 || idx === 4 || idx === 6) && (
+                <div
+                  className={`absolute top-8 ${idx % 2 === 0 ? "right-8" : "left-8"} text-[#00bcd4] text-2xl transform ${idx % 2 === 0 ? "rotate-45" : "-rotate-45"} animate-pulse`}
+                >
+                  ✈️
+                </div>
+              )}
             </div>
           ))}
         </div>
       </div>
+
+      {/* Background decorative elements */}
+      <div className="absolute top-20 left-10 w-20 h-20 bg-[#00bcd4] opacity-10 rounded-full"></div>
+      <div className="absolute bottom-20 right-10 w-32 h-32 bg-[#00bcd4] opacity-5 rounded-full"></div>
+      <div className="absolute top-1/2 right-20 w-16 h-16 bg-[#00bcd4] opacity-10 rounded-full"></div>
     </div>
   </section>
-);
 
-export default AboutTimeLineSection;
+)
+
+export default AboutTimeLineSection
+
+
