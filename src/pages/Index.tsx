@@ -17,11 +17,11 @@ const Index = () => {
   return (
     <LanguageProvider>
       <div className="min-h-screen">
-        <Header />
+        {/* <Header /> */}
         <div className="relative w-full  overflow-hidden">
 
-        {/* <FawryHeaderHero/> */}
-        <HeroSection />
+        <FawryHeaderHero/>
+        {/* <HeroSection /> */}
         </div>
         <PDFDownloadSection />
       
