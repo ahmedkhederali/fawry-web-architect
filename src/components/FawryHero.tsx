@@ -90,7 +90,14 @@ const FawryHeaderHero: React.FC = () => {
             <button className="bg-[#0074d9] text-white px-6 py-3 rounded-md font-semibold shadow hover:bg-[#005fa3] transition">
               Get a Quote
             </button>
-            <button className="bg-white text-[#0074d9] border border-[#0074d9] px-6 py-3 rounded-md font-semibold shadow hover:bg-[#ffe066] transition">
+            <button className="bg-white text-[#0074d9] border border-[#0074d9] px-6 py-3 rounded-md font-semibold shadow hover:bg-[#ffe066] transition"
+             onClick={() => {
+              const link = document.createElement("a");
+              link.href = "/files/Dirac_Co.Profile.pdf";
+              link.download = "CompanyProfile.pdf"; // name for the downloaded file
+              link.click();
+            }}
+            >
               Download Company Profile
             </button>
           </div>
