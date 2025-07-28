@@ -23,7 +23,7 @@ const Index = () => {
         <FawryHeaderHero/>
         {/* <HeroSection /> */}
         </div>
-        <PDFDownloadSection />
+        {/* <PDFDownloadSection /> */}
       
         <AboutSection />
         

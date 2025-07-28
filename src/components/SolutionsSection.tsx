@@ -31,7 +31,7 @@ const SolutionsSection = () => {
             if (solution.id === 'sass') customSpan = 'col-start-2 row-start-1 row-span-1';
             if (solution.id === 'vansales') customSpan = 'col-start-3 row-start-1 row-span-2';
             // Bottom left: spans two columns
-            if (solution.id === 'digital-marketing') customSpan = 'col-start-1 row-start-2 col-span-2';
+            if (solution.id === 'digital-transformation') customSpan = 'col-start-1 row-start-2 col-span-2';
 
             const hasChildren = Array.isArray(solution.children) && solution.children.length > 0;
             const linkTo = hasChildren
@@ -50,7 +50,7 @@ const SolutionsSection = () => {
                   className={
                     solution.id === 'vansales'
                       ? 'w-full h-full object-cover min-h-[200px]'
-                      : solution.id === 'digital-marketing'
+                      : solution.id === 'digital-transformation'
                         ? 'w-full h-[200px] object-cover'
                         : 'w-full h-full object-cover min-h-[200px]'
                   }

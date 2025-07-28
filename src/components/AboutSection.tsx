@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useLanguage } from "./LanguageContext";
 
-// Counter component for animated numbers
 const Counter = ({ end, duration = 2000 }) => {
   const [count, setCount] = useState(0);
-  const ref = useRef();
   useEffect(() => {
     let start = 0;
     const increment = end / (duration / 16);
@@ -27,6 +25,9 @@ const Counter = ({ end, duration = 2000 }) => {
 
 const AboutSection = () => {
   const { t, direction } = useLanguage();
+  const [expanded, setExpanded] = useState(false);
+  const [showButton, setShowButton] = useState(false);
+  const textRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,14 +43,27 @@ const AboutSection = () => {
         }
       }
     };
-
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const diracDescription  = `
+  useEffect(() => {
+    // Detect overflow for md and up
+    const checkOverflow = () => {
+      if (textRef.current && window.innerWidth >= 768) {
+        const hasOverflow =
+          textRef.current.scrollHeight > textRef.current.clientHeight;
+        setShowButton(hasOverflow);
+      } else {
+        setShowButton(false);
+      }
+    };
+    window.addEventListener("resize", checkOverflow);
+    setTimeout(checkOverflow, 500);
+    return () => window.removeEventListener("resize", checkOverflow);
+  }, []);
+
+  const diracDescription = `
 DIRAC Systems is a leading Egyptian shareholder company specializing in advanced strategic business software solutions that drive digital transformation across various organizations. Established in 2012, with a capital of 27 million EGP, DIRAC has quickly positioned itself as a pivotal player in the region's technology landscape. As a subsidiary of Fawry for Banking Technology and Electronic Payments S.A.E, DIRAC leverages robust financial backing to innovate and expand its offerings.
 
 At the forefront of digital transformation, DIRAC provides a comprehensive suite of Enterprise Resource Planning (ERP) solutions designed to enhance performance, efficiency, and competitiveness for businesses.
@@ -60,25 +74,45 @@ As we continue to expand our offerings—including the recent launches of the Fa
   return (
     <section className="py-20 bg-white" id="about">
       <div className="container mx-auto px-4">
-        <div key={direction} className="grid lg:grid-cols-2 gap-12 items-center">
+        <div
+          key={direction}
+          className="grid lg:grid-cols-2 gap-12 items-center"
+        >
           {/* === Text Section === */}
           <div
             id="about-text"
-            className={`animate-fade-in transition-transform duration-1000 opacity-0 translate-x-[-80px] will-change-transform lg:col-start-1 lg:order-1 ${direction === "rtl" ? "text-right" : "text-left"}`}
+            className={`transition-transform duration-1000 opacity-0 translate-x-[-80px] will-change-transform lg:col-start-1 lg:order-1 ${direction === "rtl" ? "text-right" : "text-left"
+              }`}
           >
             <h2 className="text-4xl font-bold mb-6 text-[#f36c26]">
               {t("aboutTitle")}
             </h2>
 
-           <p className="text-secondary text-base leading-relaxed font-sans tracking-wide">
-             {diracDescription}
-           </p>
+            <div
+              ref={textRef}
+              className={`text-secondary text-base leading-relaxed font-sans tracking-wide transition-all duration-500 
+              ${expanded
+                  ? "max-h-none"
+                  : "md:max-h-[250px] md:overflow-hidden"
+                }`}
+            >
+              {diracDescription}
+            </div>
+
+            {showButton && (
+              <button
+                className="mt-4 text-[#f36c26] font-semibold hover:underline"
+                onClick={() => setExpanded(!expanded)}
+              >
+                {expanded ? "Show Less" : "Read More"}
+              </button>
+            )}
           </div>
 
           {/* === Video Section === */}
           <div
             id="about-video"
-            className={`animate-slide-up transition-transform duration-1000 opacity-0 translate-x-[80px] will-change-transform lg:col-start-2 lg:order-2`}
+            className={`transition-transform duration-1000 opacity-0 translate-x-[80px] will-change-transform lg:col-start-2 lg:order-2`}
           >
             <video
               src="https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-computer-4245-large.mp4"
@@ -86,12 +120,12 @@ As we continue to expand our offerings—including the recent launches of the Fa
               autoPlay
               muted
               loop
-              className="rounded-lg shadow-xl w-full"
+              className="rounded-lg shadow-xl w-full h-[250px] md:h-[250px] lg:h-[350px] object-cover"
             />
           </div>
         </div>
 
-        {/* === Full Width Counter Section === */}
+        {/* === Counters === */}
         <div className="mt-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
@@ -116,7 +150,9 @@ As we continue to expand our offerings—including the recent launches of the Fa
               <h3 className="text-3xl font-bold text-[#f36c26] mb-2">
                 <Counter end={25000} duration={2000} />+
               </h3>
-              <p className="text-secondary">System Users Across All Platforms</p>
+              <p className="text-secondary">
+                System Users Across All Platforms
+              </p>
             </div>
           </div>
         </div>
