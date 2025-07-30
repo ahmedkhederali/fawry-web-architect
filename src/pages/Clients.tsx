@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { useLanguage } from '../components/LanguageContext';
-import ClientsSection from '../components/ClientsSection';
+import HorizontalTabs from '@/components/HorizontalTabs';
+import VerticalTabs from '@/components/VerticalTabs';
 
 const Clients = () => {
   const { t } = useLanguage();
@@ -14,8 +15,10 @@ const Clients = () => {
           <p className="text-xl text-blue-100">Companies that trust our solutions</p>
         </div>
       </div>
-      <ClientsSection />
-    </div>
+     {/* // tabs to display client logos based on category */}
+     <HorizontalTabs />
+     {/* <VerticalTabs /> */}
+      </div>
   );
 };
 

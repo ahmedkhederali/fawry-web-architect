@@ -29,20 +29,21 @@ const FawryHeaderHero: React.FC = () => {
       >
         {/* Header */}
         <div className="flex items-center justify-between mb-10 px-8">
-			<img
-			    src="https://www.diracsystems.com/wp-content/uploads/2023/08/logo-Dirac-fawry-3.png"
-			    alt="Dirac Systems"
-			    className="h-8 w-auto"
-			  />          <nav className="hidden md:flex gap-10 relative ml-auto mr-[30%]   md:mr-[16%]">
-            <a href="/" className="text-[#0074d9] font-medium hover:underline">
+          <img
+            src="https://www.fawry.com/wp-content/uploads/2022/07/Fawry-English-Horizontal-2048x641.png"
+            alt="Dirac Systems"
+            className="h-8 w-auto"
+          />          
+          <nav className="hidden md:flex gap-10 relative ml-auto mr-[30%]   md:mr-[16%] font-weight[700]">
+            <a href="/" className="text-[#0074d9] font-medium hover:underline ">
               Home
             </a>
 
             {/* About Us Dropdown */}
             <div className="relative group">
-              
+
               <span className="cursor-pointer text-[#0074d9] font-medium">
-                
+
                 <a href="/about" className="block">
                   About Us
                 </a>
@@ -54,10 +55,10 @@ const FawryHeaderHero: React.FC = () => {
                 <a href="/career" className="block py-2 px-4 text-[#fff] hover:text-[#00699c] hover:bg-[#fff]">
                   Career
                 </a>
-                <a href="/our_clients" className="block py-2 text-[#fff] px-4 hover:text-[#00699c] hover:bg-[#fff]">
+                <a href="/clients" className="block py-2 text-[#fff] px-4 hover:text-[#00699c] hover:bg-[#fff]">
                   Our Clients
                 </a>
-                <a href="/our_partner" className="block py-2 text-[#fff] px-4 hover:text-[#00699c] hover:bg-[#fff]">
+                <a href="/partner" className="block py-2 text-[#fff] px-4 hover:text-[#00699c] hover:bg-[#fff]">
                   Our Partners
                 </a>
               </div>
@@ -94,12 +95,12 @@ const FawryHeaderHero: React.FC = () => {
               Get a Quote
             </button>
             <button className="bg-white text-[#0074d9] border border-[#0074d9] px-6 py-3 rounded-md font-semibold shadow hover:bg-[#ffe066] transition"
-             onClick={() => {
-              const link = document.createElement("a");
-              link.href = "/files/Dirac_Co.Profile.pdf";
-              link.download = "CompanyProfile.pdf"; // name for the downloaded file
-              link.click();
-            }}
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/files/Dirac_Co.Profile.pdf";
+                link.download = "CompanyProfile.pdf"; // name for the downloaded file
+                link.click();
+              }}
             >
               Download Company Profile
             </button>
@@ -109,7 +110,7 @@ const FawryHeaderHero: React.FC = () => {
 
       {/* Blue Side */}
       <div className="relative flex flex-col items-center justify-center w-full md:w-[45%] mt-8 md:mt-0">
-        <div className="absolute top-5 right-8 text-white font-semibold">
+        <div className="absolute top-8 right-8 text-white font-semibold">
           +20 123-456-789
         </div>
 

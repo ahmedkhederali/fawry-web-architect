@@ -84,7 +84,7 @@ As we continue to expand our offerings—including the recent launches of the Fa
             className={`transition-transform duration-1000 opacity-0 translate-x-[-80px] will-change-transform lg:col-start-1 lg:order-1 ${direction === "rtl" ? "text-right" : "text-left"
               }`}
           >
-            <h2 className="text-4xl font-bold mb-6 text-[#f36c26]">
+            <h2 className="text-4xl font-bold mb-6 text-[#ffd300]">
               {t("aboutTitle")}
             </h2>
 
@@ -101,7 +101,7 @@ As we continue to expand our offerings—including the recent launches of the Fa
 
             {showButton && (
               <button
-                className="mt-4 text-[#f36c26] font-semibold hover:underline"
+                className="mt-4 text-[#ffd300] font-semibold hover:underline"
                 onClick={() => setExpanded(!expanded)}
               >
                 {expanded ? "Show Less" : "Read More"}
@@ -129,25 +129,25 @@ As we continue to expand our offerings—including the recent launches of the Fa
         <div className="mt-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <h3 className="text-3xl font-bold text-[#f36c26] mb-2">
+              <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={800} duration={1500} />+
               </h3>
               <p className="text-secondary">Active Customers</p>
             </div>
             <div className="text-center">
-              <h3 className="text-3xl font-bold text-[#f36c26] mb-2">
+              <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={15} duration={1200} />+
               </h3>
               <p className="text-secondary">Strategic Partners</p>
             </div>
             <div className="text-center">
-              <h3 className="text-3xl font-bold text-[#f36c26] mb-2">
+              <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={3000} duration={1800} />+
               </h3>
               <p className="text-secondary">Product Demos Delivered</p>
             </div>
             <div className="text-center">
-              <h3 className="text-3xl font-bold text-[#f36c26] mb-2">
+              <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={25000} duration={2000} />+
               </h3>
               <p className="text-secondary">

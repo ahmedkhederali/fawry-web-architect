@@ -228,5 +228,79 @@ export const clientTabs = [
   },
 ];
 
+
+export const categories = [
+  "Integration Services",
+  "Governmental Authorities",
+  "Petroleum Industries",
+  "Packaging Industry",
+  "Textile & Garment Industry",
+  "Plastic Industries",
+  "Chemical & Pharmaceutical Industries",
+  "Food Industries",
+  "Engineering Industries",
+  "Showrooms & POS (Ceramics)",
+  "Showrooms & POS",
+  
+];
+
+export const logos = {
+  "Integration Services": [
+    "/clients/anwan.png",
+    "/clients/basket.png",
+    "/clients/cope.png",
+    "/clients/egyptian.png",
+    "/clients/fawry.png",
+    "/clients/gendy.png",
+    "/clients/gpc.png",
+    "/clients/helal.png",
+    "/clients/kobaa.png",
+    "/clients/shaid.png",
+    "/clients/shams.png",
+    "/clients/tayseer.png",
+  ],
+  "Governmental Authorities": [
+    "/logos/fawry.png",
+    "/logos/fawry.png",
+  ],
+  // add logos for other categories
+  "Petroleum Industries": [
+    "/logos/fawry.png",
+    "/logos/fawry.png",
+  ],
+  "Packaging Industry": [
+    "/logos/fawry.png",
+    "/logos/fawry.png",
+  ],
+  "Textile & Garment Industry": [
+    "/logos/fawry.png",
+    "/logos/fawry.png",
+  ],
+  "Plastic Industries": [
+    "/logos/fawry.png",
+    "/logos/fawry.png",
+  ],
+  "Chemical & Pharmaceutical Industries": [
+    "/logos/fawry.png",
+    "/logos/fawry.png",
+  ],
+  "Food Industries": [
+    "/logos/fawry.png",
+    "/logos/fawry.png",
+  ],
+  "Engineering Industries": [
+    "/logos/fawry.png",
+    "/logos/fawry.png",
+  ],
+  "Showrooms & POS (Ceramics)": [
+    "/logos/fawry.png",
+    "/logos/fawry.png",
+  ],
+  "Showrooms & POS": [
+    "/logos/fawry.png",
+    "/logos/fawry.png",
+  ],
+
+};
 export default solutions;
 
