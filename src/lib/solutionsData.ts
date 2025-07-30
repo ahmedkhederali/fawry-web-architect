@@ -139,7 +139,7 @@ const solutions = [
     id: 'vansales',
     title: 'Dirac Systems',
     description: 'Driving Digital Evolution. Powering the Digital Shift Transforming Visions into Digital Realities',
-    image: '/public/logos/Diracfawry.png  ',
+    image: '/logos/Diracfawry.png  ',
     span: 'col-span-1 row-span-1',
     summary: `The Van Sales System covers the entire outdoor sales cycle, ensuring your field sales operations are efficient, accurate, and fully integrated.`,
     features: [
