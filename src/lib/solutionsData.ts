@@ -3,8 +3,8 @@
 const solutions = [
   {
     id: 'erp',
-    title: 'ERP',
-    description: 'Comprehensive ERP platform for unified business management.',
+    title: 'ERP System',
+    description: 'One System, Infinite Possibilities',
     image: 'https://s35804.pcdn.co/blog/wp-content/uploads/2021/03/erp_the_value_to_your_manufacturing.jpg',
     span: 'col-span-1 row-span-2',
     children: [
@@ -137,9 +137,9 @@ const solutions = [
   },
   {
     id: 'vansales',
-    title: 'Van Sales Application',
-    description: 'Mobile solution for van sales and field operations.',
-    image: 'https://www.stayinfront.com/wp-content/uploads/2023/08/SIF_Resource-Thumbnails-Blogs_3.20_Van-Sales-Learn-from-the-Mistakes-of-Others.png',
+    title: 'Dirac Systems',
+    description: 'Driving Digital Evolution. Powering the Digital Shift Transforming Visions into Digital Realities',
+    image: '/public/logos/Diracfawry.png  ',
     span: 'col-span-1 row-span-1',
     summary: `The Van Sales System covers the entire outdoor sales cycle, ensuring your field sales operations are efficient, accurate, and fully integrated.`,
     features: [
@@ -165,8 +165,8 @@ const solutions = [
   },
   {
     id: 'sass',
-    title: 'SaaS Applications',
-    description: 'Cloud-based SaaS solutions for business needs.',
+    title: 'SaaS Solutions',
+    description: 'Manage More. Spend Less. Start Now',
     image: 'https://www.ionos.com/digitalguide/fileadmin/DigitalGuide/Teaser/sass.jpg',
     span: 'col-span-1 row-span-2',
     children: [

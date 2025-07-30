@@ -49,7 +49,7 @@ const SolutionsSection = () => {
                   alt={solution.title}
                   className={
                     solution.id === 'vansales'
-                      ? 'w-full h-full object-cover min-h-[200px]'
+                      ? 'w-full h-full object-contain min-h-[200px]'
                       : solution.id === 'digital-transformation'
                         ? 'w-full h-[200px] object-cover'
                         : 'w-full h-full object-cover min-h-[200px]'
