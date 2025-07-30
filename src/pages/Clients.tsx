@@ -16,8 +16,8 @@ const Clients = () => {
         </div>
       </div>
      {/* // tabs to display client logos based on category */}
-     <HorizontalTabs />
-     {/* <VerticalTabs /> */}
+     {/* <HorizontalTabs /> */}
+     <VerticalTabs />
       </div>
   );
 };
