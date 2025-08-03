@@ -22,15 +22,14 @@ const SolutionsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-6 max-w-7xl mx-auto">
-          {solutions.map((solution, index) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 grid-rows-2 gap-6 max-w-7xl mx-auto">
+          {solutions.filter((solution) => solution.id !== 'vansales') // Remove the right image card
+    .map((solution, index) => {
             // Custom grid placement for each card to match the image
             let customSpan = '';
             // Top row: 3 cards
             if (solution.id === 'erp') customSpan = 'col-start-1 row-start-1 row-span-1';
             if (solution.id === 'sass') customSpan = 'col-start-2 row-start-1 row-span-1';
-            if (solution.id === 'vansales') customSpan = 'col-start-3 row-start-1 row-span-2';
-            // Bottom left: spans two columns
             if (solution.id === 'digital-transformation') customSpan = 'col-start-1 row-start-2 col-span-2';
 
             const hasChildren = Array.isArray(solution.children) && solution.children.length > 0;
