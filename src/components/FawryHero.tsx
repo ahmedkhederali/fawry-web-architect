@@ -26,7 +26,7 @@ const FawryHeaderHero: React.FC = () => {
         {/* Header */}
         <div className="flex items-center justify-between mb-10 px-8">
           <img
-            src="/images/Dirac Systems.png"
+            src="/public/images/DiracSystems.png"
             alt="Dirac Systems"
             className="h-8 w-auto"
           />
