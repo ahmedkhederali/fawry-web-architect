@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="flex-1 min-w-[220px] mb-8 lg:mb-0">
             <div className="flex items-center gap-2 mb-4">
               <img
-                src="/images/Dirac Systems.png"
+                src="/images/DiracSystems.png"
                 alt="Dirac Systems"
                 className="h-8"
               />
