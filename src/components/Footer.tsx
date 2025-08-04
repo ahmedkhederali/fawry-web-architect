@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="flex-1 min-w-[220px] mb-8 lg:mb-0">
             <div className="flex items-center gap-2 mb-4">
               <img
-                src="https://www.diracsystems.com/wp-content/uploads/2023/08/logo-Dirac-fawry-3.png"
+                src="/images/Dirac Systems.png"
                 alt="Dirac Systems"
                 className="h-8"
               />
@@ -198,7 +198,7 @@ const Footer = () => {
             <div className="w-96 h-60 rounded-lg overflow-hidden border border-gray-200 shadow-sm">
               <iframe
                 title="Dirac Systems Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.0123456789!2d31.235711315115!3d30.0444199818797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60c2c1eaf%3A0x2e2b2b2b2b2b2b2b!2sDirac%20Systems!5e0!3m2!1sen!2seg!4v1689000000000!5m2!1sen!2seg"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.893237695716!2d31.323863376202844!3d30.097243816065983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14581586ce3388dd%3A0x64fcb986dc43a59d!2sDirac%20Systems!5e0!3m2!1sen!2seg!4v1754296950203!5m2!1sen!2seg"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

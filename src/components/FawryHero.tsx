@@ -8,7 +8,6 @@ const carouselImages = [
 
 const FawryHeaderHero: React.FC = () => {
   const [current, setCurrent] = useState(0);
-  const [aboutMenuOpen, setAboutMenuOpen] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -22,28 +21,22 @@ const FawryHeaderHero: React.FC = () => {
       {/* Yellow Side */}
       <div
         className="relative flex flex-col justify-between bg-[#ffd300] py-10 z-10"
-        style={{
-          width: "55%",
-          borderBottomRightRadius: "120px",
-        }}
+        style={{ width: "55%", borderBottomRightRadius: "120px" }}
       >
         {/* Header */}
         <div className="flex items-center justify-between mb-10 px-8">
           <img
-            src="/public/images/Dirac Systems.png"
+            src="/images/Dirac Systems.png"
             alt="Dirac Systems"
             className="h-8 w-auto"
-          />          
-          <nav className="hidden md:flex gap-10 relative ml-auto mr-[30%]   md:mr-[16%] font-weight[700]">
-            <a href="/" className="text-[#0074d9] font-medium hover:underline ">
+          />
+          <nav className="hidden md:flex gap-10 relative ml-auto mr-[30%] md:mr-[16%] font-weight[700]">
+            <a href="/" className="text-[#0074d9] font-medium hover:underline">
               Home
             </a>
 
-            {/* About Us Dropdown */}
             <div className="relative group">
-
               <span className="cursor-pointer text-[#0074d9] font-medium">
-
                 <a href="/about" className="block">
                   About Us
                 </a>
@@ -52,13 +45,22 @@ const FawryHeaderHero: React.FC = () => {
                 className="absolute left-0 top-full mt-2 w-48 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 transition-all duration-300"
                 style={{ backgroundColor: "#0074d9" }}
               >
-                <a href="/career" className="block py-2 px-4 text-[#fff] hover:text-[#00699c] hover:bg-[#fff]">
+                <a
+                  href="/career"
+                  className="block py-2 px-4 text-white hover:text-[#00699c] hover:bg-white"
+                >
                   Career
                 </a>
-                <a href="/clients" className="block py-2 text-[#fff] px-4 hover:text-[#00699c] hover:bg-[#fff]">
+                <a
+                  href="/clients"
+                  className="block py-2 px-4 text-white hover:text-[#00699c] hover:bg-white"
+                >
                   Our Clients
                 </a>
-                <a href="/partner" className="block py-2 text-[#fff] px-4 hover:text-[#00699c] hover:bg-[#fff]">
+                <a
+                  href="/partner"
+                  className="block py-2 px-4 text-white hover:text-[#00699c] hover:bg-white"
+                >
                   Our Partners
                 </a>
               </div>
@@ -78,34 +80,35 @@ const FawryHeaderHero: React.FC = () => {
             </a>
           </nav>
         </div>
+
         {/* Hero Text */}
-        <div className=" py-12 px-6 md:px-16 text-gray-900">
+        <div className="py-12 px-6 md:px-16 text-gray-900">
           <div className="max-w-4xl mx-auto px-4 py-12 space-y-6 text-center md:text-left">
-            {/* Title */}
             <h1 className="text-3xl md:text-4xl font-extrabold text-orange-600">
               Dirac Systems:
             </h1>
 
-            {/* Headline */}
-            <p className="text-xl md:text-2xl  text-[#2e3d49] leading-snug">
-              - Driving Digital Evolution<br />
+            <p className="text-xl md:text-2xl text-[#2e3d49] leading-snug">
+              - Driving Digital Evolution
+              <br />
               - Powering the Digital Shift
             </p>
 
-            {/* Subheadline */}
             <p className="text-lg md:text-xl text-[#020405] font-medium">
               Transforming Visions into Digital Realities
-            </p>     
+            </p>
           </div>
+
           <div className="flex gap-4">
             <button className="bg-[#0074d9] text-white px-6 py-3 rounded-md font-semibold shadow hover:bg-[#005fa3] transition">
               Get a Quote
             </button>
-            <button className="bg-white text-[#0074d9] border border-[#0074d9] px-6 py-3 rounded-md font-semibold shadow hover:bg-[#ffe066] transition"
+            <button
+              className="bg-white text-[#0074d9] border border-[#0074d9] px-6 py-3 rounded-md font-semibold shadow hover:bg-[#ffe066] transition"
               onClick={() => {
                 const link = document.createElement("a");
                 link.href = "/files/Dirac_Co.Profile.pdf";
-                link.download = "CompanyProfile.pdf"; // name for the downloaded file
+                link.download = "CompanyProfile.pdf";
                 link.click();
               }}
             >
@@ -122,72 +125,104 @@ const FawryHeaderHero: React.FC = () => {
         </div>
 
         {/* Carousel */}
- <div className="relative w-[90%] h-[300px] md:w-[125%] md:h-[300px] flex items-center justify-center overflow-hidden rounded-tl-[80px] shadow-2xl bg-white z-20 xl:h-[450px]">
-  {/* Carousel Image */}
-  <img
-    src={carouselImages[current]}
-    alt={`Slide ${current + 1}`}
-    className="w-full h-full object-cover"
-  />
+        <div className="relative w-[90%] h-[300px] md:w-[125%] md:h-[300px] flex items-center justify-center overflow-hidden rounded-tl-[80px] shadow-2xl bg-white z-20 xl:h-[450px]">
+          <img
+            src={carouselImages[current]}
+            alt={`Slide ${current + 1}`}
+            className="w-full h-full object-cover"
+          />
 
-  {/* Text Overlay with backdrop blur */}
-  <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-30 text-center w-[90%]">
-    <div className="inline-block px-6 py-4 bg-white/30 backdrop-blur-md rounded-xl text-black shadow-lg space-y-2">
-      {current === 0 && (
-        <>
-          <h2 className="text-2xl font-bold">ERP System:</h2>
-          <p className="text-lg">One System, Infinite Possibilities</p>
-        </>
-      )}
-      {current === 1 && (
-        <>
-          <h2 className="text-2xl font-bold">SaaS Solutions:</h2>
-          <p className="text-lg">Manage More. Spend Less. Start Now</p>
-        </>
-      )}
-      {current === 2 && (
-        <>
-          <h2 className="text-2xl font-bold">Digital Transformation:</h2>
-          <p className="text-lg">Digitally Driven, Future Focused</p>
-        </>
-      )}
-    </div>
-  </div>
+          {/* Stylish Text Overlay */}
+          <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-30 text-center w-[90%]">
+            <div className="inline-block px-8 py-6 bg-black/60 rounded-xl text-white shadow-2xl space-y-2">
+              {current === 0 && (
+                <>
+                  <h2 className="text-3xl font-extrabold tracking-tight">
+                    ERP System:
+                  </h2>
+                  <p className="text-lg font-medium">
+                    One System, Infinite Possibilities
+                  </p>
+                </>
+              )}
+              {current === 1 && (
+                <>
+                  <h2 className="text-3xl font-extrabold tracking-tight">
+                    SaaS Solutions:
+                  </h2>
+                  <p className="text-lg font-medium">
+                    Manage More. Spend Less. Start Now
+                  </p>
+                </>
+              )}
+              {current === 2 && (
+                <>
+                  <h2 className="text-3xl font-extrabold tracking-tight">
+                    Digital Transformation:
+                  </h2>
+                  <p className="text-lg font-medium">
+                    Digitally Driven, Future Focused
+                  </p>
+                </>
+              )}
+            </div>
+          </div>
 
-  {/* Carousel Indicators */}
-  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-    {carouselImages.map((_, idx) => (
-      <button
-        key={idx}
-        onClick={() => setCurrent(idx)}
-        className={`w-3 h-3 rounded-full border border-[#0074d9] ${current === idx ? "bg-[#0074d9]" : "bg-white"}`}
-        aria-label={`Go to slide ${idx + 1}`}
-      />
-    ))}
-  </div>
-</div>
+          {/* Indicators */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+            {carouselImages.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrent(idx)}
+                className={`w-3 h-3 rounded-full border border-[#0074d9] ${
+                  current === idx ? "bg-[#0074d9]" : "bg-white"
+                }`}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
+            ))}
+          </div>
+        </div>
 
-
+        {/* New Arrow Buttons with SVG */}
         <div className="flex gap-6 mt-6">
+          {/* Left Arrow */}
           <button
             onClick={() =>
               setCurrent(
                 (prev) => (prev - 1 + carouselImages.length) % carouselImages.length
               )
             }
-            className="bg-white text-[#0074d9] p-3 rounded-full border border-[#ffd300] shadow hover:bg-[#ffe066] z-30"
+            className="bg-[#ffd300] hover:bg-[#ffcc00] transition-all duration-300 p-4 rounded-full shadow-lg border-2 border-white z-30"
             aria-label="Previous"
           >
-            &#8592;
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6 text-black"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
           </button>
+
+          {/* Right Arrow */}
           <button
-            onClick={() =>
-              setCurrent((prev) => (prev + 1) % carouselImages.length)
-            }
-            className="bg-white text-[#0074d9] p-3 rounded-full border border-[#ffd300] shadow hover:bg-[#ffe066] z-30"
+            onClick={() => setCurrent((prev) => (prev + 1) % carouselImages.length)}
+            className="bg-[#ffd300] hover:bg-[#ffcc00] transition-all duration-300 p-4 rounded-full shadow-lg border-2 border-white z-30"
             aria-label="Next"
           >
-            &#8594;
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6 text-black"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
           </button>
         </div>
       </div>

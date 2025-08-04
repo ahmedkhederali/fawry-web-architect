@@ -17,7 +17,7 @@ const PartnersSection = () => {
     { id: 7,  icon: '/icons/virtual-cfo.png' }
   ];
 
- 
+  
   return (
     <section className="py-20 bg-gray-50 w-full">
       <div className="text-center mb-16">
@@ -29,8 +29,8 @@ const PartnersSection = () => {
         </p>
       </div>
 
-      <div className=" mx-auto px-4">
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-8">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
           {partners.map((partner) => (
             <div
               key={partner.id}
@@ -45,6 +45,7 @@ const PartnersSection = () => {
             </div>
           ))}
         </div>
+        
       </div>
     </section>
   );
