@@ -5,43 +5,36 @@ const timeline = [
     year: "2012–2014",
     title: "DIRAC Systems Established",
     desc: "Dirac Systems was officially established in 2014, based on a team that had been developing systems since 2012.",
-    icon: "🏢",
   },
   {
     year: "2016",
     title: "Digital Payment Integrations",
     desc: "Became a leading company in enabling electronic integration for digital payments with Fawry and major Egyptian entities.",
-    icon: "💳",
   },
   {
     year: "2017",
     title: "ERP & Outsourcing Services Launched",
     desc: "Launched the first ERP system for corrugated carton factories and introduced outsourcing services to Gulf countries.",
-    icon: "📦",
   },
   {
     year: "2019",
     title: "Digital Transformation Projects",
     desc: "Expanded into digital transformation projects both locally and internationally.",
-    icon: "🌐",
   },
   {
     year: "2020",
     title: "Strategic Partnership with Fawry",
     desc: "Formed a strategic SaaS partnership with Fawry, which acquired a 51% stake in Dirac.",
-    icon: "🤝",
   },
   {
     year: "2023",
     title: "Launch of Fawry Business HR",
     desc: "Official launch of the HR system under Fawry Business.",
-    icon: "🧑‍💼",
   },
   {
     year: "2024",
     title: "Launch of Fawry Business Accounting",
     desc: "Expanded the platform with the launch of Fawry Business Accounting system.",
-    icon: "📊",
   },
 ]
 

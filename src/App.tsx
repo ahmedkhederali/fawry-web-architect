@@ -22,6 +22,7 @@ import AboutHeroSection from "./pages/AboutUspage/AboutHeroSection";
 import AboutTimeLineSection from "./pages/AboutUspage/AboutTimeLineSection";
 import ClientsSection from "./components/ClientsSection";
 import WhyDirac from "./pages/AboutUspage/WhyDirac";
+import HeaderSection from "./pages/AboutUspage/headerSection";
 
 const queryClient = new QueryClient();
 
@@ -37,9 +38,10 @@ const App = () => (
             <Route path="/about" element={
               <>
                 <Header />
-                <AboutHeroSection />
+                <HeaderSection/>
                 <AboutTimeLineSection />
                 <WhyDirac />
+                <AboutHeroSection />
                 {/*<ClientsSection />*/}
                 <Footer />
               </>} />
