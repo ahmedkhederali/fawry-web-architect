@@ -115,7 +115,7 @@ As we continue to expand our offerings—including the recent launches of the Fa
             className={`transition-transform duration-1000 opacity-0 translate-x-[80px] will-change-transform lg:col-start-2 lg:order-2`}
           >
             <video
-              src="/public/icons/Software Development.mp4"
+              src="/icons/Software Development.mp4"
               controls
               autoPlay
               muted

@@ -27,7 +27,7 @@ const Product = () => (
   <>
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-bold mb-10 text-secondary text-center">Our Products</h1>
+        <h1 className="text-3xl font-bold mb-10 text-secondary text-center">Business Line</h1>
         <div className="grid md:grid-cols-3 gap-8">
           {products.map((product) => (
             <div key={product.id} className="bg-gray-50 rounded-lg shadow hover:shadow-lg transition p-6 flex flex-col">

@@ -31,7 +31,7 @@ const translations = {
     aboutExperience: 'With over a decade of experience in the software industry, we have successfully delivered hundreds of projects across various sectors, helping businesses achieve their digital transformation goals.',
     aboutProjects: 'Projects Completed',
     aboutClients: 'Happy Clients',
-    productsTitle: 'Our Products',
+    productsTitle: 'Business Line',
     clientsTitle: 'Our Trusted Clients',
     partnersTitle: 'Our Partners',
     testimonialsTitle: 'What Our Clients Say',
