@@ -9,11 +9,11 @@ const Footer = () => {
           {/* Left: Logo & Description */}
           <div className="flex-1 min-w-[220px] mb-8 lg:mb-0">
             <div className="flex items-center gap-2 mb-4">
-              <img
-                src="/images/DiracSystems.png"
-                alt="Dirac Systems"
-                className="h-8"
-              />
+             <img
+            src="/public/images/DiracSystems.png"
+            alt="Dirac Systems"
+            className="h-12 w-[120px]"
+          />
 
             </div>
             <p className="text-gray-600 mb-4">

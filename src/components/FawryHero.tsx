@@ -26,9 +26,9 @@ const FawryHeaderHero: React.FC = () => {
         {/* Header */}
         <div className="flex items-center justify-between mb-10 px-8">
           <img
-            src="/images/DiracSystems.png"
+            src="/public/images/DiracSystems.png"
             alt="Dirac Systems"
-            className="h-8 w-auto"
+            className="h-12 w-[120px]"
           />
           <nav className="hidden md:flex gap-10 relative ml-auto mr-[30%] md:mr-[16%] font-weight[700]">
             <a href="/" className="text-[#0074d9] font-medium hover:underline">
