@@ -12,17 +12,16 @@ import Career from "./pages/Career";
 import Contact from "./pages/Contact";
 import Clients from "./pages/Clients";
 import Partners from "./pages/Partners";
-import Solutions from "./pages/Solutions";
 import Products from "./pages/Products";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
-import SolutionParent from "./pages/SolutionParent";
-import SolutionChild from "./pages/SolutionChild";
 import AboutHeroSection from "./pages/AboutUspage/AboutHeroSection";
 import AboutTimeLineSection from "./pages/AboutUspage/AboutTimeLineSection";
 import ClientsSection from "./components/ClientsSection";
 import WhyDirac from "./pages/AboutUspage/WhyDirac";
 import HeaderSection from "./pages/AboutUspage/headerSection";
+import Solutions from "./pages/Solutions";
+import SolutionParent from "./pages/SolutionParent";
 
 const queryClient = new QueryClient();
 
@@ -87,13 +86,13 @@ const App = () => (
                 <Footer />
               </>
             } />
-            <Route path="/solutions/:parentId/:childId" element={
+            {/* <Route path="/solutions/:parentId/:childId" element={
               <>
                 <Header />
                 <SolutionChild />
                 <Footer />
               </>
-            } />
+            } /> */}
             <Route path="/products" element={
               <>
                 <Header />

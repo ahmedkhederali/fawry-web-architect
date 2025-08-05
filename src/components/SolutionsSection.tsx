@@ -63,7 +63,7 @@ const SolutionsSection = () => {
                 <div className="absolute inset-0 bg-blue-900/60 group-hover:bg-blue-900/80 transition-all"></div>
                 <div className="absolute bottom-0 left-0 p-6 text-white">
                   <h3 className="text-2xl font-bold mb-2">{solution.title}</h3>
-                  <p className="text-lg font-normal opacity-90">{solution.description}</p>
+                  <p className="text-lg font-normal opacity-90">{solution.min_dec}</p>
                 </div>
               </Link>
             );
