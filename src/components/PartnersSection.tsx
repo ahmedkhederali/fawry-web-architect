@@ -1,51 +1,67 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLanguage } from './LanguageContext';
-
-// Add these colors to your Tailwind config for easy use
-const FAWRY_YELLOW = '#FFD900';
-const FAWRY_BLUE = '#1252A3';
 
 const PartnersSection = () => {
   const { t } = useLanguage();
-  const partners = [
-    { id: 1,  icon: '/icons/bank.png' },
-    { id: 2,  icon: '/icons/cegid.png' },
-    { id: 3,  icon: '/icons/ejada.png' },
-    { id: 4,  icon: '/icons/imc.png' },
-    { id: 5,  icon: '/icons/it.png' },
-    { id: 6,  icon: '/icons/itida.png' },
-    { id: 7,  icon: '/icons/virtual-cfo.png' }
+
+  const firstRow = [
+    '/icons/virtual-cfo.png',
+    '/icons/itida.png',
+    '/icons/it.png',
+    '/icons/bank.png',
+    '/icons/ejada.png',
   ];
 
-  
+  const secondRow = [
+    '/icons/imc.png',
+    '/icons/cegid.png',
+  ];
+
   return (
     <section className="py-20 bg-gray-50 w-full">
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold mb-6 text-secondary animate-fade-in">
-          {t('partnersTitle')}
+        <h2 className="text-4xl font-bold mb-6">
+          <span className="bg-gradient-to-r from-[#FFD900] to-[#1252A3] bg-clip-text text-transparent">
+            {t('partnersTitle')}
+          </span>
         </h2>
-        <p className="text-lg text-gray-600">
+        <p className="text-lg text-[#006b99]">
           Strategic partnerships with industry leaders
         </p>
       </div>
 
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
-          {partners.map((partner) => (
+      <div className="container mx-auto px-4 space-y-10">
+        {/* First row */}
+        <div className="flex flex-wrap justify-center gap-8">
+          {firstRow.map((icon, index) => (
             <div
-              key={partner.id}
-              className="flex flex-col items-center justify-center bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              key={`first-${index}`}
+              className="flex items-center justify-center bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow w-[220px] h-[140px]"
             >
               <img
-                src={partner.icon}  
-                className="w-50 h-50 mb-4 object-contain"
+                src={icon}
+                alt={`partner-${index}`}
+                className="object-contain max-h-full max-w-full"
               />
-              <div className="text-base font-medium text-gray-600 text-center">
-              </div>
             </div>
           ))}
         </div>
-        
+
+        {/* Second row */}
+        <div className="flex flex-wrap justify-center gap-8">
+          {secondRow.map((icon, index) => (
+            <div
+              key={`second-${index}`}
+              className="flex items-center justify-center bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow w-[220px] h-[140px]"
+            >
+              <img
+                src={icon}
+                alt={`partner-${index + 5}`}
+                className="object-contain max-h-full max-w-full"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

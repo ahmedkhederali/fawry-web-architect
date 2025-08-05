@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useLanguage } from "./LanguageContext";
 
-const Counter = ({ end, duration = 2000 }) => {
+const Counter = ({ end, duration = 5000 }) => {
   const [count, setCount] = useState(0);
   useEffect(() => {
     let start = 0;
@@ -79,40 +79,43 @@ As we continue to expand our offerings—including the recent launches of the Fa
           className="grid lg:grid-cols-2 gap-12 items-center"
         >
           {/* === Text Section === */}
-          <div
+        <div
             id="about-text"
-            className={`transition-transform duration-1000 opacity-0 translate-x-[-80px] will-change-transform lg:col-start-1 lg:order-1 ${direction === "rtl" ? "text-right" : "text-left"
-              }`}
+            className="transition-transform duration-1000 opacity-0 translate-x-[-80px]"
           >
-            <h2 className="text-4xl font-bold mb-6 text-[#ffd300]">
-              {t("aboutTitle")}
+            <h2
+              className="text-4xl font-bold mb-6 inline-block bg-clip-text text-transparent"
+              style={{
+                backgroundImage: "linear-gradient(to right, #ffd300, #006b99)",
+              }}
+            >
+              About Our Company
             </h2>
 
-            <div
-              ref={textRef}
-              className={`text-secondary text-base leading-relaxed font-sans tracking-wide transition-all duration-500 
-              ${expanded
-                  ? "max-h-none"
-                  : "md:max-h-[250px] md:overflow-hidden"
-                }`}
-            >
-              {diracDescription}
-            </div>
+   <div
+  ref={textRef}
+  className={`text-[#006b99] text-base leading-relaxed font-sans tracking-wide text-justify transition-all duration-500 ${
+    expanded ? "" : "line-clamp-6"
+  }`}
+>
+  {diracDescription}
+</div>
 
-            {showButton && (
-              <button
-                className="mt-4 text-[#ffd300] font-semibold hover:underline"
-                onClick={() => setExpanded(!expanded)}
-              >
-                {expanded ? "Show Less" : "Read More"}
-              </button>
-            )}
-          </div>
 
-          {/* === Video Section === */}
+{showButton && (
+  <button
+    className="mt-4 text-[#ffd300] font-semibold hover:underline"
+    onClick={() => setExpanded(!expanded)}
+  >
+    {expanded ? "Show Less" : "Read More"}
+  </button>
+)}
+</div>
+
+          {/* === Video === */}
           <div
             id="about-video"
-            className={`transition-transform duration-1000 opacity-0 translate-x-[80px] will-change-transform lg:col-start-2 lg:order-2`}
+            className="transition-transform duration-1000 opacity-0 translate-x-[80px]"
           >
             <video
               src="/icons/Software Development.mp4"
@@ -132,26 +135,26 @@ As we continue to expand our offerings—including the recent launches of the Fa
               <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={800} duration={1500} />+
               </h3>
-              <p className="text-secondary">Active Customers</p>
+              <p className="text-secondary font-bold">Active Customers</p>
             </div>
             <div className="text-center">
               <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={15} duration={1200} />+
               </h3>
-              <p className="text-secondary">Strategic Partners</p>
+              <p className="text-secondary font-bold">Power Partnerships</p>
             </div>
             <div className="text-center">
               <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={3000} duration={1800} />+
               </h3>
-              <p className="text-secondary">Product Demos Delivered</p>
+              <p className="text-secondary font-bold">Dynamic Demos</p>
             </div>
             <div className="text-center">
               <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={25000} duration={2000} />+
               </h3>
-              <p className="text-secondary">
-                System Users Across All Platforms
+              <p className="text-secondary font-bold">
+                User Ecosystem
               </p>
             </div>
           </div>

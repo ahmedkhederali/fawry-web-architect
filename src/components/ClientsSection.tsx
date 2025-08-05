@@ -33,13 +33,16 @@ const ClientsSection = () => {
     <section className="py-20 bg-white">
       <div className=" mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6 text-secondary animate-fade-in">
-            {t('clientsTitle')}
-          </h2>
-          <p className="text-lg text-gray-600">
-            Trusted by leading companies worldwide
-          </p>
-        </div>
+  <h2 className="text-4xl font-bold mb-6 animate-fade-in">
+    <span className="bg-gradient-to-r from-[#FFD900] to-[#1252A3] bg-clip-text text-transparent">
+      {t('clientsTitle')}
+    </span>
+  </h2>
+  <p className="text-lg text-[#006b99]">
+    Trusted by leading companies worldwide
+  </p>
+</div>
+
 
         <div className="relative overflow-hidden">
           <div className="flex animate-infinite-scroll">

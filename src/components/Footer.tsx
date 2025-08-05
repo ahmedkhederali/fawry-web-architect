@@ -10,17 +10,24 @@ const Footer = () => {
           <div className="flex-1 min-w-[220px] mb-8 lg:mb-0">
             <div className="flex items-center gap-2 mb-4">
              <img
-            src="/images/DiracSystems.png"
-            alt="Dirac Systems"
-            className="h-12 w-[120px]"
-          />
-
+                src="/images/DiracSystems.png"
+                alt="Dirac Systems"
+                className="
+                  h-12 w-[120px]
+                  rounded-xl
+                  shadow-[0_8px_20px_rgba(0,0,0,0.35)]
+                  border-2 border-white
+                  transform
+                  bg-white
+                "
+              />
             </div>
-            <p className="text-gray-600 mb-4">
-              Dirac Systems empowers teams to transform raw data into clear,
-              compelling visuals — making insights easier to share, understand, and
-              act on.
-            </p>
+           <p className="text-gray-600 mb-4 text-justify">
+  Dirac Systems empowers teams to transform raw data into clear,
+  compelling visuals — making insights easier to share, understand, and
+  act on.
+</p>
+
             {/* Social Media Icons */}
             <div className="flex space-x-4 mt-4">
               <a

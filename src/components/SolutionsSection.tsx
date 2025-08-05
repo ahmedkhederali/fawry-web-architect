@@ -13,14 +13,19 @@ const SolutionsSection = () => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6 text-secondary animate-fade-in">
-            {t('productsTitle')}
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive software solutions tailored to meet your business needs and drive growth.
-          </p>
-        </div>
+       <div className="text-center mb-16">
+  {/* Title with gradient like About Us */}
+  <h2 className="text-4xl font-bold mb-6 animate-fade-in">
+    <span className="bg-gradient-to-r from-[#ffd300] to-[#006b99] bg-clip-text text-transparent">
+      {t('productsTitle')}
+    </span>
+  </h2>
+
+  {/* Paragraph text in Fawry Blue */}
+  <p className="text-lg text-[#006b99] max-w-2xl mx-auto">
+    Comprehensive software solutions tailored to meet your business needs and drive growth.
+  </p>
+</div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-6 max-w-7xl mx-auto">
           {solutions.map((solution, index) => {

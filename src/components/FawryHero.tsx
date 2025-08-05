@@ -28,38 +28,47 @@ const FawryHeaderHero: React.FC = () => {
           <img
             src="/images/DiracSystems.png"
             alt="Dirac Systems"
-            className="h-12 w-[120px]"
+            className="
+              h-12 w-[120px]
+              rounded-xl
+              shadow-[0_8px_20px_rgba(0,0,0,0.35)]
+              border-2 border-white
+              transform
+              hover:scale-105 hover:-translate-y-1
+              transition-all duration-500 ease-in-out
+              bg-white
+            "
           />
           <nav className="hidden md:flex gap-10 relative ml-auto mr-[30%] md:mr-[16%] font-weight[700]">
-            <a href="/" className="text-[#0074d9] font-medium hover:underline">
+            <a href="/" className="text-[#006b99] font-medium hover:underline">
               Home
             </a>
 
             <div className="relative group">
-              <span className="cursor-pointer text-[#0074d9] font-medium">
+              <span className="cursor-pointer text-[#006b99] font-medium">
                 <a href="/about" className="block">
                   About Us
                 </a>
               </span>
               <div
                 className="absolute left-0 top-full mt-2 w-48 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 transition-all duration-300"
-                style={{ backgroundColor: "#0074d9" }}
+                style={{ backgroundColor: "#006b99" }}
               >
                 <a
                   href="/career"
-                  className="block py-2 px-4 text-white hover:text-[#00699c] hover:bg-white"
+                  className="block py-2 px-4 text-white hover:text-[#006b99] hover:bg-white"
                 >
                   Career
                 </a>
                 <a
                   href="/clients"
-                  className="block py-2 px-4 text-white hover:text-[#00699c] hover:bg-white"
+                  className="block py-2 px-4 text-white hover:text-[#006b99] hover:bg-white"
                 >
                   Our Clients
                 </a>
                 <a
                   href="/partner"
-                  className="block py-2 px-4 text-white hover:text-[#00699c] hover:bg-white"
+                  className="block py-2 px-4 text-white hover:text-[#006b99] hover:bg-white"
                 >
                   Our Partners
                 </a>
@@ -68,13 +77,13 @@ const FawryHeaderHero: React.FC = () => {
 
             <a
               href="/products"
-              className="text-[#0074d9] font-medium hover:underline"
+              className="text-[#006b99] font-medium hover:underline"
             >
               Products
             </a>
             <a
               href="/blog"
-              className="text-[#0074d9] font-medium hover:underline"
+              className="text-[#006b99] font-medium hover:underline"
             >
               Blog
             </a>
@@ -82,45 +91,55 @@ const FawryHeaderHero: React.FC = () => {
         </div>
 
         {/* Hero Text */}
-        <div className="py-12 px-6 md:px-16 text-gray-900">
-          <div className="max-w-4xl mx-auto px-4 py-12 space-y-6 text-center md:text-left">
-            <h1 className="text-3xl md:text-4xl font-extrabold text-orange-600">
-              Dirac Systems:
-            </h1>
-
-            <p className="text-xl md:text-2xl text-[#2e3d49] leading-snug">
-              - Driving Digital Evolution
-              <br />
-              - Powering the Digital Shift
-            </p>
-
-            <p className="text-lg md:text-xl text-[#020405] font-medium">
-              Transforming Visions into Digital Realities
-            </p>
-          </div>
-
-          <div className="flex gap-4">
-            <button className="bg-[#0074d9] text-white px-6 py-3 rounded-md font-semibold shadow hover:bg-[#005fa3] transition">
-              Get a Quote
-            </button>
-            <button
-              className="bg-white text-[#0074d9] border border-[#0074d9] px-6 py-3 rounded-md font-semibold shadow hover:bg-[#ffe066] transition"
-              onClick={() => {
-                const link = document.createElement("a");
-                link.href = "/files/Dirac_Co.Profile.pdf";
-                link.download = "CompanyProfile.pdf";
-                link.click();
-              }}
-            >
-              Download Company Profile
-            </button>
-          </div>
+       {/* Hero Text */}
+      <div className="flex-1 px-6 md:px-16 text-gray-900 flex flex-col justify-center">
+        <div className="max-w-4xl px-4 py-8 space-y-6 text-center md:text-left">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-[#006b99]">
+            Dirac Systems:
+          </h1>
+          <p className="text-xl md:text-2xl text-[#006b99] leading-snug">
+            Driving Digital Evolution
+            <span> Powering the Digital Shift</span>
+          </p>
         </div>
+        <div className="flex gap-4 mt-4 px-4">
+          <button className="bg-[#006b99] text-[#ffd300] px-6 py-3 rounded-md font-semibold shadow hover:bg-[#005fa3] transition">
+            Get a Quote
+          </button>
+       <button
+        className="flex items-center gap-2 bg-white text-[#006b99] border border-[#0074d9] px-6 py-3 rounded-md shadow hover:bg-[#ffe066] transition"
+        onClick={() => {
+          const link = document.createElement("a");
+          link.href = "/files/Dirac_Co.Profile.pdf";
+          link.download = "CompanyProfile.pdf";
+          link.click();
+        }}
+        aria-label="Download Company Profile"
+      >
+        <span className="font-semibold">Company Profile</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"
+          />
+        </svg>
+      </button>
+        </div>
+      </div>
+
       </div>
 
       {/* Blue Side */}
       <div className="relative flex flex-col items-center justify-center w-full md:w-[45%] mt-8 md:mt-0">
-        <div className="absolute top-8 right-8 text-white font-semibold">
+        <div className="absolute top-8 right-8 text-[#ffd300] font-semibold">
           +20 123-456-789
         </div>
 
@@ -147,17 +166,17 @@ const FawryHeaderHero: React.FC = () => {
               )}
               {current === 1 && (
                 <>
-                  <h2 className="text-3xl font-extrabold tracking-tight">
+                  <h2 className="text-3xl font-extrabold tracking-tight ">
                     SaaS Solutions:
                   </h2>
                   <p className="text-lg font-medium">
-                    Manage More. Spend Less. Start Now
+                    Manage More, Spend Less and Start Now
                   </p>
                 </>
               )}
               {current === 2 && (
                 <>
-                  <h2 className="text-3xl font-extrabold tracking-tight">
+                  <h2 className="text-3xl font-extrabold tracking-tight ">
                     Digital Transformation:
                   </h2>
                   <p className="text-lg font-medium">
@@ -174,8 +193,8 @@ const FawryHeaderHero: React.FC = () => {
               <button
                 key={idx}
                 onClick={() => setCurrent(idx)}
-                className={`w-3 h-3 rounded-full border border-[#0074d9] ${
-                  current === idx ? "bg-[#0074d9]" : "bg-white"
+                className={`w-3 h-3 rounded-full border border-[#006b99] ${
+                  current === idx ? "bg-[#006b99]" : "bg-white"
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
@@ -192,12 +211,12 @@ const FawryHeaderHero: React.FC = () => {
                 (prev) => (prev - 1 + carouselImages.length) % carouselImages.length
               )
             }
-            className="bg-[#ffd300] hover:bg-[#ffcc00] transition-all duration-300 p-4 rounded-full shadow-lg border-2 border-white z-30"
+            className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-4 rounded-full shadow-lg border-2 border-white z-30"
             aria-label="Previous"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 text-black"
+              className="w-6 h-6 text-[#006b99]"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -210,12 +229,12 @@ const FawryHeaderHero: React.FC = () => {
           {/* Right Arrow */}
           <button
             onClick={() => setCurrent((prev) => (prev + 1) % carouselImages.length)}
-            className="bg-[#ffd300] hover:bg-[#ffcc00] transition-all duration-300 p-4 rounded-full shadow-lg border-2 border-white z-30"
+            className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-4 rounded-full shadow-lg border-2 border-white z-30"
             aria-label="Next"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 text-black"
+              className="w-6 h-6 text-[#006b99]"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

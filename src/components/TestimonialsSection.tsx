@@ -87,11 +87,14 @@ const TestimonialsSection = () => {
   return (
     <section className="py-20 bg-gray-50 overflow-hidden w-full">
       <div className="px-4 mb-16">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6 text-secondary animate-fade-in">
-            {t ? t('testimonialsTitle') : "What Our Clients Say"}
-          </h2>
-        </div>
+       <div className="text-center">
+  <h2 className="text-4xl font-bold mb-6 animate-fade-in">
+    <span className="bg-gradient-to-r from-[#FFD900] to-[#1252A3] bg-clip-text text-transparent">
+      {t ? t('testimonialsTitle') : "What Our Clients Say"}
+    </span>
+  </h2>
+</div>
+
       </div>
       <div className="relative flex items-center w-full">
         {/* Left Arrow */}
