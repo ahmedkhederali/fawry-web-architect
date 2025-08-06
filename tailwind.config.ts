@@ -26,11 +26,11 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: 'rgb(255, 212, 0)', /* Yellow #FFD400 */
+					DEFAULT: '#ffd300', /* Yellow #ffd300 */
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
-					DEFAULT: '#00699c', /* Blue #00699c */
+					DEFAULT: '#006b99', /* Blue #006b99 */
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
 				destructive: {

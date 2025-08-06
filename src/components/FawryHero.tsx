@@ -25,18 +25,20 @@ const FawryHeaderHero: React.FC = () => {
       >
         {/* Header */}
         <div className="flex items-center justify-between mb-10 px-8">
-          <img
+         <img
             src="/images/DiracSystems.png"
             alt="Dirac Systems"
             className="
-              h-12 w-[120px]
-              rounded-xl
-              shadow-[0_8px_20px_rgba(0,0,0,0.35)]
-              border-2 border-white
-              transform
-              hover:scale-105 hover:-translate-y-1
-              transition-all duration-500 ease-in-out
-              bg-white
+              h-auto 
+              w-[110px] 
+              rounded-xl 
+              shadow-lg 
+              border-4 border-white 
+              transform 
+              hover:scale-105 hover:-translate-y-1 
+              transition-all duration-500 ease-in-out 
+              bg-white 
+              object-contain
             "
           />
           <nav className="hidden md:flex gap-10 relative ml-auto mr-[30%] md:mr-[16%] font-weight[700]">
@@ -153,7 +155,7 @@ const FawryHeaderHero: React.FC = () => {
 
           {/* Stylish Text Overlay */}
           <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-30 text-center w-[90%]">
-            <div className="inline-block px-8 py-6 bg-black/60 rounded-xl text-white shadow-2xl space-y-2">
+            <div className="inline-block px-8 py-6 bg-black/60 rounded-xl text-white shadow-2xl space-y-2 text-start">
               {current === 0 && (
                 <>
                   <h2 className="text-3xl font-extrabold tracking-tight">

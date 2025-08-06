@@ -10,17 +10,18 @@ const Footer = () => {
           <div className="flex-1 min-w-[220px] mb-8 lg:mb-0">
             <div className="flex items-center gap-2 mb-4">
              <img
-                src="/images/DiracSystems.png"
-                alt="Dirac Systems"
-                className="
-                  h-12 w-[120px]
-                  rounded-xl
-                  shadow-[0_8px_20px_rgba(0,0,0,0.35)]
-                  border-2 border-white
-                  transform
-                  bg-white
-                "
-              />
+            src="/images/DiracSystems.png"
+            alt="Dirac Systems"
+            className="
+              h-auto 
+              w-[110px] 
+              rounded-xl 
+              shadow-lg 
+              border-4 border-white
+              bg-white 
+              object-contain
+            "
+          />
             </div>
            <p className="text-gray-600 mb-4 text-justify">
   Dirac Systems empowers teams to transform raw data into clear,

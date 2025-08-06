@@ -30,18 +30,18 @@ const PartnersSection = () => {
         </p>
       </div>
 
-      <div className="container mx-auto px-4 space-y-10">
+      <div className=" mx-auto px-4 space-y-10">
         {/* First row */}
         <div className="flex flex-wrap justify-center gap-8">
           {firstRow.map((icon, index) => (
             <div
               key={`first-${index}`}
-              className="flex items-center justify-center bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow w-[220px] h-[140px]"
+              className="flex items-center justify-center bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow w-[240px] h-[160px]"
             >
               <img
                 src={icon}
                 alt={`partner-${index}`}
-                className="object-contain max-h-full max-w-full"
+                className="object-contain max-h-[120px] max-w-[180px]"
               />
             </div>
           ))}
@@ -52,13 +52,13 @@ const PartnersSection = () => {
           {secondRow.map((icon, index) => (
             <div
               key={`second-${index}`}
-              className="flex items-center justify-center bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow w-[220px] h-[140px]"
+              className="flex items-center justify-center bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow w-[240px] h-[160px]"
             >
-              <img
-                src={icon}
-                alt={`partner-${index + 5}`}
-                className="object-contain max-h-full max-w-full"
-              />
+             <img
+              src={icon}
+              alt={`partner-${index + 5}`}
+              className="object-contain max-h-[120px] max-w-[180px]"
+            />
             </div>
           ))}
         </div>

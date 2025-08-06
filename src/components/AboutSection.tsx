@@ -91,26 +91,12 @@ As we continue to expand our offerings—including the recent launches of the Fa
             >
               About Our Company
             </h2>
-
-   <div
-  ref={textRef}
-  className={`text-[#006b99] text-base leading-relaxed font-sans tracking-wide text-justify transition-all duration-500 ${
-    expanded ? "" : "line-clamp-6"
-  }`}
->
-  {diracDescription}
-</div>
-
-
-{showButton && (
-  <button
-    className="mt-4 text-[#ffd300] font-semibold hover:underline"
-    onClick={() => setExpanded(!expanded)}
-  >
-    {expanded ? "Show Less" : "Read More"}
-  </button>
-)}
-</div>
+            <div
+            ref={textRef}
+            className={`text-[#006b99] text-base leading-relaxed font-sans tracking-wide text-justify transition-all duration-500 `}>
+            {diracDescription}
+          </div>
+          </div>
 
           {/* === Video === */}
           <div
@@ -135,25 +121,25 @@ As we continue to expand our offerings—including the recent launches of the Fa
               <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={800} duration={1500} />+
               </h3>
-              <p className="text-secondary font-bold">Active Customers</p>
+              <p className="text-secondary font-bold text-xl">Active Customers</p>
             </div>
             <div className="text-center">
               <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={15} duration={1200} />+
               </h3>
-              <p className="text-secondary font-bold">Power Partnerships</p>
+              <p className="text-secondary font-bold text-xl">Powerful Partnerships</p>
             </div>
             <div className="text-center">
               <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={3000} duration={1800} />+
               </h3>
-              <p className="text-secondary font-bold">Dynamic Demos</p>
+              <p className="text-secondary font-bold text-xl">Dynamic Demos</p>
             </div>
             <div className="text-center">
               <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={25000} duration={2000} />+
               </h3>
-              <p className="text-secondary font-bold">
+              <p className="text-secondary font-bold text-xl">
                 User Ecosystem
               </p>
             </div>

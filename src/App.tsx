@@ -38,9 +38,10 @@ const App = () => (
               <>
                 <Header />
                 <HeaderSection/>
+                <AboutHeroSection />
                 <AboutTimeLineSection />
                 <WhyDirac />
-                <AboutHeroSection />
+                {/* <AboutHeroSection /> */}
                 {/*<ClientsSection />*/}
                 <Footer />
               </>} />

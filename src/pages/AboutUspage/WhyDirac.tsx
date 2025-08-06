@@ -31,25 +31,24 @@ const features = [
 const WhyDirac = () => {
   return (
     <section className="bg-[#f9f9f9] py-16 px-6 md:px-12">
-      <h3 className="text-3xl font-bold text-center text-[#f36c26] mb-12">Why DIRAC?</h3>
+      <h3 className="text-3xl font-bold text-center text-[#006b99] mb-12">Why DIRAC?</h3>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((item, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl p-6 border border-gray-200 shadow-md hover:shadow-xl hover:border-[#f36c26]/50 hover:scale-[1.02] transition-all duration-300"
+            className="bg-white rounded-xl p-6 border border-gray-200 shadow-md hover:shadow-xl hover:border-[#FFD300]/50 hover:scale-[1.02] transition-all duration-300"
           >
             {/* Top bar */}
-            <div className="w-10 h-1 rounded-full bg-[#f36c26] mb-4" />
+            <div className="w-10 h-1 rounded-full bg-[#FFD300] mb-4" />
 
             {/* Title */}
-            <h4 className="text-[#111827] text-lg font-semibold mb-2 flex items-center justify-between">
+            <h4 className="text-[#FFD300] text-lg font-semibold mb-2 flex items-center justify-between">
               {item.title}
-              <span className="text-[#f36c26] text-xl ml-2">&rsaquo;</span>
             </h4>
 
             {/* Description */}
-            <p className="text-[#4b5563] text-sm leading-relaxed">{item.description}</p>
+            <p className="text-[#006b99] text-sm leading-relaxed">{item.description}</p>
           </div>
         ))}
       </div>
