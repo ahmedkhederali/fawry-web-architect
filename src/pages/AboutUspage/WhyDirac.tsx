@@ -31,26 +31,47 @@ const features = [
 const WhyDirac = () => {
   return (
     <section className="bg-[#f9f9f9] py-16 px-6 md:px-12">
-      <h3 className="text-3xl font-bold text-center text-[#006b99] mb-12">Why DIRAC?</h3>
+      <h3 className="text-3xl font-bold text-center text-[#006b99] mb-12">
+        Why DIRAC?
+      </h3>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {features.map((item, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-xl p-6 border border-gray-200 shadow-md hover:shadow-xl hover:border-[#FFD300]/50 hover:scale-[1.02] transition-all duration-300"
-          >
-            {/* Top bar */}
-            <div className="w-10 h-1 rounded-full bg-[#FFD300] mb-4" />
+      {/* Grid container */}
+      <div className="max-w-7xl mx-auto space-y-8">
+        {/* First row - 3 cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.slice(0, 3).map((item, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl p-6 border border-gray-200 shadow-md hover:shadow-xl hover:border-[#FFD300]/50 hover:scale-[1.02] transition-all duration-300"
+            >
+              <div className="w-10 h-1 rounded-full bg-[#FFD300] mb-4" />
+              <h4 className="text-[#FFD300] text-lg font-semibold mb-2">
+                {item.title}
+              </h4>
+              <p className="text-[#006b99] text-sm leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
 
-            {/* Title */}
-            <h4 className="text-[#FFD300] text-lg font-semibold mb-2 flex items-center justify-between">
-              {item.title}
-            </h4>
-
-            {/* Description */}
-            <p className="text-[#006b99] text-sm leading-relaxed">{item.description}</p>
-          </div>
-        ))}
+        {/* Second row - center 2 cards */}
+        <div className="flex flex-col lg:flex-row justify-center gap-8">
+          {features.slice(3).map((item, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl p-6 border border-gray-200 shadow-md hover:shadow-xl hover:border-[#FFD300]/50 hover:scale-[1.02] transition-all duration-300 w-full lg:w-[32%]"
+            >
+              <div className="w-10 h-1 rounded-full bg-[#FFD300] mb-4" />
+              <h4 className="text-[#FFD300] text-lg font-semibold mb-2">
+                {item.title}
+              </h4>
+              <p className="text-[#006b99] text-sm leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
