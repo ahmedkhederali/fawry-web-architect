@@ -73,7 +73,7 @@ As we continue to expand our offerings—including the recent launches of the Fa
 
   return (
     <section className="py-20 bg-white" id="about">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-16">
         <div
           key={direction}
           className="grid lg:grid-cols-2 gap-12 items-center"

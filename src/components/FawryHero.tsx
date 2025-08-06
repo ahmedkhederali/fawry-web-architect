@@ -95,15 +95,26 @@ const FawryHeaderHero: React.FC = () => {
         {/* Hero Text */}
        {/* Hero Text */}
       <div className="flex-1 px-6 md:px-16 text-gray-900 flex flex-col justify-center">
-        <div className="max-w-4xl px-4 py-8 space-y-6 text-center md:text-left">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-[#006b99]">
-            Dirac Systems:
-          </h1>
-          <p className="text-xl md:text-2xl text-[#006b99] leading-snug">
-            Driving Digital Evolution
-            <span> Powering the Digital Shift</span>
-          </p>
-        </div>
+ <div className="max-w-4xl px-4 py-8 space-y-4 text-center md:text-left font-sans">
+  {/* Title */}
+  <h2 className="text-xl md:text-2xl text-[#006b99] px-1 font-semibold tracking-wide">
+    Empowering the Digital Shift
+  </h2>
+  <h1 className="text-3xl md:text-6xl font-bold text-[#006b99]">
+    Dirac Systems
+  </h1>
+
+  {/* Subtitle */}
+  {/* <h2 className="text-xl md:text-2xl text-[#006b99] font-semibold tracking-wide">
+    Empowering the Digital Shift
+  </h2> */}
+
+  {/* Paragraph */}
+  <p className="text-base md:text-lg text-[#006b99] leading-relaxed">
+    Dirac Systems drives digital evolution and operational efficiency with cutting-edge technology solutions tailored to modern business needs.
+  </p>
+</div>
+
         <div className="flex gap-4 mt-4 px-4">
           <button className="bg-[#006b99] text-[#ffd300] px-6 py-3 rounded-md font-semibold shadow hover:bg-[#005fa3] transition">
             Get a Quote
@@ -159,7 +170,7 @@ const FawryHeaderHero: React.FC = () => {
               {current === 0 && (
                 <>
                   <h2 className="text-3xl font-extrabold tracking-tight">
-                    ERP System:
+                    ERP System
                   </h2>
                   <p className="text-lg font-medium">
                     One System, Infinite Possibilities
@@ -169,7 +180,7 @@ const FawryHeaderHero: React.FC = () => {
               {current === 1 && (
                 <>
                   <h2 className="text-3xl font-extrabold tracking-tight ">
-                    SaaS Solutions:
+                    SaaS Solutions
                   </h2>
                   <p className="text-lg font-medium">
                     Manage More, Spend Less and Start Now
@@ -179,7 +190,7 @@ const FawryHeaderHero: React.FC = () => {
               {current === 2 && (
                 <>
                   <h2 className="text-3xl font-extrabold tracking-tight ">
-                    Digital Transformation:
+                    Digital Transformation
                   </h2>
                   <p className="text-lg font-medium">
                     Digitally Driven, Future Focused
@@ -205,47 +216,48 @@ const FawryHeaderHero: React.FC = () => {
         </div>
 
         {/* New Arrow Buttons with SVG */}
-        <div className="flex gap-6 mt-6">
-          {/* Left Arrow */}
-          <button
-            onClick={() =>
-              setCurrent(
-                (prev) => (prev - 1 + carouselImages.length) % carouselImages.length
-              )
-            }
-            className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-4 rounded-full shadow-lg border-2 border-white z-30"
-            aria-label="Previous"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 text-[#006b99]"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
+       <div className="flex justify-center  items-center w-full px-8 mt-6 relative">
+  {/* Left Arrow */}
+  <button
+    onClick={() =>
+      setCurrent(
+        (prev) => (prev - 1 + carouselImages.length) % carouselImages.length
+      )
+    }
+    className="bg-[#ffd300] gap-2 hover:bg-[#f9d853] transition-all duration-300 p-3 rounded-full shadow-lg border-2 border-white z-30"
+    aria-label="Previous"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-4 h-4 text-[#006b99]"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+    </svg>
+  </button>
 
-          {/* Right Arrow */}
-          <button
-            onClick={() => setCurrent((prev) => (prev + 1) % carouselImages.length)}
-            className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-4 rounded-full shadow-lg border-2 border-white z-30"
-            aria-label="Next"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 text-[#006b99]"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
+  {/* Right Arrow */}
+  <button
+    onClick={() => setCurrent((prev) => (prev + 1) % carouselImages.length)}
+    className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-3 rounded-full shadow-lg border-2 border-white z-30"
+    aria-label="Next"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-4 h-4 text-[#006b99]"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+  </button>
+</div>
+
       </div>
     </section>
   );
