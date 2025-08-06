@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 
 const HorizontalTabs = () => {
-  const [active, setActive] = useState("Integration Services");
+  const [active, setActive] = useState("Packaging Industry");
 
   return (
     <div className="container mx-auto px-4 py-8">
