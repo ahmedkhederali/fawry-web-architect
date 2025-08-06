@@ -15,27 +15,18 @@ const solutions = [
         title: 'Enterprise Edition',
         description: 'All-in-one ERP for enterprise business automation.',
         summary: `DIRAC ERP Enterprise Edition is a comprehensive suite of integrated business applications designed to unify and streamline an organization’s planning, manufacturing, sales, and marketing processes within a single, centralized management system. By consolidating departmental data into a unified platform, it provides seamless, real-time access to information across the enterprise—empowering employees at every level to make informed decisions.`,
-        benefits: [
-          { title: 'Financial Management', description: '' },
-          { title: 'Human Resource Management', description: '' },
-          { title: 'Procurement Management', description: '' },
-          { title: 'Supply Chain Management', description: '' },
-          { title: 'Costing Management', description: '' },
-          { title: 'Customer Relationship Management (CRM)', description: '' },
-          { title: 'Manufacturing Management', description: '' },
-          { title: 'Quality Management', description: '' },
-          { title: 'Maintenance Management', description: '' },
-          { title: 'Fleet Management', description: '' },
-          { title: 'Van Sales Management', description: '' },
-        ],
+        "benefits": [
+        { "title": "Increased productivity and efficiency", "description": "" },
+        { "title": "Cost-effective ERP implementation", "description": "" },
+        { "title": "Advanced data analysis and dynamic reporting", "description": "" },
+        { "title": "Fully web-based interface access anytime, anywhere", "description": "" }
+      ],
         logos: [
           
         ],
         DownloadLink: '/files/dirac-enterprise-brochure.pdf',
         isSass: false,
       },
-
-
       {
         id: 'dirapack',
         title: 'DiraPack',
@@ -248,11 +239,138 @@ const solutions = [
         DownloadLink: '/files/diraplast-brochure.pdf',
         isSass: false
       }
-
-
+    ],
+  },
+   {
+    id: 'sass',
+    title: 'SASS Solutions',
+    min_dec: 'SASS Solutions for Business',
+    description: 'SASS Solutions for Business is a suite of software services designed to enhance operational efficiency and drive growth through cloud-based applications.',
+    image: '/products/sass/sass.jpg',
+    span: 'col-span-1 row-span-2',
+      "children": [
+    {
+      "id": "fawryhr",
+      "title": "Fawry Business HR",
+      "description": "Welcome to the ultimate HR management solution in Egypt!",
+      "summary": "Fawry Payday is a comprehensive and user-friendly tool that automates your HR processes and makes your business more efficient. It seamlessly integrates with all your platforms and is compliant with the Egypt Labor Law, ensuring your data is secure.",
+      "benefits": [
+        { "title": "Employee Records Management", "description": "" },
+        { "title": "Payroll Automation", "description": "" },
+        { "title": "Attendance and Leave Tracking", "description": "" },
+        { "title": "Secure Cloud-Based Access", "description": "" }
+      ],
+      "logos": [],
+      "live_img":"/products/sass/payday.jpg",
+      DownloadLink: '/files/dirac-enterprise-brochure.pdf',
+      "isSass": true,
+      pricing: [
+  {
+    title: "Starter",
+    price: "EGP 199 / mo",
+    features: [
+      "Up to 25 employees",
+      "Basic attendance tracking",
+      "Email support",
+    ],
+    cta: "Get Started"
+  },
+  {
+    title: "Business",
+    price: "EGP 399 / mo",
+    features: [
+      "Up to 100 employees",
+      "Advanced attendance",
+      "Request management",
+      "Priority support"
+    ],
+    cta: "Request Demo"
+  },
+  {
+    title: "Enterprise",
+    price: "Custom",
+    features: [
+      "Unlimited employees",
+      "Full system integration",
+      "Dedicated support",
+      "Custom features"
+    ],
+    cta: "Contact Sales"
+  }
+]
+    },
+    {
+      "id": "fawryaccounting",
+      "title": "Fawry Business Accounting",
+      "description": "Online accounting software for managing finances, expenses, and invoicing.",
+      "summary": "Fawry Business Accounting provides a powerful and easy-to-use platform for handling your business finances—track expenses, generate invoices, monitor cash flow, and ensure compliance, all from the cloud.",
+      "benefits": [
+        { "title": "Expense Tracking", "description": "" },
+        { "title": "Invoicing & Billing", "description": "" },
+        { "title": "Cash Flow Management", "description": "" },
+        { "title": "Financial Reporting", "description": "" }
+      ],
+      "logos": [],
+      DownloadLink: '/files/dirac-enterprise-brochure.pdf',
+      "isSass": true
+    }
+  ]
+  },
+  {
+    id: 'vansales',
+    title: 'Van Sales Solutions',
+    min_dec: 'Van Sales Solutions for Business',
+    description: 'Van Sales Solutions for Business is a comprehensive software suite designed to optimize mobile sales operations, streamline inventory management, and enhance customer engagement.',
+    image: '/products/vansales/vansale.png',
+    span: 'col-span-1 row-span-2',
+    children: [
+      {
+      "id": "vansales",
+      "title": "Van Sales application",
+      "description": "Field sales automation with real-time stock and route planning.",
+      "summary": "The Van Sales System covers the entire outdoor sales cycle, ensuring your field sales operations are efficient, accurate, and fully integrated.",
+      "benefits": [
+        { "title": "Van Inventory Management", "description": "" },
+        { "title": "Route Planning", "description": "" },
+        { "title": "Real-Time Stock Visibility", "description": "" },
+        { "title": "On-the-Spot Invoicing", "description": "" },
+        { "title": "Payment Collection", "description": "" },
+        { "title": "Product Returns Handling", "description": "" },
+        { "title": "Customer Stock Audits", "description": "" }
+      ],
+      "logos": [],
+      "DownloadLink": "",
+      "isSass": false
+    }
+    ],
+  },
+  {
+    id: 'digital-transformation',
+    title: 'Digital Transformation',
+    min_dec: 'Digital Transformation Solutions for Business',
+    description: 'Digital Transformation Solutions for Business is a suite of services designed to help organizations leverage technology to improve processes, enhance customer experiences, and drive innovation.',
+    image: '/products/digitalTransformation/Digital-transformation.png',
+    span: 'col-span-2 row-span-1',
+    children: [
+      {
+        id: 'digital-transformation',
+        title: 'Digital Transformation',
+        description: 'Empowering businesses through digital innovation and process automation.',
+        summary: `Our Digital Transformation solutions help businesses leverage technology to streamline operations, enhance customer experiences, and drive innovation. From automating manual processes to implementing advanced analytics, we provide the tools and expertise needed to thrive in the digital age.`,
+        benefits: [
+          { title: 'Process Automation', description: '' },
+          { title: 'Data Analytics', description: '' },
+          { title: 'Customer Experience Enhancement', description: '' },
+          { title: 'Cloud Integration', description: '' }
+        ],
+        logos: [],
+        DownloadLink: '',
+        isSass: false
+      }
     ],
   }
 ];
+
 
 
 export const clientTabs = [

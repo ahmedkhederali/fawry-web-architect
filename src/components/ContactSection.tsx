@@ -7,14 +7,31 @@ declare global {
   }
 }
 
-const ContactSection = () => {
-  const { language, t } = useLanguage(); // assumed lang is 'en' or 'ar'
+interface ContactSectionProps {
+  hubspotFormId?: string; // ✅ formId is passed as a prop
+}
+
+const ContactSection: React.FC<ContactSectionProps> = ({ hubspotFormId }) => {
+  const { language } = useLanguage();
   const formRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    if (!hubspotFormId) return; // ✅ if no formId, exit early
+
     if (formRef.current) {
       formRef.current.innerHTML = '';
     }
+
+    const createForm = () => {
+      if (window.hbspt) {
+        window.hbspt.forms.create({
+          portalId: "140495086",
+          formId: hubspotFormId,
+          region: "eu1",
+          target: '#hubspotForm',
+        });
+      }
+    };
 
     if (!window.hbspt) {
       const script = document.createElement('script');
@@ -25,33 +42,16 @@ const ContactSection = () => {
     } else {
       createForm();
     }
+  }, [hubspotFormId]);
 
-    function createForm() {
-      if (window.hbspt) {
-        window.hbspt.forms.create({
-          portalId: "140495086",
-          formId: language === 'ar'
-            ? "64b9308d-6d38-4fdf-80c3-8c0ce4d99420" // Arabic
-            : "0fa3d708-1edd-45d7-940c-47901b61691f", // English
-          region: "eu1",
-          target: '#hubspotForm',
-        });
-      }
-    }
-  }, [language]);
+  if (!hubspotFormId) return null; // ✅ return nothing if no formId
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-16">
-        <div className="text-center mb-16">
-          {/* <h2 className="text-4xl font-bold mb-6 text-secondary animate-fade-in">
-            {t
-              ? "Hire, pay & manage your employees all in one place."
-              : "Hire, pay & manage your employees all in one place."
-            }
-          </h2> */}
+    <section className="py-1 bg-white">
+      <div className="container mx-auto px-6 md:px-16">
+        <div className="text-center mb-10">
+          {/* يمكنك إضافة عنوان هنا إذا احتجت */}
         </div>
-        {/* الديف ده HubSpot بيحط الفورم جواه */}
         <div id="hubspotForm" ref={formRef}></div>
       </div>
     </section>

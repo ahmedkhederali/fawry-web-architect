@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { LanguageProvider } from '../components/LanguageContext';
+import { LanguageProvider, useLanguage } from '../components/LanguageContext';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import PDFDownloadSection from '../components/PDFDownloadSection';
@@ -14,24 +14,32 @@ import Footer from '../components/Footer';
 import FawryHeaderHero from '@/components/FawryHero';
 
 const Index = () => {
+  const { language, t } = useLanguage(); // assumed lang is 'en' or 'ar'
+
   return (
     <LanguageProvider>
       <div className="min-h-screen">
         {/* <Header /> */}
         <div className="relative w-full  overflow-hidden">
 
-        <FawryHeaderHero/>
-        {/* <HeroSection /> */}
+          <FawryHeaderHero />
+          {/* <HeroSection /> */}
         </div>
         {/* <PDFDownloadSection /> */}
-      
+
         <AboutSection />
-        
-         <SolutionsSection />
+
+        <SolutionsSection />
         <ClientsSection />
         <PartnersSection />
         <TestimonialsSection />
-        <ContactSection />
+        <ContactSection
+          hubspotFormId={
+            language === 'ar'
+              ? '64b9308d-6d38-4fdf-80c3-8c0ce4d99420'
+              : '0fa3d708-1edd-45d7-940c-47901b61691f'
+          }
+        />
         <Footer />
       </div>
     </LanguageProvider>
