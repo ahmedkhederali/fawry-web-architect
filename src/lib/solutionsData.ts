@@ -338,7 +338,15 @@ const solutions = [
         { "title": "Product Returns Handling", "description": "" },
         { "title": "Customer Stock Audits", "description": "" }
       ],
-      "logos": [],
+      "logos": [
+        '/products/vansales/haboba.jfif',
+        '/products/vansales/rehana.jfif',
+        '/products/diraplast/ngma.png',
+        '/products/diractail/lytchee.jpg',
+
+
+
+      ],
       "DownloadLink": "",
       "isSass": false
     }
