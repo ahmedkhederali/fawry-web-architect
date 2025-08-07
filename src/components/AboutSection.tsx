@@ -120,25 +120,25 @@ As we continue to expand our offerings—including the recent launches of the Fa
               <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={800} duration={1500} />+
               </h3>
-              <p className="text-secondary font-bold text-xl " >Active Customers</p>
+              <p className="text-[#006b99] font-bold text-xl" style={{ textShadow: '0 0 8px #006b99' }}>Active Customers</p>
             </div>
             <div>
               <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={15} duration={1200} />+
               </h3>
-              <p className="text-secondary font-bold text-xl">Powerful Partnerships</p>
+              <p className="text-[#006b99] font-bold text-xl" style={{ textShadow: '0 0 8px #006b99' }}>Powerful Partnerships</p>
             </div>
             <div>
               <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={3000} duration={1800} />+
               </h3>
-              <p className="text-secondary font-bold text-xl">Dynamic Demos</p>
+              <p className="text-[#006b99] font-bold text-xl" style={{ textShadow: '0 0 8px #006b99' }}>Dynamic Demos</p>
             </div>
             <div>
               <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={25000} duration={2000} />+
               </h3>
-              <p className="text-secondary font-bold text-xl">User Ecosystem</p>
+              <p className="text-[#006b99] font-bold text-xl" style={{ textShadow: '0 0 8px #006b99' }}>User Ecosystem</p>
             </div>
           </div>
         </div>
