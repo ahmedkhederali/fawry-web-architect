@@ -29,12 +29,13 @@ const SolutionParent = () => {
   const { id } = useParams();
   const parent = solutions.find((s) => s.id === id);
   const [activeTab, setActiveTab] = useState(0);
-    const { language, t } = useLanguage(); // assumed lang is 'en' or 'ar'
+  const { language, t } = useLanguage(); // assumed lang is 'en' or 'ar'
 
 
   if (!parent) return <div className="p-8 text-center">Parent solution not found.</div>;
 
   const activeChild = parent.children?.[activeTab] as ChildSolution;
+  const formattedSummary = activeChild.summary?.replace(/\/n/g, '\n');
 
   return (
     <div className="bg-white min-h-screen">
@@ -87,8 +88,13 @@ const SolutionParent = () => {
                 {activeChild.description}
               </h2>
 
-              <p className="text-[#003366] mt-4 leading-relaxed">
-                {activeChild.summary}
+              <p className="text-[#003366] mt-1 leading-relaxed">
+                {formattedSummary.split('\n').map((line, index) => (
+                  <span key={index}>
+                    {line}
+                    <br />
+                  </span>
+                ))}
               </p>
 
               {activeChild?.DownloadLink && (
@@ -159,12 +165,12 @@ const SolutionParent = () => {
             <PricingSection plans={activeChild.pricing} />
           )}
           {activeChild?.isSass && <ContactSection
-          hubspotFormId={
-            language === 'ar'
-              ? '7f2ee7cf-6409-4e7d-99cf-1cc3d9a31539'
-              : '38575dba-625e-408c-8481-9852702e3e80'
-          }
-        />}
+            hubspotFormId={
+              language === 'ar'
+                ? '7f2ee7cf-6409-4e7d-99cf-1cc3d9a31539'
+                : '38575dba-625e-408c-8481-9852702e3e80'
+            }
+          />}
         </div>
       )}
     </div>

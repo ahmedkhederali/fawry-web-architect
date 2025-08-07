@@ -1,10 +1,5 @@
+import { carouselSlides } from "@/lib/solutionsData";
 import React, { useState, useEffect } from "react";
-
-const carouselImages = [
- "/images/ERP.png",
-  "/images/HR2.png",
-  "/images/digital.png",
-];
 
 const FawryHeaderHero: React.FC = () => {
   const [current, setCurrent] = useState(0);
@@ -12,8 +7,8 @@ const FawryHeaderHero: React.FC = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % carouselImages.length);
-    }, 4000);
+      setCurrent((prev) => (prev + 1) % carouselSlides.length);
+    }, 3000);
     return () => clearInterval(timer);
   }, []);
 
@@ -38,7 +33,7 @@ const FawryHeaderHero: React.FC = () => {
             <div className="relative group">
               <a href="/about" className="text-[#006b99] hover:underline">About Us</a>
               <div className="absolute left-0 mt-2 w-40 bg-[#006b99] text-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-all">
-                <a href="/about " className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">About us</a>
+                <a href="/about" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">About us</a>
                 <a href="/career" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Career</a>
                 <a href="/clients" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Our Clients</a>
                 <a href="/partner" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Our Partners</a>
@@ -122,36 +117,23 @@ const FawryHeaderHero: React.FC = () => {
         {/* Carousel */}
         <div className="relative h-auto md:w-[125%] md:h-[300px] xl:h-[450px] flex items-center justify-center overflow-hidden rounded-tl-[80px] shadow-2xl bg-white z-20">
           <img
-            src={carouselImages[current]}
+            key={current} // force re-render to trigger fade-in
+            src={carouselSlides[current].image}
             alt={`Slide ${current + 1}`}
-            className="w-full h-full object-cover " 
+            className="w-full h-full object-cover transition-opacity duration-700 animate-fade"
           />
 
           {/* ✅ Centered Bottom Caption */}
-          <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 bg-[#006b99]/70 text-white px-4 py-3 rounded-lg max-w-[80%] shadow-lg text-left">
-            {current === 0 && (
-              <>
-                <h2 className="text-lg md:text-xl font-extrabold">ERP System</h2>
-                <p className="text-sm md:text-base font-medium">One System, Infinite Possibilities</p>
-              </>
-            )}
-            {current === 1 && (
-              <>
-                <h2 className="text-lg md:text-xl font-extrabold">SaaS Solutions</h2>
-                <p className="text-sm md:text-base font-medium">Manage More, Spend Less and Start Now</p>
-              </>
-            )}
-            {current === 2 && (
-              <>
-                <h2 className="text-lg md:text-xl font-extrabold">Digital Transformation</h2>
-                <p className="text-sm md:text-base font-medium">Digitally Driven, Future Focused</p>
-              </>
-            )}
+          <div
+            key={`caption-${current}`} 
+            className="absolute bottom-12 left-1/2 transform -translate-x-1/2 bg-[#006b99]/70 text-white px-4 py-3 rounded-lg max-w-[80%] shadow-lg text-left transition-opacity duration-700 animate-fade ">
+            <h2 className="text-lg md:text-xl font-extrabold">{carouselSlides[current].title}</h2>
+            <p className="text-sm md:text-base font-medium">{carouselSlides[current].description}</p>
           </div>
 
           {/* Indicators */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-            {carouselImages.map((_, idx) => (
+            {carouselSlides.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setCurrent(idx)}
@@ -165,7 +147,7 @@ const FawryHeaderHero: React.FC = () => {
         <div className="flex gap-2 justify-center items-center mt-4">
           <button
             onClick={() =>
-              setCurrent((prev) => (prev - 1 + carouselImages.length) % carouselImages.length)
+              setCurrent((prev) => (prev - 1 + carouselSlides.length) % carouselSlides.length)
             }
             className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-3 rounded-full shadow-lg border-2 border-white"
           >
@@ -177,7 +159,7 @@ const FawryHeaderHero: React.FC = () => {
 
           <button
             onClick={() =>
-              setCurrent((prev) => (prev + 1) % carouselImages.length)
+              setCurrent((prev) => (prev + 1) % carouselSlides.length)
             }
             className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-3 rounded-full shadow-lg border-2 border-white"
           >
