@@ -40,6 +40,7 @@ const Header = () => {
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               <div className={`absolute mt-2 bg-white shadow-md rounded-md z-50 p-2 space-y-2 ${isAboutDropdownOpen ? 'block' : 'hidden'}`}>
+                <Link to="/about" className="block px-4 py-2 hover:bg-white hover:text-[#006b99] rounded-md">{t('aboutUs')}</Link>
                 <Link to="/career" className="block px-4 py-2 hover:bg-[#ffd300] hover:text-[#006b99] rounded-md">{t('career')}</Link>
                 <Link to="/contact" className="block px-4 py-2 hover:bg-[#ffd300] hover:text-[#006b99] rounded-md">{t('contactUs')}</Link>
                 <Link to="/clients" className="block px-4 py-2 hover:bg-[#ffd300] hover:text-[#006b99] rounded-md">{t('ourClients')}</Link>

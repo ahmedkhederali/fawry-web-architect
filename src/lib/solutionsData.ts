@@ -4,7 +4,7 @@ const solutions = [
   {
     id: 'erp',
     title: 'ERP System',
-    min_dec: 'DIRAC ERP Enterprise Edition',
+    min_dec: 'Unlock Efficiency: Optimize Your Operations',
     description: 'DIRAC ERP Enterprise Edition is a comprehensive suite of integrated business applications designed to unify and streamline an organizatio DIRAC ERP Enterprise Edition is a comprehensive suite of integrated business applications designed to unify and streamline an organizatio',
     image: 'https://s35804.pcdn.co/blog/wp-content/uploads/2021/03/erp_the_value_to_your_manufacturing.jpg',
     span: 'col-span-1 row-span-2',
@@ -244,7 +244,7 @@ const solutions = [
    {
     id: 'sass',
     title: 'SASS Solutions',
-    min_dec: 'SASS Solutions for Business',
+    min_dec: 'Streamline Your Success: Save Time, Money, and Efforts',
     description: 'SASS Solutions for Business is a suite of software services designed to enhance operational efficiency and drive growth through cloud-based applications.',
     image: '/products/sass/sass.jpg',
     span: 'col-span-1 row-span-2',
@@ -318,8 +318,8 @@ const solutions = [
   },
   {
     id: 'vansales',
-    title: 'Van Sales Solutions',
-    min_dec: 'Van Sales Solutions for Business',
+    title: 'System Integration',
+    min_dec: 'Seamlessly Connect and Streamline: Unlock the Power of System Integration!',
     description: 'Van Sales Solutions for Business is a comprehensive software suite designed to optimize mobile sales operations, streamline inventory management, and enhance customer engagement.',
     image: '/products/vansales/vansale.png',
     span: 'col-span-1 row-span-2',
@@ -355,7 +355,7 @@ const solutions = [
   {
     id: 'digital-transformation',
     title: 'Digital Transformation',
-    min_dec: 'Digital Transformation Solutions for Business',
+    min_dec: 'Embrace Digital Evolution: Leap into the Future Today!',
     description: 'Digital Transformation Solutions for Business is a suite of services designed to help organizations leverage technology to improve processes, enhance customer experiences, and drive innovation.',
     image: '/products/digitalTransformation/Digital-transformation.png',
     span: 'col-span-2 row-span-1',

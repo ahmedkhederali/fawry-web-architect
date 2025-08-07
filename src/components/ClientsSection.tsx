@@ -39,7 +39,7 @@ const ClientsSection = () => {
     </span>
   </h2>
   <p className="text-lg text-[#006b99]">
-    Trusted by leading companies worldwide
+    Trusted By Leading Companies Worldwide
   </p>
 </div>
 

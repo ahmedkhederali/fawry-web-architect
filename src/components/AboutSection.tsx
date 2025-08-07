@@ -25,7 +25,6 @@ const Counter = ({ end, duration = 5000 }) => {
 
 const AboutSection = () => {
   const { t, direction } = useLanguage();
-  const [expanded, setExpanded] = useState(false);
   const [showButton, setShowButton] = useState(false);
   const textRef = useRef<HTMLDivElement | null>(null);
 
@@ -48,7 +47,6 @@ const AboutSection = () => {
   }, []);
 
   useEffect(() => {
-    // Detect overflow for md and up
     const checkOverflow = () => {
       if (textRef.current && window.innerWidth >= 768) {
         const hasOverflow =
@@ -73,13 +71,13 @@ As we continue to expand our offerings—including the recent launches of the Fa
 
   return (
     <section className="py-20 bg-white" id="about">
-      <div className="container mx-auto px-20">
+      <div className="container mx-auto px-4">
         <div
           key={direction}
-          className="grid lg:grid-cols-2 gap-12 items-center"
+          className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 items-center"
         >
           {/* === Text Section === */}
-        <div
+          <div
             id="about-text"
             className="transition-transform duration-1000 opacity-0 translate-x-[-80px]"
           >
@@ -92,16 +90,17 @@ As we continue to expand our offerings—including the recent launches of the Fa
               About Our Company
             </h2>
             <div
-            ref={textRef}
-            className={`text-[#006b99] text-base leading-relaxed font-sans tracking-wide text-justify transition-all duration-500 `}>
-            {diracDescription}
-          </div>
+              ref={textRef}
+              className="text-[#006b99] text-base leading-relaxed font-sans tracking-wide text-justify"
+            >
+              {diracDescription}
+            </div>
           </div>
 
           {/* === Video === */}
           <div
             id="about-video"
-            className="transition-transform duration-1000 opacity-0 translate-x-[80px]"
+            className="transition-transform duration-1000 opacity-0 translate-x-[80px] w-full"
           >
             <video
               src="/icons/Software Development.mp4"
@@ -109,39 +108,37 @@ As we continue to expand our offerings—including the recent launches of the Fa
               autoPlay
               muted
               loop
-              className="rounded-lg shadow-xl w-full h-[250px] md:h-[250px] lg:h-[350px] object-cover"
+              className="rounded-lg shadow-xl w-full aspect-video object-cover"
             />
           </div>
         </div>
 
         {/* === Counters === */}
         <div className="mt-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
               <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={800} duration={1500} />+
               </h3>
-              <p className="text-secondary font-bold text-xl">Active Customers</p>
+              <p className="text-secondary font-bold text-xl " >Active Customers</p>
             </div>
-            <div className="text-center">
+            <div>
               <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={15} duration={1200} />+
               </h3>
               <p className="text-secondary font-bold text-xl">Powerful Partnerships</p>
             </div>
-            <div className="text-center">
+            <div>
               <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={3000} duration={1800} />+
               </h3>
               <p className="text-secondary font-bold text-xl">Dynamic Demos</p>
             </div>
-            <div className="text-center">
+            <div>
               <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={25000} duration={2000} />+
               </h3>
-              <p className="text-secondary font-bold text-xl">
-                User Ecosystem
-              </p>
+              <p className="text-secondary font-bold text-xl">User Ecosystem</p>
             </div>
           </div>
         </div>
