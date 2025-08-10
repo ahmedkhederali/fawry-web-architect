@@ -22,6 +22,7 @@ import WhyDirac from "./pages/AboutUspage/WhyDirac";
 import HeaderSection from "./pages/AboutUspage/headerSection";
 import Solutions from "./pages/Solutions";
 import SolutionParent from "./pages/SolutionParent";
+import Apply from "./pages/Apply";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +50,14 @@ const App = () => (
               <>
                 <Header />
                 <Career />
+                <Apply/>
+                <Footer />
+              </>
+            } />
+            <Route path="/apply" element={
+              <>
+                <Header />
+                <Apply />
                 <Footer />
               </>
             } />

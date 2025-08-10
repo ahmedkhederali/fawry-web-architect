@@ -70,8 +70,8 @@ As we continue to expand our offerings—including the recent launches of the Fa
 `;
 
   return (
-    <section className="py-20 bg-white" id="about">
-      <div className="container mx-auto px-4">
+    <section className="py-10 bg-white" id="about">
+      <div className="container mx-auto px-16">
         <div
           key={direction}
           className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 items-center"

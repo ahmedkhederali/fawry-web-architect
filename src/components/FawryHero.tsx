@@ -24,7 +24,7 @@ const FawryHeaderHero: React.FC = () => {
           <img
             src="/images/DiracSystems.png"
             alt="Dirac Systems"
-            className="w-[100px] h-auto rounded-xl shadow-lg border-4 border-white bg-white object-contain"
+            className="w-[110px] h-auto rounded-xl shadow-lg border-4 border-white bg-white object-contain transform transition-transform duration-300 hover:scale-110"
           />
 
           {/* Desktop Navbar */}
@@ -144,14 +144,14 @@ const FawryHeaderHero: React.FC = () => {
         </div>
 
         {/* Arrows */}
-        <div className="flex gap-2 justify-center items-center mt-4">
+        <div className="flex gap-2 justify-center items-center mt-2">
           <button
             onClick={() =>
               setCurrent((prev) => (prev - 1 + carouselSlides.length) % carouselSlides.length)
             }
-            className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-3 rounded-full shadow-lg border-2 border-white"
+            className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-2 rounded-full shadow-lg border-2 border-white"
           >
-            <svg className="w-4 h-4 text-[#006b99]" fill="none" viewBox="0 0 24 24"
+            <svg className="w-3.5 h-3.5 text-[#006b99]" fill="none" viewBox="0 0 24 24"
               stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
@@ -161,9 +161,9 @@ const FawryHeaderHero: React.FC = () => {
             onClick={() =>
               setCurrent((prev) => (prev + 1) % carouselSlides.length)
             }
-            className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-3 rounded-full shadow-lg border-2 border-white"
+            className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-2 rounded-full shadow-lg border-2 border-white"
           >
-            <svg className="w-4 h-4 text-[#006b99]" fill="none" viewBox="0 0 24 24"
+            <svg className="w-3.5 h-3.5 text-[#006b99]" fill="none" viewBox="0 0 24 24"
               stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
             </svg>

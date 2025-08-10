@@ -45,7 +45,7 @@ const timeline = [
 
 
 const AboutTimeLineSection = () => (
-  <section className="py-16 bg-gray-50 relative overflow-hidden">
+  <section className="py-10 bg-gray-50 relative overflow-hidden">
     <div className="container mx-auto px-4">
       <h2 className="text-4xl font-bold mb-16 text-center text-[#006b99]">Our Journey</h2>
 
@@ -122,12 +122,10 @@ const AboutTimeLineSection = () => (
             </div>
           ))}
           {/* "More to come" indicator */}
-          <div className="relative flex items-center justify-center mt-16">
-            <div className="absolute left-1/2 transform -translate-x-1/2 z-20">
-              <div className="w-5 h-5 bg-[#006b99] rounded-full border-4 border-white shadow-lg animate-pulse"></div>
-            </div>
-            <div className="bg-gradient-to-r from-[#006b99] to-[#006b99] text-white px-6 py-3 rounded-full font-semibold text-lg shadow-lg">
-              More exciting updates coming soon...
+          <div className="relative flex items-center justify-center mt-16 gap-3">
+            <div className="bg-gradient-to-r from-[#006b99] to-[#006b99] text-white px-6 py-3 rounded-full font-semibold text-lg shadow-lg flex items-center">
+              Stay Tuned For More Updates
+              <div className="ml-3 w-5 h-5 bg-[#006b99] rounded-full border-4 border-white shadow-lg animate-pulse"></div>
             </div>
           </div>
         </div>

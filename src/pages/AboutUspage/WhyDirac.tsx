@@ -4,7 +4,7 @@ const features = [
   {
     title: "Tailored Solutions",
     description:
-      "At DIRAC, we understand that every business is unique. Our ability to customize systems ensures that our software solutions align perfectly with your specific needs, enhancing operational efficiency and effectiveness.",
+      "At DIRAC, we understand that every business is unique Our ability to customize systems ensures that our software solutions align perfectly with your specific needs, enhancing operational efficiency and effectiveness.",
   },
   {
     title: "Comprehensive Digital Transformation",
@@ -48,9 +48,10 @@ const WhyDirac = () => {
               <h4 className="text-[#FFD300] text-lg font-semibold mb-2">
                 {item.title}
               </h4>
-              <p className="text-[#006b99] text-sm leading-relaxed">
-                {item.description}
-              </p>
+              <p className="text-[#006b99] text-sm leading-relaxed text-justify [text-justify:inter-word]">
+              {item.description}
+            </p>
+
             </div>
           ))}
         </div>
@@ -66,9 +67,10 @@ const WhyDirac = () => {
               <h4 className="text-[#FFD300] text-lg font-semibold mb-2">
                 {item.title}
               </h4>
-              <p className="text-[#006b99] text-sm leading-relaxed">
-                {item.description}
-              </p>
+             <p className="text-[#006b99] text-sm leading-relaxed text-justify [text-justify:inter-word]">
+              {item.description}
+            </p>
+
             </div>
           ))}
         </div>

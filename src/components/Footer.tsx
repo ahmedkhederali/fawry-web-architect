@@ -31,7 +31,7 @@ const Footer = () => {
 
             {/* Social Media Icons */}
             <div className="flex space-x-4 mt-4">
-              <a
+              {/* <a
                 href="https://twitter.com/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -42,7 +42,7 @@ const Footer = () => {
                   alt="Twitter"
                   className="h-6 w-6 opacity-70 hover:opacity-100"
                 />
-              </a>
+              </a> */}
               <a
                 href="https://www.linkedin.com/"
                 target="_blank"
@@ -55,7 +55,7 @@ const Footer = () => {
                   className="h-6 w-6 opacity-70 hover:opacity-100"
                 />
               </a>
-              <a
+              {/* <a
                 href="https://github.com/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -66,7 +66,7 @@ const Footer = () => {
                   alt="GitHub"
                   className="h-6 w-6 opacity-70 hover:opacity-100"
                 />
-              </a>
+              </a> */}
               <a
                 href="https://facebook.com/"
                 target="_blank"

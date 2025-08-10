@@ -9,7 +9,6 @@ const solutions = [
     image: 'https://s35804.pcdn.co/blog/wp-content/uploads/2021/03/erp_the_value_to_your_manufacturing.jpg',
     span: 'col-span-1 row-span-2',
     children: [
-
       {
         id: 'diracenterprise',
         title: 'Enterprise Edition',
