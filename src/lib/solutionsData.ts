@@ -267,7 +267,7 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
     title: 'SASS Solutions',
     min_dec: 'Streamline Your Success: Save Time, Money, and Effort',
     description: 'SASS Solutions for Business is a suite of software services designed to enhance operational efficiency and drive growth through cloud-based applications.',
-    image: '/products/sass/sass.jpg',
+    image: '/products/sass/sass.png',
     span: 'col-span-1 row-span-2',
     "children": [
       {
@@ -342,7 +342,7 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
     title: 'System Integration',
     min_dec: 'Seamlessly Connect and Streamline: Unlock the Power of System Integration',
     description: 'Van Sales Solutions for Business is a comprehensive software suite designed to optimize mobile sales operations, streamline inventory management, and enhance customer engagement.',
-    image: '/products/vansales/vansale.png',
+    image: '/products/vansales/system integration.png',
     span: 'col-span-1 row-span-2',
     children: [
       {
