@@ -43,7 +43,7 @@ const SolutionsSection = () => {
                 <img
                   src={solution.image}
                   alt={solution.title}
-                  className="w-full h-[200px] sm:h-[250px] md:h-[250px] lg:h-[300px] object-cover"
+                  className="w-full h-[200px] sm:h-[250px] md:h-[250px] lg:h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-blue-900/60 group-hover:bg-blue-900/80 transition-all"></div>
                 <div className="absolute bottom-0 left-0 p-6 text-white">
