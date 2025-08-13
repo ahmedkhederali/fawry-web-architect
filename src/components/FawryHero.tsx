@@ -1,9 +1,17 @@
 import { carouselSlides } from "@/lib/solutionsData";
 import React, { useState, useEffect } from "react";
+import { useLanguage } from "./LanguageContext";
+import { Button } from "./ui/button";
+import { Menu } from "lucide-react";
 
 const FawryHeaderHero: React.FC = () => {
   const [current, setCurrent] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { language, setLanguage, direction, t } = useLanguage();
+
+ const toggleLanguage = () => {
+    setLanguage(language === "en" ? "ar" : "en");
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -28,7 +36,9 @@ const FawryHeaderHero: React.FC = () => {
           />
 
           {/* Desktop Navbar */}
-          <nav className="hidden md:flex gap-6 lg:gap-10 ml-auto mr-[10%] font-semibold">
+          <nav className={`hidden md:flex gap-6 lg:gap-10 ml-auto mr-[10%] font-semibold ${
+          direction === "rtl" ? "flex-row-reverse space-x-reverse" : ""
+        }`}>
             <a href="/" className="text-[#006b99] hover:underline">Home</a>
             <div className="relative group">
               <a href="/about" className="text-[#006b99] hover:underline">About Us</a>
@@ -39,10 +49,22 @@ const FawryHeaderHero: React.FC = () => {
                 <a href="/partner" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Our Partners</a>
               </div>
             </div>
-            <a href="/products" className="text-[#006b99] hover:underline">Products</a>
-            <a href="/blog" className="text-[#006b99] hover:underline">Blog</a>
-          </nav>
+            <div className="relative group z-50">
+  <a href="/products" className="text-[#006b99] hover:underline">Product</a>
 
+  <div className="absolute left-0 mt-2 w-40 bg-[#006b99] text-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-all z-50">
+    <a href="/solutions/erp" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">ERP Standard</a>
+    <a href="/" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Enterprise</a>
+    <a href="/solutions/sass" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Sass</a>
+    <a href="/solutions/digital-transformation" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Digital Transformation</a>
+  </div>
+</div>
+
+            <a href="/blog" className="text-[#006b99] hover:underline">Blog</a>
+            {/* Language Toggle */}
+         
+          </nav>
+    
           {/* Mobile Menu Button */}
           <button
             className="md:hidden text-[#006b99]"
@@ -85,91 +107,131 @@ const FawryHeaderHero: React.FC = () => {
 
           {/* Buttons */}
           <div className="flex gap-4 mt-4 justify-center md:justify-start">
-            <button className="bg-[#006b99] text-[#ffd300] px-6 py-2 rounded-md font-semibold shadow hover:bg-[#005fa3] transition">
-              Get a Quote
-            </button>
-            <button
-              className="flex items-center gap-2 bg-white text-[#006b99] border border-[#0074d9] px-6 py-2 rounded-md shadow hover:bg-[#ffe066] transition"
-              onClick={() => {
-                const link = document.createElement("a");
-                link.href = "/files/Dirac_Co.Profile.pdf";
-                link.download = "CompanyProfile.pdf";
-                link.click();
-              }}
-            >
-              <span className="font-semibold">Company Profile</span>
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round"
-                  d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-              </svg>
-            </button>
-          </div>
+ <button
+  className="bg-[#006b99] text-[#ffd300] px-6 py-2 rounded-md font-semibold shadow hover:bg-[#005fa3] transition"
+  onClick={() => {
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start" // scroll so the section starts at the top
+    });
+  }}
+>
+  Get a Quote
+</button>
+
+
+
+  <button
+    className="flex items-center gap-2 bg-white text-[#006b99] border border-[#0074d9] px-6 py-2 rounded-md shadow hover:bg-[#ffe066] transition"
+    onClick={() => {
+      const link = document.createElement("a");
+      link.href = "/files/Dirac_Co.Profile.pdf";
+      link.download = "CompanyProfile.pdf";
+      link.click();
+    }}
+  >
+    <span className="font-semibold">Company Profile</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-4 h-4"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"
+      />
+    </svg>
+  </button>
+</div>
+
         </div>
       </div>
 
       {/* Blue Right Side with Carousel */}
-      <div className="relative flex flex-col items-center justify-center w-full md:w-[45%] bg-[#006b99]">
-        <div className="absolute top-4 right-4 text-[#ffd300] font-semibold text-sm md:text-base">
-          +20 123-456-789
-        </div>
+    <div className="relative flex flex-col items-center justify-center w-full md:w-[45%] bg-[#006b99] min-h-[80vh]">
+      <button
+           onClick={() => setLanguage(language === "en" ? "ar" : "en")}
+          className="absolute top-6 right-6 z-40 px-4 py-2 bg-white border-2 border-[#006b99] text-[#006b99] rounded-md hover:bg-[#ffd300] hover:text-[#006b99] transition-all duration-300 font-medium shadow-lg"
+        >
+          العربية
+        </button>
+  {/* Carousel */}
+  <div className="relative h-[400px] md:w-[125%] md:h-[300px] xl:h-[450px] flex items-center justify-center overflow-hidden rounded-tl-[80px] shadow-2xl bg-white z-20">
+    <img
+      key={current}
+      src={carouselSlides[current].image}
+      alt={`Slide ${current + 1}`}
+      className="w-full h-full object-cover object-center transition-opacity duration-700 animate-fade"
+    />
 
-        {/* Carousel */}
-        <div className="relative h-auto md:w-[125%] md:h-[300px] xl:h-[450px] flex items-center justify-center overflow-hidden rounded-tl-[80px] shadow-2xl bg-white z-20">
-          <img
-            key={current} // force re-render to trigger fade-in
-            src={carouselSlides[current].image}
-            alt={`Slide ${current + 1}`}
-            className="w-full h-full object-cover transition-opacity duration-700 animate-fade"
-          />
+    {/* Caption */}
+    <div
+      key={`caption-${current}`}
+      className="absolute bottom-16 left-1/2 -translate-x-1/2 bg-[#000000]/70 text-[#ffd300] px-4 py-3 rounded-lg max-w-[80%] shadow-lg text-left transition-opacity duration-700 animate-fade"
+    >
+      <h2 className="text-lg md:text-xl font-extrabold">{carouselSlides[current].title}</h2>
+      <p className="text-sm md:text-base font-medium">{carouselSlides[current].description}</p>
+    </div>
 
-          {/* ✅ Centered Bottom Caption */}
-          <div
-            key={`caption-${current}`} 
-            className="absolute bottom-12 left-1/2 transform -translate-x-1/2 bg-[#006b99]/70 text-white px-4 py-3 rounded-lg max-w-[80%] shadow-lg text-left transition-opacity duration-700 animate-fade ">
-            <h2 className="text-lg md:text-xl font-extrabold">{carouselSlides[current].title}</h2>
-            <p className="text-sm md:text-base font-medium">{carouselSlides[current].description}</p>
-          </div>
+    {/* Indicators */}
+    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
+      {carouselSlides.map((_, idx) => (
+        <button
+          key={idx}
+          onClick={() => setCurrent(idx)}
+          className={`w-3 h-3 rounded-full border border-[#006b99] ${
+            current === idx ? "bg-[#006b99]" : "bg-white"
+          }`}
+        />
+      ))}
+    </div>
 
-          {/* Indicators */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-            {carouselSlides.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrent(idx)}
-                className={`w-3 h-3 rounded-full border border-[#006b99] ${current === idx ? "bg-[#006b99]" : "bg-white"}`}
-              />
-            ))}
-          </div>
-        </div>
+    {/* Arrows moved INSIDE the card so vertical centering stays perfect */}
+    {/* <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
+      <button
+        onClick={() => setCurrent((prev) => (prev - 1 + carouselSlides.length) % carouselSlides.length)}
+        className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-2 rounded-full shadow-lg border-2 border-white"
+      >
+        <svg className="w-3.5 h-3.5 text-[#006b99]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
 
-        {/* Arrows */}
-        <div className="flex gap-2 justify-center items-center mt-2">
-          <button
-            onClick={() =>
-              setCurrent((prev) => (prev - 1 + carouselSlides.length) % carouselSlides.length)
-            }
-            className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-2 rounded-full shadow-lg border-2 border-white"
-          >
-            <svg className="w-3.5 h-3.5 text-[#006b99]" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
+      <button
+        onClick={() => setCurrent((prev) => (prev + 1) % carouselSlides.length)}
+        className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-2 rounded-full shadow-lg border-2 border-white"
+      >
+        <svg className="w-3.5 h-3.5 text-[#006b99]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div> */}
+  </div>
+<div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-2">
+      <button
+        onClick={() => setCurrent((prev) => (prev - 1 + carouselSlides.length) % carouselSlides.length)}
+        className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-2 rounded-full shadow-lg border-2 border-white"
+      >
+        <svg className="w-3.5 h-3.5 text-[#006b99]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
 
-          <button
-            onClick={() =>
-              setCurrent((prev) => (prev + 1) % carouselSlides.length)
-            }
-            className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-2 rounded-full shadow-lg border-2 border-white"
-          >
-            <svg className="w-3.5 h-3.5 text-[#006b99]" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
-      </div>
+      <button
+        onClick={() => setCurrent((prev) => (prev + 1) % carouselSlides.length)}
+        className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-2 rounded-full shadow-lg border-2 border-white"
+      >
+        <svg className="w-3.5 h-3.5 text-[#006b99]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+</div>
+
     </section>
   );
 };

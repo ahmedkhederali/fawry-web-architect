@@ -47,14 +47,16 @@ const ContactSection: React.FC<ContactSectionProps> = ({ hubspotFormId }) => {
   if (!hubspotFormId) return null; // ✅ return nothing if no formId
 
   return (
-    <section className="py-1 bg-white">
-      <div className="container mx-auto px-6 md:px-16">
-        <div className="text-center mb-10">
-          {/* يمكنك إضافة عنوان هنا إذا احتجت */}
-        </div>
-        <div id="hubspotForm" ref={formRef}></div>
+  <section id="contact" className="py-1 bg-white">
+    <div className="container mx-auto px-6 md:px-16">
+      <div className="text-center mb-10">
+        
       </div>
-    </section>
+      <div id="hubspotForm" ref={formRef}></div>
+    </div>
+  </section>
+
+
   );
 };
 
