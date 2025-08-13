@@ -8,8 +8,8 @@ const Apply: React.FC = () => {
      <ContactSection
         hubspotFormId={
           language === 'ar'
-            ? '64b9308d-6d38-4fdf-80c3-8c0ce4d99420'
-            : '0fa3d708-1edd-45d7-940c-47901b61691f'
+            ? 'ef5b35e2-b8a7-4a29-a3be-02fa116e5f44'
+            : 'ef5b35e2-b8a7-4a29-a3be-02fa116e5f44'
         }
       />
     </div>

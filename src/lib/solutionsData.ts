@@ -432,9 +432,9 @@ export const blogPosts = [
     location: "Cairo, Egypt",
     author: "Ahmed Ali",
     gallery: [
-      "/public/images/event1.jpg",
-      "/public/images/event1.jpg",
-      "/public/images/event1.jpg"
+      "/images/event1.jpg",
+      "/images/event1.jpg",
+      "/images/event1.jpg"
     ]
   },
 {
@@ -446,9 +446,9 @@ export const blogPosts = [
     date: "2025-07-13",
     author: "Ahmed Ali",
     gallery: [
-      "/public/images/event1.jpg",
-      "/public/images/event1.jpg",
-      "/public/images/event1.jpg"
+      "/images/event1.jpg",
+      "/images/event1.jpg",
+      "/images/event1.jpg"
     ]
   },
   {
@@ -460,9 +460,9 @@ export const blogPosts = [
     date: "2025-07-13",
     author: "Ahmed Ali",
     gallery: [
-      "/public/images/event1.jpg",
-      "/public/images/event1.jpg",
-      "/public/images/event1.jpg"
+      "/images/event1.jpg",
+      "/images/event1.jpg",
+      "/images/event1.jpg"
     ]
   },
 ];
@@ -602,5 +602,55 @@ export const logos = {
   ],
 
 };
+
+ export const clients = [
+    { id: 1, name: 'ATD', logo: '/clients/ATD.png', fontClass: 'font-bold', colorClass: 'text-[#009fe3]' },
+    { id: 2, name: 'ABA', logo: '/clients/Aba.png', fontClass: 'font-extrabold', colorClass: 'text-[#e30613]' },
+    { id: 3, name: 'Ain Shams University', logo: '/clients/AinShamsUniversity.png', fontClass: 'font-semibold', colorClass: 'text-[#009688]' },
+    { id: 4, name: 'Arab Tech', logo: '/clients/ArabTech.png', fontClass: 'font-bold', colorClass: 'text-[#bfa46d]' },
+    { id: 5, name: 'Benisuef University', logo: '/clients/BenisuefUniversity.png', fontClass: 'font-bold', colorClass: 'text-[#1a237e]' },
+    { id: 6, name: 'GMS', logo: '/clients/GMS.png', fontClass: 'font-bold', colorClass: 'text-[#f7941d]' },
+    { id: 7, name: 'HRZN', logo: '/clients/HRZN.png', fontClass: 'font-extrabold', colorClass: 'text-[#7c3aed]' },
+    { id: 8, name: 'International Medical Group', logo: '/clients/IMG.png', fontClass: 'font-bold', colorClass: 'text-[#f59e42]' },
+    { id: 9, name: 'Lush Fresh', logo: '/clients/LushFresh.png', fontClass: 'font-semibold', colorClass: 'text-[#009fe3]' },
+    { id: 10, name: 'Lychee', logo: '/clients/Lychee.png', fontClass: 'font-bold', colorClass: 'text-[#1e293b]' },
+    { id: 11, name: 'ALLWEILER FARID HASSANEUN PUMPS', logo: '/clients/allwellerFarid.png', fontClass: 'font-bold', colorClass: 'text-[#009688]' },
+    { id: 12, name: 'Nabati', logo: '/clients/Nabati.png', fontClass: 'font-bold', colorClass: 'text-[#fbbf24]' },
+    { id: 13, name: 'Nano Food', logo: '/clients/NanoFood.png', fontClass: 'font-semibold', colorClass: 'text-[#16a34a]' },
+    { id: 14, name: 'Rehana', logo: '/clients/Rehana.png', fontClass: 'font-bold', colorClass: 'text-[#e11d48]' },
+    { id: 15, name: 'TechnoBit', logo: '/clients/TechnoBit.png', fontClass: 'italic font-bold', colorClass: 'text-[#a21caf]' },
+    { id: 16, name: 'TechnoGym', logo: '/clients/TechnoGym.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 17, name: 'ACGI', logo: '/clients/acgi.png', fontClass: 'font-bold', colorClass: 'text-[#f59e42]' },
+    { id: 18, name: 'Furx', logo: '/clients/furx.png', fontClass: 'font-bold', colorClass: 'text-[#fbbf24]' },
+    { id: 19, name: 'AL-AZHAR UNIVERSITY', logo: '/clients/alazharuniveristy.png', fontClass: 'font-bold', colorClass: 'text-[#f59e42]' },
+    { id: 20, name: 'AL HOMAIDHI', logo: '/clients/alhomaidhi.png', fontClass: 'font-bold', colorClass: 'text-[#1e293b]' },
+    { id: 22, name: 'AL Monairy For Corn Products', logo: '/clients/almonairy.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 23, name: 'AlWan', logo: '/clients/alwan.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 24, name: 'Athad', logo: '/clients/athad.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 25, name: 'BEYTI', logo: '/clients/beyti.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 26, name: 'BTROTRED', logo: '/clients/btrotred.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 27, name: 'Cairo University', logo: '/clients/cairouniveristy.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 28, name: 'Catex', logo: '/clients/catex.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 29, name: 'COCA COLA', logo: '/clients/cocacola.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 30, name: 'Company Drink Water', logo: '/clients/companyDrinkWater.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 31, name: 'Company Egyptel 3lya', logo: '/clients/companyEgyptel3lya.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 32, name: 'Company North Delta', logo: '/clients/companyNorthDelta.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 33, name: 'Company North Cairo Elect', logo: '/clients/companyNorhcairoElect.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 34, name: 'Company South Cairo', logo: '/clients/companySouthCairo.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 35, name: 'Company South Delta', logo: '/clients/companySouthDlta.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 36, name: 'Company South Cairo', logo: '/clients/companySouthCairo.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 37, name: 'Company Water & Red Sea', logo: '/clients/companyWater&redSea.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 38, name: 'Company Water in Giza', logo: '/clients/companyWaterinGiza.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 39, name: 'Company Water in Domyat', logo: '/clients/companyWaterindomyat.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 40, name: 'Company AlKabada', logo: '/clients/companyalkabada.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 41, name: 'Crocs', logo: '/clients/crocs.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 42, name: 'elm films', logo: '/clients/elm.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 43, name: 'AL Mohamdya', logo: '/clients/elmohamdya.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 44, name: 'Elsalam Plastic', logo: '/clients/elsalamplastic.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 45, name: 'Espranzaa', logo: '/clients/espranzaa.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 46, name: 'Faragalla', logo: '/clients/faragalla.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+    { id: 47, name: 'Footloose', logo: '/clients/footloose.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+
+  ];
 export default solutions;
 

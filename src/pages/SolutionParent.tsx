@@ -167,8 +167,8 @@ const SolutionParent = () => {
           {activeChild?.isSass && <ContactSection
             hubspotFormId={
               language === 'ar'
-                ? '7f2ee7cf-6409-4e7d-99cf-1cc3d9a31539'
-                : '38575dba-625e-408c-8481-9852702e3e80'
+                ? 'ce9aac90-b7aa-4bd7-9441-0ceec3dfe7de'
+                : 'b9ee4a06-45dc-41ce-a9cd-656d33b32da9'
             }
           />}
         </div>
