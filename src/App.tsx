@@ -23,6 +23,8 @@ import HeaderSection from "./pages/AboutUspage/headerSection";
 import Solutions from "./pages/Solutions";
 import SolutionParent from "./pages/SolutionParent";
 import Apply from "./pages/Apply";
+import AboutIndex from "./pages/AboutUspage/AboutIndex";
+import BlogDetails from "./pages/BlogDetails";
 
 const queryClient = new QueryClient();
 
@@ -35,17 +37,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/about" element={
-              <>
-                <Header />
-                <HeaderSection/>
-                <AboutHeroSection />
-                <AboutTimeLineSection />
-                <WhyDirac />
-                {/* <AboutHeroSection /> */}
-                {/*<ClientsSection />*/}
-                <Footer />
-              </>} />
+            <Route path="/about" element={<AboutIndex/>} />
             <Route path="/career" element={
               <>
                 <Header />
@@ -93,6 +85,13 @@ const App = () => (
               <>
                 <Header />
                 <SolutionParent />
+                <Footer />
+              </>
+            } />
+             <Route path="/blog/:id" element={
+              <>
+                <Header />
+                <BlogDetails />
                 <Footer />
               </>
             } />

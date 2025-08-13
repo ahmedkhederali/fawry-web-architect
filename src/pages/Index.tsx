@@ -12,12 +12,20 @@ import TestimonialsSection from '../components/TestimonialsSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 import FawryHeaderHero from '@/components/FawryHero';
+import SEO from '@/components/SEO';
 
 const Index = () => {
   const { language, t } = useLanguage(); // assumed lang is 'en' or 'ar'
 
   return (
     <LanguageProvider>
+       <SEO
+        title={language === 'ar' ? "شركة ديراك سيستم - حلول تكنولوجية متكاملة" : "Dirac Systems - Integrated Technology Solutions"}
+        description={language === 'ar' ? "شركة ديراك سيستم تقدم حلول برمجية وتقنية متكاملة للشركات والمؤسسات." : "Dirac Systems provides integrated software and technology solutions for businesses and enterprises."}
+        keywords="Dirac Systems, Software Solutions, IT Services, ERP, Digital Transformation, نظم المعلومات, التحول الرقمي"
+        image="https://www.diracsystems.com/wp-content/uploads/2023/08/logo-Dirac-fawry-7.png"
+        url="https://diraccompany.netlify.app/"
+      />
       <div className="min-h-screen">
         {/* <Header /> */}
         <div className="relative w-full  overflow-hidden">

@@ -421,6 +421,51 @@ export const carouselSlides = [
 ];
 
 
+export const blogPosts = [
+  {
+   id: 1,
+    title: "How ERP Software Transforms Businesses",
+    content: "Full article content about ERP and digital transformation...",
+    full_desc:" ERP software is a game-changer for businesses, streamlining operations and enhancing efficiency. By integrating various functions into a single system, ERP eliminates data silos and improves collaboration across departments. This leads to better decision-making, reduced operational costs, and increased productivity. With real-time data access, businesses can respond quickly to market changes and customer needs, driving growth and innovation.",
+    image: "/images/blogimage1.jpg",
+    date: "2025-07-13",
+    location: "Cairo, Egypt",
+    author: "Ahmed Ali",
+    gallery: [
+      "/public/images/event1.jpg",
+      "/public/images/event1.jpg",
+      "/public/images/event1.jpg"
+    ]
+  },
+{
+   id: 1,
+    title: "How ERP Software Transforms Businesses",
+    content: "Full article content about ERP and digital transformation...",
+    full_desc:" ERP software is a game-changer for businesses, streamlining operations and enhancing efficiency. By integrating various functions into a single system, ERP eliminates data silos and improves collaboration across departments. This leads to better decision-making, reduced operational costs, and increased productivity. With real-time data access, businesses can respond quickly to market changes and customer needs, driving growth and innovation.",
+    image: "/images/blogimage1.jpg",
+    date: "2025-07-13",
+    author: "Ahmed Ali",
+    gallery: [
+      "/public/images/event1.jpg",
+      "/public/images/event1.jpg",
+      "/public/images/event1.jpg"
+    ]
+  },
+  {
+   id: 1,
+    title: "How ERP Software Transforms Businesses",
+    content: "Full article content about ERP and digital transformation...",
+    full_desc:" ERP software is a game-changer for businesses, streamlining operations and enhancing efficiency. By integrating various functions into a single system, ERP eliminates data silos and improves collaboration across departments. This leads to better decision-making, reduced operational costs, and increased productivity. With real-time data access, businesses can respond quickly to market changes and customer needs, driving growth and innovation.",
+    image: "/images/blogimage1.jpg",
+    date: "2025-07-13",
+    author: "Ahmed Ali",
+    gallery: [
+      "/public/images/event1.jpg",
+      "/public/images/event1.jpg",
+      "/public/images/event1.jpg"
+    ]
+  },
+];
 
 export const categories = [
   "Packaging Industry",
