@@ -44,7 +44,16 @@ const translations = {
     company: 'Company',
     followUs: 'Follow Us',
     profile_title: 'Company Profile',
-    profile_download:'Download our comprehensive company profile to learn more about our services, expertise, and successful projects.'
+    profile_download:'Download our comprehensive company profile to learn more about our services, expertise, and successful projects.',
+    blog_title: 'Dirac Systems Blog',
+    blog_desc: 'Explore our latest articles, insights, and updates on technology, business solutions, and industry trends Explore our latest articles, insights, and updates on technology, business solutions, and industry trends Explore our latest articles, insights, and updates on technology, business solutions, and industry trends.',
+    career_desc: 'Join our team and become part of a vibrant, forward-thinking environment where innovation meets limitless opportunity. At DIRAC Systems, every idea matters and every team member plays a vital role in shaping the future. We are constantly seeking passionate, talented individuals who are ready to take on challenges, contribute their unique skills, and grow alongside industry experts. Explore our current job openings, discover exciting career paths, and take the next bold step toward building a successful future with us.',
+    available_jobs: 'Available Jobs',
+    carrer: 'Career',
+    contact_desc: 'Get in touch with us for a free consultation or more information about our services. We are here to help you achieve your digital goals.',
+    partners_title: 'Partners',
+    partners_desc: 'We collaborate with world-class technology providers and industry leaders to deliver innovative, high-quality, and future-ready solutions for our clients. By leveraging the latest advancements, proven expertise, and strong strategic partnerships, we ensure that every solution is tailored to meet our clients’ unique needs, drive efficiency, and create lasting value.',
+    clients_desc:"Our clients are at the heart of everything we do. We are proud to partner with a diverse range of businesses, from innovative startups to established enterprises, across multiple industries and regions. Each collaboration is built on trust, transparency, and a shared commitment to excellence. By understanding their unique challenges and goals, we deliver tailored solutions that empower them to innovate, grow, and succeed in a competitive world."
   },
   ar: {
     home: 'الرئيسية',
@@ -79,8 +88,16 @@ const translations = {
     company: 'الشركة',
     followUs: 'تابعنا',
     profile_title:'الملف التعريفي للشركة',
-    profile_download:'قم بتنزيل الملف التعريفي الشامل لشركتنا للتعرف على خدماتنا وخبراتنا ومشاريعنا الناجحة.'
-
+    profile_download:'قم بتنزيل الملف التعريفي الشامل لشركتنا للتعرف على خدماتنا وخبراتنا ومشاريعنا الناجحة.',
+    blog_title: 'مدونة ديراك سيستم',
+    blog_desc: 'استكشف أحدث مقالاتنا ورؤانا وتحديثاتنا حول التكنولوجيا وحلول الأعمال واتجاهات الصناعة.',
+    career_desc: 'انضم إلى فريقنا وكن جزءًا من بيئة ديناميكية حيث يلتقي الابتكار بالفرصة. استكشف فرص العمل الحالية لدينا واتخذ الخطوة التالية في مسيرتك المهنية معنا.',
+    carrer: 'وظائف',
+    available_jobs: 'الوظائف المتاحة',
+    contact_desc: 'تواصل معنا للحصول على استشارة مجانية أو لمزيد من المعلومات حول خدماتنا. نحن هنا لمساعدتك في تحقيق أهدافك الرقمية.',
+    partners_title: 'شركاؤنا',
+    partners_desc: 'نتعاون مع مزودي التكنولوجيا الرائدين لتقديم أفضل الحلول لعملائنا.',
+    clients_desc: 'عملاؤنا هم في قلب كل ما نقوم به. نحن فخورون بشراكتنا مع مجموعة متنوعة من الشركات، من الشركات الناشئة المبتكرة إلى المؤسسات الراسخة، عبر صناعات ومناطق متعددة. كل تعاون مبني على الثقة والشفافية والالتزام بالتميز. من خلال فهم تحدياتهم وأهدافهم الفريدة، نقدم حلولاً مصممة خصيصًا تمكنهم من الابتكار والنمو والنجاح في عالم تنافسي.'
   }
 };
 

@@ -42,7 +42,7 @@ const App = () => (
               <>
                 <Header />
                 <Career />
-                <Apply/>
+                {/* <Apply/> */}
                 <Footer />
               </>
             } />

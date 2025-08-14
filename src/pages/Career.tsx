@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../components/LanguageContext';
 import { Link } from "react-router-dom";
+import Card from '@/components/Card';
 const jobs = [
   {
     title: 'Frontend Developer',
@@ -148,41 +149,24 @@ const Career = () => {
   const [selectedJob, setSelectedJob] = useState(null);
 
   return (
-    <div className="bg-white min-h-screen px-4 md:px-20 py-12 relative">
-    <section className="bg-white py-10 md:py-14">
-  <div className="container mx-auto px-4">
-    <div className="mx-auto max-w-5xl">
-      <h1 className="text-4xl font-bold text-[#006b99] text-center mb-6">
-        Career
-      </h1>
-
-      <p
-        className="text-[#0a4f68] text-base md:text-lg leading-8 text-justify"
-        style={{ textJustify: 'inter-word', hyphens: 'auto' }}
+    <div className="container bg-white min-h-screen px-4 md:px-20 py-12 relative">
+      <section className="bg-white py-10 md:py-14">
+        <div className="container mx-auto px-4">
+          <Card
+            title={t('Career')}
+            desc={t('career_desc')}
+            img_src="/images/career.jpg"
+            img_alt="career illustration"
+          />
+        </div>
+      </section>
+      <h2
+        id={`card-title-available-jobs`}
+        className="text-2xl sm:text-2xl lg:text-2xl font-bold mb-4 md:mb-6 text-[#ffd300]"
       >
-        At <span className="font-semibold text-[#FFD300]">DIRAC Systems</span>,
-        we believe that our greatest asset is our people. We are committed to
-        creating an inspiring workplace where creativity and collaboration
-        flourish. As pioneers in digital solutions, we invite you to join our
-        journey of{' '}
-        <span className="font-semibold text-[#006b99]">
-          innovation and growth
-        </span>
-        . Whether you’re an experienced professional or just starting your
-        career, you’ll find exciting opportunities to make a difference and
-        grow alongside our talented team. Explore our openings and see how you
-        can be part of our mission to{' '}
-        <span className="font-semibold text-[#006b99]">
-          transform industries
-        </span>
-        
-      </p>
-    </div>
-  </div>
-</section>
-
-
-      <div className="mt-12 grid gap-6 max-w-4xl mx-auto">
+        {t('available_jobs')}
+      </h2>
+      <div className="mt-6 grid gap-6 max-w-6xl mx-auto">
         {jobs.map((job, index) => (
           <div
             key={index}
@@ -253,14 +237,14 @@ const Career = () => {
               </div>
             </div>
 
-           <div className="mt-6 text-center">
-  <Link
-    to="/apply"
-    className="bg-[#0049A3] hover:bg-[#00337a] text-white font-semibold px-6 py-2 rounded-md transition-all inline-block"
-  >
-    Apply Now
-  </Link>
-</div>
+            <div className="mt-6 text-center">
+              <Link
+                to="/apply"
+                className="bg-[#0049A3] hover:bg-[#00337a] text-white font-semibold px-6 py-2 rounded-md transition-all inline-block"
+              >
+                Apply Now
+              </Link>
+            </div>
           </div>
         </div>
       )}

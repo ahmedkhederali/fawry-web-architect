@@ -2,18 +2,24 @@
 import React from 'react';
 import { useLanguage } from '../components/LanguageContext';
 import PartnersSection from '../components/PartnersSection';
+import Card from '@/components/Card';
 
 const Partners = () => {
   const { t } = useLanguage();
 
   return (
     <div className="min-h-screen pt-16">
-      <div className="bg-secondary text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-4">{t('ourPartners')}</h1>
-          <p className="text-xl text-blue-100">Strategic partnerships for success</p>
-        </div>
+      <div className="bg-secondary text-white  pt-12 pb-6">
+        <Card
+          title={t('partners_title')}
+          desc={t('partners_desc')}
+          img_src="/images/partner.jpeg"
+          img_alt="Partners Illustration"
+          className="container"
+          color="text-white"
+        />
       </div>
+
       <PartnersSection />
     </div>
   );

@@ -3,7 +3,16 @@ import { useLanguage } from './LanguageContext';
 
 declare global {
   interface Window {
-    hbspt?: any;
+    hbspt?: {
+      forms: {
+        create: (options: {
+          portalId: string;
+          formId: string;
+          region: string;
+          target: string;
+        }) => void;
+      };
+    };
   }
 }
 
@@ -49,9 +58,6 @@ const ContactSection: React.FC<ContactSectionProps> = ({ hubspotFormId }) => {
   return (
   <section id="contact" className="py-1 bg-white">
     <div className="container mx-auto px-6 md:px-16">
-      <div className="text-center mb-10">
-        
-      </div>
       <div id="hubspotForm" ref={formRef}></div>
     </div>
   </section>
