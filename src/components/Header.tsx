@@ -33,7 +33,7 @@ const Header: React.FC = () => {
 
           {/* Desktop nav – only mirror spacing for RTL */}
           <nav
-            className={`hidden md:flex gap-6 lg:gap-10 ml-auto mr-[10%] font-semibold ${
+            className={`hidden md:flex gap-6 lg:gap-10 ml-auto mr-[50%] font-semibold ${
           direction === "rtl" ? "flex-row-reverse space-x-reverse" : ""
         }`}>
             <Link to="/" className="text-[#006b99] hover:underline">
