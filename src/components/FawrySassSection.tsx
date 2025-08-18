@@ -1,3 +1,6 @@
+import Firebase from '@/pages/Firebase';
+import SaaSVideos from '@/pages/SaasVideos';
+import { Timeline } from '@/pages/TimelineModal';
 import {
   WalletCards,
   MailCheck,
@@ -57,7 +60,17 @@ const FawrySassSection = () => {
           </div>
         ))}
       </div>
+        <div className="mt-10">
+        <Firebase />
+        </div>
+      <div className="mt-10">
+      <Timeline />
     </div>
+<div className="mt-10">
+      <SaaSVideos />
+    </div>
+    </div>
+
   );
 };
 

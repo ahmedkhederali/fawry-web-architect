@@ -529,7 +529,7 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
     title: 'SaaS Solutions',
     min_dec: 'Streamline Your Success: Save Time, Money, and Effort',
     description: 'SaaS Solutions for Business is a suite of software services designed to enhance operational efficiency and drive growth through cloud-based applications.',
-    image: '/products/sass/sass.png',
+    image: '/products/sass/saas2.png',
     span: 'col-span-1 row-span-2',
     "children": [
       {

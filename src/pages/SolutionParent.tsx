@@ -1,48 +1,42 @@
-"use client"
-
-import { useState, useRef } from "react"
-import { useParams } from "react-router-dom"
-import solutions from "../lib/solutionsData"
-import { CheckCircleIcon } from "lucide-react"
-import FawrySassSection from "@/components/FawrySassSection"
-import PricingSection from "@/components/PricingSection"
-import ContactSection from "@/components/ContactSection"
-import { useLanguage } from "@/components/LanguageContext"
-import { Timeline } from "./TimelineModal"
-import SaaSVideos from "./SaasVideos"
-import FireBase from "./Firebase"
+import React, { useState , useRef} from 'react';
+import { useParams, Link } from 'react-router-dom';
+import solutions from '../lib/solutionsData';
+import { CheckCircleIcon } from 'lucide-react';
+import FawrySassSection from '@/components/FawrySassSection';
+import PricingSection from '@/components/PricingSection';
+import ContactSection from '@/components/ContactSection';
+import { useLanguage } from '@/components/LanguageContext';
 
 interface ChildSolution {
-  id: string
-  title: string
-  description: string
-  summary: string
-  benefits: { title: string; description: string }[]
-  logos: string[]
-  DownloadLink: string
-  isSass: boolean
-  live_img?: string
+  id: string;
+  title: string;
+  description: string;
+  summary: string;
+  benefits: { title: string; description: string }[];
+  logos: string[];
+  DownloadLink: string;
+  isSass: boolean;
+  live_img?: string;
   pricing?: {
-    title: string
-    price: string
-    features: string[]
-    cta: string
-  }[]
+    title: string;
+    price: string;
+    features: string[];
+    cta: string;
+  }[];
 }
 
 const SolutionParent = () => {
-  const { id } = useParams()
-  const parent = solutions.find((s) => s.id === id)
-  const [activeTab, setActiveTab] = useState(0)
-  const { language, t } = useLanguage() // assumed lang is 'en' or 'ar'
+  const { id } = useParams();
+  const parent = solutions.find((s) => s.id === id);
+  const [activeTab, setActiveTab] = useState(0);
+  const { language, t } = useLanguage(); // assumed lang is 'en' or 'ar'
   const descriptionRef = useRef<HTMLDivElement>(null)
 
-  if (!parent) return <div className="p-8 text-center">Parent solution not found.</div>
+  if (!parent) return <div className="p-8 text-center">Parent solution not found.</div>;
 
-  const activeChild = parent.children?.[activeTab] as ChildSolution
-  const formattedSummary = activeChild.summary?.replace(/\/n/g, "\n")
-
-  const getProductImage = (childTitle: string) => {
+  const activeChild = parent.children?.[activeTab] as ChildSolution;
+  const formattedSummary = activeChild.summary?.replace(/\/n/g, '\n');
+ const getProductImage = (childTitle: string) => {
     const images = {
       DiraPack: "/products/dirapack/dirapack.png?height=400&width=600",
       DiraPanel: "/products/dirapack/dirapack.png?height=400&width=600",
@@ -61,7 +55,6 @@ const SolutionParent = () => {
       })
     }, 100)
   }
-
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
@@ -72,12 +65,13 @@ const SolutionParent = () => {
             <p className="text-lg mb-6 leading-relaxed tracking-wide text-white text-justify">{parent.description}</p>
           </div>
 
+
           <div className="md:w-1/2">
             <img
-              src={parent.image || "/placeholder.svg"}
+              src={parent.image}
               alt={parent.title}
               className="rounded-xl shadow-2xl w-full max-h-[400px] object-cover transform"
-              style={{ perspective: "1200px" }}
+              style={{ perspective: '1200px' }}
             />
           </div>
         </div>
@@ -88,7 +82,7 @@ const SolutionParent = () => {
               <button
                 key={child.id}
                 onClick={() => handleTabClick(index)}
-                className={`relative pb-2 text-lg font-medium transition duration-300 ease-in-out ${
+               className={`relative pb-2 text-lg font-medium transition duration-300 ease-in-out ${
                   index === activeTab ? "text-[#ffd400]" : "text-white/70"
                 }`}
               >
@@ -106,9 +100,9 @@ const SolutionParent = () => {
       {activeChild && (
         <div className="container mx-auto px-6 py-12 space-y-12">
           {/* Full-width description */}
-          <div ref={descriptionRef} className={`flex flex-col md:flex-row items-center justify-between gap-8`}>
+         <div ref={descriptionRef} className={`flex flex-col md:flex-row items-center justify-between gap-8`}>
             {/* LEFT SIDE - TEXT */}
-            <div className="md:w-1/2 text-left">
+          <div className="md:w-1/2 text-left">
               <h2 className="text-2xl font-bold mb-4 text-[#006b99]">{activeChild.description}</h2>
 
               <p className="text-[#003366] mt-1 leading-relaxed text-justify">
@@ -120,7 +114,8 @@ const SolutionParent = () => {
                 ))}
               </p>
 
-              <div className="flex flex-wrap gap-4 mt-6">
+
+               <div className="flex flex-wrap gap-4 mt-6">
                 {activeChild?.DownloadLink && (
                   <a
                     href={activeChild.DownloadLink}
@@ -128,26 +123,34 @@ const SolutionParent = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-[#ffd400] text-[#006b99] font-semibold py-2 px-4 rounded-full hover:bg-[#006b99] hover:text-white transition"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
                       <path d="M3 14.5a.5.5 0 00.5.5h13a.5.5 0 000-1h-13a.5.5 0 00-.5.5zM10 2a.5.5 0 01.5.5v9.793l2.146-2.147a.5.5 0 11.708.708l-3 3a.498.498 0 01-.708 0l-3-3a.5.5 0 01.708-.708L9.5 12.293V2.5A.5.5 0 0110 2z" />
                     </svg>
                     Download Brochure
                   </a>
                 )}
-
-                <button
-                  onClick={() => {
-                    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
-                  }}
-                  className="inline-flex items-center gap-2 bg-[#ffd400] text-[#006b99] font-semibold py-2 px-4 rounded-full hover:bg-[#006b99] hover:text-white transition"
-                >
-                  Request Trial Version
-                </button>
+                {activeChild?.isSass && (
+    <button
+      onClick={() => {
+        document
+          .getElementById("contact")
+          ?.scrollIntoView({ behavior: "smooth" });
+      }}
+      className="inline-flex items-center gap-2 bg-[#ffd400] text-[#006b99] font-semibold py-2 px-4 rounded-full hover:bg-[#006b99] hover:text-white transition"
+    >
+      Request Trial Version
+    </button>
+  )}
               </div>
             </div>
 
-            {/* RIGHT SIDE - IMAGE */}
-            <div className="w-full md:w-1/2">
+            {/* RIGHT SIDE - IMAGE if isSass */}
+           <div className="w-full md:w-1/2">
               <img
                 src={getProductImage(activeChild.title) || "/placeholder.svg"}
                 alt={`${activeChild.title} Interface`}
@@ -169,9 +172,7 @@ const SolutionParent = () => {
               ))}
             </div>
           )}
-          <FireBase />
-          <Timeline />
-          <SaaSVideos />
+
           {/* Features */}
           {!activeChild?.isSass && activeChild.benefits?.length > 0 && (
             <div className="bg-[#006b99] text-white rounded-lg shadow-md p-6">
@@ -189,18 +190,20 @@ const SolutionParent = () => {
               </div>
             </div>
           )}
-          {activeChild?.pricing && activeChild.pricing.length > 0 && <PricingSection plans={activeChild.pricing} />}
-          {activeChild?.isSass && (
-            <ContactSection
-              hubspotFormId={
-                language === "ar" ? "ce9aac90-b7aa-4bd7-9441-0ceec3dfe7de" : "b9ee4a06-45dc-41ce-a9cd-656d33b32da9"
-              }
-            />
+          {activeChild?.pricing && activeChild.pricing.length > 0 && (
+            <PricingSection plans={activeChild.pricing} />
           )}
+          {activeChild?.isSass && <ContactSection
+            hubspotFormId={
+              language === 'ar'
+                ? 'ce9aac90-b7aa-4bd7-9441-0ceec3dfe7de'
+                : 'b9ee4a06-45dc-41ce-a9cd-656d33b32da9'
+            }
+          />}
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default SolutionParent
+export default SolutionParent;

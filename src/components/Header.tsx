@@ -88,7 +88,7 @@ const Header: React.FC = () => {
                   {t("Enterprise")}
                 </Link> */}
                 <Link to="/solutions/sass" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
-                  {t("Sass")}
+                  {t("SaaS")}
                 </Link>
                 <Link
                   to="/solutions/van-sales"

@@ -20,45 +20,36 @@ const SaaSVideos = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full px-6 py-8">
-      {/* Video 1 */}
-      <div className="relative w-full h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-lg">
-        <video
-          ref={video1Ref}
-          src="/icons/saas video1.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          controls   // ✅ enable full video controls
-          className="w-full h-full object-cover"
-        />
-        {/* <button
-          onClick={() => toggleMute(video1Ref, setIsMuted1, isMuted1)}
-          className="absolute bottom-4 right-4 bg-[#006b99] text-white p-2 rounded-full shadow-lg hover:bg-[#ffd400] transition"
-        >
-          {isMuted1 ? <VolumeX size={24} /> : <Volume2 size={24} />}
-        </button> */}
-      </div>
+    <div className="relative w-full px-6 py-12">
+      {/* Background with two colors */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#006b99] to-[#ffd400] opacity-20 rounded-lg"></div>
 
-      {/* Video 2 */}
-      <div className="relative w-full h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-lg">
-        <video
-          ref={video2Ref}
-          src="/icons/saas video1.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          controls   // ✅ enable full video controls
-          className="w-full h-full object-cover"
-        />
-        {/* <button
-          onClick={() => toggleMute(video2Ref, setIsMuted2, isMuted2)}
-          className="absolute bottom-4 right-4 bg-[#006b99] text-white p-2 rounded-full shadow-lg hover:bg-[#ffd400] transition"
-        >
-          {isMuted2 ? <VolumeX size={24} /> : <Volume2 size={24} />}
-        </button> */}
+      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+        {/* Video 1 */}
+        <div className="relative w-full h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-xl bg-white">
+          <video
+            ref={video1Ref}
+            src="/icons/saas video1.mp4"
+            muted
+            loop
+            playsInline
+            controls // ✅ user must click play
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Video 2 */}
+        <div className="relative w-full h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-xl bg-white">
+          <video
+            ref={video2Ref}
+            src="/icons/saas video1.mp4"
+            muted
+            loop
+            playsInline
+            controls // ✅ user must click play
+            className="w-full h-full object-cover"
+          />
+        </div>
       </div>
     </div>
   );
