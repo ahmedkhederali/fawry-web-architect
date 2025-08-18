@@ -22,7 +22,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo stays left always */}
           <div className="flex items-center justify-between ">
-            <Link to="/" >
+            <Link to="/">
               <img
                 src="/images/DiracSystems.png"
                 alt="Dirac Systems"
@@ -34,19 +34,20 @@ const Header: React.FC = () => {
           {/* Desktop nav – only mirror spacing for RTL */}
           <nav
             className={`hidden md:flex gap-6 lg:gap-10 ml-auto mr-[50%] font-semibold ${
-          direction === "rtl" ? "flex-row-reverse space-x-reverse" : ""
-        }`}>
+              direction === "rtl" ? "flex-row-reverse space-x-reverse" : ""
+            }`}
+          >
             <Link to="/" className="text-[#006b99] hover:underline">
               {t("home")}
             </Link>
 
             <div className="relative group">
-              <Link to="/about" className="text-[#006b99] hover:underline">
+              <Link to="/about" className="text-[#006b99] hover:underline px-2 py-1">
                 {t("aboutUs")}
               </Link>
 
               <div
-                className={`absolute left-0 mt-2 w-40 bg-[#006b99] text-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-all ${
+                className={`absolute left-0 mt-2 w-40 bg-[#006b99] text-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 delay-100 ${
                   direction === "rtl" ? "right-0" : "left-0"
                 }`}
               >
@@ -68,35 +69,56 @@ const Header: React.FC = () => {
               </div>
             </div>
             <div className="relative group">
-              <Link to="/" className="text-[#006b99] hover:underline">
+              <Link to="/" className="text-[#006b99] hover:underline px-2 py-1">
                 {t("products")}
               </Link>
 
               <div
-                className={`absolute mt-2 w-40 bg-[#006b99] text-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-all ${
+                className={`absolute mt-2 w-40 bg-[#006b99] text-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 delay-100 ${
                   direction === "rtl" ? "right-0" : "left-0"
                 }`}
               >
                 <Link to="/solutions/erp" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
+                  {t("ERP Enterprise")}
+                </Link>
+                <Link to="/solutions/erp-standard" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
                   {t("ERP Standard")}
                 </Link>
-                <Link to="/" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
+                {/* <Link to="/" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
                   {t("Enterprise")}
-                </Link>
+                </Link> */}
                 <Link to="/solutions/sass" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
                   {t("Sass")}
                 </Link>
+                <Link
+                  to="/solutions/van-sales"
+                  className="block px-4 py-2 hover:bg-white hover:text-[#006b99]"
+                >
+                  {t("Van Sales")}
+                </Link>
+              </div>
+            </div>
+            <div className="relative group">
+              <Link to="/solutions" className="text-[#006b99] hover:underline px-2 py-1">
+                {t("serviceSolutions")}
+              </Link>
+
+              <div
+                className={`absolute mt-2 w-40 bg-[#006b99] text-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 delay-100 ${
+                  direction === "rtl" ? "right-0" : "left-0"
+                }`}
+              >
                 <Link
                   to="/solutions/digital-transformation"
                   className="block px-4 py-2 hover:bg-white hover:text-[#006b99]"
                 >
                   {t("Digital Transformation")}
                 </Link>
+                <Link to="/" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
+                  {t("System Integration")}
+                </Link>
               </div>
             </div>
-            <Link to="/solutions" className="text-[#006b99] hover:underline">
-              {t("serviceSolutions")}
-            </Link>
             <Link to="/blog" className="text-[#006b99] hover:underline">
               {t("blog")}
             </Link>

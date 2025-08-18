@@ -53,8 +53,8 @@ const FawryHeaderHero: React.FC = () => {
               <a href="/products" className="text-[#006b99] hover:underline">Product</a>
 
               <div className="absolute left-0 mt-2 w-40 bg-[#006b99] text-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-all z-50">
-                <a href="/solutions/erp" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">ERT Enterprise</a>
-                <a href="/" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">ERP Standard Edition</a>
+                <a href="/solutions/erp" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">ERP Enterprise</a>
+                <a href="/solutions/erp-standard" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">ERP Standard </a>
                 <a href="/solutions/sass" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">SaaS Solutions</a>
                 <a href="/solutions/sass" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Van Sale</a>
               </div>

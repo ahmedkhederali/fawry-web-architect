@@ -16,7 +16,7 @@ interface PricingSectionProps {
 const PricingSection: React.FC<PricingSectionProps> = ({ plans }) => {
   return (
     <div className="bg-white py-4 px-4 text-[#003366]">
-      <div className="max-w-6xl mx-auto text-center mb-12">
+      {/* <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-3xl md:text-3xl font-extrabold mb-2 text-[#006b99]">
           Choose the Right Plan for Your Business
         </h2>
@@ -48,7 +48,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({ plans }) => {
             </button>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
