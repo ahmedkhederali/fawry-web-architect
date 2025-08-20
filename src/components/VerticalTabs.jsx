@@ -1,10 +1,9 @@
 // src/components/VerticalTabs.jsx
 import React, { useState } from "react";
-import { categories, logos } from "@/lib/solutionsData";
+import {  logos } from "@/lib/solutionsData";
 
-const VerticalTabs = () => {
-  const [active, setActive] = useState("Packaging Industry");
-
+const VerticalTabs = ({categories}) => {
+  const [active, setActive] = useState(categories[0] || "Packaging Industry");
   return (
     <div className="container mx-auto px-4 py-8 flex">
       {/* Vertical Tab List */}

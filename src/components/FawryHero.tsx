@@ -46,7 +46,7 @@ const FawryHeaderHero: React.FC = () => {
                 <a href="/about" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">About us</a>
                 <a href="/career" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Career</a>
                 <a href="/clients" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Our Clients</a>
-                <a href="/partner" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Our Partners</a>
+                <a href="/partners" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Our Partners</a>
               </div>
             </div>
             <div className="relative group z-50">
@@ -92,7 +92,7 @@ const FawryHeaderHero: React.FC = () => {
             <a href="/about" className="block px-4 py-2">About Us</a>
             <a href="/career" className="block px-4 py-2">Career</a>
             <a href="/clients" className="block px-4 py-2">Our Clients</a>
-            <a href="/partner" className="block px-4 py-2">Our Partners</a>
+            <a href="/partners" className="block px-4 py-2">Our Partners</a>
             <a href="/products" className="block px-4 py-2">Products</a>
             <a href="/blog" className="block px-4 py-2">Blog</a>
             <button

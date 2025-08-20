@@ -3,7 +3,7 @@
 import type React from "react"
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { Menu } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { useLanguage } from "./LanguageContext"
 import { Button } from "@/components/ui/button"
 
@@ -21,7 +21,7 @@ const Header: React.FC = () => {
         {/* NOTE: don't reverse the whole row */}
         <div className="flex items-center justify-between h-20">
           {/* Logo stays left always */}
-          <div className="flex items-center justify-between ">
+          <div className="flex items-center flex-shrink-0">
             <Link to="/">
               <img
                 src="/images/DiracSystems.png"
@@ -33,15 +33,14 @@ const Header: React.FC = () => {
 
           {/* Desktop nav – only mirror spacing for RTL */}
           <nav
-            className={`hidden md:flex gap-6 lg:gap-10 ml-auto mr-[50%] font-semibold ${
+            className={`hidden md:flex flex-1 justify-center lg:justify-center gap-6 lg:gap-10 font-semibold ${
               direction === "rtl" ? "flex-row-reverse space-x-reverse" : ""
             }`}
           >
             <Link to="/" className="text-[#006b99] hover:underline">
               {t("home")}
             </Link>
-
-            <div className="relative group">
+           <div className="relative group">
               <Link to="/about" className="text-[#006b99] hover:underline px-2 py-1">
                 {t("aboutUs")}
               </Link>
@@ -124,27 +123,116 @@ const Header: React.FC = () => {
             </Link>
           </nav>
 
-          {/* Right side controls */}
+          {/* Right Controls */}
           <div className="flex items-center space-x-4">
             <Button
               variant="outline"
               size="sm"
-              onClick={() => setLanguage(language === "en" ? "ar" : "en")}
+              onClick={toggleLanguage}
               className="border-secondary text-secondary hover:bg-secondary hover:text-white"
             >
               {language === "en" ? "العربية" : "English"}
             </Button>
 
+            {/* Mobile Menu Button */}
             <button
               className="md:hidden p-2 text-secondary"
               onClick={() => setIsMenuOpen((v) => !v)}
               aria-label="Toggle navigation"
             >
-              <Menu className="h-6 w-6" />
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Dropdown */}
+    {isMenuOpen && (
+  <div
+    className={`md:hidden absolute top-20 left-0 w-full bg-white shadow-lg flex flex-col space-y-2 py-6 px-4 z-40 ${
+      direction === "rtl" ? "text-right" : "text-left"
+    }`}
+  >
+    {/* Home */}
+    <Link
+      to="/"
+      onClick={() => setIsMenuOpen(false)}
+      className="text-[#006b99] font-semibold hover:underline"
+    >
+      {t("home")}
+    </Link>
+
+    {/* About Us Dropdown */}
+    <details className="w-full">
+      <summary className="cursor-pointer text-[#006b99] font-semibold py-2">
+        {t("aboutUs")}
+      </summary>
+      <div className="pl-4 flex flex-col space-y-2 text-[#ffd300]">
+        <Link to="/about" onClick={() => setIsMenuOpen(false)}>
+          {t("aboutUs")}
+        </Link>
+        <Link to="/career" onClick={() => setIsMenuOpen(false)}>
+          {t("career")}
+        </Link>
+        <Link to="/clients" onClick={() => setIsMenuOpen(false)}>
+          {t("ourClients")}
+        </Link>
+        <Link to="/partners" onClick={() => setIsMenuOpen(false)}>
+          {t("ourPartners")}
+        </Link>
+        <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+          {t("contactUs")}
+        </Link>
+      </div>
+    </details>
+
+    {/* Products Dropdown */}
+    <details className="w-full">
+      <summary className="cursor-pointer text-[#006b99] font-semibold py-2">
+        {t("products")}
+      </summary>
+      <div className="pl-4 flex flex-col space-y-2 text-[#ffd300]">
+        <Link to="/solutions/erp" onClick={() => setIsMenuOpen(false)}>
+          {t("ERP Enterprise")}
+        </Link>
+        <Link to="/solutions/erp-standard" onClick={() => setIsMenuOpen(false)}>
+          {t("ERP Standard")}
+        </Link>
+        <Link to="/solutions/sass" onClick={() => setIsMenuOpen(false)}>
+          {t("SaaS")}
+        </Link>
+        <Link to="/solutions/van-sales" onClick={() => setIsMenuOpen(false)}>
+          {t("Van Sales")}
+        </Link>
+      </div>
+    </details>
+
+    {/* Services Dropdown */}
+    <details className="w-full">
+      <summary className="cursor-pointer text-[#006b99] font-semibold py-2">
+        {t("serviceSolutions")}
+      </summary>
+      <div className="pl-4 flex flex-col space-y-2 text-[#ffd300]">
+        <Link to="/solutions/digital-transformation" onClick={() => setIsMenuOpen(false)}>
+          {t("Digital Transformation")}
+        </Link>
+        <Link to="/" onClick={() => setIsMenuOpen(false)}>
+          {t("System Integration")}
+        </Link>
+      </div>
+    </details>
+
+    {/* Blog */}
+    <Link
+      to="/blog"
+      onClick={() => setIsMenuOpen(false)}
+      className="text-[#006b99] font-semibold hover:underline"
+    >
+      {t("blog")}
+    </Link>
+  </div>
+)}
+
     </header>
   )
 }

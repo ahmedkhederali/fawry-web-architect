@@ -662,7 +662,52 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
   }
 ];
 
+export const ClientTabsParent=[
+  {id:1,label:"ERP System",categories : [
+    "Packaging Industry",
+    "Plastic Industries",
+    "Food Industries",
 
+  ]},
+  {id:2,label:"SaaS Solutions",
+    categories : [
+   
+    "Engineering Industries",
+    "Textile & Garment Industry",
+    "Chemical & Pharmaceutical Industries",
+    "Governmental Authorities",
+    "Petroleum Industries",
+  ]
+  },
+  {id:3,label:"Digital Transformation",
+    categories : [
+    "Packaging Industry",
+    "Plastic Industries",
+    "Food Industries",
+    "Showrooms & POS (Ceramics)",
+    "Showrooms & POS",
+    "Engineering Industries",
+    "Textile & Garment Industry",
+    "Chemical & Pharmaceutical Industries",
+    "Governmental Authorities",
+    "Petroleum Industries",
+  ]
+  },
+  {id:4,label:"System Integration",
+    categories : [
+    "Packaging Industry",
+    "Plastic Industries",
+    "Food Industries",
+    "Showrooms & POS (Ceramics)",
+    "Showrooms & POS",
+    "Engineering Industries",
+    "Textile & Garment Industry",
+    "Chemical & Pharmaceutical Industries",
+    "Governmental Authorities",
+    "Petroleum Industries",
+  ]
+  },
+]
 
 export const carouselSlides = [
   {
@@ -741,9 +786,6 @@ export const categories = [
   "Integration Services",
   "Governmental Authorities",
   "Petroleum Industries",
-  
- 
-
 ];
 
 export const logos = {
