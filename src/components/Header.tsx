@@ -33,7 +33,7 @@ const Header: React.FC = () => {
 
           {/* Desktop nav – only mirror spacing for RTL */}
           <nav
-            className={`hidden md:flex flex-1 justify-center lg:justify-center gap-6 lg:gap-10 font-semibold ${
+            className={`hidden  xl:ml-[-30rem] md:flex flex-1 justify-center lg:justify-center gap-6 lg:gap-10 font-semibold ${
               direction === "rtl" ? "flex-row-reverse space-x-reverse" : ""
             }`}
           >
