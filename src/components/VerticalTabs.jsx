@@ -1,9 +1,10 @@
 // src/components/VerticalTabs.jsx
 import React, { useState } from "react";
-import {  logos } from "@/lib/solutionsData";
+import { logos } from "@/lib/solutionsData";
 
-const VerticalTabs = ({categories}) => {
+const VerticalTabs = ({ categories }) => {
   const [active, setActive] = useState(categories[0] || "Packaging Industry");
+  
   return (
     <div className="container mx-auto px-4 py-8 flex">
       {/* Vertical Tab List */}
@@ -27,8 +28,12 @@ const VerticalTabs = ({categories}) => {
       {/* Logos */}
       <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 pl-6">
         {logos[active]?.map((logo, i) => (
-          <div key={i} className="flex justify-center">
-            <img src={logo} alt={`${active} logo ${i}`} className="h-20 object-contain" />
+          <div key={i} className="flex justify-center items-center p-2 bg-white rounded-lg shadow-sm">
+            <img 
+              src={logo} 
+              alt={`${active} logo ${i}`} 
+              className="w-full max-w-[180px] h-24 object-contain" 
+            />
           </div>
         ))}
       </div>

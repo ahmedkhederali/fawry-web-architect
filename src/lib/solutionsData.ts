@@ -667,6 +667,13 @@ export const ClientTabsParent=[
     "Packaging Industry",
     "Plastic Industries",
     "Food Industries",
+    "Showrooms & POS (Ceramics)",
+    "Showrooms & POS",
+    "Engineering Industries",
+    "Textile & Garment Industry",
+    "Chemical & Pharmaceutical Industries",
+    "Governmental Authorities",
+    "Petroleum Industries",
 
   ]},
   {id:2,label:"SaaS Solutions",
@@ -694,6 +701,20 @@ export const ClientTabsParent=[
   ]
   },
   {id:4,label:"System Integration",
+    categories : [
+    "Packaging Industry",
+    "Plastic Industries",
+    "Food Industries",
+    "Showrooms & POS (Ceramics)",
+    "Showrooms & POS",
+    "Engineering Industries",
+    "Textile & Garment Industry",
+    "Chemical & Pharmaceutical Industries",
+    "Governmental Authorities",
+    "Petroleum Industries",
+  ]
+  },
+    {id:5,label:"Van Sale",
     categories : [
     "Packaging Industry",
     "Plastic Industries",

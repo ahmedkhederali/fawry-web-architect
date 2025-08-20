@@ -149,20 +149,34 @@ const Career = () => {
   const [selectedJob, setSelectedJob] = useState(null);
 
   return (
-    <div className="container bg-white min-h-screen px-4 md:px-20 py-12 relative">
-      <section className="bg-white py-10 md:py-14">
-        <div className="container mx-auto px-4">
-          <Card
-            title={t('Career')}
-            desc={t('career_desc')}
-            img_src="/images/career.jpg"
-            img_alt="career illustration"
-          />
+    <div className=" bg-white min-h-screen pt-16  ">
+      <section className="w-full bg-[#006b99] text-white mt-10 pt-20 pb-8 relative">
+        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+       <div className="md:w-1/2 relative z-10">
+      <h1 className="text-4xl font-bold mb-6 text-[#ffd400] drop-shadow-lg">
+        {t("Career")}
+      </h1>
+      <p className="text-lg mb-6 leading-relaxed tracking-wide text-white text-justify">
+        {t("career_desc")}
+      </p>
+    </div>
+
+    {/* Right side image */}
+    <div className="md:w-1/2">
+      <img
+        src="/images/career.jpg"
+        alt="career illustration"
+        className=" h-[300px] rounded-xl shadow-2xl  w-full  contain-content transform"
+       // className="rounded-xl shadow-2xl w-full max-h-[400px] object-cover transform "
+        style={{ perspective: "1200px" }}
+      />
+    </div>
+  
         </div>
       </section>
       <h2
         id={`card-title-available-jobs`}
-        className="text-2xl sm:text-2xl lg:text-2xl font-bold mb-4 md:mb-6 text-[#ffd300]"
+        className="mt-20 text-center text-2xl sm:text-2xl lg:text-2xl font-bold mb-4 md:mb-6 text-[#ffd300]"
       >
         {t('available_jobs')}
       </h2>

@@ -53,3 +53,9 @@
 .read-the-docs {
   color: #888;
 }
+/* In your global CSS file */
+.client-logo {
+  width: 128px !important;
+  height: 96px !important;
+  object-fit: contain !important;
+}

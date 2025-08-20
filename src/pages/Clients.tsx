@@ -1,4 +1,3 @@
-
 import React, { useRef, useState } from 'react';
 import { useLanguage } from '../components/LanguageContext';
 import HorizontalTabs from '@/components/HorizontalTabs';
@@ -10,16 +9,11 @@ const Clients = () => {
   const [activeTab, setActiveTab] = useState(0);
   const descriptionRef = useRef<HTMLDivElement>(null)
 
-  const { language, t } = useLanguage(); // assumed lang is 'en' or 'ar'
+  const { language, t } = useLanguage();
   const handleTabClick = (index: number) => {
     setActiveTab(index)
-    // setTimeout(() => {
-    //   descriptionRef.current?.scrollIntoView({
-    //     behavior: "smooth",
-    //     block: "center",
-    //   })
-    // }, 100)
   }
+
   return (
     <div className="min-h-screen pt-16">
       <div className="bg-secondary text-white pt-12 pb-6">
@@ -29,7 +23,7 @@ const Clients = () => {
           img_src="/images/clients.jpg"
           img_alt="Clients Illustration"
           className="container"
-          color="text-white"
+          color="text-white "
         />
         <div className="container mx-auto px-6 pt-5  border-[white]/30">
         <div className="flex space-x-8 overflow-x-auto">
@@ -54,7 +48,10 @@ const Clients = () => {
         <div className="container mx-auto px-6 py-12 space-y-12">
           {/* Full-width description */}
           <div ref={descriptionRef} className={`flex flex-col md:flex-row items-center justify-between gap-8`}>
-            <VerticalTabs categories={ClientTabsParent[activeTab].categories} />
+            <VerticalTabs 
+              categories={ClientTabsParent[activeTab].categories} 
+              logoClassName="w-32 h-24 object-contain" // Added uniform logo sizing
+            />
           </div>
         </div>
       )}

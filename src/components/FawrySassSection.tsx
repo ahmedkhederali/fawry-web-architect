@@ -1,3 +1,4 @@
+import AboutTimeLineSection from '@/pages/AboutUspage/AboutTimeLineSection';
 import Firebase from '@/pages/Firebase';
 import SaaSVideos from '@/pages/SaasVideos';
 import { Timeline } from '@/pages/TimelineModal';
@@ -64,7 +65,8 @@ const FawrySassSection = () => {
         <Firebase />
         </div>
       <div className="mt-10">
-      <Timeline />
+      {/* <Timeline /> */}
+      <AboutTimeLineSection/>
     </div>
 <div className="mt-10">
       <SaaSVideos />
