@@ -46,11 +46,11 @@ const Clients = () => {
       
       {ClientTabsParent[activeTab] &&  (
         <div className="container mx-auto px-6 py-12 space-y-12">
-          {/* Full-width description */}
+         
           <div ref={descriptionRef} className={`flex flex-col md:flex-row items-center justify-between gap-8`}>
             <VerticalTabs 
               categories={ClientTabsParent[activeTab].categories} 
-              logoClassName="w-32 h-24 object-contain" // Added uniform logo sizing
+              logoClassName="w-32 h-32 object-contain" // Added uniform logo sizing
             />
           </div>
         </div>
