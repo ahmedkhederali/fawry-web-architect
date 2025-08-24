@@ -67,7 +67,7 @@ const FawryHeaderHero: React.FC = () => {
                 <a href="/" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">System Integration</a>
               </div>
             </div>
-            <a href="/blog" className="text-[#006b99] hover:underline">Blog</a>
+            {/* <a href="/blog" className="text-[#006b99] hover:underline">Blog</a> */}
             {/* Language Toggle */}
 
           </nav>

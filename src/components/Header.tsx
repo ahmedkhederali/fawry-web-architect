@@ -118,9 +118,9 @@ const Header: React.FC = () => {
                 </Link>
               </div>
             </div>
-            <Link to="/blog" className="text-[#006b99] hover:underline">
+            {/* <Link to="/blog" className="text-[#006b99] hover:underline">
               {t("blog")}
-            </Link>
+            </Link> */}
           </nav>
 
           {/* Right Controls */}
@@ -223,13 +223,13 @@ const Header: React.FC = () => {
     </details>
 
     {/* Blog */}
-    <Link
+    {/* <Link
       to="/blog"
       onClick={() => setIsMenuOpen(false)}
       className="text-[#006b99] font-semibold hover:underline"
     >
       {t("blog")}
-    </Link>
+    </Link> */}
   </div>
 )}
 

@@ -109,13 +109,13 @@ const App = () => (
                 <Footer />
               </>
             } />
-            <Route path="/blog" element={
+            {/* <Route path="/blog" element={
               <>
                 <Header />
                 <Blog />
                 <Footer />
               </>
-            } />
+            } /> */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
