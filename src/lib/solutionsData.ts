@@ -268,7 +268,7 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
     title: 'ERP Standard Edition',
     min_dec: 'Unlock Efficiency: Optimize Your Operations',
     description: "Unlock your organization's potential with our comprehensive ERP Enterprise Edition. Designed to integrate planning, manufacturing, sales, and marketing processes, this solution provides real-time access to critical data across all departments. Empower your team to make informed decisions that drive efficiency and profitability.",
-    image: '/public/images/erp1.png',
+    image: 'images/erp1.png',
     span: 'col-span-1 row-span-2',
     children: [
       {
