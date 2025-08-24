@@ -1,4 +1,3 @@
-import React, { useState , useRef} from 'react';
 import { useParams, Link } from 'react-router-dom';
 import solutions from '../lib/solutionsData';
 import { CheckCircleIcon } from 'lucide-react';
@@ -6,6 +5,7 @@ import FawrySassSection from '@/components/FawrySassSection';
 import PricingSection from '@/components/PricingSection';
 import ContactSection from '@/components/ContactSection';
 import { useLanguage } from '@/components/LanguageContext';
+import { useRef, useState } from 'react';
 
 interface ChildSolution {
   id: string;
@@ -31,19 +31,24 @@ const SolutionParent = () => {
   const [activeTab, setActiveTab] = useState(0);
   const { language, t } = useLanguage(); // assumed lang is 'en' or 'ar'
   const descriptionRef = useRef<HTMLDivElement>(null)
+  const [isExpanded, setIsExpanded] = useState(false);
 
   if (!parent) return <div className="p-8 text-center">Parent solution not found.</div>;
 
   const activeChild = parent.children?.[activeTab] as ChildSolution;
   const formattedSummary = activeChild.summary?.replace(/\/n/g, '\n');
+
+  const summaryLines = formattedSummary.split("\n");
+  const displayLines = isExpanded ? summaryLines : summaryLines.slice(0, 3);
  const getProductImage = (childTitle: string) => {
     const images = {
+      diracenterprise: "/products/diracenterprise/diracenterprise.png?height=400&width=600",
       DiraPack: "/products/dirapack/dirapack.png?height=400&width=600",
       DiraPanel: "/products/dirapack/dirapack.png?height=400&width=600",
       DiraTail: "/products/dirapack/dirapack.png?height=400&width=600",
       DiraPlast: "/products/dirapack/dirapack.png?height=400&width=600",
     }
-    return images[childTitle as keyof typeof images] || activeChild?.live_img || "/placeholder.svg?height=400&width=600"
+    return images[childTitle as keyof typeof images] || activeChild?.live_img || "/images/EnterpriseEdition.png"
   }
 
   const handleTabClick = (index: number) => {
@@ -103,16 +108,26 @@ const SolutionParent = () => {
          <div ref={descriptionRef} className={`flex flex-col md:flex-row items-center justify-between gap-8`}>
             {/* LEFT SIDE - TEXT */}
           <div className="md:w-1/2 text-left">
-              <h2 className="text-2xl font-bold mb-4 text-[#006b99]">{activeChild.description}</h2>
-
-              <p className="text-[#003366] mt-1 leading-relaxed text-justify">
-                {formattedSummary.split("\n").map((line, index) => (
-                  <span key={index}>
-                    {line}
-                    <br />
-                  </span>
-                ))}
-              </p>
+               <h2 className="text-2xl font-bold mb-4 text-[#006b99]">
+        {activeChild.description}
+      </h2>
+      <div className="text-[#003366] mt-1 leading-relaxed text-justify">
+        {displayLines.map((line, index) => (
+          <div key={index} className="min-h-[1.5em] flex items-center">
+            <span className="inline-block w-full text-left break-words">
+              {line || <br />}
+            </span>
+          </div>
+        ))}
+        {!isExpanded && summaryLines.length > 3 && (
+          <button
+            className="mt-2 text-[#006b99] hover:text-[#003366] underline focus:outline-none"
+            onClick={() => setIsExpanded(true)}
+          >
+            Read More
+          </button>
+        )}
+      </div>
 
 
                <div className="flex flex-wrap gap-4 mt-6">

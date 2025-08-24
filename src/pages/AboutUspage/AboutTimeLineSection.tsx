@@ -13,7 +13,7 @@ const timeline = [
     year: "2017",
     title: "Launch of Dirapack",
     desc: "DIRAC launched Dirapack, the first ERP system in Egypt and the Arab world specifically designed for managing corrugated carton factories. This was a significant step in delivering tailored digital solutions for the industry.",
-    image: "/images/DiraPack.png",
+    image: "/images/DiracSystems.png",
   },
   {
     year: "2019",
@@ -41,11 +41,12 @@ const timeline = [
   },
 ];
 
-
 const AboutTimeLineSection = () => (
   <section className="py-10 bg-gray-50 relative overflow-hidden">
     <div className="container mx-auto px-4">
-      <h2 className="text-4xl font-bold mb-16 text-center text-[#006b99]">Our Journey</h2>
+      <h2 className="text-4xl font-bold mb-16 text-center text-[#006b99]">
+        Our Journey
+      </h2>
 
       <div className="relative max-w-4xl mx-auto">
         {/* Improved curved dashed line */}
@@ -82,33 +83,39 @@ const AboutTimeLineSection = () => (
               </div>
 
               {/* Content container */}
-              <div className={`w-full flex ${idx % 2 === 0 ? "justify-start pr-8" : "justify-end pl-8"}`}>
-                <div className={`max-w-md ${idx % 2 === 0 ? "mr-16" : "ml-16"}`}>
+              <div
+                className={`w-full flex ${
+                  idx % 2 === 0 ? "justify-start pr-8" : "justify-end pl-8"
+                }`}
+              >
+                <div
+                  className={`max-w-md ${idx % 2 === 0 ? "mr-16" : "ml-16"}`}
+                >
                   {/* Year badge */}
                   <div className="inline-block bg-[#006b99] text-white px-4 py-2 rounded-lg font-bold text-lg mb-4 shadow-lg">
                     {item.year}
-                  </div>e
+                  </div>
                   {/* Content card */}
-                 <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-  <div className="flex items-start gap-4">
-    {/* Image */}
-    <img 
-      src={item.image} 
-      alt={item.title} 
-      className="w-16 h-16 rounded-lg object-cover flex-shrink-0" 
-    />
-    
-    {/* Content */}
-    <div>
-      <h3 className="text-xl font-bold text-[#FFD300] mb-2 leading-tight">
-        {item.title}
-      </h3>
-      <p className="text-gray-600 leading-relaxed">{item.desc}</p>
-    </div>
-  </div>
-</div>
+                  <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                    <div className="flex items-start gap-4">
+                      {/* Image */}
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-16 h-16 rounded-lg object-cover flex-shrink-0"
+                      />
 
-
+                      {/* Content */}
+                      <div>
+                        <h3 className="text-xl font-bold text-[#FFD300] mb-2 leading-tight">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                   {/* Connecting line from dot to card */}
                   <div
                     className={`absolute top-8 w-12 h-0.5 bg-[#006b99] opacity-60 ${
@@ -121,7 +128,11 @@ const AboutTimeLineSection = () => (
               {/* Decorative paper plane for certain milestones */}
               {(idx === 2 || idx === 4 || idx === 6) && (
                 <div
-                  className={`absolute top-8 ${idx % 2 === 0 ? "right-8" : "left-8"} text-[#[#006b99]] text-2xl transform ${idx % 2 === 0 ? "rotate-45" : "-rotate-45"} animate-pulse`}
+                  className={`absolute top-8 ${
+                    idx % 2 === 0 ? "right-8" : "left-8"
+                  } text-[#[#006b99]] text-2xl transform ${
+                    idx % 2 === 0 ? "rotate-45" : "-rotate-45"
+                  } animate-pulse`}
                 >
                   ✈️
                 </div>
@@ -144,6 +155,6 @@ const AboutTimeLineSection = () => (
       <div className="absolute top-1/2 right-20 w-16 h-16 bg-[#006b99] opacity-10 rounded-full"></div>
     </div>
   </section>
-)
+);
 
-export default AboutTimeLineSection
+export default AboutTimeLineSection;

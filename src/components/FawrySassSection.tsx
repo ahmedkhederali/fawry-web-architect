@@ -65,8 +65,8 @@ const FawrySassSection = () => {
         <Firebase />
         </div>
       <div className="mt-10">
-      {/* <Timeline /> */}
-      <AboutTimeLineSection/>
+      <Timeline/>
+      {/* <AboutTimeLineSection/> */}
     </div>
 <div className="mt-10">
       <SaaSVideos />

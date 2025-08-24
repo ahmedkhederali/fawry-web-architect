@@ -6,7 +6,7 @@ const solutions = [
     title: 'ERP System',
     min_dec: 'Unlock Efficiency: Optimize Your Operations',
     description: "Unlock your organization's potential with our comprehensive ERP Enterprise Edition. Designed to integrate planning, manufacturing, sales, and marketing processes, this solution provides real-time access to critical data across all departments. Empower your team to make informed decisions that drive efficiency and profitability.",
-    image: 'https://s35804.pcdn.co/blog/wp-content/uploads/2021/03/erp_the_value_to_your_manufacturing.jpg',
+    image: '/images/erp1.png',
     span: 'col-span-1 row-span-2',
     children: [
       {
@@ -268,7 +268,7 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
     title: 'ERP Standard Edition',
     min_dec: 'Unlock Efficiency: Optimize Your Operations',
     description: "Unlock your organization's potential with our comprehensive ERP Enterprise Edition. Designed to integrate planning, manufacturing, sales, and marketing processes, this solution provides real-time access to critical data across all departments. Empower your team to make informed decisions that drive efficiency and profitability.",
-    image: 'images/erp1.png',
+    image: '/images/erp1.png',
     span: 'col-span-1 row-span-2',
     children: [
       {
@@ -301,7 +301,8 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
 The solution includes advanced capabilities such as Cut Sheet Management, Corrugator Machine Planning, and Waste Calculation, allowing you to optimize material usage and improve cost control. Additionally, DiraPack provides tools for managing assembly processes and monitoring all stages of printing, ensuring high-quality output throughout the production process. By empowering packaging manufacturers with these essential tools, DiraPack helps you reduce costs and maintain quality at every step.
 
 Implementation of DiraPack is designed to be seamless, with a dedicated team guiding you through the setup and integration process. We offer comprehensive training and ongoing support to ensure your team is confident in using the system effectively. With our commitment to your success, you’ll have the resources you need to maximize the benefits of your tailored ERP solution, driving efficiency and profitability for your packaging operations.`,
-        benefits: [
+        
+benefits: [
           {
             title: 'Carton Configurator',
             description: 'Easily define and customize carton dimensions, structure, and specifications.'
