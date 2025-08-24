@@ -3,19 +3,17 @@ const timeline = [
     year: "2012–2014",
     title: "Foundation & Early Development",
     desc: "DIRAC Systems was officially established in 2014, building on system development that began in 2012.",
-    icon: "🏢",
   },
   {
     year: "2016",
     title: "Leadership in Digital Payment Integration",
     desc: "DIRAC became a leading provider of electronic integration solutions for digital payments, partnering with Fawry and other major institutions in Egypt.",
-    icon: "💳",
   },
   {
     year: "2017",
     title: "Launch of Dirapack",
     desc: "DIRAC launched Dirapack, the first ERP system in Egypt and the Arab world specifically designed for managing corrugated carton factories. This was a significant step in delivering tailored digital solutions for the industry.",
-    icon: "📦",
+    image: "/images/DiraPack.png",
   },
   {
     year: "2019",
@@ -89,18 +87,27 @@ const AboutTimeLineSection = () => (
                   {/* Year badge */}
                   <div className="inline-block bg-[#006b99] text-white px-4 py-2 rounded-lg font-bold text-lg mb-4 shadow-lg">
                     {item.year}
-                  </div>
-
+                  </div>e
                   {/* Content card */}
-                  <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-                    <div className="flex items-start gap-4">
-                      <div className="text-3xl flex-shrink-0">{item.icon}</div>
-                      <div>
-                        <h3 className="text-xl font-bold text-[#FFD300] mb-2 leading-tight">{item.title}</h3>
-                        <p className="text-gray-600 leading-relaxed">{item.desc}</p>
-                      </div>
-                    </div>
-                  </div>
+                 <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+  <div className="flex items-start gap-4">
+    {/* Image */}
+    <img 
+      src={item.image} 
+      alt={item.title} 
+      className="w-16 h-16 rounded-lg object-cover flex-shrink-0" 
+    />
+    
+    {/* Content */}
+    <div>
+      <h3 className="text-xl font-bold text-[#FFD300] mb-2 leading-tight">
+        {item.title}
+      </h3>
+      <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+    </div>
+  </div>
+</div>
+
 
                   {/* Connecting line from dot to card */}
                   <div

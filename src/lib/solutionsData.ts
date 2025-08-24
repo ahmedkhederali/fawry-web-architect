@@ -268,7 +268,7 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
     title: 'ERP Standard Edition',
     min_dec: 'Unlock Efficiency: Optimize Your Operations',
     description: "Unlock your organization's potential with our comprehensive ERP Enterprise Edition. Designed to integrate planning, manufacturing, sales, and marketing processes, this solution provides real-time access to critical data across all departments. Empower your team to make informed decisions that drive efficiency and profitability.",
-    image: 'https://s35804.pcdn.co/blog/wp-content/uploads/2021/03/erp_the_value_to_your_manufacturing.jpg',
+    image: '/public/images/erp1.png',
     span: 'col-span-1 row-span-2',
     children: [
       {
@@ -529,7 +529,7 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
     title: 'SaaS Solutions',
     min_dec: 'Streamline Your Success: Save Time, Money, and Effort',
     description: 'SaaS Solutions for Business is a suite of software services designed to enhance operational efficiency and drive growth through cloud-based applications.',
-    image: '/products/sass/saas2.png',
+    image: '/images/saas3.png',
     span: 'col-span-1 row-span-2',
     "children": [
       {
@@ -679,53 +679,23 @@ export const ClientTabsParent=[
   {id:2,label:"SaaS Solutions",
     categories : [
    
-    "Engineering Industries",
-    "Textile & Garment Industry",
-    "Chemical & Pharmaceutical Industries",
-    "Governmental Authorities",
-    "Petroleum Industries",
+    "Companies",
+    
   ]
   },
   {id:3,label:"Digital Transformation",
     categories : [
-    "Packaging Industry",
-    "Plastic Industries",
-    "Food Industries",
-    "Showrooms & POS (Ceramics)",
-    "Showrooms & POS",
-    "Engineering Industries",
-    "Textile & Garment Industry",
-    "Chemical & Pharmaceutical Industries",
-    "Governmental Authorities",
-    "Petroleum Industries",
+    
   ]
   },
   {id:4,label:"System Integration",
     categories : [
-    "Packaging Industry",
-    "Plastic Industries",
-    "Food Industries",
-    "Showrooms & POS (Ceramics)",
-    "Showrooms & POS",
-    "Engineering Industries",
-    "Textile & Garment Industry",
-    "Chemical & Pharmaceutical Industries",
-    "Governmental Authorities",
-    "Petroleum Industries",
+    
   ]
   },
     {id:5,label:"Van Sale",
     categories : [
-    "Packaging Industry",
-    "Plastic Industries",
-    "Food Industries",
-    "Showrooms & POS (Ceramics)",
-    "Showrooms & POS",
-    "Engineering Industries",
-    "Textile & Garment Industry",
-    "Chemical & Pharmaceutical Industries",
-    "Governmental Authorities",
-    "Petroleum Industries",
+    
   ]
   },
 ]

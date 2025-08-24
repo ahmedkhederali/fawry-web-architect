@@ -20,9 +20,9 @@ const content = [
 
 const AboutHeroSection = () => {
   return (
-    <section className="bg-[#f9f9f9] py-10 px-6 md:px-12">
+    <section className="bg-[#f9f9f9] py-10 px-6 md:px-12 ">
       {/* Header */}
-      <div className="text-center mb-8">
+      <div className="text-center mb-8 ">
         <h2 className="text-3xl font-bold text-[#006b99]">Who We Are</h2>
         <p className="text-[#4b5563] mt-2 text-md max-w-2xl mx-auto">
           Discover our mission, vision, and the values that define DIRAC’s digital leadership.

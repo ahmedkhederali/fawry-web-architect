@@ -15,16 +15,33 @@ const Clients = () => {
   }
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen">
       <div className="bg-secondary text-white pt-12 pb-6">
-        <Card
-          title={t('ourClients')}
-          desc={t('clients_desc')}
-          img_src="/images/clients.jpg"
-          img_alt="Clients Illustration"
-          className="container"
-          color="text-white "
-        />
+        <section className="w-full bg-[#006b99] text-white mt-10 pt-16 pb-8 relative">
+        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+       <div className="md:w-1/2 relative z-10">
+      <h1 className="text-4xl font-bold mb-6 text-[#ffd400] drop-shadow-lg">
+        {t("Clients")}
+      </h1>
+      <p className="text-lg mb-6 leading-relaxed tracking-wide text-white text-justify">
+        {t("clients_desc")}
+      </p>
+    </div>
+
+    {/* Right side image */}
+    <div className="md:w-1/2">
+      <img
+        src="/images/clients.jpg"
+        alt="client illustration"
+        className=" h-[300px] rounded-xl shadow-2xl  w-full  contain-content transform"
+       // className="rounded-xl shadow-2xl w-full max-h-[400px] object-cover transform "
+        style={{ perspective: "1200px" }}
+      />
+    </div>
+  
+        </div>
+      </section>
+      
         <div className="container mx-auto px-6 pt-5  border-[white]/30">
         <div className="flex space-x-8 overflow-x-auto">
           {ClientTabsParent.map((child, index) => (

@@ -149,7 +149,7 @@ const Career = () => {
   const [selectedJob, setSelectedJob] = useState(null);
 
   return (
-    <div className=" bg-white min-h-screen pt-16  ">
+    <div className=" bg-white min-h-screen w-full    ">
       <section className="w-full bg-[#006b99] text-white mt-10 pt-20 pb-8 relative">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
        <div className="md:w-1/2 relative z-10">
