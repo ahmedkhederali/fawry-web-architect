@@ -29,33 +29,54 @@ const PartnersSection = () => {
           Strategic Partnerships With Industry Leaders
         </p>
       </div>
-      <div className="mx-auto px-4 space-y-4 sm:space-y-6 max-w-7xl">
-        {/* First row - Mobile: 1 column, Small: 2 columns, Medium+: 5 columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 sm:gap-6 md:gap-8 justify-items-center">
+      <div className="mx-auto max-w-7xl px-4 space-y-6">
+        {/* FIRST ROW */}
+        <div
+          className="
+     grid grid-cols-1 gap-4
+     sm:grid-cols-1
+     md:flex md:flex-wrap md:justify-center md:gap-6
+     lg:grid lg:grid-cols-5 lg:gap- lg:justify-items-center
+   "
+        >
           {firstRow.map((icon, index) => (
             <div
               key={`first-${index}`}
-              className="flex items-center justify-center bg-white p-4 sm:p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow w-full max-w-[240px] h-[140px] sm:h-[160px]"
+              className="
+         flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow
+         w-full h-[140px] p-4
+         sm:h-[160px] sm:p-6
+         md:basis-[calc(33.333%-24px)] md:max-w-[260px]   /* 3 per line approx on md, wraps */
+         lg:basis-auto lg:max-w-[240px]                   /* grid controls at lg */
+       "
             >
               <img
                 src={icon || "/placeholder.svg"}
                 alt={`partner-${index}`}
-                className="object-contain max-h-[100px] sm:max-h-[120px] max-w-[160px] sm:max-w-[180px]"
+                className="object-contain max-h-[100px] sm:max-h-[120px] max-w-[180px]"
               />
             </div>
           ))}
         </div>
-        {/* Second row - Mobile: 1 column, larger screens: centered flex */}
-        <div className="grid grid-cols-1 sm:flex sm:flex-wrap sm:justify-center gap-4 sm:gap-6 md:gap-8">
+        {/* SECOND ROW */}
+        <div
+          className="
+   flex flex-wrap gap-6
+   justify-center    /* ده اللي بيخلي العناصر في النص */
+ "
+        >
           {secondRow.map((icon, index) => (
             <div
               key={`second-${index}`}
-              className="flex items-center justify-center bg-white p-4 sm:p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow w-full max-w-[240px] h-[140px] sm:h-[160px] mx-auto sm:mx-0"
+              className="
+       flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow
+       w-full sm:w-[240px] h-[160px] p-6
+     "
             >
               <img
-                src={icon || "/placeholder.svg"}
-                alt={`partner-${index + 5}`}
-                className="object-contain max-h-[80px] sm:max-h-[100px] w-auto"
+                src={icon || '/placeholder.svg'}
+                alt={`partner-${index}`}
+                className="object-contain max-h-[100px] sm:max-h-[120px] max-w-[180px]"
               />
             </div>
           ))}

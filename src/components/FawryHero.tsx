@@ -94,13 +94,13 @@ const FawryHeaderHero: React.FC = () => {
             <a href="/clients" className="block px-4 py-2">Our Clients</a>
             <a href="/partners" className="block px-4 py-2">Our Partners</a>
             <a href="/products" className="block px-4 py-2">Products</a>
-            <a href="/blog" className="block px-4 py-2">Blog</a>
+            {/* <a href="/blog" className="block px-4 py-2">Blog</a>
             <button
               onClick={() => setLanguage(language === "en" ? "ar" : "en")}
               className="w-[5rem] text-left px-4 py-2 bg-white border-2 border-[#006b99] text-[#006b99] rounded-md hover:bg-[#ffd300] hover:text-[#006b99] transition-all duration-300 font-medium shadow-lg"
             >
               العربية
-            </button>
+            </button> */}
           </div>
         )}
 
@@ -113,7 +113,7 @@ const FawryHeaderHero: React.FC = () => {
             <h1 className="text-3xl md:text-4xl font-bold text-[#006b99]">
               Dirac Systems
             </h1>
-            <p className="text-sm md:text-lg text-[#006b99] leading-relaxed w-full md:w-3/4 mx-auto md:mx-0">
+            <p className="text-sm md:text-lg text-[#025274] leading-relaxed w-full md:w-3/4 mx-auto md:mx-0">
               Drives Digital Evolution And Operational Efficiency With Cutting-Edge Technology Solutions Tailored To Modern Business Needs
             </p>
           </div>
@@ -166,14 +166,15 @@ const FawryHeaderHero: React.FC = () => {
 
       {/* Blue Right Side with Carousel */}
       <div className="relative flex flex-col items-center justify-center w-full md:w-[45%] bg-[#006b99] min-h-[50vh] md:min-h-[80vh]">
-        <button
+        {/* <button
           onClick={() => setLanguage(language === "en" ? "ar" : "en")}
           className="hidden md:block absolute top-6 right-6 md:right-[2rem] z-40 px-4 py-2 bg-white border-2 border-[#006b99] text-[#006b99] rounded-md hover:bg-[#ffd300] hover:text-[#006b99] transition-all duration-300 font-medium shadow-lg"
         >
           العربية
-        </button>
+        </button> */}
         {/* Carousel */}
-        <div className="relative h-[400px] md:w-[125%]  xl:h-[450px] md:h-[350px] flex items-center justify-center overflow-hidden rounded-[10px] md:rounded-tl-[80px] shadow-2xl bg-white z-20">
+        <div className="relative image-container h-[400px] md:w-[125%]  xl:h-[450px] md:h-[350px] flex items-center justify-center overflow-hidden rounded-[10px] md:rounded-tl-[80px] shadow-2xl bg-white z-20">
+         
           <img
             key={current}
             src={carouselSlides[current].image}

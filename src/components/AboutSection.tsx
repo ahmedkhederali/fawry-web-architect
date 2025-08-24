@@ -60,7 +60,7 @@ export default function AboutSection() {
 
   return (
     <section className="py-10 bg-white" id="about">
-      <div className="container mx-auto px-16">
+      <div className="container md:mx-auto md:px-16">
         <div key={direction} className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 items-center">
           {/* === Text Section === */}
           <div id="about-text" className="transition-transform duration-1000 opacity-0 translate-x-[-80px]">
@@ -102,8 +102,8 @@ export default function AboutSection() {
                   <Counter end={800} duration={1500} />+
                 </h3>
                 <p
-                  className="text-[#006b99] font-bold text-xl group-hover:text-[#ffd300] transition-colors"
-                  style={{ textShadow: "0 0 8px #006b99" }}
+                  className="text-[#006b99] font-bold text-xl "
+                  // style={{ textShadow: "0 0 8px #006b99" }}
                 >
                   Active Customers
                 </p>
@@ -116,8 +116,8 @@ export default function AboutSection() {
                   <Counter end={15} duration={1200} />+
                 </h3>
                 <p
-                  className="text-[#006b99] font-bold text-xl group-hover:text-[#ffd300] transition-colors"
-                  style={{ textShadow: "0 0 8px #006b99" }}
+                  className="text-[#006b99] font-bold text-xl "
+                  // style={{ textShadow: "0 0 8px #006b99" }}
                 >
                   Powerful Partnerships
                 </p>
@@ -128,7 +128,7 @@ export default function AboutSection() {
               <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={3000} duration={1800} />+
               </h3>
-              <p className="text-[#006b99] font-bold text-xl" style={{ textShadow: "0 0 8px #006b99" }}>
+              <p className="text-[#006b99] font-bold text-xl" >
                 Dynamic Demos
               </p>
             </div>
@@ -136,7 +136,7 @@ export default function AboutSection() {
               <h3 className="text-3xl font-bold text-[#ffd300] mb-2">
                 <Counter end={25000} duration={2000} />+
               </h3>
-              <p className="text-[#006b99] font-bold text-xl" style={{ textShadow: "0 0 8px #006b99" }}>
+              <p className="text-[#006b99] font-bold text-xl" >
                 User Ecosystem
               </p>
             </div>

@@ -125,14 +125,14 @@ const Header: React.FC = () => {
 
           {/* Right Controls */}
           <div className="flex items-center space-x-4">
-            <Button
+            {/* <Button
               variant="outline"
               size="sm"
               onClick={toggleLanguage}
               className="border-secondary text-secondary hover:bg-secondary hover:text-white"
             >
               {language === "en" ? "العربية" : "English"}
-            </Button>
+            </Button> */}
 
             {/* Mobile Menu Button */}
             <button
