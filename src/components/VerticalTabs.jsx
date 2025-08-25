@@ -1,26 +1,9 @@
-import React, { useState, useEffect } from "react"; // Add useEffect import
+// src/components/VerticalTabs.jsx
+import React, { useState } from "react";
 import { logos } from "@/lib/solutionsData";
 
-const VerticalTabs = ({ categories, logoClassName = "w-full max-w-[180px] h-24 object-contain" }) => {
-  const [active, setActive] = useState(categories[0]);
-
-  // Reset active when categories change (e.g., when top tab switches)
-  useEffect(() => {
-    if (categories.length > 0) {
-      setActive(categories[0]);
-    } else {
-      setActive(null); // Or undefined, to trigger the no-category message
-    }
-  }, [categories]);
-
-  if (categories.length === 0) {
-    return <div className="flex-1 text-center text-gray-500">No clients available</div>;
-  }
-
-  if (!active) {
-    return <div className="flex-1 text-center text-gray-500">No category selected</div>;
-  }
-
+const VerticalTabs = ({ categories }) => {
+  const [active, setActive] = useState(categories[0] || "Packaging Industry");
   return (
     <div className="container mx-auto px-4 py-8 flex">
       {/* Vertical Tab List */}
@@ -48,10 +31,10 @@ const VerticalTabs = ({ categories, logoClassName = "w-full max-w-[180px] h-24 o
             <img 
               src={logo} 
               alt={`${active} logo ${i}`} 
-              className={logoClassName}
+              className="w-full max-w-[180px] h-24 object-contain" 
             />
           </div>
-        )) || <div className="col-span-full text-center text-gray-500">No logos available for this category</div>}
+        ))}
       </div>
     </div>
   );
