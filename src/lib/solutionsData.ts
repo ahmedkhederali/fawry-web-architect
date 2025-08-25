@@ -76,8 +76,8 @@ Implementation of DiraPack is designed to be seamless, with a dedicated team gui
         isSass: false
       },
       {
-        id: 'diratail',
-        title: 'DiraPanel',
+        id: 'diraanel',
+        title: 'Diraanel',
         description: 'Tailor-made ERP for electrical panel manufacturing factories.',
         summary: `DiraPlast is a tailored ERP solution that addresses the unique challenges of the plastic manufacturing industry. Covering the entire production process—from Injection Molding and Blow Molding to Extrusion, Printing, and Packing—DiraPlast ensures that every aspect of your operations is effectively managed. Our system enables you to oversee not only standard product manufacturing but also the custom design and development of specific products, providing the flexibility needed to meet diverse market demands.
 
@@ -301,7 +301,7 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
     description: 'SaaS Solutions for Business is a suite of software services designed to enhance operational efficiency and drive growth through cloud-based applications.',
     image: '/images/saas3.png',
     span: 'col-span-1 row-span-2',
-    "children": [
+    children: [
       {
         "id": "fawryhr",
         "title": "Fawry Business HR",
@@ -371,7 +371,7 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
   },
   {
     id: 'vansales',
-    title: 'System Integration',
+    title: 'rana ',
     min_dec: 'Seamlessly Connect and Streamline: Unlock the Power of System Integration',
     description: 'Van Sales Solutions for Business is a comprehensive software suite designed to optimize mobile sales operations, streamline inventory management, and enhance customer engagement.',
     image: '/products/vansales/system integration.png',
@@ -396,9 +396,6 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
           '/products/vansales/rehana.jfif',
           '/products/diraplast/ngma.png',
           '/products/diractail/lytchee.jpg',
-
-
-
         ],
         "DownloadLink": "",
         "isSass": false

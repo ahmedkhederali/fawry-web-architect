@@ -5,7 +5,7 @@ import FawrySassSection from '@/components/FawrySassSection';
 import PricingSection from '@/components/PricingSection';
 import ContactSection from '@/components/ContactSection';
 import { useLanguage } from '@/components/LanguageContext';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface ChildSolution {
   id: string;
@@ -28,37 +28,50 @@ interface ChildSolution {
 const SolutionParent = () => {
   const { id } = useParams();
   const parent = solutions.find((s) => s.id === id);
+  const { language, t } = useLanguage();
+  const descriptionRef = useRef<HTMLDivElement>(null);
+
   const [activeTab, setActiveTab] = useState(0);
-  const { language, t } = useLanguage(); // assumed lang is 'en' or 'ar'
-  const descriptionRef = useRef<HTMLDivElement>(null)
   const [isExpanded, setIsExpanded] = useState(false);
+  const [currentChildren, setCurrentChildren] = useState<ChildSolution[]>([]);
 
-  if (!parent) return <div className="p-8 text-center">Parent solution not found.</div>;
+  // تحديث children والـ tab لما الـ id أو parent يتغير
+  useEffect(() => {
+    if (parent?.children) {
+      setCurrentChildren(parent.children);
+      setActiveTab(0);
+      setIsExpanded(false);
+    }
+  }, [id, parent]);
 
-  const activeChild = parent.children?.[activeTab] as ChildSolution;
-  const formattedSummary = activeChild.summary?.replace(/\/n/g, '\n');
+  if (!parent) {
+    return <div className="p-8 text-center">Parent solution not found.</div>;
+  }
 
-  const summaryLines = formattedSummary.split("\n");
+  const activeChild = currentChildren[activeTab] as ChildSolution | undefined;
+  const formattedSummary = activeChild?.summary?.replace(/\/n/g, '\n') || '';
+  const summaryLines = formattedSummary.split('\n');
   const displayLines = isExpanded ? summaryLines : summaryLines.slice(0, 3);
- const getProductImage = (childTitle: string) => {
+
+  const getProductImage = (childTitle: string) => {
     const images = {
       diracenterprise: "/products/diracenterprise/diracenterprise.png?height=400&width=600",
       DiraPack: "/products/dirapack/dirapack.png?height=400&width=600",
       DiraPanel: "/products/dirapack/dirapack.png?height=400&width=600",
       DiraTail: "/products/dirapack/dirapack.png?height=400&width=600",
       DiraPlast: "/products/dirapack/dirapack.png?height=400&width=600",
-    }
-    return images[childTitle as keyof typeof images] || activeChild?.live_img || "/images/EnterpriseEdition.png"
-  }
+    };
+    return images[childTitle as keyof typeof images] || activeChild?.live_img || "/images/EnterpriseEdition.png";
+  };
 
   const handleTabClick = (index: number) => {
-    setActiveTab(index)
+    setActiveTab(index);
     setTimeout(() => {
       descriptionRef.current?.scrollIntoView({
         behavior: "smooth",
         block: "center",
-      })
-    }, 100)
+      });
+    }, 100);
   }
   return (
     <div className="bg-white min-h-screen">
@@ -83,21 +96,21 @@ const SolutionParent = () => {
 
         <div className="container mx-auto px-6 mt-12  border-[white]/30">
           <div className="flex space-x-8 overflow-x-auto">
-            {parent.children.map((child, index) => (
-              <button
-                key={child.id}
-                onClick={() => handleTabClick(index)}
-               className={`relative pb-2 text-lg font-medium transition duration-300 ease-in-out ${
-                  index === activeTab ? "text-[#ffd400]" : "text-white/70"
-                }`}
-              >
-                {child.title}
-                {index === activeTab && (
-                  <span className="absolute bottom-0 left-0 w-full h-[3px] bg-[#ffd400] rounded-full" />
-                )}
-              </button>
-            ))}
-          </div>
+  {currentChildren.map((child, index) => (
+    <button
+      key={child.id}
+      onClick={() => handleTabClick(index)}
+      className={`relative pb-2 text-lg font-medium transition duration-300 ease-in-out 
+        ${index === activeTab ? "text-[#ffd400]" : "text-white/70"}`}
+    >
+      {child.title}
+      {index === activeTab && (
+        <span className="absolute bottom-0 left-0 w-full h-[3px] bg-[#ffd400] rounded-full" />
+      )}
+    </button>
+  ))}
+</div>
+
         </div>
       </div>
 
@@ -105,41 +118,41 @@ const SolutionParent = () => {
       {activeChild && (
         <div className="container mx-auto px-6 py-12 space-y-12">
           {/* Full-width description */}
-         <div ref={descriptionRef} className={`flex flex-col md:flex-row items-center justify-between gap-8`}>
+          <div ref={descriptionRef} className={`flex flex-col md:flex-row items-center justify-between gap-8`}>
             {/* LEFT SIDE - TEXT */}
-          <div className="md:w-1/2 text-left">
-               <h2 className="text-2xl font-bold mb-4 text-[#006b99]">
-        {activeChild.description}
-      </h2>
-      <div className="text-[#003366] mt-1 leading-relaxed text-justify">
-        {displayLines.map((line, index) => (
-          <div key={index} className="min-h-[1.5em] flex items-center">
-            <span className="inline-block w-full text-left break-words">
-              {line || <br />}
-            </span>
-          </div>
-        ))}
+            <div className="md:w-1/2 text-left">
+              <h2 className="text-2xl font-bold mb-4 text-[#006b99]">
+                {activeChild.description}
+              </h2>
+              <div className="text-[#003366] mt-1 leading-relaxed text-justify">
+                {displayLines.map((line, index) => (
+                  <div key={index} className="min-h-[1.5em] flex items-center">
+                    <span className="inline-block w-full text-left break-words">
+                      {line || <br />}
+                    </span>
+                  </div>
+                ))}
 
-{!isExpanded && summaryLines.length > 3 && (
-  <button
-    className="mt-2 text-[#006b99] hover:text-[#003366] underline focus:outline-none"
-    onClick={() => setIsExpanded(true)}
-  >
-    Read More
-  </button>
-)}
-{isExpanded && summaryLines.length > 3 && (
-  <button
-    className="mt-2 text-[#006b99] hover:text-[#003366] underline focus:outline-none"
-    onClick={() => setIsExpanded(false)}
-  >
-    Show Less
-  </button>
-)}
-      </div>
+                {!isExpanded && summaryLines.length > 3 && (
+                  <button
+                    className="mt-2 text-[#006b99] hover:text-[#003366] underline focus:outline-none"
+                    onClick={() => setIsExpanded(true)}
+                  >
+                    Read More
+                  </button>
+                )}
+                {isExpanded && summaryLines.length > 3 && (
+                  <button
+                    className="mt-2 text-[#006b99] hover:text-[#003366] underline focus:outline-none"
+                    onClick={() => setIsExpanded(false)}
+                  >
+                    Show Less
+                  </button>
+                )}
+              </div>
 
 
-               <div className="flex flex-wrap gap-4 mt-6">
+              <div className="flex flex-wrap gap-4 mt-6">
                 {activeChild?.DownloadLink && (
                   <a
                     href={activeChild.DownloadLink}
@@ -159,22 +172,22 @@ const SolutionParent = () => {
                   </a>
                 )}
                 {activeChild?.isSass && (
-    <button
-      onClick={() => {
-        document
-          .getElementById("contact")
-          ?.scrollIntoView({ behavior: "smooth" });
-      }}
-      className="inline-flex items-center gap-2 bg-[#ffd400] text-[#006b99] font-semibold py-2 px-4 rounded-full hover:bg-[#006b99] hover:text-white transition"
-    >
-      Request Trial Version
-    </button>
-  )}
+                  <button
+                    onClick={() => {
+                      document
+                        .getElementById("contact")
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                    className="inline-flex items-center gap-2 bg-[#ffd400] text-[#006b99] font-semibold py-2 px-4 rounded-full hover:bg-[#006b99] hover:text-white transition"
+                  >
+                    Request Trial Version
+                  </button>
+                )}
               </div>
             </div>
 
             {/* RIGHT SIDE - IMAGE if isSass */}
-           <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2">
               <img
                 src={getProductImage(activeChild.title) || "/placeholder.svg"}
                 alt={`${activeChild.title} Interface`}
@@ -187,12 +200,16 @@ const SolutionParent = () => {
           {activeChild.logos?.length > 0 && (
             <div className="flex flex-wrap justify-center items-center gap-8">
               {activeChild.logos.map((logo, idx) => (
-                <img
+                <div
                   key={idx}
-                  src={logo || "/placeholder.svg"}
-                  alt={`Logo ${idx}`}
-                  className="h-16 object-contain transition"
-                />
+                  className="w-40 h-40 flex items-center justify-center rounded-xl shadow-md bg-white border"
+                >
+                  <img
+                    src={logo || "/placeholder.svg"}
+                    alt={`Logo ${idx}`}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
               ))}
             </div>
           )}

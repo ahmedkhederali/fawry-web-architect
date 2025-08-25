@@ -5,7 +5,7 @@ const HeaderSection = () => {
    const { t } = useLanguage();
   return (
     <div className="w-full min-h-screen bg-white ">
- <section className="w-full bg-[#006b99] text-white mt-10 pt-20 pb-8 relative">
+ <section className="w-full bg-[#006b99] text-white mt-10 pt-5 md:pt-20 pb-8 relative">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
        <div className="md:w-1/2 relative z-10">
       <h1 className="text-4xl font-bold mb-6 text-[#ffd400] drop-shadow-lg">
@@ -36,7 +36,7 @@ const HeaderSection = () => {
   </div>
 
   {/* Updated content wrapper */}
-  <div className="max-w-4xl mx-auto text-gray-700 leading-relaxed space-y-6">
+  <div className="max-w-4xl mx-auto text-gray-700 leading-relaxed space-y-6 px-4">
     <p className="text-lg text-justify">
       <span className="font-bold text-2xl text-[#FFD300]">Dirac Systems:</span> <br />
       is a leading Egyptian shareholder company specializing in advanced strategic business software solutions that drive digital transformation across various organizations. Established in 

@@ -25,7 +25,6 @@ import SolutionParent from "./pages/SolutionParent";
 import Apply from "./pages/Apply";
 import AboutIndex from "./pages/AboutUspage/AboutIndex";
 import BlogDetails from "./pages/BlogDetails";
-import VanSales from "./pages/VanSale";
 import SystemIntegration from "./pages/SystemIntegration";
 
 
@@ -70,13 +69,7 @@ const App = () => (
                 <Footer />
               </>
             } />
-             <Route path="/solutions/van-sales" element={
-              <>
-                <Header />
-                <VanSales />
-                <Footer />
-              </>
-            } />
+        
                   <Route path="/solutions/system-integration" element={
               <>
                 <Header />
@@ -123,6 +116,13 @@ const App = () => (
               <>
                 <Header />
                 <Products />
+                <Footer />
+              </>
+            } />
+                 <Route path="/products/:id" element={
+              <>
+                <Header />
+                <SolutionParent />
                 <Footer />
               </>
             } />

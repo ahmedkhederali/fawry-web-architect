@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useLanguage } from "./LanguageContext";
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 const FawryHeaderHero: React.FC = () => {
   const [current, setCurrent] = useState(0);
@@ -39,7 +40,20 @@ const FawryHeaderHero: React.FC = () => {
           {/* Desktop Navbar */}
           <nav className={`hidden md:flex gap-6 lg:gap-10 ml-auto mr-[10%] font-semibold ${direction === "rtl" ? "flex-row-reverse space-x-reverse" : ""
             }`}>
-            <a href="/" className="text-[#006b99] hover:underline">Home</a>
+              <NavLink 
+                to="/" 
+                end
+                className={({ isActive }) =>
+                  `relative font-bold transition-all duration-300 
+                  ${isActive 
+                      ? "text-[#006b99] bg-[#ffd300] after:w-full" 
+                      : "text-[#006b99] hover:text-white hover:bg-[#006b99] after:w-0 hover:after:w-full"} 
+                  after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-[#006b99] after:transition-all after:duration-300`
+                }
+              >
+                Home
+              </NavLink>
+            {/* <a href="/" className="text-[#006b99] hover:underline">Home</a> */}
             <div className="relative group">
               <a href="/about" className="text-[#006b99] hover:underline">About Us</a>
               <div className="absolute left-0 mt-2 w-40 bg-[#006b99] text-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-all">
@@ -203,8 +217,7 @@ const FawryHeaderHero: React.FC = () => {
             ))}
           </div>
         </div>
-        <div className="absolute bottom-12 md:bottom-[3rem] left-1/2 -translate-x-1/2 flex gap-2">
-          <button
+        <div className="hidden md:flex md:absolute md:bottom-[3rem] md:left-1/2 md:-translate-x-1/2 gap-2  bottom-12 ">          <button
             onClick={() => setCurrent((prev) => (prev - 1 + carouselSlides.length) % carouselSlides.length)}
             className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-2 rounded-full shadow-lg border-2 border-white"
           >
