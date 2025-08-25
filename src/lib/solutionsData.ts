@@ -267,13 +267,13 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
     id: 'erp-standard',
     title: 'ERP Standard Edition',
     min_dec: 'Unlock Efficiency: Optimize Your Operations',
-    description: "Unlock your organization's potential with our comprehensive ERP Enterprise Edition. Designed to integrate planning, manufacturing, sales, and marketing processes, this solution provides real-time access to critical data across all departments. Empower your team to make informed decisions that drive efficiency and profitability.",
+    description: "Smart ERP for Growing Businesses DIRAC 1.4 Standard Edition is a cost-effective, easy-to-use business management software (ERP) tailored for small and medium-sized enterprises. It is designed to automate and streamline key business functions—including financials, supply chain, sales, manufacturing, and human resources—within a single, integrated platform.",
     image: '/images/erp1.png',
     span: 'col-span-1 row-span-2',
     children: [
       {
         id: 'diracenterprise',
-        title: 'Enterprise Edition',
+        title: '',
         description: 'All-in-one ERP for enterprise business automation.',
         summary: `DIRAC ERP Enterprise Edition is a powerful suite of integrated business applications tailored to unify and streamline your organization's operations. By consolidating departmental databases into a single, centralized management system, our solution ensures seamless communication and collaboration across all levels of your enterprise. This real-time access to information not only enhances decision-making but also fosters a culture of transparency and accountability.
 
@@ -291,237 +291,6 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
         ],
         DownloadLink: '/files/dirac-enterprise-brochure.pdf',
         isSass: false,
-      },
-      {
-        id: 'dirapack',
-        title: 'DiraPack',
-        description: 'Tailored ERP for Corrugated Carton Manufacturing & Packaging.',
-        summary: `DiraPack is our fully customized ERP solution, purpose-built for corrugated carton manufacturing and packaging factories. Designed to streamline operations and enhance productivity, DiraPack covers the entire production lifecycle—from configuration to final delivery. With features like the Carton Configurator and Carton Pricing Calculator, you can easily define and customize carton dimensions and generate accurate pricing based on materials and production variables. This ensures that your operations are not only efficient but also responsive to market demands.
-
-The solution includes advanced capabilities such as Cut Sheet Management, Corrugator Machine Planning, and Waste Calculation, allowing you to optimize material usage and improve cost control. Additionally, DiraPack provides tools for managing assembly processes and monitoring all stages of printing, ensuring high-quality output throughout the production process. By empowering packaging manufacturers with these essential tools, DiraPack helps you reduce costs and maintain quality at every step.
-
-Implementation of DiraPack is designed to be seamless, with a dedicated team guiding you through the setup and integration process. We offer comprehensive training and ongoing support to ensure your team is confident in using the system effectively. With our commitment to your success, you’ll have the resources you need to maximize the benefits of your tailored ERP solution, driving efficiency and profitability for your packaging operations.`,
-        
-benefits: [
-          {
-            title: 'Carton Configurator',
-            description: 'Easily define and customize carton dimensions, structure, and specifications.'
-          },
-          {
-            title: 'Carton Pricing Calculator',
-            description: 'Generate accurate and dynamic pricing based on materials, dimensions, and production variables.'
-          },
-          {
-            title: 'Cut Sheet Management',
-            description: 'Optimize material usage through efficient sheet cutting plans.'
-          },
-          {
-            title: 'Corrugator Machine Planning',
-            description: 'Plan and schedule production for corrugator operations with real-time visibility.'
-          },
-          {
-            title: 'Stapling & Plastering Management',
-            description: 'Manage assembly processes including stapling and plastering with precision.'
-          },
-          {
-            title: 'Printing Management',
-            description: 'Control and monitor all stages of the printing process.'
-          }
-        ],
-        logos: [
-          '/products/dirapack/ver.png',
-          '/products/dirapack/min.png',
-          '/products/dirapack/box.png',
-          '/products/dirapack/bloo.png',
-          '/products/dirapack/sfwa.png',
-        ],
-        DownloadLink: '/files/dirapack-brochure.pdf',
-        isSass: false
-      },
-      {
-        id: 'diratail',
-        title: 'DiraPanel',
-        description: 'Tailor-made ERP for electrical panel manufacturing factories.',
-        summary: `DiraPlast is a tailored ERP solution that addresses the unique challenges of the plastic manufacturing industry. Covering the entire production process—from Injection Molding and Blow Molding to Extrusion, Printing, and Packing—DiraPlast ensures that every aspect of your operations is effectively managed. Our system enables you to oversee not only standard product manufacturing but also the custom design and development of specific products, providing the flexibility needed to meet diverse market demands.
-
-In addition to production management, DiraPlast offers full business integration across key operational areas, including Financial Management, Sales Management, and Inventory Management. Each module is seamlessly integrated to facilitate smooth workflows, real-time data sharing, and optimized performance throughout your organization. With robust features for Quality Control & Assurance, Human Resources Management, and Customer Relationship Management (CRM), DiraPlast empowers your team to make informed decisions and drive operational excellence.
-
-The implementation process for DiraPlast is designed to be smooth and efficient, with a dedicated team assisting you every step of the way. We provide thorough training and ongoing support, ensuring your staff is well-equipped to utilize the system effectively. With our commitment to your success, DiraPlast not only enhances productivity but also positions your business for long-term growth and profitability in the competitive plastic manufacturing landscape.`,
-        benefits: [
-          {
-            title: 'Panel Configurator',
-            description: 'Easily define panel types, structure, dimensions, and required specifications.'
-          },
-          {
-            title: 'Component Builder',
-            description: 'Select and configure internal components (breakers, contactors, PLCs, etc.) with accuracy and compliance.'
-          },
-          {
-            title: 'Quotation Generator',
-            description: 'Create comprehensive technical and financial proposals with automatic BOM and pricing breakdowns.'
-          },
-          {
-            title: 'Template Library',
-            description: 'Access ready-made panel templates for both inbound and outbound systems to speed up design and production.'
-          },
-          {
-            title: 'BOM & Procurement Integration',
-            description: 'Generate a full bill of materials and integrate directly with procurement for component purchasing.'
-          },
-          {
-            title: 'Production Planning & Quality Control',
-            description: 'Plan assembly schedules, track progress, and manage quality control checkpoints.'
-          },
-          {
-            title: 'Testing Management',
-            description: 'Manage internal testing processes and schedule client inspection and approval procedures.'
-          }
-        ],
-        logos: [
-          '/products/dirapanel/arab.png',
-          '/products/dirapanel/gms.png',
-          '/products/dirapanel/memco.png',
-          '/products/dirapanel/sigma.png',
-        ],
-        DownloadLink: '/files/dirapanel-brochure.pdf',
-        isSass: false
-      },
-      {
-        id: 'diratail',
-        title: 'DiraTail',
-        description: 'Scalable retail ERP with seamless POS and delivery integration.',
-        summary: `DiraTail is a customized ERP solution specifically designed for the retail sector, providing the tools you need to adapt and thrive in a competitive marketplace. Our platform enables you to manage every aspect of your retail business, from product options and tax rules to receipt content and layout, all in one centralized location. With features such as Showroom Management and Point of Sale (POS) Management, DiraTail allows for streamlined inventory handling and fast, accurate transactions, ensuring a seamless shopping experience for your customers.
-
-Integrated with Fawry POS machines for secure payment processing and powered by a robust delivery platform, DiraTail enhances both operational efficiency and customer satisfaction. Our Customer Loyalty Management and Customer Relationship Management (CRM) modules help you engage with customers effectively, rewarding loyalty and building lasting relationships. Additionally, the Mobile App for Sales Representatives empowers your field team with real-time access to essential information and reporting tools, enabling them to serve customers better.
-
-The implementation of DiraTail is designed to be smooth and efficient, with a dedicated team guiding you through setup and integration. We offer comprehensive training and ongoing support to ensure your staff is confident in using the system. With DiraTail, you will not only optimize your retail operations but also position your business for sustainable growth and success in the evolving retail landscape.`,
-        benefits: [
-          {
-            title: 'Showroom Management',
-            description: 'Easily manage displays, inventory, and product presentation.'
-          },
-          {
-            title: 'Point of Sale (POS) Management',
-            description: 'Streamlined POS system for fast and accurate transactions.'
-          },
-          {
-            title: 'Customer Loyalty Management',
-            description: 'Reward repeat customers and build brand loyalty.'
-          },
-          {
-            title: 'Customer Relationship Management (CRM)',
-            description: 'Track and engage customers through every interaction.'
-          },
-          {
-            title: 'Mobile App for Sales Representatives',
-            description: 'Empower your field team with real-time access and reporting tools.'
-          },
-          {
-            title: 'Shipping Module',
-            description: 'Simplify and manage all shipping operations.'
-          },
-          {
-            title: 'Delivery Application',
-            description: 'A full-featured app to coordinate and optimize last-mile delivery.'
-          }
-        ],
-        logos: [
-          '/products/diractail/elwan.png',
-          '/products/diractail/hamdy.png',
-          '/products/diractail/lytchee.jpg',
-          '/products/diractail/mohamdia.jpg',
-          '/products/diractail/mzahm.jpg',
-
-        ],
-        DownloadLink: '/files/diratail-brochure.pdf',
-        isSass: false
-      },
-      {
-        id: 'diraplast',
-        title: 'DiraPlast',
-        description: 'ERP for Plastic Manufacturing Operations',
-        summary: `DiraPanel is specifically crafted for electrical panel manufacturing factories, providing a comprehensive ERP solution that addresses the unique challenges of the industry. Covering every aspect of the production process, DiraPanel enables users to define panel types, structures, and dimensions through an intuitive Panel Configurator. The Component Builder ensures that internal components, such as breakers and PLCs, are selected and configured with precision, meeting all necessary compliance standards.
-
-Key features such as the Quotation Generator streamline the proposal process by creating technical and financial documents with automatic bill of materials (BOM) and pricing breakdowns. The Template Library offers access to ready-made panel designs for both inbound and outbound systems, expediting the design and production phases. With integrated BOM and procurement capabilities, you can efficiently generate materials lists and manage component purchasing, ensuring timely production without delays.
-
-DiraPanel also excels in production planning and quality control, allowing you to schedule assembly processes, track progress, and manage quality checkpoints effectively. Testing Management features help coordinate internal testing and client inspections, ensuring that every panel meets the highest standards before delivery.
-
-The implementation of DiraPanel is designed to be seamless, supported by a dedicated team that guides you through the setup and integration process. We provide comprehensive training and ongoing support, ensuring that your staff can maximize the system's capabilities. With DiraPanel, electrical panel manufacturers can achieve greater efficiency, accuracy, and compliance, positioning their operations for long-term success in a competitive market.`,
-        benefits: [
-          {
-            title: 'Injection Molding',
-            description: 'Manage and monitor plastic injection molding processes.'
-          },
-          {
-            title: 'Blow Molding (Inflation)',
-            description: 'Control inflation-based molding systems used in production.'
-          },
-          {
-            title: 'Extrusion',
-            description: 'Support extrusion operations for continuous plastic shaping.'
-          },
-          {
-            title: 'Printing',
-            description: 'Enable custom printing workflows on manufactured parts.'
-          },
-          {
-            title: 'Logo Application',
-            description: 'Configure and apply branded elements within the system.'
-          },
-          {
-            title: 'Packing',
-            description: 'Streamline packaging workflows and logistics prep.'
-          },
-          {
-            title: 'Assembly',
-            description: 'Manage final product assembly and QA processes.'
-          },
-          {
-            title: 'Financial Management',
-            description: 'Complete control over accounting and financial operations.'
-          },
-          {
-            title: 'Sales Management',
-            description: 'Optimize your sales pipeline and customer orders.'
-          },
-          {
-            title: 'Purchasing Management',
-            description: 'Handle supplier relationships and procurement efficiently.'
-          },
-          {
-            title: 'Inventory Management',
-            description: 'Track stock levels, movement, and forecasting.'
-          },
-          {
-            title: 'Manufacturing & Production Management',
-            description: 'Plan, monitor, and optimize your factory floor operations.'
-          },
-          {
-            title: 'Quality Control & Assurance',
-            description: 'Ensure product quality and compliance at every stage.'
-          },
-          {
-            title: 'Human Resources (HR) Management',
-            description: 'Manage employees, payroll, attendance, and more.'
-          },
-          {
-            title: 'Maintenance Management',
-            description: 'Schedule and track machine maintenance and repairs.'
-          },
-          {
-            title: 'Customer Relationship Management (CRM)',
-            description: 'Maintain and analyze customer interactions and data.'
-          }
-        ],
-        logos: [
-          '/products/diraplast/saudi.png',
-          '/products/diraplast/sp.png',
-          '/products/diraplast/plast.png',
-          '/products/diraplast/onda.png',
-          '/products/diraplast/ngma.png',
-        ],
-        DownloadLink: '/files/diraplast-brochure.pdf',
-        isSass: false
       }
     ],
   },
@@ -677,13 +446,11 @@ export const ClientTabsParent=[
     "Petroleum Industries",
 
   ]},
-  {id:2,label:"SaaS Solutions",
-    categories : [
-   
-    "Companies",
-    
-  ]
-  },
+{ id: 2, label: "SaaS Solutions", categories: [
+    "Corporate Sector",
+    "Industrial Sector",
+    "Retail",
+  ] },
   {id:3,label:"Digital Transformation",
     categories : [
     
@@ -780,6 +547,8 @@ export const categories = [
   "Petroleum Industries",
 ];
 
+
+
 export const logos = {
   "Packaging Industry": [
    "/logos/Packaging Industry/7Pack.png",
@@ -794,6 +563,21 @@ export const logos = {
    "/logos/Packaging Industry/safwa.png",
    "/logos/Packaging Industry/smartpack.png",
    "/logos/Packaging Industry/verta.png",
+  ],
+  "Corporate Sector": [
+   "/logos/Packaging Industry/betterpack.png",
+   "/logos/Packaging Industry/bloompack.png",
+   "/logos/Packaging Industry/box.png",
+  ],
+  "Industrial Sector": [
+    "/logos/Food Industries/nabaty.png",
+    "/logos/Food Industries/nevertety.png",
+  ],
+  "Retail": [
+   "/logos/Packaging Industry/bloompack.png",
+   "/logos/Packaging Industry/box.png",
+   "/logos/Packaging Industry/carton.png",
+   "/logos/Packaging Industry/elm.png",
   ],
   "Plastic Industries": [
     "/logos/Plastic Industries/acgi.png",

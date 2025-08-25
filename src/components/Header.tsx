@@ -68,7 +68,7 @@ const Header: React.FC = () => {
               </div>
             </div>
             <div className="relative group">
-              <Link to="/" className="text-[#006b99] hover:underline px-2 py-1">
+              <Link to="/products" className="text-[#006b99] hover:underline px-2 py-1">
                 {t("products")}
               </Link>
 
@@ -113,7 +113,7 @@ const Header: React.FC = () => {
                 >
                   {t("Digital Transformation")}
                 </Link>
-                <Link to="/" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
+                <Link to="/solutions/system-integration" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
                   {t("System Integration")}
                 </Link>
               </div>

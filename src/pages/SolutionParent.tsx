@@ -119,14 +119,23 @@ const SolutionParent = () => {
             </span>
           </div>
         ))}
-        {!isExpanded && summaryLines.length > 3 && (
-          <button
-            className="mt-2 text-[#006b99] hover:text-[#003366] underline focus:outline-none"
-            onClick={() => setIsExpanded(true)}
-          >
-            Read More
-          </button>
-        )}
+
+{!isExpanded && summaryLines.length > 3 && (
+  <button
+    className="mt-2 text-[#006b99] hover:text-[#003366] underline focus:outline-none"
+    onClick={() => setIsExpanded(true)}
+  >
+    Read More
+  </button>
+)}
+{isExpanded && summaryLines.length > 3 && (
+  <button
+    className="mt-2 text-[#006b99] hover:text-[#003366] underline focus:outline-none"
+    onClick={() => setIsExpanded(false)}
+  >
+    Show Less
+  </button>
+)}
       </div>
 
 

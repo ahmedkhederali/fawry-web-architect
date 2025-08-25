@@ -34,6 +34,7 @@ const translations = {
     aboutClients: 'Happy Clients',
     productsTitle: 'Business Line',
     clientsTitle: 'Our Trusted Clients',
+    vanSale:"Van Sales",
     partnersTitle: 'Our Partners',
     testimonialsTitle: 'What Our Clients Say',
     contactTitle: 'Get In Touch',
@@ -43,6 +44,7 @@ const translations = {
     services: 'Services',
     company: 'Company',
     followUs: 'Follow Us',
+    system_integration: 'System Integration',
     profile_title: 'Company Profile',
     profile_download:'Download our comprehensive company profile to learn more about our services, expertise, and successful projects.',
     blog_title: 'Dirac Systems Blog',
@@ -51,9 +53,11 @@ const translations = {
     available_jobs: 'Available Jobs',
     carrer: 'Career',
     contact_desc: 'Get in touch with us for a free consultation or more information about our services. We are here to help you achieve your digital goals.',
+    van_sales_desc:"Get in touch with us for a free consultation or more information about our services. We are here to help you achieve your digital goals",
     partners_title: 'Partners',
     partners_desc: 'We collaborate with world-class technology providers and industry leaders to deliver innovative, high-quality, and future-ready solutions for our clients. By leveraging the latest advancements, proven expertise, and strong strategic partnerships, we ensure that every solution is tailored to meet our clients’ unique needs, drive efficiency, and create lasting value.',
     clients_desc:"Our clients are at the heart of everything we do. We are proud to partner with a diverse range of businesses, from innovative startups to established enterprises, across multiple industries and regions. Each collaboration is built on trust, transparency, and a shared commitment to excellence. By understanding their unique challenges and goals, we deliver tailored solutions that empower them to innovate, grow, and succeed in a competitive world.",
+    system_integration_desc:"DIRAC Systems offers advanced system integration services to help businesses streamline their operations and improve efficiency. Our team of experts works closely with clients to design and implement customized solutions that meet their unique needs, ensuring seamless connectivity between various systems and applications.",
     about_desc:"DIRAC Systems, a subsidiary of Fawry, is an Egyptian company specializing in advanced strategic business software solutions,They drive digital transformation across various organizations by providing comprehensive Enterprise Resource Planning (ERP) solutions and other business services, with a focus on improving performance, efficiency, and competitiveness. DIRAC also offers solutions for sound and vibration measurement and analysis, including room acoustics software and an intelligent audio platform for automotive applications"
   },
   ar: {

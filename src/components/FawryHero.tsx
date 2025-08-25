@@ -64,7 +64,7 @@ const FawryHeaderHero: React.FC = () => {
 
               <div className="absolute left-0 mt-2 w-40 bg-[#006b99] text-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-all z-50">
                 <a href="/solutions/digital-transformation" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Digital Transformation</a>
-                <a href="/" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">System Integration</a>
+                <a href="/solutions/system-integration" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">System Integration</a>
               </div>
             </div>
             {/* <a href="/blog" className="text-[#006b99] hover:underline">Blog</a> */}
