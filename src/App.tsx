@@ -25,6 +25,8 @@ import SolutionParent from "./pages/SolutionParent";
 import Apply from "./pages/Apply";
 import AboutIndex from "./pages/AboutUspage/AboutIndex";
 import BlogDetails from "./pages/BlogDetails";
+import SystemIntegration from "./pages/SystemIntegration";
+
 
 const queryClient = new QueryClient();
 
@@ -67,6 +69,14 @@ const App = () => (
                 <Footer />
               </>
             } />
+        
+                  <Route path="/solutions/system-integration" element={
+              <>
+                <Header />
+                <SystemIntegration />
+                <Footer />
+              </>
+            } />
             <Route path="/partners" element={
               <>
                 <Header />
@@ -106,6 +116,13 @@ const App = () => (
               <>
                 <Header />
                 <Products />
+                <Footer />
+              </>
+            } />
+                 <Route path="/products/:id" element={
+              <>
+                <Header />
+                <SolutionParent />
                 <Footer />
               </>
             } />
