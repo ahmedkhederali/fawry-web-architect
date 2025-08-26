@@ -371,9 +371,9 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
   },
   {
     id: 'vansales',
-    title: 'rana ',
+    title: 'Van Sales application',
     min_dec: 'Seamlessly Connect and Streamline: Unlock the Power of System Integration',
-    description: 'Van Sales Solutions for Business is a comprehensive software suite designed to optimize mobile sales operations, streamline inventory management, and enhance customer engagement.',
+    description: 'The Van Sales System covers the entire outdoor sales cycle, ensuring your field sales operations are efficient, accurate, and fully integrated.',
     image: '/products/vansales/system integration.png',
     span: 'col-span-1 row-span-2',
     children: [
@@ -392,10 +392,10 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
           { "title": "Customer Stock Audits", "description": "" }
         ],
         "logos": [
-          '/products/vansales/haboba.jfif',
-          '/products/vansales/rehana.jfif',
-          '/products/diraplast/ngma.png',
-          '/products/diractail/lytchee.jpg',
+          // '/products/vansales/haboba.jfif',
+          // '/products/vansales/rehana.jfif',
+          // '/products/diraplast/ngma.png',
+          // '/products/diractail/lytchee.jpg',
         ],
         "DownloadLink": "",
         "isSass": false
@@ -420,6 +420,38 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
           { title: 'Data Analytics', description: '' },
           { title: 'Customer Experience Enhancement', description: '' },
           { title: 'Cloud Integration', description: '' }
+        ],
+        logos: [],
+        DownloadLink: '',
+        isSass: false
+      }
+    ],
+  },
+  {
+    id: 'system-integration',
+    title: 'System Integration',
+    min_dec: 'Seamlessly Connect Your Systems for Enhanced Performance',
+    description: 'In today\'s complex digital landscape, businesses rely on a multitude of systems to manage their operations. Integrating these systems effectively is crucial for streamlining workflows, improving data accuracy, and gaining a competitive edge. Dirac Systems offers comprehensive system integration services that connect your disparate systems, whether they reside in the cloud or within your data center. We leverage our expertise and solution-focused hub frameworks to ensure seamless communication and data flow across your organization',
+    image: '/products/digitalTransformation/systemIntegration.png',
+    span: 'col-span-2 row-span-1',
+    children: [
+      {
+        id: 'system-integration',
+        title: 'System Integration',
+        description: 'Seamlessly Connect Your Systems for Enhanced Performance ',
+        summary: `At Dirac Systems, we understand that every business has unique integration needs. That's why we take a tailored approach to every project, working closely with you to understand your specific requirements and design a solution that meets your goals. Our team of experienced integration specialists has expertise in a wide range of technologies and platforms, including:
+Middleware Platforms: IBM MQ, IBM BMP, TIBCO
+Technologies: Java, .NET
+Cloud Technologies: Integration with various cloud services and platforms
+ERP Systems: Integration with leading ERP systems to streamline business processes
+CRM Systems: Integration with CRM platforms to enhance customer relationship management
+E-commerce Platforms: Integration with e-commerce platforms like Shopify and WooCommerce.`,
+        benefits: [
+          { title: 'Improved Efficiency:', description: 'Streamline workflows and automate data exchange to reduce manual effort and improve operational efficiency.' },
+          { title: 'Enhanced Data Accuracy:', description: 'Ensure data consistency across all systems, minimizing errors and improving decision-making.' },
+          { title: 'Increased Visibility:', description: 'Gain a holistic view of your business operations with real-time data insights.' },
+          { title: 'Reduced Costs:', description: 'Eliminate data silos and redundant processes, leading to significant cost savings.' },
+          { title: 'Scalability and Flexibility:', description: 'Build a flexible and scalable integration infrastructure that can adapt to your evolving business needs.' }
         ],
         logos: [],
         DownloadLink: '',
