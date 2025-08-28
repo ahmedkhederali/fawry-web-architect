@@ -12,10 +12,13 @@ interface ChildSolution {
   title: string;
   description: string;
   summary: string;
+  title_why?: string; 
   benefits: { title: string; description: string }[];
+  whyChooseDirac?: { title: string; description: string }[];
   logos: string[];
   DownloadLink: string;
   isSass: boolean;
+  isVansale?: boolean;
   live_img?: string;
   pricing?: {
     title: string;
@@ -35,7 +38,6 @@ const SolutionParent = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [currentChildren, setCurrentChildren] = useState<ChildSolution[]>([]);
 
-  // تحديث children والـ tab لما الـ id أو parent يتغير
   useEffect(() => {
     if (parent?.children) {
       setCurrentChildren(parent.children);
@@ -213,7 +215,23 @@ const SolutionParent = () => {
               ))}
             </div>
           )}
-
+               {/* Features */}
+          {activeChild?.isVansale && activeChild.whyChooseDirac?.length > 0 && (
+            <div className="bg-[#006b99] text-white rounded-lg shadow-md p-6">
+              <h3 className="text-2xl font-bold mb-6 text-[#ffd400]">{activeChild?.title_why}</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {activeChild.whyChooseDirac.map((whyuse, i) => (
+                  <div key={i} className="flex items-start gap-4">
+                    <CheckCircleIcon className="h-6 w-6 text-[#ffd400] mt-1 shrink-0" />
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-1">{whyuse.title}</h4>
+                      <p className="text-sm text-white/80">{whyuse.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
           {/* Features */}
           {!activeChild?.isSass && activeChild.benefits?.length > 0 && (
             <div className="bg-[#006b99] text-white rounded-lg shadow-md p-6">

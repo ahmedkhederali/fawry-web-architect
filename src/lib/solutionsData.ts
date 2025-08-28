@@ -371,37 +371,53 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
   },
   {
     id: 'vansales',
-    title: 'Van Sales application',
-    min_dec: 'Seamlessly Connect and Streamline: Unlock the Power of System Integration',
-    description: 'The Van Sales System covers the entire outdoor sales cycle, ensuring your field sales operations are efficient, accurate, and fully integrated.',
-    image: '/products/vansales/system integration.png',
-    span: 'col-span-1 row-span-2',
+    title: 'Van Sales Application',
+    min_dec: 'Revolutionize Your Outdoor Sales Operations',
+    description: 'Van Sales System designed to optimize outdoor sales, streamline operations, and empower sales teams with real-time tools.',
+    image: '/products/vanSales/van-sales.png',
+    span: 'col-span-2 row-span-1',
     children: [
       {
-        "id": "vansales",
-        "title": "Van Sales application",
-        "description": "Field sales automation with real-time stock and route planning.",
-        "summary": "The Van Sales System covers the entire outdoor sales cycle, ensuring your field sales operations are efficient, accurate, and fully integrated.",
-        "benefits": [
-          { "title": "Van Inventory Management", "description": "" },
-          { "title": "Route Planning", "description": "" },
-          { "title": "Real-Time Stock Visibility", "description": "" },
-          { "title": "On-the-Spot Invoicing", "description": "" },
-          { "title": "Payment Collection", "description": "" },
-          { "title": "Product Returns Handling", "description": "" },
-          { "title": "Customer Stock Audits", "description": "" }
+        id: 'vansales',
+        title: 'Van Sales Application',
+        title_why: 'Why Choose Dirac systems for Van Sales?',
+        description: 'Revolutionize outdoor sales operations with efficient inventory, invoicing, and customer management.',
+        summary: `Van Inventory Management: Efficiently manage your inventory on the go. Track stock levels in real-time, ensuring accurate product availability, reducing stockouts, and minimizing overstock situations.
+      
+Route Planning: Optimize your sales routes with advanced planning features to maximize productivity and minimize costs.
+      
+Real-Time Stock Visibility: Keep your sales team fully informed with live stock updates, improving order accuracy and communication.
+      
+On-the-Spot Invoicing: Close deals faster by generating invoices instantly in the field, enhancing customer satisfaction.
+      
+Payment Collection: Collect payments easily and securely via multiple methods, ensuring smooth transactions.
+      
+Product Returns Handling: Manage returns efficiently to maintain customer trust and loyalty.
+      
+Customer Stock Audits: Conduct accurate on-site audits, preventing discrepancies and ensuring accountability.`,
+        benefits: [
+          { title: 'Van Inventory Management', description: 'Manage inventory on the go with real-time tracking to prevent stockouts and overstocking.' },
+          { title: 'Route Planning', description: 'Plan efficient sales routes to maximize time and reduce travel costs.' },
+          { title: 'Real-Time Stock Visibility', description: 'Access live inventory updates for accurate order fulfillment in the field.' },
+          { title: 'On-the-Spot Invoicing', description: 'Generate invoices instantly from the field for faster sales cycles.' },
+          { title: 'Payment Collection', description: 'Accept cash, credit, or mobile payments securely to improve cash flow.' },
+          { title: 'Product Returns Handling', description: 'Process returns quickly to maintain customer satisfaction.' },
+          { title: 'Customer Stock Audits', description: 'Perform on-site audits for accurate and accountable inventory management.' }
         ],
-        "logos": [
-          // '/products/vansales/haboba.jfif',
-          // '/products/vansales/rehana.jfif',
-          // '/products/diraplast/ngma.png',
-          // '/products/diractail/lytchee.jpg',
+        whyChooseDirac: [
+          { title: 'Seamless Integration', description: 'Integrates smoothly with your existing accounting and inventory systems.' },
+          { title: 'User-Friendly Interface', description: 'Easy-to-use design reduces training time and boosts productivity.' },
+          { title: 'Real-Time Data Insights', description: 'Access live data and analytics for better, faster decisions.' },
+          { title: 'Dedicated Support', description: 'Expert support team ensures smooth transition and ongoing success.' }
         ],
-        "DownloadLink": "",
-        "isSass": false
+        logos: [],
+        DownloadLink: '',
+        isSass: false,
+        isVansale: true
       }
     ],
-  },
+  }
+  ,
   {
     id: 'digital-transformation',
     title: 'Digital Transformation',
@@ -461,39 +477,46 @@ E-commerce Platforms: Integration with e-commerce platforms like Shopify and Woo
   }
 ];
 
-export const ClientTabsParent=[
-  {id:1,label:"ERP System",categories : [
-    "Packaging Industry",
-    "Plastic Industries",
-    "Food Industries",
-    "Showrooms & POS (Ceramics)",
-    "Showrooms & POS",
-    "Engineering Industries",
-    "Textile & Garment Industry",
-    "Chemical & Pharmaceutical Industries",
-    "Governmental Authorities",
-    "Petroleum Industries",
+export const ClientTabsParent = [
+  {
+    id: 1, label: "ERP System", categories: [
+      "Packaging Industry",
+      "Plastic Industries",
+      "Food Industries",
+      "Showrooms & POS (Ceramics)",
+      "Showrooms & POS",
+      "Engineering Industries",
+      "Textile & Garment Industry",
+      "Chemical & Pharmaceutical Industries",
+      "Governmental Authorities",
+      "Petroleum Industries",
 
-  ]},
-{ id: 2, label: "SaaS Solutions", categories: [
-    "Corporate Sector",
-    "Industrial Sector",
-    "Retail",
-  ] },
-  {id:3,label:"Digital Transformation",
-    categories : [
-    
-  ]
+    ]
   },
-  {id:4,label:"System Integration",
-    categories : [
-    
-  ]
+  {
+    id: 2, label: "SaaS Solutions", categories: [
+      "Corporate Sector",
+      "Industrial Sector",
+      "Retail",
+    ]
   },
-    {id:5,label:"Van Sale",
-    categories : [
-    
-  ]
+  {
+    id: 3, label: "Digital Transformation",
+    categories: [
+
+    ]
+  },
+  {
+    id: 4, label: "System Integration",
+    categories: [
+
+    ]
+  },
+  {
+    id: 5, label: "Van Sale",
+    categories: [
+
+    ]
   },
 ]
 
@@ -518,10 +541,10 @@ export const carouselSlides = [
 
 export const blogPosts = [
   {
-   id: 1,
+    id: 1,
     title: "How ERP Software Transforms Businesses",
     content: "Full article content about ERP and digital transformation...",
-    full_desc:" ERP software is a game-changer for businesses, streamlining operations and enhancing efficiency. By integrating various functions into a single system, ERP eliminates data silos and improves collaboration across departments. This leads to better decision-making, reduced operational costs, and increased productivity. With real-time data access, businesses can respond quickly to market changes and customer needs, driving growth and innovation.",
+    full_desc: " ERP software is a game-changer for businesses, streamlining operations and enhancing efficiency. By integrating various functions into a single system, ERP eliminates data silos and improves collaboration across departments. This leads to better decision-making, reduced operational costs, and increased productivity. With real-time data access, businesses can respond quickly to market changes and customer needs, driving growth and innovation.",
     image: "/images/blogimage1.jpg",
     date: "2025-07-13",
     location: "Cairo, Egypt",
@@ -532,11 +555,11 @@ export const blogPosts = [
       "/images/event1.jpg"
     ]
   },
-{
-   id: 1,
+  {
+    id: 1,
     title: "How ERP Software Transforms Businesses",
     content: "Full article content about ERP and digital transformation...",
-    full_desc:" ERP software is a game-changer for businesses, streamlining operations and enhancing efficiency. By integrating various functions into a single system, ERP eliminates data silos and improves collaboration across departments. This leads to better decision-making, reduced operational costs, and increased productivity. With real-time data access, businesses can respond quickly to market changes and customer needs, driving growth and innovation.",
+    full_desc: " ERP software is a game-changer for businesses, streamlining operations and enhancing efficiency. By integrating various functions into a single system, ERP eliminates data silos and improves collaboration across departments. This leads to better decision-making, reduced operational costs, and increased productivity. With real-time data access, businesses can respond quickly to market changes and customer needs, driving growth and innovation.",
     image: "/images/blogimage1.jpg",
     date: "2025-07-13",
     author: "Ahmed Ali",
@@ -547,10 +570,10 @@ export const blogPosts = [
     ]
   },
   {
-   id: 1,
+    id: 1,
     title: "How ERP Software Transforms Businesses",
     content: "Full article content about ERP and digital transformation...",
-    full_desc:" ERP software is a game-changer for businesses, streamlining operations and enhancing efficiency. By integrating various functions into a single system, ERP eliminates data silos and improves collaboration across departments. This leads to better decision-making, reduced operational costs, and increased productivity. With real-time data access, businesses can respond quickly to market changes and customer needs, driving growth and innovation.",
+    full_desc: " ERP software is a game-changer for businesses, streamlining operations and enhancing efficiency. By integrating various functions into a single system, ERP eliminates data silos and improves collaboration across departments. This leads to better decision-making, reduced operational costs, and increased productivity. With real-time data access, businesses can respond quickly to market changes and customer needs, driving growth and innovation.",
     image: "/images/blogimage1.jpg",
     date: "2025-07-13",
     author: "Ahmed Ali",
@@ -580,33 +603,33 @@ export const categories = [
 
 export const logos = {
   "Packaging Industry": [
-   "/logos/Packaging Industry/7Pack.png",
-   "/logos/Packaging Industry/betterpack.png",
-   "/logos/Packaging Industry/bloompack.png",
-   "/logos/Packaging Industry/box.png",
-   "/logos/Packaging Industry/carton.png",
-   "/logos/Packaging Industry/elm.png",
-   "/logos/Packaging Industry/gaintgroup.png",
-   "/logos/Packaging Industry/lionpack.png",
-   "/logos/Packaging Industry/minipack.png",
-   "/logos/Packaging Industry/safwa.png",
-   "/logos/Packaging Industry/smartpack.png",
-   "/logos/Packaging Industry/verta.png",
+    "/logos/Packaging Industry/7Pack.png",
+    "/logos/Packaging Industry/betterpack.png",
+    "/logos/Packaging Industry/bloompack.png",
+    "/logos/Packaging Industry/box.png",
+    "/logos/Packaging Industry/carton.png",
+    "/logos/Packaging Industry/elm.png",
+    "/logos/Packaging Industry/gaintgroup.png",
+    "/logos/Packaging Industry/lionpack.png",
+    "/logos/Packaging Industry/minipack.png",
+    "/logos/Packaging Industry/safwa.png",
+    "/logos/Packaging Industry/smartpack.png",
+    "/logos/Packaging Industry/verta.png",
   ],
   "Corporate Sector": [
-   "/logos/Packaging Industry/betterpack.png",
-   "/logos/Packaging Industry/bloompack.png",
-   "/logos/Packaging Industry/box.png",
+    "/logos/Packaging Industry/betterpack.png",
+    "/logos/Packaging Industry/bloompack.png",
+    "/logos/Packaging Industry/box.png",
   ],
   "Industrial Sector": [
     "/logos/Food Industries/nabaty.png",
     "/logos/Food Industries/nevertety.png",
   ],
   "Retail": [
-   "/logos/Packaging Industry/bloompack.png",
-   "/logos/Packaging Industry/box.png",
-   "/logos/Packaging Industry/carton.png",
-   "/logos/Packaging Industry/elm.png",
+    "/logos/Packaging Industry/bloompack.png",
+    "/logos/Packaging Industry/box.png",
+    "/logos/Packaging Industry/carton.png",
+    "/logos/Packaging Industry/elm.png",
   ],
   "Plastic Industries": [
     "/logos/Plastic Industries/acgi.png",
@@ -707,59 +730,59 @@ export const logos = {
   ],
   "Petroleum Industries": [
     "/logos/Petroleum Industries/disco.png",
-    
+
   ],
 
 };
 
- export const clients = [
-    { id: 1, name: 'ATD', logo: '/clients/ATD.png', fontClass: 'font-bold', colorClass: 'text-[#009fe3]' },
-    { id: 2, name: 'ABA', logo: '/clients/Aba.png', fontClass: 'font-extrabold', colorClass: 'text-[#e30613]' },
-    { id: 3, name: 'Ain Shams University', logo: '/clients/AinShamsUniversity.png', fontClass: 'font-semibold', colorClass: 'text-[#009688]' },
-    { id: 4, name: 'Arab Tech', logo: '/clients/ArabTech.png', fontClass: 'font-bold', colorClass: 'text-[#bfa46d]' },
-    { id: 5, name: 'Benisuef University', logo: '/clients/BenisuefUniversity.png', fontClass: 'font-bold', colorClass: 'text-[#1a237e]' },
-    { id: 6, name: 'GMS', logo: '/clients/GMS.png', fontClass: 'font-bold', colorClass: 'text-[#f7941d]' },
-    { id: 7, name: 'HRZN', logo: '/clients/HRZN.png', fontClass: 'font-extrabold', colorClass: 'text-[#7c3aed]' },
-    { id: 8, name: 'International Medical Group', logo: '/clients/IMG.png', fontClass: 'font-bold', colorClass: 'text-[#f59e42]' },
-    { id: 9, name: 'Lush Fresh', logo: '/clients/LushFresh.png', fontClass: 'font-semibold', colorClass: 'text-[#009fe3]' },
-    { id: 10, name: 'Lychee', logo: '/clients/Lychee.png', fontClass: 'font-bold', colorClass: 'text-[#1e293b]' },
-    { id: 11, name: 'ALLWEILER FARID HASSANEUN PUMPS', logo: '/clients/allwellerFarid.png', fontClass: 'font-bold', colorClass: 'text-[#009688]' },
-    { id: 12, name: 'Nabati', logo: '/clients/Nabati.png', fontClass: 'font-bold', colorClass: 'text-[#fbbf24]' },
-    { id: 13, name: 'Nano Food', logo: '/clients/NanoFood.png', fontClass: 'font-semibold', colorClass: 'text-[#16a34a]' },
-    { id: 14, name: 'Rehana', logo: '/clients/Rehana.png', fontClass: 'font-bold', colorClass: 'text-[#e11d48]' },
-    { id: 15, name: 'TechnoBit', logo: '/clients/TechnoBit.png', fontClass: 'italic font-bold', colorClass: 'text-[#a21caf]' },
-    { id: 16, name: 'TechnoGym', logo: '/clients/TechnoGym.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 17, name: 'ACGI', logo: '/clients/acgi.png', fontClass: 'font-bold', colorClass: 'text-[#f59e42]' },
-    { id: 18, name: 'Furx', logo: '/clients/furx.png', fontClass: 'font-bold', colorClass: 'text-[#fbbf24]' },
-    { id: 19, name: 'AL-AZHAR UNIVERSITY', logo: '/clients/alazharuniveristy.png', fontClass: 'font-bold', colorClass: 'text-[#f59e42]' },
-    { id: 20, name: 'AL HOMAIDHI', logo: '/clients/alhomaidhi.png', fontClass: 'font-bold', colorClass: 'text-[#1e293b]' },
-    { id: 22, name: 'AL Monairy For Corn Products', logo: '/clients/almonairy.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 23, name: 'AlWan', logo: '/clients/alwan.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 24, name: 'Athad', logo: '/clients/athad.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 25, name: 'BEYTI', logo: '/clients/beyti.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 26, name: 'BTROTRED', logo: '/clients/btrotred.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 27, name: 'Cairo University', logo: '/clients/cairouniveristy.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 28, name: 'Catex', logo: '/clients/catex.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 29, name: 'COCA COLA', logo: '/clients/cocacola.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 30, name: 'Company Drink Water', logo: '/clients/companyDrinkWater.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 31, name: 'Company Egyptel 3lya', logo: '/clients/companyEgyptel3lya.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 32, name: 'Company North Delta', logo: '/clients/companyNorthDelta.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 33, name: 'Company North Cairo Elect', logo: '/clients/companyNorhcairoElect.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 34, name: 'Company South Cairo', logo: '/clients/companySouthCairo.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 35, name: 'Company South Delta', logo: '/clients/companySouthDlta.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 36, name: 'Company South Cairo', logo: '/clients/companySouthCairo.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 37, name: 'Company Water & Red Sea', logo: '/clients/companyWater&redSea.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 38, name: 'Company Water in Giza', logo: '/clients/companyWaterinGiza.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 39, name: 'Company Water in Domyat', logo: '/clients/companyWaterindomyat.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 40, name: 'Company AlKabada', logo: '/clients/companyalkabada.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 41, name: 'Crocs', logo: '/clients/crocs.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 42, name: 'elm films', logo: '/clients/elm.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 43, name: 'AL Mohamdya', logo: '/clients/elmohamdya.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 44, name: 'Elsalam Plastic', logo: '/clients/elsalamplastic.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 45, name: 'Espranzaa', logo: '/clients/espranzaa.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 46, name: 'Faragalla', logo: '/clients/faragalla.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-    { id: 47, name: 'Footloose', logo: '/clients/footloose.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+export const clients = [
+  { id: 1, name: 'ATD', logo: '/clients/ATD.png', fontClass: 'font-bold', colorClass: 'text-[#009fe3]' },
+  { id: 2, name: 'ABA', logo: '/clients/Aba.png', fontClass: 'font-extrabold', colorClass: 'text-[#e30613]' },
+  { id: 3, name: 'Ain Shams University', logo: '/clients/AinShamsUniversity.png', fontClass: 'font-semibold', colorClass: 'text-[#009688]' },
+  { id: 4, name: 'Arab Tech', logo: '/clients/ArabTech.png', fontClass: 'font-bold', colorClass: 'text-[#bfa46d]' },
+  { id: 5, name: 'Benisuef University', logo: '/clients/BenisuefUniversity.png', fontClass: 'font-bold', colorClass: 'text-[#1a237e]' },
+  { id: 6, name: 'GMS', logo: '/clients/GMS.png', fontClass: 'font-bold', colorClass: 'text-[#f7941d]' },
+  { id: 7, name: 'HRZN', logo: '/clients/HRZN.png', fontClass: 'font-extrabold', colorClass: 'text-[#7c3aed]' },
+  { id: 8, name: 'International Medical Group', logo: '/clients/IMG.png', fontClass: 'font-bold', colorClass: 'text-[#f59e42]' },
+  { id: 9, name: 'Lush Fresh', logo: '/clients/LushFresh.png', fontClass: 'font-semibold', colorClass: 'text-[#009fe3]' },
+  { id: 10, name: 'Lychee', logo: '/clients/Lychee.png', fontClass: 'font-bold', colorClass: 'text-[#1e293b]' },
+  { id: 11, name: 'ALLWEILER FARID HASSANEUN PUMPS', logo: '/clients/allwellerFarid.png', fontClass: 'font-bold', colorClass: 'text-[#009688]' },
+  { id: 12, name: 'Nabati', logo: '/clients/Nabati.png', fontClass: 'font-bold', colorClass: 'text-[#fbbf24]' },
+  { id: 13, name: 'Nano Food', logo: '/clients/NanoFood.png', fontClass: 'font-semibold', colorClass: 'text-[#16a34a]' },
+  { id: 14, name: 'Rehana', logo: '/clients/Rehana.png', fontClass: 'font-bold', colorClass: 'text-[#e11d48]' },
+  { id: 15, name: 'TechnoBit', logo: '/clients/TechnoBit.png', fontClass: 'italic font-bold', colorClass: 'text-[#a21caf]' },
+  { id: 16, name: 'TechnoGym', logo: '/clients/TechnoGym.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 17, name: 'ACGI', logo: '/clients/acgi.png', fontClass: 'font-bold', colorClass: 'text-[#f59e42]' },
+  { id: 18, name: 'Furx', logo: '/clients/furx.png', fontClass: 'font-bold', colorClass: 'text-[#fbbf24]' },
+  { id: 19, name: 'AL-AZHAR UNIVERSITY', logo: '/clients/alazharuniveristy.png', fontClass: 'font-bold', colorClass: 'text-[#f59e42]' },
+  { id: 20, name: 'AL HOMAIDHI', logo: '/clients/alhomaidhi.png', fontClass: 'font-bold', colorClass: 'text-[#1e293b]' },
+  { id: 22, name: 'AL Monairy For Corn Products', logo: '/clients/almonairy.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 23, name: 'AlWan', logo: '/clients/alwan.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 24, name: 'Athad', logo: '/clients/athad.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 25, name: 'BEYTI', logo: '/clients/beyti.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 26, name: 'BTROTRED', logo: '/clients/btrotred.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 27, name: 'Cairo University', logo: '/clients/cairouniveristy.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 28, name: 'Catex', logo: '/clients/catex.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 29, name: 'COCA COLA', logo: '/clients/cocacola.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 30, name: 'Company Drink Water', logo: '/clients/companyDrinkWater.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 31, name: 'Company Egyptel 3lya', logo: '/clients/companyEgyptel3lya.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 32, name: 'Company North Delta', logo: '/clients/companyNorthDelta.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 33, name: 'Company North Cairo Elect', logo: '/clients/companyNorhcairoElect.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 34, name: 'Company South Cairo', logo: '/clients/companySouthCairo.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 35, name: 'Company South Delta', logo: '/clients/companySouthDlta.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 36, name: 'Company South Cairo', logo: '/clients/companySouthCairo.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 37, name: 'Company Water & Red Sea', logo: '/clients/companyWater&redSea.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 38, name: 'Company Water in Giza', logo: '/clients/companyWaterinGiza.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 39, name: 'Company Water in Domyat', logo: '/clients/companyWaterindomyat.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 40, name: 'Company AlKabada', logo: '/clients/companyalkabada.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 41, name: 'Crocs', logo: '/clients/crocs.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 42, name: 'elm films', logo: '/clients/elm.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 43, name: 'AL Mohamdya', logo: '/clients/elmohamdya.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 44, name: 'Elsalam Plastic', logo: '/clients/elsalamplastic.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 45, name: 'Espranzaa', logo: '/clients/espranzaa.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 46, name: 'Faragalla', logo: '/clients/faragalla.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 47, name: 'Footloose', logo: '/clients/footloose.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
 
-  ];
+];
 export default solutions;
 
