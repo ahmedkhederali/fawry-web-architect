@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useLanguage } from "./LanguageContext";
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const FawryHeaderHero: React.FC = () => {
   const [current, setCurrent] = useState(0);
@@ -100,23 +100,90 @@ const FawryHeaderHero: React.FC = () => {
         </div>
 
         {/* Mobile Menu Dropdown */}
-        {menuOpen && (
-          <div className="md:hidden mt-2 space-y-2 text-[#006b99]">
-            <a href="/" className="block px-4 py-2">Home</a>
-            <a href="/about" className="block px-4 py-2">About Us</a>
-            <a href="/career" className="block px-4 py-2">Career</a>
-            <a href="/clients" className="block px-4 py-2">Our Clients</a>
-            <a href="/partners" className="block px-4 py-2">Our Partners</a>
-            <a href="/products" className="block px-4 py-2">Products</a>
-            {/* <a href="/blog" className="block px-4 py-2">Blog</a>
-            <button
-              onClick={() => setLanguage(language === "en" ? "ar" : "en")}
-              className="w-[5rem] text-left px-4 py-2 bg-white border-2 border-[#006b99] text-[#006b99] rounded-md hover:bg-[#ffd300] hover:text-[#006b99] transition-all duration-300 font-medium shadow-lg"
+         {menuOpen && (
+                <div
+                  className={`md:hidden absolute top-20 left-0 w-full bg-white shadow-lg flex flex-col space-y-2 py-6 px-4 z-40 ${direction === "rtl" ? "text-right" : "text-left"
+                    }`}
+                >
+                  {/* Home */}
+                  <Link
+                    to="/"
+                    onClick={() => setMenuOpen(false)}
+                    className="text-[#006b99] font-semibold hover:underline"
+                  >
+                    {t("home")}
+                  </Link>
+        
+                  {/* About Us Dropdown */}
+                  <details className="w-full">
+                    <summary className="cursor-pointer text-[#006b99] font-semibold py-2">
+                      {t("aboutUs")}
+                    </summary>
+                    <div className="pl-4 flex flex-col space-y-2 text-[#ffd300]">
+                      <Link to="/about" onClick={() => setMenuOpen(false)}>
+                        {t("aboutUs")}
+                      </Link>
+                      <Link to="/career" onClick={() => setMenuOpen(false)}>
+                        {t("career")}
+                      </Link>
+                      <Link to="/clients" onClick={() => setMenuOpen(false)}>
+                        {t("ourClients")}
+                      </Link>
+                      <Link to="/partners" onClick={() => setMenuOpen(false)}>
+                        {t("ourPartners")}
+                      </Link>
+                      <Link to="/contact" onClick={() => setMenuOpen(false)}>
+                        {t("contactUs")}
+                      </Link>
+                    </div>
+                  </details>
+        
+                  {/* Products Dropdown */}
+                  <details className="w-full">
+                    <summary className="cursor-pointer text-[#006b99] font-semibold py-2">
+                      {t("products")}
+                    </summary>
+                    <div className="pl-4 flex flex-col space-y-2 text-[#ffd300]">
+                      <Link to="/products/erp" onClick={() => setMenuOpen(false)}>
+                        {t("ERP Enterprise")}
+                      </Link>
+                      <Link to="/products/erp-standard" onClick={() => setMenuOpen(false)}>
+                        {t("ERP Standard")}
+                      </Link>
+                      <Link to="/products/sass" onClick={() => setMenuOpen(false)}>
+                        {t("SaaS")}
+                      </Link>
+                      <Link to="/products/vansales" onClick={() => setMenuOpen(false)}>
+                        {t("Van Sales")}
+                      </Link>
+                    </div>
+                  </details>
+        
+                  {/* Services Dropdown */}
+                  <details className="w-full">
+                    <summary className="cursor-pointer text-[#006b99] font-semibold py-2">
+                      {t("serviceSolutions")}
+                    </summary>
+                    <div className="pl-4 flex flex-col space-y-2 text-[#ffd300]">
+                      <Link to="/solutions/digital-transformation" onClick={() => setMenuOpen(false)}>
+                        {t("Digital Transformation")}
+                      </Link>
+                      <Link to="/" onClick={() => setMenuOpen(false)}>
+                        {t("System Integration")}
+                      </Link>
+                    </div>
+                  </details>
+        
+                  {/* Blog */}
+                  {/* <Link
+              to="/blog"
+              onClick={() => setMenuOpen(false)}
+              className="text-[#006b99] font-semibold hover:underline"
             >
-              العربية
-            </button> */}
-          </div>
-        )}
+              {t("blog")}
+            </Link> */}
+                </div>
+              )}
 
         {/* Hero Content */}
         <div className="flex-1 text-gray-900 flex flex-col justify-center mt-6">

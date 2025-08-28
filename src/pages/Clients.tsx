@@ -15,7 +15,7 @@ const Clients = () => {
   return (
     <div className="min-h-screen">
       {/* HERO */}
-      <div className="bg-secondary text-white pt-12 pb-6">
+      <div className="bg-secondary text-white pd-4 md:pt-12 pb-6">
         <section className="w-full bg-[#006b99] text-white mt-10 pt-16 pb-8 relative">
           <div className="container mx-auto px-4 sm:px-6 flex flex-col md:flex-row gap-6 md:gap-10">
             <div className="md:w-1/2 relative z-10">

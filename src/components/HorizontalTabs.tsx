@@ -41,7 +41,7 @@ const HorizontalTabs: React.FC<Props> = ({
   return (
     <div className={containerClassName}>
       {/* Tabs (horizontal) */}
-      <div className={tabsClassName} role="tablist" aria-label="Client categories" style={{ marginBottom: '1rem' }}>
+      <div className={tabsClassName} role="tablist" aria-label="Client categories" style={{ marginBottom: '1rem', paddingBottom:"5px" }}>
         {categories.map((cat) => {
           const isActive = active === cat;
           return (
