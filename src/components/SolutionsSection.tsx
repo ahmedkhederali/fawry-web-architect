@@ -23,7 +23,7 @@ const SolutionsSection = () => {
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-none md:grid-rows-2 gap-6 max-w-7xl mx-auto co">
           {solutions.map((solution, index) => {
-            if(solution.id === 'system-integration'){
+            if(solution.id === 'vansales'){
               return;
             }
             // Apply custom spans only on md+
@@ -31,7 +31,7 @@ const SolutionsSection = () => {
             if (solution.id === 'erp') customSpan = 'md:col-start-1 md:row-start-1 md:row-span-1';
              if (solution.id === 'erp-standard') customSpan = 'md:col-start-1 md:row-start-1 md:row-span-1';
             if (solution.id === 'sass') customSpan = 'md:col-start-2 md:row-start-1 md:row-span-1';
-            if (solution.id === 'vansales') customSpan = 'md:col-start-3 md:row-start-1 md:row-span-2';
+            if (solution.id === 'system-integration') customSpan = 'md:col-start-3 md:row-start-1 md:row-span-2';
             if (solution.id === 'digital-transformation') customSpan = 'md:col-start-1 md:row-start-2 md:col-span-2';
 
             const linkTo = `/solutions/${solution.id}`;

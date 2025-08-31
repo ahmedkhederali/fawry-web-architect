@@ -12,9 +12,11 @@ const Career = () => {
 
   return (
     <div className=" bg-white min-h-screen w-full    ">
-      <section className="w-full bg-[#006b99] text-white mt-10 pt-20 pb-8 relative">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
-       <div className="md:w-1/2 relative z-10">
+      <section className="w-full bg-[#006b99] text-white mt-10 pt-20 md:pt-[7rem] pb-8 relative">
+  <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+    
+    {/* Left side text */}
+    <div className="md:w-1/2 relative z-10">
       <h1 className="text-4xl font-bold mb-6 text-[#ffd400] drop-shadow-lg">
         {t("Career")}
       </h1>
@@ -28,14 +30,15 @@ const Career = () => {
       <LazyLoadImage
         src="/images/career.jpg"
         alt="career illustration"
-        className=" h-[300px] rounded-xl shadow-2xl  w-full  contain-content transform"
-       // className="rounded-xl shadow-2xl w-full max-h-[400px] object-cover transform "
+        className="h-[300px] rounded-xl shadow-2xl w-full contain-content transform"
+        // className="rounded-xl shadow-2xl w-full max-h-[400px] object-cover transform"
         style={{ perspective: "1200px" }}
       />
     </div>
-  
-        </div>
-      </section>
+
+  </div>
+</section>
+
       <h2
         id={`card-title-available-jobs`}
         className="mt-20 text-center text-2xl sm:text-2xl lg:text-2xl font-bold mb-4 md:mb-6 text-[#ffd300]"

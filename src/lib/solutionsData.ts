@@ -77,8 +77,8 @@ Implementation of DiraPack is designed to be seamless, with a dedicated team gui
         isSass: false
       },
       {
-        id: 'diraanel',
-        title: 'Diraanel',
+        id: 'dirapanel',
+        title: 'Dirapanel',
         description: 'Tailor-made ERP for electrical panel manufacturing factories.',
         summary: `DiraPlast is a tailored ERP solution that addresses the unique challenges of the plastic manufacturing industry. Covering the entire production process—from Injection Molding and Blow Molding to Extrusion, Printing, and Packing—DiraPlast ensures that every aspect of your operations is effectively managed. Our system enables you to oversee not only standard product manufacturing but also the custom design and development of specific products, providing the flexibility needed to meet diverse market demands.
 
@@ -301,7 +301,7 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
     title: 'SaaS Solutions',
     min_dec: 'Streamline Your Success: Save Time, Money, and Effort',
     description: 'SaaS Solutions for Business is a suite of software services designed to enhance operational efficiency and drive growth through cloud-based applications.',
-    image: '/images/saas3.png',
+    image: '/images/SaaS2.png',
     span: 'col-span-1 row-span-2',
     children: [
       {
@@ -439,7 +439,7 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
     title: 'System Integration',
     min_dec: 'Seamlessly Connect Your Systems for Enhanced Performance',
     description: 'In today\'s complex digital landscape, businesses rely on a multitude of systems to manage their operations. Integrating these systems effectively is crucial for streamlining workflows, improving data accuracy, and gaining a competitive edge. Dirac Systems offers comprehensive system integration services that connect your disparate systems, whether they reside in the cloud or within your data center. We leverage our expertise and solution-focused hub frameworks to ensure seamless communication and data flow across your organization',
-    image: '/products/digitalTransformation/systemIntegration.png',
+    image: '/images/System Integration 1.png',
     span: 'col-span-2 row-span-1',
     children: [
       {

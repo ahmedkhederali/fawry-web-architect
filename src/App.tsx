@@ -40,7 +40,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<AboutIndex/>} />
-            <Route path="/career" element={
+            <Route path="/about/career" element={
               <>
                 <Header />
                 <Career />
@@ -55,14 +55,14 @@ const App = () => (
                 <Footer />
               </>
             } />
-            <Route path="/contact" element={
+            <Route path="/about/contact" element={
               <>
                 <Header />
                 <Contact />
                 <Footer />
               </>
             } />
-            <Route path="/clients" element={
+            <Route path="/about/clients" element={
               <>
                 <Header />
                 <Clients />
@@ -71,7 +71,7 @@ const App = () => (
             } />
         
              
-            <Route path="/partners" element={
+            <Route path="/about/partners" element={
               <>
                 <Header />
                 <Partners />

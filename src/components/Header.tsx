@@ -19,7 +19,7 @@ const Header: React.FC = () => {
     <header className="bg-white shadow-md fixed w-full top-0 z-50">
       <div className=" px-4">
         {/* NOTE: don't reverse the whole row */}
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-[6rem]">
           {/* Logo stays left always */}
           <div className="flex items-center flex-shrink-0">
             <Link to="/">
@@ -33,7 +33,7 @@ const Header: React.FC = () => {
 
           {/* Desktop nav – only mirror spacing for RTL */}
           <nav
-            className={`hidden  xl:ml-[-30rem] md:flex flex-1 justify-center lg:justify-center gap-6 lg:gap-10 font-semibold ${direction === "rtl" ? "flex-row-reverse space-x-reverse" : ""
+            className={`hidden  xl:ml-[-42rem] md:flex flex-1 justify-center lg:justify-center gap-6 lg:gap-10 font-semibold ${direction === "rtl" ? "flex-row-reverse space-x-reverse" : ""
               }`}
           >
             <Link to="/" className="text-[#006b99] hover:underline">
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
                   `relative font-bold p-1 transition-all duration-300 
                   ${isActive
                     ? "text-[#006b99] bg-[#fff] after:w-full"
-                    : "text-[#006b99]   after:w-0 hover:after:w-full"} 
+                    : "text-[#006b99]   after:w-0 hover:after:w-full font-semibold"} 
                   after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-[#006b99] after:transition-all after:duration-300`
                 }
               >
@@ -61,16 +61,16 @@ const Header: React.FC = () => {
                 <Link to="/about" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
                   {t("aboutUs")}
                 </Link>
-                <Link to="/career" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
+                <Link to="/about/career" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
                   {t("career")}
                 </Link>
-                <Link to="/clients" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
+                <Link to="/about/clients" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
                   {t("ourClients")}
                 </Link>
-                <Link to="/partners" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
+                <Link to="/about/partners" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
                   {t("ourPartners")}
                 </Link>
-                <Link to="/contact" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
+                <Link to="/about/contact" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
                   {t("contactUs")}
                 </Link>
               </div>
@@ -78,12 +78,12 @@ const Header: React.FC = () => {
             <div className="relative group">
 
               <NavLink
-                to="/products/erp"
+                to="/products"
                 className={({ isActive }) =>
                   `relative font-bold p-1 transition-all duration-300 
                   ${isActive
                     ? "text-[#006b99] bg-[#fff] after:w-full"
-                    : "text-[#006b99]  hover:bg-[#fff] after:w-0 hover:after:w-full"} 
+                    : "text-[#006b99]  hover:bg-[#fff] after:w-0 hover:after:w-full font-semibold"} 
                   after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-[#006b99] after:transition-all after:duration-300`
                 }
               >
@@ -117,12 +117,12 @@ const Header: React.FC = () => {
             <div className="relative group">
 
               <NavLink
-                to="/solutions/digital-transformation"
+                to="/solutions"
                 className={({ isActive }) =>
                   `relative font-bold p-1 transition-all duration-300 
                   ${isActive
                     ? "text-[#006b99] bg-[#fff] after:w-full"
-                    : "text-[#006b99]  hover:bg-[#fff] after:w-0 hover:after:w-full"} 
+                    : "text-[#006b99]  hover:bg-[#fff] after:w-0 hover:after:w-full font-semibold"} 
                   after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-[#006b99] after:transition-all after:duration-300`
                 }
               >
@@ -135,7 +135,7 @@ const Header: React.FC = () => {
               >
                 <Link
                   to="/solutions/digital-transformation"
-                  className="block px-4 py-2 hover:bg-white hover:text-[#006b99]"
+                  className="block px-4 py-2 hover:bg-white hover:text-[#006b99] "
                 >
                   {t("Digital Transformation")}
                 </Link>
@@ -197,16 +197,16 @@ const Header: React.FC = () => {
               <Link to="/about" onClick={() => setIsMenuOpen(false)}>
                 {t("aboutUs")}
               </Link>
-              <Link to="/career" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/about/career" onClick={() => setIsMenuOpen(false)}>
                 {t("career")}
               </Link>
-              <Link to="/clients" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/about/clients" onClick={() => setIsMenuOpen(false)}>
                 {t("ourClients")}
               </Link>
-              <Link to="/partners" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/about/partners" onClick={() => setIsMenuOpen(false)}>
                 {t("ourPartners")}
               </Link>
-              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/about/contact" onClick={() => setIsMenuOpen(false)}>
                 {t("contactUs")}
               </Link>
             </div>

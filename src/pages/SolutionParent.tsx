@@ -6,13 +6,14 @@ import PricingSection from '@/components/PricingSection';
 import ContactSection from '@/components/ContactSection';
 import { useLanguage } from '@/components/LanguageContext';
 import { useEffect, useRef, useState } from 'react';
+import JustifiedText from '@/components/TextComponents';
 
 interface ChildSolution {
   id: string;
   title: string;
   description: string;
   summary: string;
-  title_why?: string; 
+  title_why?: string;
   benefits: { title: string; description: string }[];
   whyChooseDirac?: { title: string; description: string }[];
   logos: string[];
@@ -100,20 +101,20 @@ const SolutionParent = () => {
 
         <div className="container mx-auto px-6 mt-12  border-[white]/30">
           <div className="flex space-x-8 overflow-x-auto">
-  {currentChildren.map((child, index) => (
-    <button
-      key={child.id}
-      onClick={() => handleTabClick(index)}
-      className={`relative pb-2 text-lg font-medium transition duration-300 ease-in-out 
+            {currentChildren.map((child, index) => (
+              <button
+                key={child.id}
+                onClick={() => handleTabClick(index)}
+                className={`relative pb-2 text-lg font-medium transition duration-300 ease-in-out 
         ${index === activeTab ? "text-[#ffd400]" : "text-white/70"}`}
-    >
-      {child.title}
-      {index === activeTab && (
-        <span className="absolute bottom-0 left-0 w-full h-[3px] bg-[#ffd400] rounded-full" />
-      )}
-    </button>
-  ))}
-</div>
+              >
+                {child.title}
+                {index === activeTab && (
+                  <span className="absolute bottom-0 left-0 w-full h-[3px] bg-[#ffd400] rounded-full" />
+                )}
+              </button>
+            ))}
+          </div>
 
         </div>
       </div>
@@ -122,7 +123,8 @@ const SolutionParent = () => {
       {activeChild && (
         <div className="container mx-auto px-6 py-12 space-y-12">
           {/* Full-width description */}
-          <div ref={descriptionRef} className={`flex flex-col md:flex-row items-center justify-between gap-8`}>
+          <JustifiedText text={activeChild.summary}/>
+          {activeChild.isSass && <div ref={descriptionRef} className={`flex flex-col md:flex-row items-center justify-between gap-8`}>
             {/* LEFT SIDE - TEXT */}
             <div className="md:w-1/2 text-left">
               <h2 className="text-2xl font-bold mb-4 text-[#006b99]">
@@ -190,7 +192,6 @@ const SolutionParent = () => {
               </div>
             </div>
 
-            {/* RIGHT SIDE - IMAGE if isSass */}
             <div className="w-full md:w-1/2">
               <img
                 src={getProductImage(activeChild.title) || "/placeholder.svg"}
@@ -198,7 +199,7 @@ const SolutionParent = () => {
                 className="w-full h-auto rounded-lg shadow-lg object-cover"
               />
             </div>
-            </div>
+          </div>}
           {activeChild?.isSass && <FawrySassSection />}
           {/* Logos */}
           {activeChild.logos?.length > 0 && (
@@ -217,7 +218,7 @@ const SolutionParent = () => {
               ))}
             </div>
           )}
-               {/* Features */}
+          {/* Features */}
           {activeChild?.isVansale && activeChild.whyChooseDirac?.length > 0 && (
             <div className="bg-[#006b99] text-white rounded-lg shadow-md p-6">
               <h3 className="text-2xl font-bold mb-6 text-[#ffd400]">{activeChild?.title_why}</h3>
@@ -235,7 +236,7 @@ const SolutionParent = () => {
             </div>
           )}
 
-           {activeChild?.isSystemIntegration && activeChild.whyChooseDirac?.length > 0 && (
+          {activeChild?.isSystemIntegration && activeChild.whyChooseDirac?.length > 0 && (
             <div className="bg-[#006b99] text-white rounded-lg shadow-md p-6">
               <h3 className="text-2xl font-bold mb-6 text-[#ffd400]">{activeChild?.title_why}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

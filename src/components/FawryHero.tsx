@@ -38,7 +38,7 @@ const FawryHeaderHero: React.FC = () => {
           />
 
           {/* Desktop Navbar */}
-          <nav className={`hidden md:flex gap-6 lg:gap-10 ml-auto mr-[10%] font-semibold ${direction === "rtl" ? "flex-row-reverse space-x-reverse" : ""
+          <nav className={`hidden md:flex gap-6 lg:gap-10 ml-auto mr-[22%] font-semibold ${direction === "rtl" ? "flex-row-reverse space-x-reverse" : ""
             }`}>
               <NavLink 
                 to="/" 
@@ -254,7 +254,7 @@ const FawryHeaderHero: React.FC = () => {
           العربية
         </button> */}
         {/* Carousel */}
-        <div className="relative image-container h-[400px] md:w-[125%]  xl:h-[450px] md:h-[350px] flex items-center justify-center overflow-hidden rounded-[10px] md:rounded-tl-[80px] shadow-2xl bg-white z-20">
+        <div className="relative image-container h-[400px] md:w-[125%]  xl:h-[350px] md:h-[350px] flex items-center justify-center overflow-hidden rounded-[10px] md:rounded-tl-[80px] shadow-2xl bg-white z-20">
          
           <img
             key={current}
