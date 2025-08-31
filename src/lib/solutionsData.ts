@@ -923,5 +923,76 @@ export const clients = [
 
 
 ];
+
+export const sampleReleases = [
+  {
+    id: "1",
+    name: "Fawry Pay 3.0",
+    version: "v3.0.0",
+    date: "March 15, 2024",
+    shortDescription: "Major overhaul with enhanced security and new payment methods.",
+    fullDescription:
+      "A complete redesign of our payment platform featuring advanced security protocols, streamlined user experience, and support for multiple new payment methods including digital wallets and cryptocurrency.",
+    features: [
+      "Enhanced biometric authentication",
+      "Support for 15+ new payment methods",
+      "Real-time fraud detection",
+      "Improved mobile app performance",
+      "Advanced analytics dashboard",
+    ],
+    status: "released" as const,
+  },
+  {
+    id: "2",
+    name: "Merchant Portal Update",
+    version: "v2.5.0",
+    date: "February 8, 2024",
+    shortDescription: "New merchant dashboard with advanced reporting and analytics.",
+    fullDescription:
+      "Comprehensive update to the merchant portal featuring a modern dashboard, advanced reporting capabilities, and powerful analytics tools to help businesses track their performance and optimize their payment processes.",
+    features: [
+      "Interactive revenue charts",
+      "Custom report generation",
+      "Real-time transaction monitoring",
+      "Multi-currency support",
+      "Automated reconciliation tools",
+    ],
+    status: "released" as const,
+  },
+  {
+    id: "3",
+    name: "API Gateway Enhancement",
+    version: "v1.8.0",
+    date: "April 22, 2024",
+    shortDescription: "Improved API performance and new developer tools.",
+    fullDescription:
+      "Significant improvements to our API infrastructure with enhanced performance, better error handling, and comprehensive developer tools including SDKs for popular programming languages.",
+    features: [
+      "50% faster response times",
+      "New REST and GraphQL endpoints",
+      "SDKs for Python, Node.js, and PHP",
+      "Enhanced error messaging",
+      "Comprehensive API documentation",
+    ],
+    status: "in-progress" as const,
+  },
+  {
+    id: "4",
+    name: "Mobile Wallet Integration",
+    version: "v4.0.0",
+    date: "June 10, 2024",
+    shortDescription: "Native integration with popular mobile wallets and digital payment platforms.",
+    fullDescription:
+      "Seamless integration with major mobile wallet providers, enabling customers to pay using their preferred digital payment methods while maintaining the highest security standards.",
+    features: [
+      "Apple Pay and Google Pay support",
+      "Samsung Pay integration",
+      "QR code payment system",
+      "Contactless payment options",
+      "Loyalty program integration",
+    ],
+    status: "upcoming" as const,
+  },
+]
 export default solutions;
 

@@ -78,7 +78,7 @@ const Header: React.FC = () => {
             <div className="relative group">
 
               <NavLink
-                to="/products"
+                to="/products/erp"
                 className={({ isActive }) =>
                   `relative font-bold p-1 transition-all duration-300 
                   ${isActive
@@ -117,7 +117,7 @@ const Header: React.FC = () => {
             <div className="relative group">
 
               <NavLink
-                to="/solutions"
+                to="/solutions/digital-transformation"
                 className={({ isActive }) =>
                   `relative font-bold p-1 transition-all duration-300 
                   ${isActive

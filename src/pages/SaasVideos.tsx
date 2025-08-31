@@ -16,22 +16,22 @@ const SaaSVideos = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
         {/* Video 1 */}
         <div className="relative w-full max-w-md aspect-video rounded-xl overflow-hidden shadow-xl bg-white">
-          <video
-            ref={video1Ref}
-            src="/icons/saas video1.mp4"
-            muted
-            loop
-            playsInline
-            controls
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <iframe
+          src="https://www.youtube.com/embed/P4f6q6IvTso"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full h-full object-cover"
+        ></iframe>
+      </div>
+
 
         {/* Video 2 */}
         <div className="relative w-full max-w-md aspect-video rounded-xl overflow-hidden shadow-xl bg-white">
           <video
-            ref={video2Ref}
-            src="/icons/saas video2.mp4"
+            ref={video1Ref}
+            src="/icons/saas video1.mp4"
             muted
             loop
             playsInline

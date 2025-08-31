@@ -1,13 +1,13 @@
-import AboutTimeLineSection from '@/pages/AboutUspage/AboutTimeLineSection';
 import Firebase from '@/pages/Firebase';
 import SaaSVideos from '@/pages/SaasVideos';
-import { Timeline } from '@/pages/TimelineModal';
 import {
   WalletCards,
   MailCheck,
   CalendarClock,
   Handshake,
 } from 'lucide-react'; 
+import ReleaseTimeline from './TimeLineVersions';
+import { sampleReleases } from '@/lib/solutionsData';
 const padyDayaData=[
   {
     title: 'Payroll',
@@ -65,7 +65,8 @@ const FawrySassSection = () => {
         <Firebase />
         </div>
       <div className="mt-10">
-      <Timeline/>
+        <ReleaseTimeline releases={sampleReleases}/>
+      {/* <Timeline/> */}
       {/* <AboutTimeLineSection/> */}
     </div>
 <div className="mt-10">
