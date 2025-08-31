@@ -5,7 +5,6 @@ import solutions from '../lib/solutionsData';
 
 const SolutionsSection = () => {
   const { t } = useLanguage();
-
   return (
     <section className="py-10 md:py-12 lg:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -24,6 +23,9 @@ const SolutionsSection = () => {
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-none md:grid-rows-2 gap-6 max-w-7xl mx-auto co">
           {solutions.map((solution, index) => {
+            if(solution.id === 'system-integration'){
+              return;
+            }
             // Apply custom spans only on md+
             let customSpan = '';
             if (solution.id === 'erp') customSpan = 'md:col-start-1 md:row-start-1 md:row-span-1';
