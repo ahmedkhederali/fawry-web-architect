@@ -20,7 +20,7 @@ const HeaderSection = () => {
           {/* Right side image */}
           <div className="md:w-1/2">
             <LazyLoadImage
-              src="/images/about.png"
+              src="/images/about.avif"
               alt="about illustration"
               className=" h-[300px] rounded-xl shadow-2xl  w-full  contain-content transform"
               // className="rounded-xl shadow-2xl w-full max-h-[400px] object-cover transform "
