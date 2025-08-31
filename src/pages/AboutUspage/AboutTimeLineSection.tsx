@@ -11,8 +11,8 @@ const timeline = [
  },
  { year: "2019", title: "Digital Transformation Projects", desc: "We expanded into digital transformation initiatives both locally and internationally, enhancing operational efficiency and driving innovation.", icon: "🌐" },
  { year: "2020", title: "Strategic Partnership with Fawry",image: "/images/DiracSystems.png", desc: "DIRAC formed a strategic SaaS partnership with Fawry, which acquired a 51% stake in the company, marking a major milestone in our growth.", icon: "🤝" },
- { year: "2023", title: "Launch of Fawry Business HR", desc: "Officially launched the Human Resources system under the Fawry Business brand, providing comprehensive HR solutions.", icon: "" },
- { year: "2024", title: "Launch of Fawry Business Accounting", desc: "Expanded our platform with the release of the Fawry Business Accounting system, offering integrated financial management tools.", icon: "📊" },
+ { year: "2023", title: "Launch of Fawry Business HR", image:"/images/hrimg.png", desc: "Officially launched the Human Resources system under the Fawry Business brand, providing comprehensive HR solutions.", icon: "" },
+ { year: "2024", title: "Launch of Fawry Business Accounting",image: "/images/accounting.png",  desc: "Expanded our platform with the release of the Fawry Business Accounting system, offering integrated financial management tools.", icon: "📊" },
 ];
 const AboutTimeLineSection = () => (
 <section className="py-10 bg-gray-50 relative overflow-hidden">
