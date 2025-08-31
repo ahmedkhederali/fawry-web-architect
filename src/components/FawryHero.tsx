@@ -58,9 +58,9 @@ const FawryHeaderHero: React.FC = () => {
               <a href="/about" className="text-[#006b99] hover:underline">About Us</a>
               <div className="absolute left-0 mt-2 w-40 bg-[#006b99] text-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-all">
                 <a href="/about" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">About us</a>
-                <a href="/career" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Career</a>
-                <a href="/clients" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Our Clients</a>
-                <a href="/partners" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Our Partners</a>
+                <a href="/about/career" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Career</a>
+                <a href="/about/clients" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Our Clients</a>
+                <a href="/about/partners" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Our Partners</a>
               </div>
             </div>
             <div className="relative group z-50">
@@ -126,7 +126,7 @@ const FawryHeaderHero: React.FC = () => {
                       <Link to="/career" onClick={() => setMenuOpen(false)}>
                         {t("career")}
                       </Link>
-                      <Link to="/clients" onClick={() => setMenuOpen(false)}>
+                      <Link to="/about/clients" onClick={() => setMenuOpen(false)}>
                         {t("ourClients")}
                       </Link>
                       <Link to="/partners" onClick={() => setMenuOpen(false)}>
@@ -254,7 +254,7 @@ const FawryHeaderHero: React.FC = () => {
           العربية
         </button> */}
         {/* Carousel */}
-        <div className="relative image-container h-[400px] md:w-[125%]  xl:h-[350px] md:h-[350px] flex items-center justify-center overflow-hidden rounded-[10px] md:rounded-tl-[80px] shadow-2xl bg-white z-20">
+        <div className="relative image-container h-[400px] md:w-[125%]  xl:h-[20rem] md:h-[20rem] flex items-center justify-center overflow-hidden rounded-[10px] md:rounded-tl-[80px] shadow-2xl bg-white z-20">
          
           <img
             key={current}
@@ -284,7 +284,7 @@ const FawryHeaderHero: React.FC = () => {
             ))}
           </div>
         </div>
-        <div className="hidden md:flex md:absolute md:bottom-[3rem] md:left-1/2 md:-translate-x-1/2 gap-2  bottom-12 ">          <button
+        <div className="hidden md:flex md:absolute md:bottom-[2rem] md:left-1/2 md:-translate-x-1/2 gap-2  bottom-12 ">          <button
             onClick={() => setCurrent((prev) => (prev - 1 + carouselSlides.length) % carouselSlides.length)}
             className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-2 rounded-full shadow-lg border-2 border-white"
           >
