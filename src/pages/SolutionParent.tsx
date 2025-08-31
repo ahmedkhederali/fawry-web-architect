@@ -19,6 +19,7 @@ interface ChildSolution {
   DownloadLink: string;
   isSass: boolean;
   isVansale?: boolean;
+  isSystemIntegration: boolean;
   live_img?: string;
   pricing?: {
     title: string;
@@ -62,6 +63,7 @@ const SolutionParent = () => {
       DiraPanel: "/products/dirapack/dirapack.png?height=400&width=600",
       DiraTail: "/products/dirapack/dirapack.png?height=400&width=600",
       DiraPlast: "/products/dirapack/dirapack.png?height=400&width=600",
+      vansales: "/products/vansales/evolution.png?height=400&width=600"
     };
     return images[childTitle as keyof typeof images] || activeChild?.live_img || "/images/EnterpriseEdition.png";
   };
@@ -196,7 +198,7 @@ const SolutionParent = () => {
                 className="w-full h-auto rounded-lg shadow-lg object-cover"
               />
             </div>
-          </div>
+            </div>
           {activeChild?.isSass && <FawrySassSection />}
           {/* Logos */}
           {activeChild.logos?.length > 0 && (
@@ -217,6 +219,23 @@ const SolutionParent = () => {
           )}
                {/* Features */}
           {activeChild?.isVansale && activeChild.whyChooseDirac?.length > 0 && (
+            <div className="bg-[#006b99] text-white rounded-lg shadow-md p-6">
+              <h3 className="text-2xl font-bold mb-6 text-[#ffd400]">{activeChild?.title_why}</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {activeChild.whyChooseDirac.map((whyuse, i) => (
+                  <div key={i} className="flex items-start gap-4">
+                    <CheckCircleIcon className="h-6 w-6 text-[#ffd400] mt-1 shrink-0" />
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-1">{whyuse.title}</h4>
+                      <p className="text-sm text-white/80">{whyuse.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+           {activeChild?.isSystemIntegration && activeChild.whyChooseDirac?.length > 0 && (
             <div className="bg-[#006b99] text-white rounded-lg shadow-md p-6">
               <h3 className="text-2xl font-bold mb-6 text-[#ffd400]">{activeChild?.title_why}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

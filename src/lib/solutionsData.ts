@@ -29,6 +29,7 @@ const solutions = [
         ],
         DownloadLink: '/files/dirac-enterprise-brochure.pdf',
         isSass: false,
+        isSystemIntegration:false
       },
       {
         id: 'dirapack',
@@ -291,6 +292,7 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
         ],
         DownloadLink: '/files/dirac-enterprise-brochure.pdf',
         isSass: false,
+        isSystemIntegration:false,
       }
     ],
   },
@@ -374,27 +376,15 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
     title: 'Van Sales Application',
     min_dec: 'Revolutionize Your Outdoor Sales Operations',
     description: 'Van Sales System designed to optimize outdoor sales, streamline operations, and empower sales teams with real-time tools.',
-    image: '/products/vanSales/van-sales.png',
+    image: '/products/vansales/evolution.png',
     span: 'col-span-2 row-span-1',
     children: [
       {
         id: 'vansales',
         title: 'Van Sales Application',
         title_why: 'Why Choose Dirac systems for Van Sales?',
-        description: 'Revolutionize outdoor sales operations with efficient inventory, invoicing, and customer management.',
-        summary: `Van Inventory Management: Efficiently manage your inventory on the go. Track stock levels in real-time, ensuring accurate product availability, reducing stockouts, and minimizing overstock situations.
-      
-Route Planning: Optimize your sales routes with advanced planning features to maximize productivity and minimize costs.
-      
-Real-Time Stock Visibility: Keep your sales team fully informed with live stock updates, improving order accuracy and communication.
-      
-On-the-Spot Invoicing: Close deals faster by generating invoices instantly in the field, enhancing customer satisfaction.
-      
-Payment Collection: Collect payments easily and securely via multiple methods, ensuring smooth transactions.
-      
-Product Returns Handling: Manage returns efficiently to maintain customer trust and loyalty.
-      
-Customer Stock Audits: Conduct accurate on-site audits, preventing discrepancies and ensuring accountability.`,
+        description: 'Revolutionize Your Outdoor Sales Operations with Dirac Systems.',
+        summary: `The Van Sales System from Dirac Systems is designed to cover the entire outdoor sales cycle, ensuring your field sales operations are efficient, accurate, and fully integrated. Our solution empowers your sales team with the tools they need to manage their sales processes seamlessly, enhancing productivity and customer satisfaction.`,
         benefits: [
           { title: 'Van Inventory Management', description: 'Manage inventory on the go with real-time tracking to prevent stockouts and overstocking.' },
           { title: 'Route Planning', description: 'Plan efficient sales routes to maximize time and reduce travel costs.' },
@@ -413,7 +403,8 @@ Customer Stock Audits: Conduct accurate on-site audits, preventing discrepancies
         logos: [],
         DownloadLink: '',
         isSass: false,
-        isVansale: true
+        isVansale: true,
+        isSystemIntegration: false
       }
     ],
   }
@@ -454,6 +445,7 @@ Customer Stock Audits: Conduct accurate on-site audits, preventing discrepancies
       {
         id: 'system-integration',
         title: 'System Integration',
+        title_why: 'Why Choose Dirac systems for Van Sales?',
         description: 'Seamlessly Connect Your Systems for Enhanced Performance ',
         summary: `At Dirac Systems, we understand that every business has unique integration needs. That's why we take a tailored approach to every project, working closely with you to understand your specific requirements and design a solution that meets your goals. Our team of experienced integration specialists has expertise in a wide range of technologies and platforms, including:
 Middleware Platforms: IBM MQ, IBM BMP, TIBCO
@@ -469,9 +461,16 @@ E-commerce Platforms: Integration with e-commerce platforms like Shopify and Woo
           { title: 'Reduced Costs:', description: 'Eliminate data silos and redundant processes, leading to significant cost savings.' },
           { title: 'Scalability and Flexibility:', description: 'Build a flexible and scalable integration infrastructure that can adapt to your evolving business needs.' }
         ],
+         whyChooseDirac: [
+          { title: 'Seamless Integration', description: 'Integrates smoothly with your existing accounting and inventory systems.' },
+          { title: 'User-Friendly Interface', description: 'Easy-to-use design reduces training time and boosts productivity.' },
+          { title: 'Real-Time Data Insights', description: 'Access live data and analytics for better, faster decisions.' },
+          { title: 'Dedicated Support', description: 'Expert support team ensures smooth transition and ongoing success.' }
+        ],
         logos: [],
         DownloadLink: '',
-        isSass: false
+        isSass: false,
+        isSystemIntegration: true
       }
     ],
   }
