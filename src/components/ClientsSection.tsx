@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from './LanguageContext';
 import { clients } from '@/lib/solutionsData';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const ClientsSection = () => {
   const { t } = useLanguage();
@@ -32,7 +33,7 @@ const ClientsSection = () => {
                 >
                   <div className="text-center w-full">
               <div className="relative group inline-block">
-                <img
+                <LazyLoadImage 
                   src={client.logo}
                   alt={client.name}
                   className="h-20 w-40 mx-auto mb-2 object-contain"
