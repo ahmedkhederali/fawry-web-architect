@@ -219,7 +219,7 @@ const FawryHeaderHero: React.FC = () => {
               className="flex items-center gap-2 bg-white text-[#006b99] border border-[#0074d9] px-6 py-2 rounded-md shadow hover:bg-[#ffe066] transition"
               onClick={() => {
                 const link = document.createElement("a");
-                link.href = "/files/Dirac_Co.Profile.pdf";
+                link.href = "/files/Dirac_Fawry_Co.Profile.pdf";
                 link.download = "CompanyProfile.pdf";
                 link.click();
               }}
