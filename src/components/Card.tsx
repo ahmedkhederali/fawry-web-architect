@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from './LanguageContext';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 interface CardProps {
     title: string;
@@ -35,7 +36,7 @@ export default function Card({ title, desc, img_src, img_alt ,className, color }
 
             {/* Image Section */}
             <div className="flex justify-center px-4 md:px-0">
-                <img
+                <LazyLoadImage 
                     src={img_src}
                     alt={img_alt || translatedTitle}
                     className="rounded-lg shadow-lg object-cover w-full h-auto max-w-md"

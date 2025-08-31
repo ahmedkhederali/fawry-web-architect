@@ -1,5 +1,6 @@
 import { useLanguage } from "@/components/LanguageContext";
 import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const HeaderSection = () => {
    const { t } = useLanguage();
@@ -18,7 +19,7 @@ const HeaderSection = () => {
 
     {/* Right side image */}
     <div className="md:w-1/2">
-      <img
+      <LazyLoadImage
         src="/images/about.png"
         alt="about illustration"
         className=" h-[300px] rounded-xl shadow-2xl  w-full  contain-content transform"

@@ -2,147 +2,9 @@ import React, { useState } from 'react';
 import { useLanguage } from '../components/LanguageContext';
 import { Link } from "react-router-dom";
 import Card from '@/components/Card';
-const jobs = [
-  {
-    title: 'Frontend Developer',
-    location: 'Cairo, Egypt',
-    type: 'Full-time',
-    description: {
-      summary: 'We are looking for a skilled Frontend Developer to build engaging UI experiences.',
-      responsibilities: [
-        'Develop UI using React and Tailwind CSS.',
-        'Collaborate with UX/UI designers.',
-        'Ensure cross-browser compatibility.',
-        'Write clean, scalable code.'
-      ],
-      requirements: [
-        '2+ years experience with React.',
-        'Familiarity with Tailwind CSS and Git.',
-        'Strong understanding of responsive design.'
-      ],
-      benefits: [
-        'Flexible hours',
-        'Health insurance',
-        'Professional development'
-      ]
-    }
-  },
-  {
-    title: 'Backend Developer',
-    location: 'Cairo, Egypt',
-    type: 'Full-time',
-    description: {
-      summary: 'Backend Developer needed to design APIs and support scalable architecture.',
-      responsibilities: [
-        'Develop RESTful APIs using Node.js or .NET.',
-        'Manage databases and integrations.',
-        'Optimize server-side performance.'
-      ],
-      requirements: [
-        'Experience with Express, .NET, or Django.',
-        'Good understanding of SQL/NoSQL.',
-        'Knowledge of security and authentication.'
-      ],
-      benefits: [
-        'Remote work options',
-        'Annual bonuses',
-        'Team retreats'
-      ]
-    }
-  },
-  {
-    title: 'Mobile Developer',
-    location: 'Remote',
-    type: 'Full-time',
-    description: {
-      summary: 'We’re seeking a Mobile Developer for cross-platform development.',
-      responsibilities: [
-        'Build apps using React Native or Flutter.',
-        'Deploy to Android and iOS stores.',
-        'Ensure smooth performance and responsiveness.'
-      ],
-      requirements: [
-        'At least 1 year of mobile dev experience.',
-        'Familiar with publishing apps to stores.',
-        'Good debugging and testing skills.'
-      ],
-      benefits: [
-        'Fully remote team',
-        'Flexible schedule',
-        'Performance bonuses'
-      ]
-    }
-  },
-  {
-    title: 'QA Tester',
-    location: 'Cairo, Egypt',
-    type: 'Part-time',
-    description: {
-      summary: 'Join our QA team to ensure bug-free product delivery.',
-      responsibilities: [
-        'Write and run test cases.',
-        'Report and track bugs.',
-        'Work with developers to resolve issues.'
-      ],
-      requirements: [
-        'Basic knowledge of QA methodologies.',
-        'Experience with tools like Selenium or Cypress.',
-        'Attention to detail.'
-      ],
-      benefits: [
-        'Part-time schedule',
-        'Collaborative environment',
-        'Career growth opportunities'
-      ]
-    }
-  },
-  {
-    title: 'DevOps Engineer',
-    location: 'Remote',
-    type: 'Full-time',
-    description: {
-      summary: 'We need a DevOps expert to support our cloud and CI/CD pipeline.',
-      responsibilities: [
-        'Maintain CI/CD workflows.',
-        'Manage AWS or Azure infrastructure.',
-        'Monitor performance and uptime.'
-      ],
-      requirements: [
-        'Strong DevOps tooling experience.',
-        'Familiarity with Docker, Kubernetes.',
-        'Scripting skills (Bash, Python).'
-      ],
-      benefits: [
-        'Remote-friendly',
-        'Competitive salary',
-        'Tech allowance'
-      ]
-    }
-  },
-  {
-    title: 'Database Administrator',
-    location: 'Cairo, Egypt',
-    type: 'Full-time',
-    description: {
-      summary: 'Seeking a DBA to maintain and optimize databases.',
-      responsibilities: [
-        'Manage SQL and NoSQL databases.',
-        'Ensure data integrity and backups.',
-        'Perform tuning and migrations.'
-      ],
-      requirements: [
-        'Experience with MySQL/PostgreSQL.',
-        'Knowledge of indexing, replication.',
-        'Backup and restore strategy skills.'
-      ],
-      benefits: [
-        'In-office perks',
-        'Health and dental insurance',
-        'Training programs'
-      ]
-    }
-  }
-];
+import { jobs } from '@/lib/solutionsData';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 const Career = () => {
   const { t } = useLanguage();
@@ -163,7 +25,7 @@ const Career = () => {
 
     {/* Right side image */}
     <div className="md:w-1/2">
-      <img
+      <LazyLoadImage
         src="/images/career.jpg"
         alt="career illustration"
         className=" h-[300px] rounded-xl shadow-2xl  w-full  contain-content transform"
