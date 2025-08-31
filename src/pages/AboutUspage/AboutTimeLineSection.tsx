@@ -1,6 +1,6 @@
 const timeline = [
  { year: "2012–2014", title: "Foundation & Early Development",
-  image: "/images/DiracSystems.png",
+  image: "/images/Diracfawry.png",
   desc: "DIRAC Systems was officially established in 2014, building on system development that began in 2012." },
  { year: "2016", title: "Leadership in Digital Payment Integration", desc: "DIRAC became a leading provider of electronic integration solutions for digital payments, partnering with Fawry and other major institutions in Egypt." },
  {
@@ -10,8 +10,8 @@ const timeline = [
    image: "/images/DiracSystems.png",
  },
  { year: "2019", title: "Digital Transformation Projects", desc: "We expanded into digital transformation initiatives both locally and internationally, enhancing operational efficiency and driving innovation.", icon: "🌐" },
- { year: "2020", title: "Strategic Partnership with Fawry", desc: "DIRAC formed a strategic SaaS partnership with Fawry, which acquired a 51% stake in the company, marking a major milestone in our growth.", icon: "🤝" },
- { year: "2023", title: "Launch of Fawry Business HR", desc: "Officially launched the Human Resources system under the Fawry Business brand, providing comprehensive HR solutions.", icon: "🧑‍💼" },
+ { year: "2020", title: "Strategic Partnership with Fawry",image: "/images/DiracSystems.png", desc: "DIRAC formed a strategic SaaS partnership with Fawry, which acquired a 51% stake in the company, marking a major milestone in our growth.", icon: "🤝" },
+ { year: "2023", title: "Launch of Fawry Business HR", desc: "Officially launched the Human Resources system under the Fawry Business brand, providing comprehensive HR solutions.", icon: "" },
  { year: "2024", title: "Launch of Fawry Business Accounting", desc: "Expanded our platform with the release of the Fawry Business Accounting system, offering integrated financial management tools.", icon: "📊" },
 ];
 const AboutTimeLineSection = () => (
