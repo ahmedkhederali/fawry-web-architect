@@ -22,10 +22,10 @@ const FawryHeaderHero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative w-full md:min-h-[80vh] flex flex-col md:flex-row overflow-hidden bg-[#006b99]">
+    <section className="relative w-full custom-md:min-h-[80vh] flex flex-col custom-md:flex-row overflow-hidden bg-[#006b99]">
       {/* Yellow Left Side */}
       <div
-        className="relative flex flex-col justify-between bg-[#ffd300] py-6 px-4 md:px-8 z-10 w-full md:w-[55%] md:rounded-br-[120px]"
+        className="relative flex flex-col justify-between bg-[#ffd300] py-6 px-4 custom-md:px-8 z-10 w-full custom-md:w-[55%] custom-md:rounded-br-[120px]"
         // className="relative flex flex-col justify-between bg-[#ffd300] py-6 px-4 md:px-8 z-10 w-full md:w-[55%] borderBottomRightRadius"
         // style={{ borderBottomRightRadius: "120px" }} // need to remove in mobile
       >
@@ -38,7 +38,7 @@ const FawryHeaderHero: React.FC = () => {
           />
 
           {/* Desktop Navbar */}
-          <nav className={`hidden md:flex gap-6 lg:gap-10 ml-auto mr-[22%] font-semibold ${direction === "rtl" ? "flex-row-reverse space-x-reverse" : ""
+          <nav className={`hidden custom-md:flex gap-6 lg:gap-10 ml-auto mr-[22%] custom-md_tablet:mr-[5%] font-semibold ${direction === "rtl" ? "flex-row-reverse space-x-reverse" : ""
             }`}>
               <NavLink 
                 to="/" 
@@ -88,7 +88,7 @@ const FawryHeaderHero: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-[#006b99]"
+            className="custom-md:hidden text-[#006b99]"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none"
@@ -187,20 +187,20 @@ const FawryHeaderHero: React.FC = () => {
 
         {/* Hero Content */}
         <div className="flex-1 text-gray-900 flex flex-col justify-center mt-6">
-          <div className="max-w-3xl space-y-3 text-center md:text-left font-sans">
-            <h2 className="text-lg md:text-xl text-[#006b99] font-semibold">
+          <div className="max-w-3xl space-y-3 text-center custom-md:text-left font-sans">
+            <h2 className="text-lg custom-md:text-xl text-[#006b99] font-semibold">
               Empowering the Digital Shift
             </h2>
-            <h1 className="text-3xl md:text-4xl font-bold text-[#006b99]">
+            <h1 className="text-3xl custom-md:text-4xl font-bold text-[#006b99]">
               Dirac Systems
             </h1>
-            <p className="text-sm md:text-lg text-[#025274] leading-relaxed w-full md:w-3/4 mx-auto md:mx-0">
+            <p className="text-sm custom-md:text-lg text-[#025274] leading-relaxed w-full md:w-3/4 mx-auto md:mx-0">
               Drives Digital Evolution And Operational Efficiency With Cutting-Edge Technology Solutions Tailored To Modern Business Needs
             </p>
           </div>
 
           {/* Buttons */}
-          <div className="flex gap-4 mt-4 justify-center md:justify-start">
+          <div className="flex gap-4 mt-4 justify-center custom-md:justify-start">
             <button
               className="bg-[#006b99] text-[#ffd300] px-6 py-2 rounded-md font-semibold shadow hover:bg-[#005fa3] transition"
               onClick={() => {
@@ -246,7 +246,7 @@ const FawryHeaderHero: React.FC = () => {
       </div>
 
       {/* Blue Right Side with Carousel */}
-      <div className="relative flex flex-col items-center justify-center w-full md:w-[45%] bg-[#006b99] min-h-[50vh] md:min-h-[80vh]">
+      <div className="relative flex flex-col items-center justify-center w-full custom-md:w-[45%] bg-[#006b99] min-h-[50vh] custom-md:min-h-[80vh]">
         {/* <button
           onClick={() => setLanguage(language === "en" ? "ar" : "en")}
           className="hidden md:block absolute top-6 right-6 md:right-[2rem] z-40 px-4 py-2 bg-white border-2 border-[#006b99] text-[#006b99] rounded-md hover:bg-[#ffd300] hover:text-[#006b99] transition-all duration-300 font-medium shadow-lg"
@@ -254,7 +254,7 @@ const FawryHeaderHero: React.FC = () => {
           العربية
         </button> */}
         {/* Carousel */}
-        <div className="relative image-container h-[400px] md:w-[125%]  xl:h-[20rem] md:h-[20rem] flex items-center justify-center overflow-hidden rounded-[10px] md:rounded-tl-[80px] shadow-2xl bg-white z-20">
+        <div className="relative image-container h-[400px]  custom-md:w-[125%]  xl:h-[20rem] custom-md:h-[20rem] custom-lg:h-[25rem] flex items-center justify-center overflow-hidden rounded-[10px] custom-md:rounded-tl-[80px] shadow-2xl bg-white z-20">
          
           <img
             key={current}
@@ -268,8 +268,8 @@ const FawryHeaderHero: React.FC = () => {
             key={`caption-${current}`}
             className="absolute bottom-16 left-1/2 -translate-x-1/2 bg-[#000000]/70 text-[#ffd300] px-4 py-3 rounded-lg max-w-[80%] shadow-lg text-left transition-opacity duration-700 animate-fade"
           >
-            <h2 className="text-lg md:text-xl font-extrabold">{carouselSlides[current].title}</h2>
-            <p className="text-sm md:text-base font-medium">{carouselSlides[current].description}</p>
+            <h2 className="text-lg custom-md:text-xl font-extrabold">{carouselSlides[current].title}</h2>
+            <p className="text-sm custom-md:text-base font-medium">{carouselSlides[current].description}</p>
           </div>
 
           {/* Indicators */}
@@ -284,7 +284,7 @@ const FawryHeaderHero: React.FC = () => {
             ))}
           </div>
         </div>
-        <div className="hidden md:flex md:absolute md:bottom-[2rem] md:left-1/2 md:-translate-x-1/2 gap-2  bottom-12 ">          <button
+        <div className="hidden custom-md:flex custom-md:absolute custom-md:bottom-[3.5rem] custom-md:left-1/2 custom-md:-translate-x-1/2 gap-2  bottom-12 ">          <button
             onClick={() => setCurrent((prev) => (prev - 1 + carouselSlides.length) % carouselSlides.length)}
             className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-2 rounded-full shadow-lg border-2 border-white"
           >

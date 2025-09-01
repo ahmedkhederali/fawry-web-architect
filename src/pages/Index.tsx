@@ -1,9 +1,5 @@
 
-import React from 'react';
 import { LanguageProvider, useLanguage } from '../components/LanguageContext';
-import Header from '../components/Header';
-import HeroSection from '../components/HeroSection';
-import PDFDownloadSection from '../components/PDFDownloadSection';
 import AboutSection from '../components/AboutSection';
 import SolutionsSection from '../components/SolutionsSection';
 import ClientsSection from '../components/ClientsSection';

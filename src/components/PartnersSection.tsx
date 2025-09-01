@@ -62,8 +62,7 @@ const PartnersSection = () => {
         <div
           className="
    flex flex-wrap gap-6
-   justify-center    /* ده اللي بيخلي العناصر في النص */
- "
+   justify-center "
         >
           {secondRow.map((icon, index) => (
             <div

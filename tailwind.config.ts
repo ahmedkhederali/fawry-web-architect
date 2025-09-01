@@ -1,5 +1,6 @@
 
 import type { Config } from "tailwindcss";
+import tailwindAnimate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -90,8 +91,15 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+			},
+			screens: {
+				'custom-md': {  'min': '950px' },
+				'custom-lg': {  'min': '1500px' },
+				'custom-md_tablet': { 'min': '950px', 'max': '1220px' },
+				'custom-md_min_tablet': { 'min': '800px', 'max': '1100px' },
+				'custom_md_hide_menu': { 'min': '767px' , 'max': '960px' },
+			},
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindAnimate],
 } satisfies Config;

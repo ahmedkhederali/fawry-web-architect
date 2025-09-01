@@ -2,7 +2,6 @@
 import React from 'react';
 import { useLanguage } from '../components/LanguageContext';
 import PartnersSection from '../components/PartnersSection';
-import Card from '@/components/Card';
 
 const Partners = () => {
   const { t } = useLanguage();
