@@ -24,7 +24,7 @@ const ReleaseTimeline: React.FC<ReleaseTimelineProps> = ({ releases }) => {
     const [hoveredId, setHoveredId] = useState<string | null>(null)
 
     return (
-        <div className="max-w-6xl mx-auto p-4 md:p-6">
+        <div className="md:max-w-6xl mx-auto md:p-4 md:p-6">
             <div className="text-center mb-8 md:mb-12">
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Release Timeline</h1>
                 <p className="text-base md:text-lg text-gray-600">Track our product evolution and upcoming features</p>

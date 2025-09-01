@@ -1,14 +1,14 @@
-import Firebase from '@/pages/Firebase';
 import SaaSVideos from '@/pages/SaasVideos';
 import {
   WalletCards,
   MailCheck,
   CalendarClock,
   Handshake,
-} from 'lucide-react'; 
+} from 'lucide-react';
 import ReleaseTimeline from './TimeLineVersions';
 import { sampleReleases } from '@/lib/solutionsData';
-const padyDayaData=[
+import MyMap from '@/pages/Maps';
+const padyDayaData = [
   {
     title: 'Payroll',
     description:
@@ -36,7 +36,7 @@ const padyDayaData=[
 ];
 const FawrySassSection = () => {
   return (
-    <div className="bg-white py-16 px-4  text-[#006b99]">
+    <div className="bg-white md:py-16 md:px-4  text-[#006b99]">
       <div className="max-w-6xl mx-auto text-center mb-14">
         <h2 className="text-3xl md:text-2xl font-extrabold leading-relaxed">
           At <span className="text-[#ffd400]">Fawry Business HR</span>, we understand the needs of HR management,<br />
@@ -61,17 +61,15 @@ const FawrySassSection = () => {
           </div>
         ))}
       </div>
-        <div className="mt-10">
-        <Firebase />
-        </div>
       <div className="mt-10">
-        <ReleaseTimeline releases={sampleReleases}/>
-      {/* <Timeline/> */}
-      {/* <AboutTimeLineSection/> */}
-    </div>
-<div className="">
-      <SaaSVideos />
-    </div>
+        <MyMap />
+      </div>   
+      <div className="mt-10">
+        <ReleaseTimeline releases={sampleReleases} />
+      </div>
+      <div className="mt-10">
+        <SaaSVideos />
+      </div>
     </div>
 
   );

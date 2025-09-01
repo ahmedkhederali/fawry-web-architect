@@ -17,6 +17,7 @@ interface ChildSolution {
   benefits: { title: string; description: string }[];
   whyChooseDirac?: { title: string; description: string }[];
   logos: string[];
+  children?:[];
   DownloadLink: string;
   isSass: boolean;
   isVansale?: boolean;
@@ -39,10 +40,10 @@ const SolutionParent = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
   const [currentChildren, setCurrentChildren] = useState<ChildSolution[]>([]);
-
+console.log("parent",parent)
   useEffect(() => {
     if (parent?.children) {
-      setCurrentChildren(parent.children);
+      setCurrentChildren(parent.children as ChildSolution[] || []); // 
       setActiveTab(0);
       setIsExpanded(false);
     }
@@ -121,9 +122,9 @@ const SolutionParent = () => {
 
       {/* Tab Content Section */}
       {activeChild && (
-        <div className="container mx-auto px-6 py-12 space-y-12">
+        <div className="container mx-auto px-6 py-12 md:space-y-12">
           {/* Full-width description */}
-          <JustifiedText text={activeChild.summary}/>
+          <JustifiedText text={activeChild.summary} />
           {activeChild.isSass && <div ref={descriptionRef} className={`flex flex-col md:flex-row items-center justify-between gap-8`}>
             {/* LEFT SIDE - TEXT */}
             <div className="md:w-1/2 text-left">
