@@ -7,7 +7,7 @@ const FAWRY_BLUE = '#1252A3';
 const TestimonialsSection = () => {
   const { t } = useLanguage();
 
-  const testimonials = [
+  const initialTestimonials = [
     {
       id: 1,
       name: "Ahmed Allakany",
@@ -35,6 +35,18 @@ const TestimonialsSection = () => {
   const visibleCount = 3;
   const [startIdx, setStartIdx] = useState(0);
 
+
+  const [testimonials, setTestimonials] = useState(
+    initialTestimonials.map(t => ({ ...t, expanded: false }))
+  );
+
+  const toggleExpand = (id) => {
+    setTestimonials(testimonials.map(t =>
+      t.id === id ? { ...t, expanded: !t.expanded } : t
+    ));
+  };
+
+
   // Infinite scroll logic
   const handlePrev = () => {
     setStartIdx((prev) => (prev - 1 + testimonials.length) % testimonials.length);
@@ -52,13 +64,13 @@ const TestimonialsSection = () => {
   return (
     <section className="py-10 bg-gray-50 overflow-hidden w-full">
       <div className="px-4 mb-10">
-       <div className="text-center">
-  <h2 className="text-4xl font-bold mb-6 animate-fade-in">
-    <span className="bg-gradient-to-r from-[#FFD900] to-[#1252A3] bg-clip-text text-transparent">
-      {t ? t('testimonialsTitle') : "What Our Clients Say"}
-    </span>
-  </h2>
-</div>
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-6 animate-fade-in">
+            <span className="bg-gradient-to-r from-[#FFD900] to-[#1252A3] bg-clip-text text-transparent">
+              {t ? t('testimonialsTitle') : "What Our Clients Say"}
+            </span>
+          </h2>
+        </div>
 
       </div>
       <div className="relative flex items-center w-full">
@@ -90,7 +102,7 @@ const TestimonialsSection = () => {
           <div className="flex gap-12 justify-center">
             {visibleTestimonials.map((testimonial, idx) => (
               <div
-                key={testimonial.id + '-' + idx}
+                key={testimonial.id + "-" + idx}
                 className="testimonial-card bg-white rounded-lg shadow p-6 w-[350px] max-w-full shrink-0 flex flex-col"
               >
                 <div className="flex items-start space-x-4 mb-2">
@@ -99,12 +111,24 @@ const TestimonialsSection = () => {
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full object-cover"
                   />
-                  <div className="flex-1">
+                  <div className="flex-1 flex flex-col">
                     <div className="text-4xl text-secondary mb-2">"</div>
-                    <p className="text-gray-700 mb-4 leading-relaxed">
+
+                    <p
+                      className={`text-gray-700 mb-4 leading-relaxed transition-all duration-300 custom-scrollbar ${testimonial.expanded ? "max-h-40 overflow-y-auto pr-2" : "line-clamp-5"
+                        }`}
+                    >
                       {testimonial.text}
                     </p>
-                    <div>
+
+                    <button
+                      className="text-blue-600 text-sm font-medium hover:underline self-start"
+                      onClick={() => toggleExpand(testimonial.id)}
+                    >
+                      {testimonial.expanded ? "Read Less" : "Read More"}
+                    </button>
+
+                    <div className="mt-2">
                       <h4 className="font-bold text-secondary">{testimonial.name}</h4>
                       <p className="text-gray-600 text-sm">{testimonial.company}</p>
                     </div>
@@ -112,8 +136,10 @@ const TestimonialsSection = () => {
                 </div>
               </div>
             ))}
+
           </div>
         </div>
+
 
         {/* Right Arrow */}
         <button

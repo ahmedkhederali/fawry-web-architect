@@ -10,3 +10,23 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
 }
+
+/* كل الـ scrollbars في الصفحة */
+::-webkit-scrollbar {
+  width: 6px; /* العرض */
+  height: 6px; /* لو horizontal */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #FFD900, #1252A3); /* أصفر -> أزرق فوري */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #FFC700, #0D3D80); /* hover أغمق */
+}

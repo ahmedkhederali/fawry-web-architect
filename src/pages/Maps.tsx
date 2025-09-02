@@ -79,20 +79,25 @@ const MyMap = () => {
           <p className="text-sm mt-2">Unique company logins</p>
         </div>
       </div>
-    <GoogleMap
-      mapContainerStyle={containerStyle}
-      center={center}
-      zoom={7}
-    >
-      {/* Add markers */}
-      {locations.map((loc) => (
-        <Marker
-          key={loc.id}
-          position={{ lat: loc.lat, lng: loc.lng }}
-          title={loc.title}
-        />
-      ))}
-    </GoogleMap>
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={7}
+        options={{
+          minZoom: 5,
+          maxZoom: 8,
+          gestureHandling: "greedy",
+        }}
+      >
+        {/* Add markers */}
+        {locations.map((loc) => (
+          <Marker
+            key={loc.id}
+            position={{ lat: loc.lat, lng: loc.lng }}
+            title={loc.title}
+          />
+        ))}
+      </GoogleMap>
     </div>
   );
 };
