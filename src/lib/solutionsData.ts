@@ -77,8 +77,8 @@ Implementation of DiraPack is designed to be seamless, with a dedicated team gui
         isSass: false
       },
       {
-        id: 'dirapanel',
-        title: 'Dirapanel',
+        id: 'diraplast',
+        title: 'DiraPlast',
         description: 'Tailor-made ERP for electrical panel manufacturing factories.',
         summary: `DiraPlast is a tailored ERP solution that addresses the unique challenges of the plastic manufacturing industry. Covering the entire production process—from Injection Molding and Blow Molding to Extrusion, Printing, and Packing—DiraPlast ensures that every aspect of your operations is effectively managed. Our system enables you to oversee not only standard product manufacturing but also the custom design and development of specific products, providing the flexibility needed to meet diverse market demands.
 
@@ -175,8 +175,8 @@ The implementation of DiraTail is designed to be smooth and efficient, with a de
         isSass: false
       },
       {
-        id: 'diraplast',
-        title: 'DiraPlast',
+        id: 'dirapanel',
+        title: 'DiraPanel',
         description: 'ERP for Plastic Manufacturing Operations',
         summary: `DiraPanel is specifically crafted for electrical panel manufacturing factories, providing a comprehensive ERP solution that addresses the unique challenges of the industry. Covering every aspect of the production process, DiraPanel enables users to define panel types, structures, and dimensions through an intuitive Panel Configurator. The Component Builder ensures that internal components, such as breakers and PLCs, are selected and configured with precision, meeting all necessary compliance standards.
 
@@ -643,18 +643,20 @@ export const ClientTabsParent = [
   {
     id: 3, label: "Digital Transformation",
     categories: [
-
+      "\u200B"
     ]
   },
   {
     id: 4, label: "System Integration",
     categories: [
+      "\u200D"
 
     ]
   },
   {
     id: 5, label: "Van Sale",
     categories: [
+      "\u200C"
 
     ]
   },
@@ -757,19 +759,88 @@ export const logos = {
     "/logos/Packaging Industry/verta.png",
   ],
   "Corporate Sector": [
-    "/logos/Packaging Industry/betterpack.png",
-    "/logos/Packaging Industry/bloompack.png",
-    "/logos/Packaging Industry/box.png",
+    "/saas/Corporate Sector/myCash.png",
+    "/saas/Corporate Sector/livery.png",
+    "/saas/Corporate Sector/josphine.png",
+    "/saas/Corporate Sector/banker.png",
   ],
   "Industrial Sector": [
-    "/logos/Food Industries/nabaty.png",
-    "/logos/Food Industries/nevertety.png",
+    "/saas/Industrial Sector/almanyah.png",
+    "/saas/Industrial Sector/alwan.png",
+    "/saas/Industrial Sector/bimex.png",
+    "/saas/Industrial Sector/carptuire.png",
+    "/saas/Industrial Sector/danish.png",
+    "/saas/Industrial Sector/DE Backer's.png",
+    "/saas/Industrial Sector/GMS.png",
+    "/saas/Industrial Sector/GPC.png",
+    "/saas/Industrial Sector/haboba.png",
+    "/saas/Industrial Sector/helal.png",
+    "/saas/Industrial Sector/helw sham.png",
+    "/saas/Industrial Sector/kassab.png",
+    "/saas/Industrial Sector/kobaa.png",
+    "/saas/Industrial Sector/lychee.png",
+    "/saas/Industrial Sector/memco.png",
+    "/saas/Industrial Sector/minapack.png",
+    "/saas/Industrial Sector/mirtec.png",
+    "/saas/Industrial Sector/perch.png",
+    "/saas/Industrial Sector/plastmac.png",
+     "/saas/Industrial Sector/reef.png",
+    "/saas/Industrial Sector/rehana.png",
+    "/saas/Industrial Sector/safwa.png",
+    "/saas/Industrial Sector/solo.png",
+    "/saas/Industrial Sector/star.png",
+    "/saas/Industrial Sector/tayseer.png",
+   
+
+
+
   ],
   "Retail": [
-    "/logos/Packaging Industry/bloompack.png",
-    "/logos/Packaging Industry/box.png",
-    "/logos/Packaging Industry/carton.png",
-    "/logos/Packaging Industry/elm.png",
+    "/saas/retail/AIprotien.png",
+    "/saas/retail/Aliens.png",
+    "/saas/retail/dabbosa.png",
+    "/saas/retail/arago.png",
+    "/saas/retail/alwan.png",
+    "/saas/retail/coffeeEslam.png",
+    "/saas/retail/controlGroup.png",
+    "/saas/retail/country.png",
+    "/saas/retail/fa7m.png",
+    "/saas/retail/farid.png",
+    "/saas/retail/kimo.png",
+    "/saas/retail/khalil.png",
+    "/saas/retail/inshape.png",
+    "/saas/retail/helw sham.png",
+    "/saas/retail/helal.png",
+    "/saas/retail/haboba.png",
+    "/saas/retail/gendy.png",
+    "/saas/retail/koffee.png",
+    "/saas/retail/kofta.png",
+    "/saas/retail/labs.png",
+    "/saas/retail/lychee.png",
+    "/saas/retail/medScan.png",
+    "/saas/retail/dawad.png",
+    "/saas/retail/laroche.png",
+    "/saas/retail/armando.png",
+    "/saas/retail/jetExpress.png",
+    "/saas/retail/endless.png",
+    "/saas/retail/clinic.png",
+    "/saas/retail/trustLab.png",
+    "/saas/retail/mesc.png",
+    "/saas/retail/principle.png",
+    "/saas/retail/aurline.png",
+    "/saas/retail/ramsesy.png",
+    "/saas/retail/saberFood.png",
+     "/saas/retail/shwarma.png",
+     "/saas/retail/tesla.png",
+     "/saas/retail/speedNet.png",
+     "/saas/retail/carptuire.png",
+     "/saas/retail/rehana.png",
+     "/saas/retail/wokandwalkpng.png",
+     "/saas/retail/sglobal.png",
+     "/saas/retail/monoSuchi.png",
+
+     
+
   ],
   "Plastic Industries": [
     "/logos/Plastic Industries/acgi.png",
@@ -872,7 +943,48 @@ export const logos = {
     "/logos/Petroleum Industries/disco.png",
 
   ],
-
+"\u200B": [
+    "/logos/Governmental Authorities/CanelRpeco.png",
+    "/logos/Governmental Authorities/athad.png",
+    "/logos/Governmental Authorities/nevertety.png",
+  ],
+  "\u200D": [
+    "/logos/Integration Services/AinShamsUniversity.png",
+    "/logos/Integration Services/Asset 99@4x.png",
+    "/logos/Integration Services/BenisuefUniversity.png",
+    "/logos/Integration Services/alazharuniveristy.png",
+    "/logos/Integration Services/beyti.png",
+    "/logos/Integration Services/btrotred.png",
+    "/logos/Integration Services/cairouniveristy.png",
+    "/logos/Integration Services/cocacola.png",
+    "/logos/Integration Services/companyDrinkWater.png",
+    "/logos/Integration Services/companyEgyptel3lya.png",
+    "/logos/Integration Services/companyNorhcairoElect.png",
+    "/logos/Integration Services/companyNorthDelta.png",
+    "/logos/Integration Services/companySouthCairo.png",
+    "/logos/Integration Services/companySouthDlta.png",
+    "/logos/Integration Services/companyWater&redSea .png",
+    "/logos/Integration Services/companyWaterinGiza.png",
+    "/logos/Integration Services/companyWaterindomyat.png",
+    "/logos/Integration Services/companyalkabada.png",
+    "/logos/Integration Services/faragalla.png",
+    "/logos/Integration Services/juhina.png",
+    "/logos/Integration Services/markzCairoUniversity.png",
+    "/logos/Integration Services/mdinat abdlmlk abdallah.png",
+    "/logos/Integration Services/misrLifeInsurance.png",
+    "/logos/Integration Services/misrinsurance.png",
+    "/logos/Integration Services/natgas.png",
+    "/logos/Integration Services/suez cement.png",
+    "/logos/Integration Services/zagazegUniversity.png",
+  ],
+  "\u200C": [
+    "/logos/Food Industries/Lychee.png",
+    "/logos/Food Industries/Rehana.png",
+    "/logos/Food Industries/almonairy.png",
+    "/logos/Food Industries/hboa.png",
+    "/logos/Food Industries/nabaty.png",
+    "/logos/Food Industries/nevertety.png",
+  ],
 };
 
 export const clients = [
@@ -902,7 +1014,7 @@ export const clients = [
   { id: 25, name: 'Med Scan', logo: '/clients/medScan.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
   { id: 26, name: 'Virtual ESC', logo: '/clients/mesc.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
   { id: 27, name: 'Elwaa Pharmacy', logo: '/clients/pharmacy.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 28, name: 'Principle Pharmacy', logo: '/clients/prinicple.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
+  { id: 28, name: 'Principle Pharmacy', logo: '/clients/principle.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
   { id: 29, name: 'El Ramsisy Pharmacy', logo: '/clients/ramsesy.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
   { id: 30, name: 'Rehana', logo: '/clients/rehana.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
   { id: 31, name: 'Saber Foods', logo: '/clients/saberFood.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },

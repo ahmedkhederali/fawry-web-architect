@@ -2,21 +2,38 @@ import React from "react";
 
 interface JustifiedTextProps {
   text: string;
-  chunkSize?: number; // default 200
 }
 
-const JustifiedText: React.FC<JustifiedTextProps> = ({ text, chunkSize = 200 }) => {
-  // نقسم النص chunks
-  const chunks: string[] = [];
-  for (let i = 0; i < text.length; i += chunkSize) {
-    chunks.push(text.slice(i, i + chunkSize));
-  }
+const JustifiedText: React.FC<JustifiedTextProps> = ({ text }) => {
+  // Split the text into paragraphs based on double newlines
+  const paragraphs = text.split(/\n\s*\n/).filter((para) => para.trim() !== "");
+
+  // Function to process only the first paragraph for the first 3 words
+  const processFirstParagraph = (para: string) => {
+    const words = para.trim().split(/\s+/);
+    if (words.length >= 3) {
+      const boldPart = words.slice(0, 3).join(" ");
+      const rest = words.slice(3).join(" ");
+      return (
+        <>
+          <span className="font-bold text-[#ffd300]">{boldPart}</span>{" "}
+          {rest}
+        </>
+      );
+    }
+    return para; // Return unchanged if less than 3 words
+  };
 
   return (
-    <div className="text-justify leading-relaxed">
-      {chunks.map((chunk, idx) => (
-        <p key={idx} className="mb-4">
-          {chunk}
+    <div className="max-w-3xl mx-auto">
+      {paragraphs.map((para, idx) => (
+        <p
+          key={idx}
+          className={`mb-4 text-lg text-justify ${
+            idx % 2 === 0 ? "text-gray-700" : "text-[#006b99]"
+          }`}
+        >
+          {idx === 0 ? processFirstParagraph(para) : para.trim()}
         </p>
       ))}
     </div>

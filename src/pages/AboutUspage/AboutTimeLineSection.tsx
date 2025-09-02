@@ -7,7 +7,7 @@ const timeline = [
    year: "2017",
    title: "Launch of Dirapack",
    desc: "DIRAC launched Dirapack, the first ERP system in Egypt and the Arab world specifically designed for managing corrugated carton factories. This was a significant step in delivering tailored digital solutions for the industry.",
-   image: "/images/DiracSystems.png",
+   image: "/images/logo-DiraPack.png",
  },
  { year: "2019", title: "Digital Transformation Projects", desc: "We expanded into digital transformation initiatives both locally and internationally, enhancing operational efficiency and driving innovation.", icon: "🌐" },
  { year: "2020", title: "Strategic Partnership with Fawry",image: "/images/DiracSystems.png", desc: "DIRAC formed a strategic SaaS partnership with Fawry, which acquired a 51% stake in the company, marking a major milestone in our growth.", icon: "🤝" },

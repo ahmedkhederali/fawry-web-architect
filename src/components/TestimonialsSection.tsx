@@ -10,60 +10,25 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Isabella Rodriguez',
-      company: 'CEO and Co-founder of ABC Company',
-      text: 'Their ability to capture our brand essence in every project is unparalleled - an invaluable creative collaborator.',
-      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face'
+      name: "Ahmed Allakany",
+      company: "CFO, Koffee Kulture",
+      text: "One of the key factors enabling us to compete with international brands is our strategic partnership with Fawry Business. It's not just about accepting payments; it's also about how we manage HR, financial processes, and collections across our branches.",
+      avatar: '/testmolies/test.png'
     },
     {
       id: 2,
-      name: 'Gabrielle Williams',
-      company: 'CEO and Co-founder of XYZ Company',
-      text: 'Creative geniuses who listen, understand, and craft captivating visuals - an agency that truly understands our needs.',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face'
+      name: 'Kamel Abd Al-Latif',
+      company: 'COO - Creative Basket',
+      text: 'Fawry Business offered us a comprehensive HR solution for all our HR operations. We were able to track employee attendance, leave, and vacation balances, as well as facilitating salary transfers through endless payment channels. Furthermore, they provided us with the fawry yellow card for employee payroll & medical, which is equipped with a wide range of benefits for our employees.',
+      avatar: '/testmolies/test2.png'
     },
     {
       id: 3,
-      name: 'Samantha Johnson',
-      company: 'CEO and Co-founder of DEF Company',
-      text: 'Exceeded our expectations with innovative designs that brought our vision to life - a truly remarkable creative agency.',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face'
+      name: 'Kamel Abd Al-Latif',
+      company: 'COO - Creative Basket',
+      text: 'Fawry Business offered us a comprehensive HR solution for all our HR operations. We were able to track employee attendance, leave, and vacation balances, as well as facilitating salary transfers through endless payment channels. Furthermore, they provided us with the fawry yellow card for employee payroll & medical, which is equipped with a wide range of benefits for our employees.',
+      avatar: '/testmolies/test2.png'
     },
-    {
-      id: 4,
-      name: 'Michael Chen',
-      company: 'CTO of Tech Innovations',
-      text: 'Outstanding technical expertise combined with creative vision. They delivered beyond what we imagined possible.',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face'
-    },
-    {
-      id: 5,
-      name: 'Sarah Ahmed',
-      company: 'Marketing Director at Global Corp',
-      text: 'Professional, innovative, and results-driven. Our collaboration has transformed our digital presence completely.',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&h=60&fit=crop&crop=face'
-    },
-    {
-      id: 6,
-      name: 'Amr Youssef',
-      company: 'CFO at FinTech Hub',
-      text: 'Very fast and high quality work, they really care about details and user experience.',
-      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=60&h=60&fit=crop&crop=face'
-    },
-    {
-      id: 7,
-      name: 'Fatima Saleh',
-      company: 'Product Owner at Appify',
-      text: 'Absolutely the best team for UI/UX. They took our product to the next level.',
-      avatar: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=60&h=60&fit=crop&crop=face'
-    },
-    {
-      id: 8,
-      name: 'Alex Kim',
-      company: 'Lead Designer at Designify',
-      text: 'If you need modern design and creativity, this is the team to work with!',
-      avatar: 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=60&h=60&fit=crop&crop=face'
-    }
   ];
 
   // Show 3 at a time
