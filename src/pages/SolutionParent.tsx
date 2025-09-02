@@ -122,7 +122,7 @@ console.log("parent",parent)
 
       {/* Tab Content Section */}
       {activeChild && (
-        <div className="container mx-auto px-6 py-12 md:space-y-12">
+        <div className="md:container mx-auto px-6 py-12 md:space-y-12">
           {/* Full-width description */}
           <JustifiedText text={activeChild.summary} />
           {activeChild.isSass && <div ref={descriptionRef} className={`flex flex-col md:flex-row items-center justify-between gap-8`}>

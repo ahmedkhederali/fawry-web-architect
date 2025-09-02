@@ -16,12 +16,40 @@ const center = {
   lng: 31.2357,
 };
 
-// example locations
-const locations = [
-  { id: 1, lat: 30.0444, lng: 31.2357, title: "Cairo" },
-  { id: 2, lat: 29.9753, lng: 31.1376, title: "Giza Pyramids" },
-  { id: 3, lat: 31.2001, lng: 29.9187, title: "Alexandria" },
+// Cairo base coords
+const cairo = { lat: 30.0444, lng: 31.2357 };
+
+// Helper: generate random offset (small distance)
+const randomOffset = (range: number) => (Math.random() - 0.5) * range;
+
+// Generate 50 points near Cairo
+const cairoLocations = Array.from({ length: 50 }, (_, i) => ({
+  id: i + 1,
+  lat: cairo.lat + randomOffset(0.1),  // ~11km range
+  lng: cairo.lng + randomOffset(0.1),
+  title: `Cairo Location ${i + 1}`,
+}));
+
+// Some base points in Egypt (Alexandria, Luxor, Aswan, Sharm El Sheikh)
+const egyptBases = [
+  { lat: 31.2001, lng: 29.9187, title: "Alexandria" },
+  { lat: 25.6872, lng: 32.6396, title: "Luxor" },
+  { lat: 24.0889, lng: 32.8998, title: "Aswan" },
 ];
+
+// Generate 50 random points distributed over Egypt bases
+const egyptLocations = Array.from({ length: 50 }, (_, i) => {
+  const base = egyptBases[Math.floor(Math.random() * egyptBases.length)];
+  return {
+    id: i + 51,
+    lat: base.lat + randomOffset(0.2),  // wider spread
+    lng: base.lng + randomOffset(0.2),
+    title: `${base.title} Location ${i + 51}`,
+  };
+});
+
+// Combine all
+const locations = [...cairoLocations, ...egyptLocations];
 
 const MyMap = () => {
   const { isLoaded } = useLoadScript({
