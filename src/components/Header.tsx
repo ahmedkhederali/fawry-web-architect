@@ -194,7 +194,7 @@ const Header: React.FC = () => {
               {t("aboutUs")}
             </summary>
             <div className="pl-4 flex flex-col space-y-2 text-[#ffd300]">
-              <Link to="/about" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/aboutus" onClick={() => setIsMenuOpen(false)}>
                 {t("aboutUs")}
               </Link>
               <Link to="/aboutus/careers" onClick={() => setIsMenuOpen(false)}>
