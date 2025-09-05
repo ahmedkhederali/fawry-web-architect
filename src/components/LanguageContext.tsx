@@ -14,7 +14,7 @@ const translations = {
   en: {
     home: 'Home',
     aboutUs: 'About Us',
-    career: 'Career',
+    careers: 'Careers',
     contactUs: 'Contact Us',
     ourClients: 'Our Clients',
     ourPartners: 'Our Partners',

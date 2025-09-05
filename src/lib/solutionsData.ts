@@ -7,17 +7,21 @@ const solutions = [
     min_dec: 'Unlock Efficiency: Optimize Your Operations',
     description: "Unlock your organization's potential with our comprehensive ERP Enterprise Edition. Designed to integrate planning, manufacturing, sales, and marketing processes, this solution provides real-time access to critical data across all departments. Empower your team to make informed decisions that drive efficiency and profitability.",
     image: '/images/erp1.png',
+    innerImage: '/images/erp1.png',
     span: 'col-span-1 row-span-2',
     children: [
       {
         id: 'diracenterprise',
-        title: 'Enterprise Edition',
+        title: 'Enterprise Edition' ,
+        title1: 'Enterprise Edition',
         description: 'All-in-one ERP for enterprise business automation.',
-        summary: `DIRAC ERP Enterprise Edition is a powerful suite of integrated business applications tailored to unify and streamline your organization's operations. By consolidating departmental databases into a single, centralized management system, our solution ensures seamless communication and collaboration across all levels of your enterprise. This real-time access to information not only enhances decision-making but also fosters a culture of transparency and accountability.
+        summary: `DIRAC ERP Enterprise Edition is a powerful suite of integrated business applications tailored to unify and streamline your organization's operations. By consolidating departmental databases into a single, centralized management system, our solution ensures seamless communication and collaboration across all levels of your enterprise.
 
-        Our ERP solution caters to both industrial and commercial sectors, featuring robust modules such as Financial Management, Human Resource Management, and Supply Chain Management. With intelligent dashboards and advanced analytical reporting tools, DIRAC ERP simplifies complex processes and enhances operational efficiency. Experience increased profitability and long-term success as you harness the full potential of your organization through our innovative ERP system.
+This real-time access to information not only enhances decision-making but also fosters a culture of transparency and accountability. Our ERP solution caters to both industrial and commercial sectors, featuring robust modules such as Financial Management, Human Resource Management, and Supply Chain Management.
 
-        The implementation of DIRAC ERP is designed to be smooth and efficient, with a dedicated team of experts guiding you through every step of the process. We provide comprehensive training and support to ensure that your staff feels confident and empowered to use the system effectively. Our commitment to ongoing support means that you’ll have access to resources and assistance whenever you need it, helping you maximize the benefits of your ERP investment.`,
+With intelligent dashboards and advanced analytical reporting tools, DIRAC ERP simplifies complex processes and enhances operational efficiency. Experience increased profitability and long-term success as you harness the full potential of your organization through our innovative ERP system. The implementation of DIRAC ERP is designed to be smooth and efficient, with a dedicated team of experts guiding you through every step of the process.
+
+We provide comprehensive training and support to ensure that your staff feels confident and empowered to use the system effectively. Our commitment to ongoing support means that you’ll have access to resources and assistance whenever you need it, helping you maximize the benefits of your ERP`,
         "benefits": [
           { "title": "Increased productivity and efficiency", "description": "" },
           { "title": "Cost-effective ERP implementation", "description": "" },
@@ -270,17 +274,17 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
     min_dec: 'Unlock Efficiency: Optimize Your Operations',
     description: "Smart ERP for Growing Businesses DIRAC 1.4 Standard Edition is a cost-effective, easy-to-use business management software (ERP) tailored for small and medium-sized enterprises. It is designed to automate and streamline key business functions—including financials, supply chain, sales, manufacturing, and human resources—within a single, integrated platform.",
     image: '/images/erp1.png',
+    innerImage: '/images/erp1.png',
     span: 'col-span-1 row-span-2',
     children: [
       {
         id: 'diracenterprise',
         title: '',
+        title1: 'ERP Standard Edition',
         description: 'All-in-one ERP for enterprise business automation.',
-        summary: `DIRAC ERP Enterprise Edition is a powerful suite of integrated business applications tailored to unify and streamline your organization's operations. By consolidating departmental databases into a single, centralized management system, our solution ensures seamless communication and collaboration across all levels of your enterprise. This real-time access to information not only enhances decision-making but also fosters a culture of transparency and accountability.
+        summary: `DIRAC 1.4 Standard Edition is a cost-effective, easy-to-use business management software (ERP) Tailored for small and medium-sized enterprises. It is designed to automate and streamline key business functions—including financials, supply chain, sales, manufacturing, and human resources—within a single, integrated platform.
 
-        Our ERP solution caters to both industrial and commercial sectors, featuring robust modules such as Financial Management, Human Resource Management, and Supply Chain Management. With intelligent dashboards and advanced analytical reporting tools, DIRAC ERP simplifies complex processes and enhances operational efficiency. Experience increased profitability and long-term success as you harness the full potential of your organization through our innovative ERP system.
-
-        The implementation of DIRAC ERP is designed to be smooth and efficient, with a dedicated team of experts guiding you through every step of the process. We provide comprehensive training and support to ensure that your staff feels confident and empowered to use the system effectively. Our commitment to ongoing support means that you’ll have access to resources and assistance whenever you need it, helping you maximize the benefits of your ERP investment.`,
+This powerful solution gives you real-time, end-to-end visibility into your operations, enabling faster decision-making, better customer responsiveness, and sustainable business growth.`,
         "benefits": [
           { "title": "Increased productivity and efficiency", "description": "" },
           { "title": "Cost-effective ERP implementation", "description": "" },
@@ -302,6 +306,7 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
     min_dec: 'Streamline Your Success: Save Time, Money, and Effort',
     description: 'SaaS Solutions for Business is a suite of software services designed to enhance operational efficiency and drive growth through cloud-based applications.',
     image: '/images/SaaS2.png',
+    innerImage: '/images/18.png', 
     span: 'col-span-1 row-span-2',
     children: [
       {
@@ -377,11 +382,13 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
     min_dec: 'Revolutionize Your Outdoor Sales Operations',
     description: 'Van Sales System designed to optimize outdoor sales, streamline operations, and empower sales teams with real-time tools.',
     image: '/products/vansales/evolution.png',
+    innerImage: '/images/14.png',
     span: 'col-span-2 row-span-1',
     children: [
       {
         id: 'vansales',
-        title: 'Van Sales Application',
+        title: '',
+        title1: 'Van Sales Application',
         title_why: 'Why Choose Dirac systems for Van Sales?',
         description: 'Revolutionize Your Outdoor Sales Operations with Dirac Systems.',
         summary: `The Van Sales System from Dirac Systems is designed to cover the entire outdoor sales cycle, ensuring your field sales operations are efficient, accurate, and fully integrated. Our solution empowers your sales team with the tools they need to manage their sales processes seamlessly, enhancing productivity and customer satisfaction.`,
@@ -415,11 +422,13 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
     min_dec: 'Embrace Digital Evolution: Leap into the Future Today',
     description: 'Digital Transformation Solutions for Business is a suite of services designed to help organizations leverage technology to improve processes, enhance customer experiences, and drive innovation.',
     image: '/products/digitalTransformation/Digital-transformation.png',
+    innerImage: '/products/digitalTransformation/Digital-transformation.png',
     span: 'col-span-2 row-span-1',
     children: [
       {
         id: 'digital-transformation',
-        title: 'Digital Transformation',
+        title: '',
+        title1: 'Digital Transformation',
         description: 'Empowering businesses through digital innovation and process automation.',
         summary: `Our Digital Transformation solutions help businesses leverage technology to streamline operations, enhance customer experiences, and drive innovation. From automating manual processes to implementing advanced analytics, we provide the tools and expertise needed to thrive in the digital age.`,
         benefits: [
@@ -440,12 +449,14 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
     min_dec: 'Seamlessly Connect Your Systems for Enhanced Performance',
     description: 'In today\'s complex digital landscape, businesses rely on a multitude of systems to manage their operations. Integrating these systems effectively is crucial for streamlining workflows, improving data accuracy, and gaining a competitive edge. Dirac Systems offers comprehensive system integration services that connect your disparate systems, whether they reside in the cloud or within your data center. We leverage our expertise and solution-focused hub frameworks to ensure seamless communication and data flow across your organization',
     image: '/images/System Integration 1.png',
+    innerImage: '/images/14.png',
     span: 'col-span-2 row-span-1',
     children: [
       {
         id: 'system-integration',
-        title: 'System Integration',
-        title_why: 'Why Choose Dirac systems for Van Sales?',
+        title: '',
+        title1: 'System Integration',
+        title_why: 'Why Choose Dirac systems for System Integration ?',
         description: 'Seamlessly Connect Your Systems for Enhanced Performance ',
         summary: `At Dirac Systems, we understand that every business has unique integration needs. That's why we take a tailored approach to every project, working closely with you to understand your specific requirements and design a solution that meets your goals. Our team of experienced integration specialists has expertise in a wide range of technologies and platforms, including:
 Middleware Platforms: IBM MQ, IBM BMP, TIBCO
@@ -462,10 +473,9 @@ E-commerce Platforms: Integration with e-commerce platforms like Shopify and Woo
           { title: 'Scalability and Flexibility:', description: 'Build a flexible and scalable integration infrastructure that can adapt to your evolving business needs.' }
         ],
          whyChooseDirac: [
-          { title: 'Seamless Integration', description: 'Integrates smoothly with your existing accounting and inventory systems.' },
-          { title: 'User-Friendly Interface', description: 'Easy-to-use design reduces training time and boosts productivity.' },
-          { title: 'Real-Time Data Insights', description: 'Access live data and analytics for better, faster decisions.' },
-          { title: 'Dedicated Support', description: 'Expert support team ensures smooth transition and ongoing success.' }
+          { title: 'Cloud-Based Flexibility: ', description: 'Access your financial data anytime, anywhere with our secure cloud-based solution.' },
+          { title: 'User-Friendly Interface: ', description: 'Enjoy an intuitive interface that simplifies complex accounting tasks, making it easy for your team to adapt.' },
+          { title: 'Dedicated Support: ', description: 'Our team is here to support you every step of the way, ensuring a seamless experience and addressing any queries you may have.' }
         ],
         logos: [],
         DownloadLink: '',

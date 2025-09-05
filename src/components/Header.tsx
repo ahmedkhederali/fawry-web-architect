@@ -42,7 +42,7 @@ const Header: React.FC = () => {
             <div className="relative group">
 
               <NavLink
-                to="/about"
+                to="/aboutus"
                 className={({ isActive }) =>
                   `relative font-bold p-1 transition-all duration-300 
                   ${isActive
@@ -58,19 +58,19 @@ const Header: React.FC = () => {
                 className={`absolute left-0 mt-2 w-40 bg-[#006b99] text-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 delay-100 ${direction === "rtl" ? "right-0" : "left-0"
                   }`}
               >
-                <Link to="/about" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
+                <Link to="/aboutus" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
                   {t("aboutUs")}
                 </Link>
-                <Link to="/about/career" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
-                  {t("career")}
+                <Link to="/aboutus/careers" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
+                  {t("careers")}
                 </Link>
-                <Link to="/about/clients" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
+                <Link to="/aboutus/clients" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
                   {t("ourClients")}
                 </Link>
-                <Link to="/about/partners" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
+                <Link to="/aboutus/partners" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
                   {t("ourPartners")}
                 </Link>
-                <Link to="/about/contact" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
+                <Link to="/aboutus/contact" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">
                   {t("contactUs")}
                 </Link>
               </div>
@@ -197,16 +197,16 @@ const Header: React.FC = () => {
               <Link to="/about" onClick={() => setIsMenuOpen(false)}>
                 {t("aboutUs")}
               </Link>
-              <Link to="/about/career" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/aboutus/careers" onClick={() => setIsMenuOpen(false)}>
                 {t("career")}
               </Link>
-              <Link to="/about/clients" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/aboutus/clients" onClick={() => setIsMenuOpen(false)}>
                 {t("ourClients")}
               </Link>
-              <Link to="/about/partners" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/aboutus/partners" onClick={() => setIsMenuOpen(false)}>
                 {t("ourPartners")}
               </Link>
-              <Link to="/about/contact" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/aboutus/contact" onClick={() => setIsMenuOpen(false)}>
                 {t("contactUs")}
               </Link>
             </div>

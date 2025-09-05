@@ -24,11 +24,11 @@ const TestimonialsSection = () => {
     },
     {
       id: 3,
-      name: 'Kamel Abd Al-Latif',
-      company: 'COO - Creative Basket',
-      text: 'Fawry Business offered us a comprehensive HR solution for all our HR operations. We were able to track employee attendance, leave, and vacation balances, as well as facilitating salary transfers through endless payment channels. Furthermore, they provided us with the fawry yellow card for employee payroll & medical, which is equipped with a wide range of benefits for our employees.',
-      avatar: '/testmolies/test2.png'
-    },
+      name: 'Tarek Elsaiedy',
+      company: 'CEO - Jetexpresst',
+      text: 'Fawry Business was the key factor that helped us through our digital transformation. From accepting all types of payments, managing cash collection to tracking employee attendance across all locations.',
+      avatar: '/testmolies/test3.png'
+    }
   ];
 
   // Show 3 at a time

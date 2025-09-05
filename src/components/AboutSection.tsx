@@ -96,7 +96,7 @@ export default function AboutSection() {
         {/* === Counters === */}
         <div className="mt-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <Link to ="/about/clients" className="group cursor-pointer">
+            <Link to ="/aboutus/clients" className="group cursor-pointer">
               <div>
                 <h3 className="text-3xl font-bold text-[#ffd300] mb-2 group-hover:scale-105 transition-transform">
                   <Counter end={800} duration={1500} />+
@@ -110,7 +110,7 @@ export default function AboutSection() {
               </div>
             </Link>
 
-            <Link to="/about/partners" className="group cursor-pointer">
+            <Link to="/aboutus/partners" className="group cursor-pointer">
               <div>
                 <h3 className="text-3xl font-bold text-[#ffd300] mb-2 group-hover:scale-105 transition-transform">
                   <Counter end={15} duration={1200} />+

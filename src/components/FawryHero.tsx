@@ -55,12 +55,12 @@ const FawryHeaderHero: React.FC = () => {
               </NavLink>
             {/* <a href="/" className="text-[#006b99] hover:underline">Home</a> */}
             <div className="relative group">
-              <a href="/about" className="text-[#006b99] hover:underline">About Us</a>
+              <a href="/aboutus" className="text-[#006b99] hover:underline">About Us</a>
               <div className="absolute left-0 mt-2 w-40 bg-[#006b99] text-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-all">
-                <a href="/about" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">About us</a>
-                <a href="/about/career" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Career</a>
-                <a href="/about/clients" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Our Clients</a>
-                <a href="/about/partners" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Our Partners</a>
+                <a href="/aboutus" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">About us</a>
+                <a href="/aboutus/careers" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Careers</a>
+                <a href="/aboutus/clients" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Our Clients</a>
+                <a href="/aboutus/partners" className="block px-4 py-2 hover:bg-white hover:text-[#006b99]">Our Partners</a>
               </div>
             </div>
             <div className="relative group z-50">
@@ -120,19 +120,19 @@ const FawryHeaderHero: React.FC = () => {
                       {t("aboutUs")}
                     </summary>
                     <div className="pl-4 flex flex-col space-y-2 text-[#ffd300]">
-                      <Link to="/about" onClick={() => setMenuOpen(false)}>
+                      <Link to="/aboutus" onClick={() => setMenuOpen(false)}>
                         {t("aboutUs")}
                       </Link>
-                      <Link to="/career" onClick={() => setMenuOpen(false)}>
+                      <Link to="/aboutus/careers" onClick={() => setMenuOpen(false)}>
                         {t("career")}
                       </Link>
-                      <Link to="/about/clients" onClick={() => setMenuOpen(false)}>
+                      <Link to="/aboutus/clients" onClick={() => setMenuOpen(false)}>
                         {t("ourClients")}
                       </Link>
-                      <Link to="/partners" onClick={() => setMenuOpen(false)}>
+                      <Link to="/aboutus/partners" onClick={() => setMenuOpen(false)}>
                         {t("ourPartners")}
                       </Link>
-                      <Link to="/contact" onClick={() => setMenuOpen(false)}>
+                      <Link to="/aboutus/contact" onClick={() => setMenuOpen(false)}>
                         {t("contactUs")}
                       </Link>
                     </div>

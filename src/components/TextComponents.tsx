@@ -16,7 +16,7 @@ const JustifiedText: React.FC<JustifiedTextProps> = ({ text }) => {
       const rest = words.slice(3).join(" ");
       return (
         <>
-          <span className="font-bold text-[#ffd300]">{boldPart}</span>{" "}
+          <span className="font-bold text-[#006b99]">{boldPart}</span>{" "}
           {rest}
         </>
       );
@@ -30,7 +30,7 @@ const JustifiedText: React.FC<JustifiedTextProps> = ({ text }) => {
         <p
           key={idx}
           className={`mb-4 text-lg text-justify ${
-            idx % 2 === 0 ? "text-gray-700" : "text-[#006b99]"
+            idx % 2 === 0 ? "text-gray-700" : "text-gray-700]"
           }`}
         >
           {idx === 0 ? processFirstParagraph(para) : para.trim()}

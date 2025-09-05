@@ -1,6 +1,6 @@
 import { useLanguage } from "@/components/LanguageContext";
 import React from "react";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const HeaderSection = () => {
   const { t } = useLanguage();
@@ -27,38 +27,70 @@ const HeaderSection = () => {
               style={{ perspective: "1200px" }}
             />
           </div>
-
         </div>
       </section>
       {/* Title section unchanged */}
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-[#006b99] my-6 mb-2">Dirac Systems</h1>
+        {/* <h1 className="text-4xl font-bold text-[#006b99] my-6 mb-2">Dirac Systems</h1> */}
+        <h1 className="text-4xl font-bold text-[#000000] my-6 mb-2">
+          Dirac Systems
+        </h1>
         <div className="w-24 h-1 bg-[#FFD300] mx-auto rounded-full"></div>
       </div>
 
       {/* Updated content wrapper */}
       <div className="max-w-4xl mx-auto text-gray-700 leading-relaxed space-y-6 px-4">
         <p className="text-lg text-justify">
+          <span className="font-medium text-[#006b99]">Dirac Systems </span>
           {/* <br /> */}
-          is a leading Egyptian shareholder company specializing in advanced strategic business software solutions that drive digital transformation across various organizations. Established in
-          <span className="font-medium text-[#006b99]"> 2014</span>, with a capital of
-          <span className="font-medium text-[#006b99]"> 30 million EGP</span>, DIRAC has quickly positioned itself as a pivotal player in the region's technology landscape. As a subsidiary of
-          <span className="font-medium text-[#006b99]"> Fawry for Banking Technology and Electronic Payments S.A.E</span>, DIRAC leverages robust financial backing to innovate and expand its offerings.
+          is a leading Egyptian shareholder company specializing in advanced
+          strategic business software solutions that drive digital
+          transformation across various organizations. Established in 2014, with
+          a capital of 30 million EGP, Dirac has quickly positioned itself as a
+          pivotal player in the region's technology landscape. As a{" "}
+          <span className="font-medium text-[#000000]">
+            subsidiary of Fawry{" "}
+          </span>{" "}
+          for Banking Technology and Electronic Payments S.A.E, Dirac leverages
+          robust financial backing to innovate and expand its offerings.
         </p>
 
         <p className="text-lg text-justify">
-          At the forefront of digital transformation, DIRAC provides a comprehensive suite of
-          <span className="font-medium text-[#006b99]"> Enterprise Resource Planning (ERP)</span> solutions designed to enhance performance, efficiency, and competitiveness for businesses.
+          At the forefront of{" "}
+          <span className="font-medium text-[#000000]">
+            Digital Transformation
+          </span>
+          ,
+          <span className="font-medium text-[#000000]">
+            {" "}
+            Enterprise Resource Planning (ERP)
+          </span>{" "}
+          solutions designed to enhance performance, efficiency, and
+          competitiveness for businesses.
         </p>
 
         <p className="text-lg text-justify mb-4">
-          As we continue to expand our offerings—including the recent launches of the
-          <span className="font-medium text-[#006b99]"> Fawry Business HR and Accounting systems</span>—DIRAC Systems remains focused on empowering businesses to improve products, enhance customer experiences, and enter new markets.
-          <span className="font-medium text-[#006b99]"> Join us as we transform the future of business through cutting-edge digital solutions.</span>
+          As we continue to expand our offerings—including the recent launches
+          of the
+          <span className="font-medium text-[#000000]">
+            {" "}
+            Fawry Business HR{" "}
+          </span>{" "}
+          and{" "}
+          <span className="font-medium text-[#000000]">
+            {" "}
+            Accounting systems
+          </span>
+          —DIRAC Systems remains focused on empowering businesses to improve
+          products, enhance customer experiences, and enter new markets.
+          <span className="font-medium text-[#000000]">
+            {" "}
+            Join us as we transform the future of business through cutting-edge
+            digital solutions.
+          </span>
         </p>
       </div>
     </div>
-
   );
 };
 

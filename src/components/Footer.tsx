@@ -66,8 +66,8 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-1 lg:col-span-1">
             <h4 className="text-lg font-semibold mb-6 text-secondary">Resources</h4>
             <ul className="space-y-3">
-              <li><Link to="/blog" className="text-gray-600 hover:text-secondary text-sm">Documentation</Link></li>
-              <li><Link to="/contact" className="text-gray-600 hover:text-secondary text-sm">Support</Link></li>
+              {/* <li><Link to="/blog" className="text-gray-600 hover:text-secondary text-sm">Documentation</Link></li> */}
+              <li><Link to="/aboutus/contact" className="text-gray-600 hover:text-secondary text-sm">Support</Link></li>
             </ul>
           </div>
 
@@ -75,10 +75,10 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-1 lg:col-span-1">
             <h4 className="text-lg font-semibold mb-6 text-secondary">Company</h4>
             <ul className="space-y-3">
-              <li><Link to="/contact" className="text-gray-600 hover:text-secondary text-sm">About</Link></li>
-              <li><Link to="/career" className="text-gray-600 hover:text-secondary text-sm">Careers</Link></li>
-              <li><Link to="/contact" className="text-gray-600 hover:text-secondary text-sm">Contact</Link></li>
-              <li><Link to="/partners" className="text-gray-600 hover:text-secondary text-sm">Partners</Link></li>
+              <li><Link to="/aboutus" className="text-gray-600 hover:text-secondary text-sm">About</Link></li>
+              <li><Link to="/aboutus/careers" className="text-gray-600 hover:text-secondary text-sm">Careers</Link></li>
+              <li><Link to="/aboutus/contact" className="text-gray-600 hover:text-secondary text-sm">Contact</Link></li>
+              <li><Link to="/aboutus/partners" className="text-gray-600 hover:text-secondary text-sm">Partners</Link></li>
             </ul>
           </div>
 

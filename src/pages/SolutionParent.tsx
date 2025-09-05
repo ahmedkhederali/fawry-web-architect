@@ -11,6 +11,7 @@ import JustifiedText from '@/components/TextComponents';
 interface ChildSolution {
   id: string;
   title: string;
+  title1: string;
   description: string;
   summary: string;
   title_why?: string;
@@ -40,7 +41,6 @@ const SolutionParent = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
   const [currentChildren, setCurrentChildren] = useState<ChildSolution[]>([]);
-console.log("parent",parent)
   useEffect(() => {
     if (parent?.children) {
       setCurrentChildren(parent.children as ChildSolution[] || []); // 
@@ -92,7 +92,7 @@ console.log("parent",parent)
 
           <div className="md:w-1/2">
             <img
-              src={parent.image}
+              src={parent.innerImage}
               alt={parent.title}
               className="rounded-xl shadow-2xl w-full max-h-[400px] object-cover transform"
               style={{ perspective: '1200px' }}
@@ -256,7 +256,7 @@ console.log("parent",parent)
           {/* Features */}
           {!activeChild?.isSass && activeChild.benefits?.length > 0 && (
             <div className="bg-[#006b99] text-white rounded-lg shadow-md p-6">
-              <h3 className="text-2xl font-bold mb-6 text-[#ffd400]">Benefits of {activeChild.title}</h3>
+              <h3 className="text-2xl font-bold mb-6 text-[#ffd400]">Benefits of {activeChild.title1}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {activeChild.benefits.map((benefit, i) => (
                   <div key={i} className="flex items-start gap-4">

@@ -18,7 +18,7 @@ const Career = () => {
     {/* Left side text */}
     <div className="md:w-1/2 relative z-10">
       <h1 className="text-4xl font-bold mb-6 text-[#ffd400] drop-shadow-lg">
-        {t("Career")}
+        {t("Careers")}
       </h1>
       <p className="text-lg mb-6 leading-relaxed tracking-wide text-white text-justify">
         {t("career_desc")}

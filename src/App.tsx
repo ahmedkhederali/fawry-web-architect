@@ -39,8 +39,8 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/about" element={<AboutIndex/>} />
-            <Route path="/about/career" element={
+            <Route path="/aboutus" element={<AboutIndex/>} />
+            <Route path="/aboutus/careers" element={
               <>
                 <Header />
                 <Career />
@@ -55,14 +55,14 @@ const App = () => (
                 <Footer />
               </>
             } />
-            <Route path="/about/contact" element={
+            <Route path="/aboutus/contact" element={
               <>
                 <Header />
                 <Contact />
                 <Footer />
               </>
             } />
-            <Route path="/about/clients" element={
+            <Route path="/aboutus/clients" element={
               <>
                 <Header />
                 <Clients />
@@ -71,7 +71,7 @@ const App = () => (
             } />
         
              
-            <Route path="/about/partners" element={
+            <Route path="/aboutus/partners" element={
               <>
                 <Header />
                 <Partners />

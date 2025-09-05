@@ -68,15 +68,15 @@ const MyMap = () => {
       {/* Counters */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 w-full max-w-4xl">
         <div className="bg-[#006b99] text-white shadow-lg rounded-2xl p-6 text-center">
-          <h2 className="text-xl font-semibold">Employees signed in today</h2>
+          <h2 className="text-xl font-semibold">Today's Employee Sign-Ins Live Clients Count</h2>
           <p className="text-5xl font-bold mt-4">{500}</p>
-          <p className="text-sm mt-2 text-[#ffd400]">From mobile sign-ins</p>
+          {/* <p className="text-sm mt-2 text-[#ffd400]">From mobile sign-ins</p> */}
         </div>
 
         <div className="bg-[#ffd400] text-[#003366] shadow-lg rounded-2xl p-6 text-center">
-          <h2 className="text-xl font-semibold">Companies today</h2>
+          <h2 className="text-xl font-semibold"> Companies use fawry business HR</h2>
           <p className="text-5xl font-bold mt-4">{22}</p>
-          <p className="text-sm mt-2">Unique company logins</p>
+          {/* <p className="text-sm mt-2">Unique company logins</p> */}
         </div>
       </div>
       <GoogleMap
