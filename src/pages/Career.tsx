@@ -11,33 +11,33 @@ const Career = () => {
   const [selectedJob, setSelectedJob] = useState(null);
 
   return (
-    <div className=" bg-white min-h-screen w-full    ">
+    <div className=" bg-white min-h-screen w-full  mb-8">
       <section className="w-full bg-[#006b99] text-white mt-10 pt-20 md:pt-[7rem] pb-8 relative">
-  <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
-    
-    {/* Left side text */}
-    <div className="md:w-1/2 relative z-10">
-      <h1 className="text-4xl font-bold mb-6 text-[#ffd400] drop-shadow-lg">
-        {t("Careers")}
-      </h1>
-      <p className="text-lg mb-6 leading-relaxed tracking-wide text-white text-justify">
-        {t("career_desc")}
-      </p>
-    </div>
+        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
 
-    {/* Right side image */}
-    <div className="md:w-1/2">
-      <LazyLoadImage
-        src="/images/career.jpg"
-        alt="career illustration"
-        className="h-[300px] rounded-xl shadow-2xl w-full contain-content transform"
-        // className="rounded-xl shadow-2xl w-full max-h-[400px] object-cover transform"
-        style={{ perspective: "1200px" }}
-      />
-    </div>
+          {/* Left side text */}
+          <div className="md:w-1/2 relative z-10">
+            <h1 className="text-4xl font-bold mb-6 text-[#ffd400] drop-shadow-lg">
+              {t("Careers")}
+            </h1>
+            <p className="text-lg mb-6 leading-relaxed tracking-wide text-white text-justify">
+              {t("career_desc")}
+            </p>
+          </div>
 
-  </div>
-</section>
+          {/* Right side image */}
+          <div className="md:w-1/2">
+            <LazyLoadImage
+              src="/images/career.jpg"
+              alt="career illustration"
+              className="h-[300px] rounded-xl shadow-2xl w-full contain-content transform"
+              // className="rounded-xl shadow-2xl w-full max-h-[400px] object-cover transform"
+              style={{ perspective: "1200px" }}
+            />
+          </div>
+
+        </div>
+      </section>
 
       <h2
         id={`card-title-available-jobs`}
