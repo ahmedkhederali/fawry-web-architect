@@ -1,16 +1,16 @@
 const timeline = [
  { year: "2012–2014", title: "Foundation & Early Development",
   image: "/images/Diracfawry.png",
-  desc: "DIRAC Systems was officially established in 2014, building on system development that began in 2012." },
- { year: "2016", title: "Leadership in Digital Payment Integration", desc: "DIRAC became a leading provider of electronic integration solutions for digital payments, partnering with Fawry and other major institutions in Egypt." },
+  desc: "Dirac Systems was officially established in 2014, building on system development that began in 2012." },
+ { year: "2016", title: "Leadership in Digital Payment Integration", desc: "Dirac became a leading provider of electronic integration solutions for digital payments, partnering with Fawry and other major institutions in Egypt." },
  {
    year: "2017",
    title: "Launch of Dirapack",
-   desc: "DIRAC launched Dirapack, the first ERP system in Egypt and the Arab world specifically designed for managing corrugated carton factories. This was a significant step in delivering tailored digital solutions for the industry.",
+   desc: "Dirac launched Dirapack, the first ERP system in Egypt and the Arab world specifically designed for managing corrugated carton factories. This was a significant step in delivering tailored digital solutions for the industry.",
    image: "/images/logo-DiraPack.png",
  },
  { year: "2019", title: "Digital Transformation Projects", desc: "We expanded into digital transformation initiatives both locally and internationally, enhancing operational efficiency and driving innovation.", icon: "🌐" },
- { year: "2020", title: "Strategic Partnership with Fawry",image: "/images/DiracSystems.png", desc: "DIRAC formed a strategic SaaS partnership with Fawry, which acquired a 51% stake in the company, marking a major milestone in our growth.", icon: "🤝" },
+ { year: "2020", title: "Strategic Partnership with Fawry",image: "/images/DiracSystems.png", desc: "Dirac formed a strategic SaaS partnership with Fawry, which acquired a 51% stake in the company, marking a major milestone in our growth.", icon: "🤝" },
  { year: "2023", title: "Launch of Fawry Business HR", image:"/images/hrimg.png", desc: "Officially launched the Human Resources system under the Fawry Business brand, providing comprehensive HR solutions.", icon: "" },
  { year: "2024", title: "Launch of Fawry Business Accounting",image: "/images/accounting.png",  desc: "Expanded our platform with the release of the Fawry Business Accounting system, offering integrated financial management tools.", icon: "📊" },
 ];

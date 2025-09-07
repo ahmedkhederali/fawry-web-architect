@@ -4,7 +4,7 @@ const features = [
   {
     title: "Tailored Solutions",
     description:
-      "At DIRAC, we understand that every business is unique Our ability to customize systems ensures that our software solutions align perfectly with your specific needs, enhancing operational efficiency and effectiveness.",
+      "At Dirac, we understand that every business is unique Our ability to customize systems ensures that our software solutions align perfectly with your specific needs, enhancing operational efficiency and effectiveness.",
   },
   {
     title: "Comprehensive Digital Transformation",
@@ -32,7 +32,7 @@ const WhyDirac = () => {
   return (
     <section className="bg-[#f9f9f9] py-16 px-6 md:px-12">
       <h3 className="text-3xl font-bold text-center text-[#006b99] mb-12">
-        Why DIRAC?
+        Why Dirac?
       </h3>
 
       {/* Grid container */}

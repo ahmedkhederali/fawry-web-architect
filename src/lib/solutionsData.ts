@@ -15,11 +15,11 @@ const solutions = [
         title: 'Enterprise Edition' ,
         title1: 'Enterprise Edition',
         description: 'All-in-one ERP for enterprise business automation.',
-        summary: `DIRAC ERP Enterprise Edition is a powerful suite of integrated business applications tailored to unify and streamline your organization's operations. By consolidating departmental databases into a single, centralized management system, our solution ensures seamless communication and collaboration across all levels of your enterprise.
+        summary: `Dirac ERP Enterprise Edition is a powerful suite of integrated business applications tailored to unify and streamline your organization's operations. By consolidating departmental databases into a single, centralized management system, our solution ensures seamless communication and collaboration across all levels of your enterprise.
 
 This real-time access to information not only enhances decision-making but also fosters a culture of transparency and accountability. Our ERP solution caters to both industrial and commercial sectors, featuring robust modules such as Financial Management, Human Resource Management, and Supply Chain Management.
 
-With intelligent dashboards and advanced analytical reporting tools, DIRAC ERP simplifies complex processes and enhances operational efficiency. Experience increased profitability and long-term success as you harness the full potential of your organization through our innovative ERP system. The implementation of DIRAC ERP is designed to be smooth and efficient, with a dedicated team of experts guiding you through every step of the process.
+With intelligent dashboards and advanced analytical reporting tools, Dirac ERP simplifies complex processes and enhances operational efficiency. Experience increased profitability and long-term success as you harness the full potential of your organization through our innovative ERP system. The implementation of Dirac ERP is designed to be smooth and efficient, with a dedicated team of experts guiding you through every step of the process.
 
 We provide comprehensive training and support to ensure that your staff feels confident and empowered to use the system effectively. Our commitment to ongoing support means that you’ll have access to resources and assistance whenever you need it, helping you maximize the benefits of your ERP`,
         "benefits": [
@@ -272,7 +272,7 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
     id: 'erp-standard',
     title: 'ERP Standard Edition',
     min_dec: 'Unlock Efficiency: Optimize Your Operations',
-    description: "Smart ERP for Growing Businesses DIRAC 1.4 Standard Edition is a cost-effective, easy-to-use business management software (ERP) tailored for small and medium-sized enterprises. It is designed to automate and streamline key business functions—including financials, supply chain, sales, manufacturing, and human resources—within a single, integrated platform.",
+    description: "Smart ERP for Growing Businesses Dirac 1.4 Standard Edition is a cost-effective, easy-to-use business management software (ERP) tailored for small and medium-sized enterprises. It is designed to automate and streamline key business functions—including financials, supply chain, sales, manufacturing, and human resources—within a single, integrated platform.",
     image: '/images/erp1.png',
     innerImage: '/images/erp1.png',
     span: 'col-span-1 row-span-2',
@@ -282,7 +282,7 @@ The implementation of DiraPanel is designed to be seamless, supported by a dedic
         title: '',
         title1: 'ERP Standard Edition',
         description: 'All-in-one ERP for enterprise business automation.',
-        summary: `DIRAC 1.4 Standard Edition is a cost-effective, easy-to-use business management software (ERP) Tailored for small and medium-sized enterprises. It is designed to automate and streamline key business functions—including financials, supply chain, sales, manufacturing, and human resources—within a single, integrated platform.
+        summary: `Dirac 1.4 Standard Edition is a cost-effective, easy-to-use business management software (ERP) Tailored for small and medium-sized enterprises. It is designed to automate and streamline key business functions—including financials, supply chain, sales, manufacturing, and human resources—within a single, integrated platform.
 
 This powerful solution gives you real-time, end-to-end visibility into your operations, enabling faster decision-making, better customer responsiveness, and sustainable business growth.`,
         "benefits": [

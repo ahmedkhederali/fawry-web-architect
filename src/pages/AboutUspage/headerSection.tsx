@@ -69,7 +69,7 @@ const HeaderSection = () => {
           competitiveness for businesses.
         </p>
 
-        <p className="text-lg text-justify mb-4">
+        <p className="text-lg text-justify mb-4 py-4">
           As we continue to expand our offerings—including the recent launches
           of the
           <span className="font-medium text-[#000000]">
@@ -81,13 +81,13 @@ const HeaderSection = () => {
             {" "}
             Accounting systems
           </span>
-          —DIRAC Systems remains focused on empowering businesses to improve
+          —Dirac Systems remains focused on empowering businesses to improve
           products, enhance customer experiences, and enter new markets.
-          <span className="font-medium text-[#000000]">
+          <p className="font-medium text-[#000000]">
             {" "}
             Join us as we transform the future of business through cutting-edge
             digital solutions.
-          </span>
+          </p>
         </p>
       </div>
     </div>
