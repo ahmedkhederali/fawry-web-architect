@@ -362,6 +362,7 @@ This powerful solution gives you real-time, end-to-end visibility into your oper
       {
         "id": "fawryaccounting",
         "title": "Fawry Business Accounting",
+        "title1":"Fawry Business Accounting",
         "description": "Online accounting software for managing finances, expenses, and invoicing.",
         "summary": "Fawry Business Accounting provides a powerful and easy-to-use platform for handling your business finances—track expenses, generate invoices, monitor cash flow, and ensure compliance, all from the cloud.",
         "benefits": [
@@ -372,7 +373,7 @@ This powerful solution gives you real-time, end-to-end visibility into your oper
         ],
         "logos": [],
         DownloadLink: '/files/dirac-enterprise-brochure.pdf',
-        "isSass": true
+        "isSass": false
       }
     ]
   },
@@ -420,7 +421,7 @@ This powerful solution gives you real-time, end-to-end visibility into your oper
     id: 'digital-transformation',
     title: 'Digital Transformation',
     min_dec: 'Embrace Digital Evolution: Leap into the Future Today',
-    description: 'Digital Transformation Solutions for Business is a suite of services designed to help organizations leverage technology to improve processes, enhance customer experiences, and drive innovation.',
+    description: 'Dirac Systems empowers organizations to modernize and streamline theiroperations through tailored digital transformation solutions. Our mission is todesign scalable, secure, and modular platforms that replace legacy systems with agile architectures built around real business needs.',
     image: '/products/digitalTransformation/Digital-transformation.png',
     innerImage: '/products/digitalTransformation/Digital-transformation.png',
     span: 'col-span-2 row-span-1',
@@ -437,6 +438,7 @@ This powerful solution gives you real-time, end-to-end visibility into your oper
           { title: 'Customer Experience Enhancement', description: '' },
           { title: 'Cloud Integration', description: '' }
         ],
+        isDigitalTransform:true,
         logos: [],
         DownloadLink: '',
         isSass: false

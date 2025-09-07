@@ -30,3 +30,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, #FFC700, #0D3D80); /* hover أغمق */
 }
+
+
+.map-curved {
+  border-radius: 5px;
+  border: 2px solid #FFC700;
+}
