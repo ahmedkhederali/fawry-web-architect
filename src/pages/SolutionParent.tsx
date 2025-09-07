@@ -18,7 +18,7 @@ interface ChildSolution {
   benefits: { title: string; description: string }[];
   whyChooseDirac?: { title: string; description: string }[];
   logos: string[];
-  children?:[];
+  children?: [];
   DownloadLink: string;
   isSass: boolean;
   isVansale?: boolean;
@@ -72,12 +72,20 @@ const SolutionParent = () => {
 
   const handleTabClick = (index: number) => {
     setActiveTab(index);
-    setTimeout(() => {
-      descriptionRef.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-    }, 100);
+    if (descriptionRef.current) {
+  const y = descriptionRef.current.getBoundingClientRect().top + window.scrollY;
+    const offset = 11.25 * parseFloat(getComputedStyle(document.documentElement).fontSize); 
+  window.scrollTo({
+    top: y - 180, // 32px = 2rem
+    behavior: "smooth",
+  });
+}
+    // setTimeout(() => {
+    //   descriptionRef.current?.scrollIntoView({
+    //     behavior: "smooth",
+    //     block: "center",
+    //   });
+    // }, 100);
   }
   return (
     <div className="bg-white min-h-screen">
@@ -122,10 +130,10 @@ const SolutionParent = () => {
 
       {/* Tab Content Section */}
       {activeChild && (
-        <div className="md:container mx-auto px-6 py-12 md:space-y-12">
+        <div className="md:container mx-auto px-6 py-12 md:space-y-12" ref={descriptionRef}>
           {/* Full-width description */}
-          <JustifiedText text={activeChild.summary} />
-          {activeChild.isSass && <div ref={descriptionRef} className={`flex flex-col md:flex-row items-center justify-between gap-8`}>
+         {!activeChild.isSass &&  <JustifiedText text={activeChild.summary} />}
+          {activeChild.isSass && <div className={`flex flex-col md:flex-row items-center justify-between gap-8`}>
             {/* LEFT SIDE - TEXT */}
             <div className="md:w-1/2 text-left">
               <h2 className="text-2xl font-bold mb-4 text-[#006b99]">
