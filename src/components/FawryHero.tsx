@@ -284,7 +284,7 @@ const FawryHeaderHero: React.FC = () => {
             ))}
           </div>
         </div>
-        <div className="hidden custom-md:flex custom-md:absolute custom-md:bottom-[1.9rem] custom-md:left-1/2 custom-md:-translate-x-1/2 gap-2  bottom-12 ">          <button
+        <div className="hidden custom-md:flex custom-md:absolute custom-md:bottom-[1.5rem] custom-md:left-1/2 custom-md:-translate-x-1/2 gap-2  bottom-12 ">          <button
             onClick={() => setCurrent((prev) => (prev - 1 + carouselSlides.length) % carouselSlides.length)}
             className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-2 rounded-full shadow-lg border-2 border-white"
           >
