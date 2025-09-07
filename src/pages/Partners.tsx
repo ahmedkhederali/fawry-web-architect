@@ -8,7 +8,7 @@ const Partners = () => {
 
   return (
     <div className="min-h-screen">
-      <section className="w-full bg-[#006b99] text-white mt-10 pt-20 pb-8 relative">
+      <section className="w-full bg-[#006b99] text-white mt-10 pt-20 md:pt-[5.5rem] pb-8 md:pb-[2rem] relative">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
        <div className="md:w-1/2 relative z-10">
       <h1 className="text-4xl font-bold mb-6 text-[#ffd400] drop-shadow-lg">

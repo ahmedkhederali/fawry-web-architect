@@ -91,7 +91,7 @@ const SolutionParent = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <div className="w-full bg-[#006b99] text-white mt-10 pt-20 pb-8 relative">
+      <div className="w-full bg-[#006b99] text-white mt-10 pt-20 md:pt-[5.5rem] pb-8 md:pb-[2rem] relative">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2 relative z-10">
             <h1 className="text-4xl font-bold mb-6 text-[#ffd400] drop-shadow-lg">{parent.title}</h1>

@@ -12,7 +12,7 @@ const Career = () => {
 
   return (
     <div className=" bg-white min-h-screen w-full  mb-8">
-      <section className="w-full bg-[#006b99] text-white mt-10 pt-20 md:pt-[7rem] pb-8 relative">
+      <section className="w-full bg-[#006b99] text-white mt-10 pt-20 md:pt-[5.5rem] pb-8 md:pb-[2rem] relative">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
 
           {/* Left side text */}
