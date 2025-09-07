@@ -25,7 +25,7 @@ const Footer = () => {
             {/* Social Media Icons */}
             <div className="flex space-x-4 mt-4">
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/company/dirac-systems/posts/?feedView=all"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -37,7 +37,7 @@ const Footer = () => {
                 />
               </a>
               <a
-                href="https://facebook.com/"
+                href="https://www.facebook.com/share/1B84PnHewb/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
