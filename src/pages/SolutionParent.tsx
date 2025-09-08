@@ -9,6 +9,20 @@ import { useEffect, useRef, useState } from "react";
 import JustifiedText from "@/components/TextComponents";
 import KeyTechnologies from "@/components/KeyTechnologies";
 
+// ✅ Loader Component (Fawry Theme)
+const FawryLoader = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-white">
+      <div className="relative flex flex-col items-center">
+        {/* Circle loader */}
+        <div className="w-16 h-16 border-4 border-[#ffd400] border-t-[#006b99] rounded-full animate-spin"></div>
+        {/* Fawry text */}
+        <p className="mt-4 text-lg font-semibold text-[#006b99]">Loading...</p>
+      </div>
+    </div>
+  );
+};
+
 interface ChildSolution {
   id: string;
   title: string;
@@ -46,14 +60,26 @@ const SolutionParent = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
   const [currentChildren, setCurrentChildren] = useState<ChildSolution[]>([]);
+  const [loading, setLoading] = useState(true); // ✅ Loading state
+
   useEffect(() => {
     if (parent?.children) {
-      setCurrentChildren((parent.children as ChildSolution[]) || []); //
-      setActiveTab(0);
-      setIsExpanded(false);
+      setLoading(true);
+      // Simulate small delay to show loader
+      const timer = setTimeout(() => {
+        setCurrentChildren((parent.children as ChildSolution[]) || []);
+        setActiveTab(0);
+        setIsExpanded(false);
+        setLoading(false); // ✅ hide loader after data is ready
+      }, 800);
+
+      return () => clearTimeout(timer);
     }
   }, [id, parent]);
 
+  if (loading) {
+    return <FawryLoader />; // ✅ Show Loader
+  }
   if (!parent) {
     return <div className="p-8 text-center">Parent solution not found.</div>;
   }
