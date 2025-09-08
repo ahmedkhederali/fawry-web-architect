@@ -2,19 +2,21 @@
 
 const solutions = [
   {
-    id: 'erp',
-    title: 'ERP System',
-    min_dec: 'Unlock Efficiency: Optimize Your Operations',
-    description: "Unlock your organization's potential with our comprehensive ERP Enterprise Edition. Designed to integrate planning, manufacturing, sales, and marketing processes, this solution provides real-time access to critical data across all departments. Empower your team to make informed decisions that drive efficiency and profitability.",
-    image: '/images/erp1.png',
-    innerImage: '/images/erp1.png',
-    span: 'col-span-1 row-span-2',
+    id: "erp",
+    title: "ERP System",
+    min_dec: "Unlock Efficiency: Optimize Your Operations",
+    description:
+      "Unlock your organization's potential with our comprehensive ERP Enterprise Edition. Designed to integrate planning, manufacturing, sales, and marketing processes, this solution provides real-time access to critical data across all departments. Empower your team to make informed decisions that drive efficiency and profitability.",
+    image: "/images/erp1.png",
+    innerImage: "/images/erp1.png",
+    span: "col-span-1 row-span-2",
+    ishaveTabs: true,
     children: [
       {
-        id: 'diracenterprise',
-        title: 'Enterprise Edition' ,
-        title1: 'Enterprise Edition',
-        description: 'All-in-one ERP for enterprise business automation.',
+        id: "diracenterprise",
+        title: "Enterprise Edition",
+        title1: "Enterprise Edition",
+        description: "All-in-one ERP for enterprise business automation.",
         summary: `Dirac ERP Enterprise Edition is a powerful suite of integrated business applications tailored to unify and streamline your organization's operations. By consolidating departmental databases into a single, centralized management system, our solution ensures seamless communication and collaboration across all levels of your enterprise.
 
 This real-time access to information not only enhances decision-making but also fosters a culture of transparency and accountability. Our ERP solution caters to both industrial and commercial sectors, featuring robust modules such as Financial Management, Human Resource Management, and Supply Chain Management.
@@ -22,23 +24,28 @@ This real-time access to information not only enhances decision-making but also 
 With intelligent dashboards and advanced analytical reporting tools, Dirac ERP simplifies complex processes and enhances operational efficiency. Experience increased profitability and long-term success as you harness the full potential of your organization through our innovative ERP system. The implementation of Dirac ERP is designed to be smooth and efficient, with a dedicated team of experts guiding you through every step of the process.
 
 We provide comprehensive training and support to ensure that your staff feels confident and empowered to use the system effectively. Our commitment to ongoing support means that you’ll have access to resources and assistance whenever you need it, helping you maximize the benefits of your ERP`,
-        "benefits": [
-          { "title": "Increased productivity and efficiency", "description": "" },
-          { "title": "Cost-effective ERP implementation", "description": "" },
-          { "title": "Advanced data analysis and dynamic reporting", "description": "" },
-          { "title": "Fully web-based interface access anytime, anywhere", "description": "" }
+        benefits: [
+          { title: "Increased productivity and efficiency", description: "" },
+          { title: "Cost-effective ERP implementation", description: "" },
+          {
+            title: "Advanced data analysis and dynamic reporting",
+            description: "",
+          },
+          {
+            title: "Fully web-based interface access anytime, anywhere",
+            description: "",
+          },
         ],
-        logos: [
-
-        ],
-        DownloadLink: '/files/dirac-enterprise-brochure.pdf',
+        logos: [],
+        DownloadLink: "/files/dirac-enterprise-brochure.pdf",
         isSass: false,
-        isSystemIntegration:false
+        isSystemIntegration: false,
       },
       {
-        id: 'dirapack',
-        title: 'DiraPack',
-        description: 'Tailored ERP for Corrugated Carton Manufacturing & Packaging.',
+        id: "dirapack",
+        title: "DiraPack",
+        description:
+          "Tailored ERP for Corrugated Carton Manufacturing & Packaging.",
         summary: `DiraPack is our fully customized ERP solution, purpose-built for corrugated carton manufacturing and packaging factories. Designed to streamline operations and enhance productivity, DiraPack covers the entire production lifecycle—from configuration to final delivery. With features like the Carton Configurator and Carton Pricing Calculator, you can easily define and customize carton dimensions and generate accurate pricing based on materials and production variables. This ensures that your operations are not only efficient but also responsive to market demands.
 
 The solution includes advanced capabilities such as Cut Sheet Management, Corrugator Machine Planning, and Waste Calculation, allowing you to optimize material usage and improve cost control. Additionally, DiraPack provides tools for managing assembly processes and monitoring all stages of printing, ensuring high-quality output throughout the production process. By empowering packaging manufacturers with these essential tools, DiraPack helps you reduce costs and maintain quality at every step.
@@ -46,44 +53,51 @@ The solution includes advanced capabilities such as Cut Sheet Management, Corrug
 Implementation of DiraPack is designed to be seamless, with a dedicated team guiding you through the setup and integration process. We offer comprehensive training and ongoing support to ensure your team is confident in using the system effectively. With our commitment to your success, you’ll have the resources you need to maximize the benefits of your tailored ERP solution, driving efficiency and profitability for your packaging operations.`,
         benefits: [
           {
-            title: 'Carton Configurator',
-            description: 'Easily define and customize carton dimensions, structure, and specifications.'
+            title: "Carton Configurator",
+            description:
+              "Easily define and customize carton dimensions, structure, and specifications.",
           },
           {
-            title: 'Carton Pricing Calculator',
-            description: 'Generate accurate and dynamic pricing based on materials, dimensions, and production variables.'
+            title: "Carton Pricing Calculator",
+            description:
+              "Generate accurate and dynamic pricing based on materials, dimensions, and production variables.",
           },
           {
-            title: 'Cut Sheet Management',
-            description: 'Optimize material usage through efficient sheet cutting plans.'
+            title: "Cut Sheet Management",
+            description:
+              "Optimize material usage through efficient sheet cutting plans.",
           },
           {
-            title: 'Corrugator Machine Planning',
-            description: 'Plan and schedule production for corrugator operations with real-time visibility.'
+            title: "Corrugator Machine Planning",
+            description:
+              "Plan and schedule production for corrugator operations with real-time visibility.",
           },
           {
-            title: 'Stapling & Plastering Management',
-            description: 'Manage assembly processes including stapling and plastering with precision.'
+            title: "Stapling & Plastering Management",
+            description:
+              "Manage assembly processes including stapling and plastering with precision.",
           },
           {
-            title: 'Printing Management',
-            description: 'Control and monitor all stages of the printing process.'
-          }
+            title: "Printing Management",
+            description:
+              "Control and monitor all stages of the printing process.",
+          },
         ],
         logos: [
-          '/products/dirapack/ver.png',
-          '/products/dirapack/min.png',
-          '/products/dirapack/box.png',
-          '/products/dirapack/bloo.png',
-          '/products/dirapack/sfwa.png',
+          "/products/dirapack/ver.png",
+          "/products/dirapack/min.png",
+          "/products/dirapack/box.png",
+          "/products/dirapack/bloo.png",
+          "/products/dirapack/sfwa.png",
         ],
-        DownloadLink: '/files/dirapack-brochure.pdf',
-        isSass: false
+        DownloadLink: "/files/dirapack-brochure.pdf",
+        isSass: false,
       },
       {
-        id: 'diraplast',
-        title: 'DiraPlast',
-        description: 'Tailor-made ERP for electrical panel manufacturing factories.',
+        id: "diraplast",
+        title: "DiraPlast",
+        description:
+          "Tailor-made ERP for electrical panel manufacturing factories.",
         summary: `DiraPlast is a tailored ERP solution that addresses the unique challenges of the plastic manufacturing industry. Covering the entire production process—from Injection Molding and Blow Molding to Extrusion, Printing, and Packing—DiraPlast ensures that every aspect of your operations is effectively managed. Our system enables you to oversee not only standard product manufacturing but also the custom design and development of specific products, providing the flexibility needed to meet diverse market demands.
 
 In addition to production management, DiraPlast offers full business integration across key operational areas, including Financial Management, Sales Management, and Inventory Management. Each module is seamlessly integrated to facilitate smooth workflows, real-time data sharing, and optimized performance throughout your organization. With robust features for Quality Control & Assurance, Human Resources Management, and Customer Relationship Management (CRM), DiraPlast empowers your team to make informed decisions and drive operational excellence.
@@ -91,47 +105,55 @@ In addition to production management, DiraPlast offers full business integration
 The implementation process for DiraPlast is designed to be smooth and efficient, with a dedicated team assisting you every step of the way. We provide thorough training and ongoing support, ensuring your staff is well-equipped to utilize the system effectively. With our commitment to your success, DiraPlast not only enhances productivity but also positions your business for long-term growth and profitability in the competitive plastic manufacturing landscape.`,
         benefits: [
           {
-            title: 'Panel Configurator',
-            description: 'Easily define panel types, structure, dimensions, and required specifications.'
+            title: "Panel Configurator",
+            description:
+              "Easily define panel types, structure, dimensions, and required specifications.",
           },
           {
-            title: 'Component Builder',
-            description: 'Select and configure internal components (breakers, contactors, PLCs, etc.) with accuracy and compliance.'
+            title: "Component Builder",
+            description:
+              "Select and configure internal components (breakers, contactors, PLCs, etc.) with accuracy and compliance.",
           },
           {
-            title: 'Quotation Generator',
-            description: 'Create comprehensive technical and financial proposals with automatic BOM and pricing breakdowns.'
+            title: "Quotation Generator",
+            description:
+              "Create comprehensive technical and financial proposals with automatic BOM and pricing breakdowns.",
           },
           {
-            title: 'Template Library',
-            description: 'Access ready-made panel templates for both inbound and outbound systems to speed up design and production.'
+            title: "Template Library",
+            description:
+              "Access ready-made panel templates for both inbound and outbound systems to speed up design and production.",
           },
           {
-            title: 'BOM & Procurement Integration',
-            description: 'Generate a full bill of materials and integrate directly with procurement for component purchasing.'
+            title: "BOM & Procurement Integration",
+            description:
+              "Generate a full bill of materials and integrate directly with procurement for component purchasing.",
           },
           {
-            title: 'Production Planning & Quality Control',
-            description: 'Plan assembly schedules, track progress, and manage quality control checkpoints.'
+            title: "Production Planning & Quality Control",
+            description:
+              "Plan assembly schedules, track progress, and manage quality control checkpoints.",
           },
           {
-            title: 'Testing Management',
-            description: 'Manage internal testing processes and schedule client inspection and approval procedures.'
-          }
+            title: "Testing Management",
+            description:
+              "Manage internal testing processes and schedule client inspection and approval procedures.",
+          },
         ],
         logos: [
-          '/products/dirapanel/arab.png',
-          '/products/dirapanel/gms.png',
-          '/products/dirapanel/memco.png',
-          '/products/dirapanel/sigma.png',
+          "/products/dirapanel/arab.png",
+          "/products/dirapanel/gms.png",
+          "/products/dirapanel/memco.png",
+          "/products/dirapanel/sigma.png",
         ],
-        DownloadLink: '/files/dirapanel-brochure.pdf',
-        isSass: false
+        DownloadLink: "/files/dirapanel-brochure.pdf",
+        isSass: false,
       },
       {
-        id: 'diratail',
-        title: 'DiraTail',
-        description: 'Scalable retail ERP with seamless POS and delivery integration.',
+        id: "diratail",
+        title: "DiraTail",
+        description:
+          "Scalable retail ERP with seamless POS and delivery integration.",
         summary: `DiraTail is a customized ERP solution specifically designed for the retail sector, providing the tools you need to adapt and thrive in a competitive marketplace. Our platform enables you to manage every aspect of your retail business, from product options and tax rules to receipt content and layout, all in one centralized location. With features such as Showroom Management and Point of Sale (POS) Management, DiraTail allows for streamlined inventory handling and fast, accurate transactions, ensuring a seamless shopping experience for your customers.
 
 Integrated with Fawry POS machines for secure payment processing and powered by a robust delivery platform, DiraTail enhances both operational efficiency and customer satisfaction. Our Customer Loyalty Management and Customer Relationship Management (CRM) modules help you engage with customers effectively, rewarding loyalty and building lasting relationships. Additionally, the Mobile App for Sales Representatives empowers your field team with real-time access to essential information and reporting tools, enabling them to serve customers better.
@@ -139,49 +161,53 @@ Integrated with Fawry POS machines for secure payment processing and powered by 
 The implementation of DiraTail is designed to be smooth and efficient, with a dedicated team guiding you through setup and integration. We offer comprehensive training and ongoing support to ensure your staff is confident in using the system. With DiraTail, you will not only optimize your retail operations but also position your business for sustainable growth and success in the evolving retail landscape.`,
         benefits: [
           {
-            title: 'Showroom Management',
-            description: 'Easily manage displays, inventory, and product presentation.'
+            title: "Showroom Management",
+            description:
+              "Easily manage displays, inventory, and product presentation.",
           },
           {
-            title: 'Point of Sale (POS) Management',
-            description: 'Streamlined POS system for fast and accurate transactions.'
+            title: "Point of Sale (POS) Management",
+            description:
+              "Streamlined POS system for fast and accurate transactions.",
           },
           {
-            title: 'Customer Loyalty Management',
-            description: 'Reward repeat customers and build brand loyalty.'
+            title: "Customer Loyalty Management",
+            description: "Reward repeat customers and build brand loyalty.",
           },
           {
-            title: 'Customer Relationship Management (CRM)',
-            description: 'Track and engage customers through every interaction.'
+            title: "Customer Relationship Management (CRM)",
+            description:
+              "Track and engage customers through every interaction.",
           },
           {
-            title: 'Mobile App for Sales Representatives',
-            description: 'Empower your field team with real-time access and reporting tools.'
+            title: "Mobile App for Sales Representatives",
+            description:
+              "Empower your field team with real-time access and reporting tools.",
           },
           {
-            title: 'Shipping Module',
-            description: 'Simplify and manage all shipping operations.'
+            title: "Shipping Module",
+            description: "Simplify and manage all shipping operations.",
           },
           {
-            title: 'Delivery Application',
-            description: 'A full-featured app to coordinate and optimize last-mile delivery.'
-          }
+            title: "Delivery Application",
+            description:
+              "A full-featured app to coordinate and optimize last-mile delivery.",
+          },
         ],
         logos: [
-          '/products/diractail/elwan.png',
-          '/products/diractail/hamdy.png',
-          '/products/diractail/lytchee.jpg',
-          '/products/diractail/mohamdia.jpg',
-          '/products/diractail/mzahm.jpg',
-
+          "/products/diractail/elwan.png",
+          "/products/diractail/hamdy.png",
+          "/products/diractail/lytchee.jpg",
+          "/products/diractail/mohamdia.jpg",
+          "/products/diractail/mzahm.jpg",
         ],
-        DownloadLink: '/files/diratail-brochure.pdf',
-        isSass: false
+        DownloadLink: "/files/diratail-brochure.pdf",
+        isSass: false,
       },
       {
-        id: 'dirapanel',
-        title: 'DiraPanel',
-        description: 'ERP for Plastic Manufacturing Operations',
+        id: "dirapanel",
+        title: "DiraPanel",
+        description: "ERP for Plastic Manufacturing Operations",
         summary: `DiraPanel is specifically crafted for electrical panel manufacturing factories, providing a comprehensive ERP solution that addresses the unique challenges of the industry. Covering every aspect of the production process, DiraPanel enables users to define panel types, structures, and dimensions through an intuitive Panel Configurator. The Component Builder ensures that internal components, such as breakers and PLCs, are selected and configured with precision, meeting all necessary compliance standards.
 
 Key features such as the Quotation Generator streamline the proposal process by creating technical and financial documents with automatic bill of materials (BOM) and pricing breakdowns. The Template Library offers access to ready-made panel designs for both inbound and outbound systems, expediting the design and production phases. With integrated BOM and procurement capabilities, you can efficiently generate materials lists and manage component purchasing, ensuring timely production without delays.
@@ -191,139 +217,157 @@ DiraPanel also excels in production planning and quality control, allowing you t
 The implementation of DiraPanel is designed to be seamless, supported by a dedicated team that guides you through the setup and integration process. We provide comprehensive training and ongoing support, ensuring that your staff can maximize the system's capabilities. With DiraPanel, electrical panel manufacturers can achieve greater efficiency, accuracy, and compliance, positioning their operations for long-term success in a competitive market.`,
         benefits: [
           {
-            title: 'Injection Molding',
-            description: 'Manage and monitor plastic injection molding processes.'
+            title: "Injection Molding",
+            description:
+              "Manage and monitor plastic injection molding processes.",
           },
           {
-            title: 'Blow Molding (Inflation)',
-            description: 'Control inflation-based molding systems used in production.'
+            title: "Blow Molding (Inflation)",
+            description:
+              "Control inflation-based molding systems used in production.",
           },
           {
-            title: 'Extrusion',
-            description: 'Support extrusion operations for continuous plastic shaping.'
+            title: "Extrusion",
+            description:
+              "Support extrusion operations for continuous plastic shaping.",
           },
           {
-            title: 'Printing',
-            description: 'Enable custom printing workflows on manufactured parts.'
+            title: "Printing",
+            description:
+              "Enable custom printing workflows on manufactured parts.",
           },
           {
-            title: 'Logo Application',
-            description: 'Configure and apply branded elements within the system.'
+            title: "Logo Application",
+            description:
+              "Configure and apply branded elements within the system.",
           },
           {
-            title: 'Packing',
-            description: 'Streamline packaging workflows and logistics prep.'
+            title: "Packing",
+            description: "Streamline packaging workflows and logistics prep.",
           },
           {
-            title: 'Assembly',
-            description: 'Manage final product assembly and QA processes.'
+            title: "Assembly",
+            description: "Manage final product assembly and QA processes.",
           },
           {
-            title: 'Financial Management',
-            description: 'Complete control over accounting and financial operations.'
+            title: "Financial Management",
+            description:
+              "Complete control over accounting and financial operations.",
           },
           {
-            title: 'Sales Management',
-            description: 'Optimize your sales pipeline and customer orders.'
+            title: "Sales Management",
+            description: "Optimize your sales pipeline and customer orders.",
           },
           {
-            title: 'Purchasing Management',
-            description: 'Handle supplier relationships and procurement efficiently.'
+            title: "Purchasing Management",
+            description:
+              "Handle supplier relationships and procurement efficiently.",
           },
           {
-            title: 'Inventory Management',
-            description: 'Track stock levels, movement, and forecasting.'
+            title: "Inventory Management",
+            description: "Track stock levels, movement, and forecasting.",
           },
           {
-            title: 'Manufacturing & Production Management',
-            description: 'Plan, monitor, and optimize your factory floor operations.'
+            title: "Manufacturing & Production Management",
+            description:
+              "Plan, monitor, and optimize your factory floor operations.",
           },
           {
-            title: 'Quality Control & Assurance',
-            description: 'Ensure product quality and compliance at every stage.'
+            title: "Quality Control & Assurance",
+            description:
+              "Ensure product quality and compliance at every stage.",
           },
           {
-            title: 'Human Resources (HR) Management',
-            description: 'Manage employees, payroll, attendance, and more.'
+            title: "Human Resources (HR) Management",
+            description: "Manage employees, payroll, attendance, and more.",
           },
           {
-            title: 'Maintenance Management',
-            description: 'Schedule and track machine maintenance and repairs.'
+            title: "Maintenance Management",
+            description: "Schedule and track machine maintenance and repairs.",
           },
           {
-            title: 'Customer Relationship Management (CRM)',
-            description: 'Maintain and analyze customer interactions and data.'
-          }
+            title: "Customer Relationship Management (CRM)",
+            description: "Maintain and analyze customer interactions and data.",
+          },
         ],
         logos: [
-          '/products/diraplast/saudi.png',
-          '/products/diraplast/sp.png',
-          '/products/diraplast/plast.png',
-          '/products/diraplast/onda.png',
-          '/products/diraplast/ngma.png',
+          "/products/diraplast/saudi.png",
+          "/products/diraplast/sp.png",
+          "/products/diraplast/plast.png",
+          "/products/diraplast/onda.png",
+          "/products/diraplast/ngma.png",
         ],
-        DownloadLink: '/files/diraplast-brochure.pdf',
-        isSass: false
-      }
+        DownloadLink: "/files/diraplast-brochure.pdf",
+        isSass: false,
+      },
     ],
   },
 
   {
-    id: 'erp-standard',
-    title: 'ERP Standard Edition',
-    min_dec: 'Unlock Efficiency: Optimize Your Operations',
-    description: "Smart ERP for Growing Businesses Dirac 1.4 Standard Edition is a cost-effective, easy-to-use business management software (ERP) tailored for small and medium-sized enterprises. It is designed to automate and streamline key business functions—including financials, supply chain, sales, manufacturing, and human resources—within a single, integrated platform.",
-    image: '/images/erp1.png',
-    innerImage: '/images/erp1.png',
-    span: 'col-span-1 row-span-2',
+    id: "erp-standard",
+    title: "ERP Standard Edition",
+    min_dec: "Unlock Efficiency: Optimize Your Operations",
+    description:
+      "Smart ERP for Growing Businesses Dirac 1.4 Standard Edition is a cost-effective, easy-to-use business management software (ERP) tailored for small and medium-sized enterprises. It is designed to automate and streamline key business functions—including financials, supply chain, sales, manufacturing, and human resources—within a single, integrated platform.",
+    image: "/images/erp1.png",
+    innerImage: "/images/erp1.png",
+    span: "col-span-1 row-span-2",
+    ishaveTabs: false,
     children: [
       {
-        id: 'diracenterprise',
-        title: '',
-        title1: 'ERP Standard Edition',
-        description: 'All-in-one ERP for enterprise business automation.',
+        id: "diracenterprise",
+        title: "",
+        title1: "ERP Standard Edition",
+        description: "All-in-one ERP for enterprise business automation.",
         summary: `Dirac 1.4 Standard Edition is a cost-effective, easy-to-use business management software (ERP) Tailored for small and medium-sized enterprises. It is designed to automate and streamline key business functions—including financials, supply chain, sales, manufacturing, and human resources—within a single, integrated platform.
 
 This powerful solution gives you real-time, end-to-end visibility into your operations, enabling faster decision-making, better customer responsiveness, and sustainable business growth.`,
-        "benefits": [
-          { "title": "Increased productivity and efficiency", "description": "" },
-          { "title": "Cost-effective ERP implementation", "description": "" },
-          { "title": "Advanced data analysis and dynamic reporting", "description": "" },
-          { "title": "Fully web-based interface access anytime, anywhere", "description": "" }
+        benefits: [
+          { title: "Increased productivity and efficiency", description: "" },
+          { title: "Cost-effective ERP implementation", description: "" },
+          {
+            title: "Advanced data analysis and dynamic reporting",
+            description: "",
+          },
+          {
+            title: "Fully web-based interface access anytime, anywhere",
+            description: "",
+          },
         ],
-        logos: [
-
-        ],
-        DownloadLink: '/files/dirac-enterprise-brochure.pdf',
+        logos: [],
+        DownloadLink: "/files/dirac-enterprise-brochure.pdf",
         isSass: false,
-        isSystemIntegration:false,
-      }
+        isSystemIntegration: false,
+      },
     ],
   },
   {
-    id: 'sass',
-    title: 'SaaS Solutions',
-    min_dec: 'Streamline Your Success: Save Time, Money, and Effort',
-    description: 'SaaS Solutions for Business is a suite of software services designed to enhance operational efficiency and drive growth through cloud-based applications.',
-    image: '/images/SaaS2.png',
-    innerImage: '/images/18.png', 
-    span: 'col-span-1 row-span-2',
+    id: "sass",
+    title: "SaaS Solutions",
+    min_dec: "Streamline Your Success: Save Time, Money, and Effort",
+    description:
+      "SaaS Solutions for Business is a suite of software services designed to enhance operational efficiency and drive growth through cloud-based applications.",
+    image: "/images/SaaS2.png",
+    innerImage: "/images/18.png",
+    span: "col-span-1 row-span-2",
+    ishaveTabs: true,
     children: [
       {
-        "id": "fawryhr",
-        "title": "Fawry Business HR",
-        "description": "Welcome to the ultimate HR management solution in Egypt!",
-        "summary": "Fawry Payday is a comprehensive and user-friendly tool that automates your HR processes and makes your business more efficient. It seamlessly integrates with all your platforms and is compliant with the Egypt Labor Law, ensuring your data is secure.",
-        "benefits": [
-          { "title": "Employee Records Management", "description": "" },
-          { "title": "Payroll Automation", "description": "" },
-          { "title": "Attendance and Leave Tracking", "description": "" },
-          { "title": "Secure Cloud-Based Access", "description": "" }
+        id: "fawryhr",
+        title: "Fawry Business HR",
+        description: "Welcome to the ultimate HR management solution in Egypt!",
+        summary:
+          "Fawry Payday is a comprehensive and user-friendly tool that automates your HR processes and makes your business more efficient. It seamlessly integrates with all your platforms and is compliant with the Egypt Labor Law, ensuring your data is secure.",
+        benefits: [
+          { title: "Employee Records Management", description: "" },
+          { title: "Payroll Automation", description: "" },
+          { title: "Attendance and Leave Tracking", description: "" },
+          { title: "Secure Cloud-Based Access", description: "" },
         ],
-        "logos": [],
-        "live_img": "/products/sass/payday.jpg",
-        DownloadLink: '/files/dirac-enterprise-brochure.pdf',
-        "isSass": true,
+        logos: [],
+        live_img: "/products/sass/payday.jpg",
+        DownloadLink: "/files/dirac-enterprise-brochure.pdf",
+        isSass: true,
         pricing: [
           {
             title: "Starter",
@@ -333,7 +377,7 @@ This powerful solution gives you real-time, end-to-end visibility into your oper
               "Basic attendance tracking",
               "Email support",
             ],
-            cta: "Get Started"
+            cta: "Get Started",
           },
           {
             title: "Business",
@@ -342,9 +386,9 @@ This powerful solution gives you real-time, end-to-end visibility into your oper
               "Up to 100 employees",
               "Advanced attendance",
               "Request management",
-              "Priority support"
+              "Priority support",
             ],
-            cta: "Request Demo"
+            cta: "Request Demo",
           },
           {
             title: "Enterprise",
@@ -353,113 +397,176 @@ This powerful solution gives you real-time, end-to-end visibility into your oper
               "Unlimited employees",
               "Full system integration",
               "Dedicated support",
-              "Custom features"
+              "Custom features",
             ],
-            cta: "Contact Sales"
-          }
-        ]
+            cta: "Contact Sales",
+          },
+        ],
       },
       {
-        "id": "fawryaccounting",
-        "title": "Fawry Business Accounting",
-        "title1":"Fawry Business Accounting",
-        "description": "Online accounting software for managing finances, expenses, and invoicing.",
-        "summary": "Fawry Business Accounting provides a powerful and easy-to-use platform for handling your business finances—track expenses, generate invoices, monitor cash flow, and ensure compliance, all from the cloud.",
-        "benefits": [
-          { "title": "Expense Tracking", "description": "" },
-          { "title": "Invoicing & Billing", "description": "" },
-          { "title": "Cash Flow Management", "description": "" },
-          { "title": "Financial Reporting", "description": "" }
+        id: "fawryaccounting",
+        title: "Fawry Business Accounting",
+        title1: "Fawry Business Accounting",
+        
+        description:
+          "Online accounting software for managing finances, expenses, and invoicing.",
+        summary:
+          "Fawry Business Accounting provides a powerful and easy-to-use platform for handling your business finances—track expenses, generate invoices, monitor cash flow, and ensure compliance, all from the cloud.",
+        benefits: [
+          { title: "Expense Tracking", description: "" },
+          { title: "Invoicing & Billing", description: "" },
+          { title: "Cash Flow Management", description: "" },
+          { title: "Financial Reporting", description: "" },
         ],
-        "logos": [],
-        DownloadLink: '/files/dirac-enterprise-brochure.pdf',
-        "isSass": false
-      }
-    ]
+        logos: [],
+        DownloadLink: "/files/dirac-enterprise-brochure.pdf",
+        live_img: "/images/accounting.jfif",
+        isSass: false,
+        isAccounting: true
+      },
+    ],
   },
   {
-    id: 'vansales',
-    title: 'Van Sales Application',
-    min_dec: 'Revolutionize Your Outdoor Sales Operations',
-    description: 'Van Sales System designed to optimize outdoor sales, streamline operations, and empower sales teams with real-time tools.',
-    image: '/products/vansales/evolution.png',
-    innerImage: '/images/14.png',
-    span: 'col-span-2 row-span-1',
+    id: "vansales",
+    title: "Van Sales Application",
+    min_dec: "Revolutionize Your Outdoor Sales Operations",
+    description:
+      "Van Sales System designed to optimize outdoor sales, streamline operations, and empower sales teams with real-time tools.",
+    image: "/products/vansales/evolution.png",
+    innerImage: "/images/14.png",
+    span: "col-span-2 row-span-1",
+    ishaveTabs: false,
     children: [
       {
-        id: 'vansales',
-        title: '',
-        title1: 'Van Sales Application',
-        title_why: 'Why Choose Dirac systems for Van Sales?',
-        description: 'Revolutionize Your Outdoor Sales Operations with Dirac Systems.',
+        id: "vansales",
+        title: "",
+        title1: "Van Sales Application",
+        title_why: "Why Choose Dirac systems for Van Sales?",
+        description:
+          "Revolutionize Your Outdoor Sales Operations with Dirac Systems.",
         summary: `The Van Sales System from Dirac Systems is designed to cover the entire outdoor sales cycle, ensuring your field sales operations are efficient, accurate, and fully integrated. Our solution empowers your sales team with the tools they need to manage their sales processes seamlessly, enhancing productivity and customer satisfaction.`,
         benefits: [
-          { title: 'Van Inventory Management', description: 'Manage inventory on the go with real-time tracking to prevent stockouts and overstocking.' },
-          { title: 'Route Planning', description: 'Plan efficient sales routes to maximize time and reduce travel costs.' },
-          { title: 'Real-Time Stock Visibility', description: 'Access live inventory updates for accurate order fulfillment in the field.' },
-          { title: 'On-the-Spot Invoicing', description: 'Generate invoices instantly from the field for faster sales cycles.' },
-          { title: 'Payment Collection', description: 'Accept cash, credit, or mobile payments securely to improve cash flow.' },
-          { title: 'Product Returns Handling', description: 'Process returns quickly to maintain customer satisfaction.' },
-          { title: 'Customer Stock Audits', description: 'Perform on-site audits for accurate and accountable inventory management.' }
+          {
+            title: "Van Inventory Management",
+            description:
+              "Manage inventory on the go with real-time tracking to prevent stockouts and overstocking.",
+          },
+          {
+            title: "Route Planning",
+            description:
+              "Plan efficient sales routes to maximize time and reduce travel costs.",
+          },
+          {
+            title: "Real-Time Stock Visibility",
+            description:
+              "Access live inventory updates for accurate order fulfillment in the field.",
+          },
+          {
+            title: "On-the-Spot Invoicing",
+            description:
+              "Generate invoices instantly from the field for faster sales cycles.",
+          },
+          {
+            title: "Payment Collection",
+            description:
+              "Accept cash, credit, or mobile payments securely to improve cash flow.",
+          },
+          {
+            title: "Product Returns Handling",
+            description:
+              "Process returns quickly to maintain customer satisfaction.",
+          },
+          {
+            title: "Customer Stock Audits",
+            description:
+              "Perform on-site audits for accurate and accountable inventory management.",
+          },
         ],
         whyChooseDirac: [
-          { title: 'Seamless Integration', description: 'Integrates smoothly with your existing accounting and inventory systems.' },
-          { title: 'User-Friendly Interface', description: 'Easy-to-use design reduces training time and boosts productivity.' },
-          { title: 'Real-Time Data Insights', description: 'Access live data and analytics for better, faster decisions.' },
-          { title: 'Dedicated Support', description: 'Expert support team ensures smooth transition and ongoing success.' }
+          {
+            title: "Seamless Integration",
+            description:
+              "Integrates smoothly with your existing accounting and inventory systems.",
+          },
+          {
+            title: "User-Friendly Interface",
+            description:
+              "Easy-to-use design reduces training time and boosts productivity.",
+          },
+          {
+            title: "Real-Time Data Insights",
+            description:
+              "Access live data and analytics for better, faster decisions.",
+          },
+          {
+            title: "Dedicated Support",
+            description:
+              "Expert support team ensures smooth transition and ongoing success.",
+          },
         ],
         logos: [],
-        DownloadLink: '',
+        DownloadLink: "",
         isSass: false,
         isVansale: true,
-        isSystemIntegration: false
-      }
-    ],
-  }
-  ,
-  {
-    id: 'digital-transformation',
-    title: 'Digital Transformation',
-    min_dec: 'Embrace Digital Evolution: Leap into the Future Today',
-    description: 'Dirac Systems empowers organizations to modernize and streamline theiroperations through tailored digital transformation solutions. Our mission is todesign scalable, secure, and modular platforms that replace legacy systems with agile architectures built around real business needs.',
-    image: '/products/digitalTransformation/Digital-transformation.png',
-    innerImage: '/products/digitalTransformation/Digital-transformation.png',
-    span: 'col-span-2 row-span-1',
-    children: [
-      {
-        id: 'digital-transformation',
-        title: '',
-        title1: 'Digital Transformation',
-        description: 'Empowering businesses through digital innovation and process automation.',
-        summary: `Our Digital Transformation solutions help businesses leverage technology to streamline operations, enhance customer experiences, and drive innovation. From automating manual processes to implementing advanced analytics, we provide the tools and expertise needed to thrive in the digital age.`,
-        benefits: [
-          { title: 'Process Automation', description: '' },
-          { title: 'Data Analytics', description: '' },
-          { title: 'Customer Experience Enhancement', description: '' },
-          { title: 'Cloud Integration', description: '' }
-        ],
-        isDigitalTransform:true,
-        logos: [],
-        DownloadLink: '',
-        isSass: false
-      }
+        isSystemIntegration: false,
+      },
     ],
   },
   {
-    id: 'system-integration',
-    title: 'System Integration',
-    min_dec: 'Seamlessly Connect Your Systems for Enhanced Performance',
-    description: 'In today\'s complex digital landscape, businesses rely on a multitude of systems to manage their operations. Integrating these systems effectively is crucial for streamlining workflows, improving data accuracy, and gaining a competitive edge. Dirac Systems offers comprehensive system integration services that connect your disparate systems, whether they reside in the cloud or within your data center. We leverage our expertise and solution-focused hub frameworks to ensure seamless communication and data flow across your organization',
-    image: '/images/System Integration 1.png',
-    innerImage: '/images/14.png',
-    span: 'col-span-2 row-span-1',
+    id: "digital-transformation",
+    title: "Digital Transformation",
+    min_dec: "Embrace Digital Evolution: Leap into the Future Today",
+    description:
+      "Dirac Systems empowers organizations to modernize and streamline theiroperations through tailored digital transformation solutions. Our mission is todesign scalable, secure, and modular platforms that replace legacy systems with agile architectures built around real business needs.",
+    image: "/products/digitalTransformation/Digital-transformation.png",
+    innerImage: "/products/digitalTransformation/Digital-transformation.png",
+    span: "col-span-2 row-span-1",
+    ishaveTabs: false,
     children: [
       {
-        id: 'system-integration',
-        title: '',
-        title1: 'System Integration',
-        title_why: 'Why Choose Dirac systems for System Integration ?',
-        description: 'Seamlessly Connect Your Systems for Enhanced Performance ',
+        id: "digital-transformation",
+        title: "",
+        title1: "Digital Transformation",
+        description:
+          "Empowering businesses through digital innovation and process automation.",
+        summary: `Our Digital Transformation solutions help businesses leverage technology to streamline operations, enhance customer experiences, and drive innovation. From automating manual processes to implementing advanced analytics, we provide the tools and expertise needed to thrive in the digital age.
+        We combine deep domain understanding with cutting-edge technologies to deliver solutions that are both technically robust and operationally impactful. Our key technologies include: Microservices,
+Process Automation,
+Rule Engines,
+Enterprise Content Management.`,
+        benefits: [
+          { title: "Custom Platform Development", description: "" },
+          { title: "Workflow Automation", description: "" },
+          { title: "Integration Solutions", description: "" },
+          { title: "Data-Driven Decision Making", description: "" },
+          { title: "Proven Track Record", description: "" },
+        ],
+        isDigitalTransform: true,
+        logos: [],
+        DownloadLink: "",
+        isSass: false,
+      },
+    ],
+  },
+  {
+    id: "system-integration",
+    title: "System Integration",
+    min_dec: "Seamlessly Connect Your Systems for Enhanced Performance",
+    description:
+      "In today's complex digital landscape, businesses rely on a multitude of systems to manage their operations. Integrating these systems effectively is crucial for streamlining workflows, improving data accuracy, and gaining a competitive edge. Dirac Systems offers comprehensive system integration services that connect your disparate systems, whether they reside in the cloud or within your data center. We leverage our expertise and solution-focused hub frameworks to ensure seamless communication and data flow across your organization",
+    image: "/images/System Integration 1.png",
+    innerImage: "/images/14.png",
+    span: "col-span-2 row-span-1",
+    isSystemIntegration: true,
+    ishaveTabs: false,
+    children: [
+      {
+        id: "system-integration",
+        title: "",
+        title1: "System Integration",
+        title_why: "Why Choose Dirac systems for System Integration ?",
+        description:
+          "Seamlessly Connect Your Systems for Enhanced Performance ",
         summary: `At Dirac Systems, we understand that every business has unique integration needs. That's why we take a tailored approach to every project, working closely with you to understand your specific requirements and design a solution that meets your goals. Our team of experienced integration specialists has expertise in a wide range of technologies and platforms, including:
 Middleware Platforms: IBM MQ, IBM BMP, TIBCO
 Technologies: Java, .NET
@@ -468,170 +575,200 @@ ERP Systems: Integration with leading ERP systems to streamline business process
 CRM Systems: Integration with CRM platforms to enhance customer relationship management
 E-commerce Platforms: Integration with e-commerce platforms like Shopify and WooCommerce.`,
         benefits: [
-          { title: 'Improved Efficiency:', description: 'Streamline workflows and automate data exchange to reduce manual effort and improve operational efficiency.' },
-          { title: 'Enhanced Data Accuracy:', description: 'Ensure data consistency across all systems, minimizing errors and improving decision-making.' },
-          { title: 'Increased Visibility:', description: 'Gain a holistic view of your business operations with real-time data insights.' },
-          { title: 'Reduced Costs:', description: 'Eliminate data silos and redundant processes, leading to significant cost savings.' },
-          { title: 'Scalability and Flexibility:', description: 'Build a flexible and scalable integration infrastructure that can adapt to your evolving business needs.' }
+          {
+            title: "Improved Efficiency:",
+            description:
+              "Streamline workflows and automate data exchange to reduce manual effort and improve operational efficiency.",
+          },
+          {
+            title: "Enhanced Data Accuracy:",
+            description:
+              "Ensure data consistency across all systems, minimizing errors and improving decision-making.",
+          },
+          {
+            title: "Increased Visibility:",
+            description:
+              "Gain a holistic view of your business operations with real-time data insights.",
+          },
+          {
+            title: "Reduced Costs:",
+            description:
+              "Eliminate data silos and redundant processes, leading to significant cost savings.",
+          },
+          {
+            title: "Scalability and Flexibility:",
+            description:
+              "Build a flexible and scalable integration infrastructure that can adapt to your evolving business needs.",
+          },
         ],
-         whyChooseDirac: [
-          { title: 'Cloud-Based Flexibility: ', description: 'Access your financial data anytime, anywhere with our secure cloud-based solution.' },
-          { title: 'User-Friendly Interface: ', description: 'Enjoy an intuitive interface that simplifies complex accounting tasks, making it easy for your team to adapt.' },
-          { title: 'Dedicated Support: ', description: 'Our team is here to support you every step of the way, ensuring a seamless experience and addressing any queries you may have.' }
+        whyChooseDirac: [
+          {
+            title: "Cloud-Based Flexibility: ",
+            description:
+              "Access your financial data anytime, anywhere with our secure cloud-based solution.",
+          },
+          {
+            title: "User-Friendly Interface: ",
+            description:
+              "Enjoy an intuitive interface that simplifies complex accounting tasks, making it easy for your team to adapt.",
+          },
+          {
+            title: "Dedicated Support: ",
+            description:
+              "Our team is here to support you every step of the way, ensuring a seamless experience and addressing any queries you may have.",
+          },
         ],
         logos: [],
-        DownloadLink: '',
+        DownloadLink: "",
         isSass: false,
-        isSystemIntegration: true
-      }
+        isSystemIntegration: true,
+      },
     ],
-  }
+  },
 ];
 
 export const jobs = [
   {
-    title: 'Frontend Developer',
-    location: 'Cairo, Egypt',
-    type: 'Full-time',
+    title: "Frontend Developer",
+    location: "Cairo, Egypt",
+    type: "Full-time",
     description: {
-      summary: 'We are looking for a skilled Frontend Developer to build engaging UI experiences.',
+      summary:
+        "We are looking for a skilled Frontend Developer to build engaging UI experiences.",
       responsibilities: [
-        'Develop UI using React and Tailwind CSS.',
-        'Collaborate with UX/UI designers.',
-        'Ensure cross-browser compatibility.',
-        'Write clean, scalable code.'
+        "Develop UI using React and Tailwind CSS.",
+        "Collaborate with UX/UI designers.",
+        "Ensure cross-browser compatibility.",
+        "Write clean, scalable code.",
       ],
       requirements: [
-        '2+ years experience with React.',
-        'Familiarity with Tailwind CSS and Git.',
-        'Strong understanding of responsive design.'
+        "2+ years experience with React.",
+        "Familiarity with Tailwind CSS and Git.",
+        "Strong understanding of responsive design.",
       ],
       benefits: [
-        'Flexible hours',
-        'Health insurance',
-        'Professional development'
-      ]
-    }
+        "Flexible hours",
+        "Health insurance",
+        "Professional development",
+      ],
+    },
   },
   {
-    title: 'Backend Developer',
-    location: 'Cairo, Egypt',
-    type: 'Full-time',
+    title: "Backend Developer",
+    location: "Cairo, Egypt",
+    type: "Full-time",
     description: {
-      summary: 'Backend Developer needed to design APIs and support scalable architecture.',
+      summary:
+        "Backend Developer needed to design APIs and support scalable architecture.",
       responsibilities: [
-        'Develop RESTful APIs using Node.js or .NET.',
-        'Manage databases and integrations.',
-        'Optimize server-side performance.'
+        "Develop RESTful APIs using Node.js or .NET.",
+        "Manage databases and integrations.",
+        "Optimize server-side performance.",
       ],
       requirements: [
-        'Experience with Express, .NET, or Django.',
-        'Good understanding of SQL/NoSQL.',
-        'Knowledge of security and authentication.'
+        "Experience with Express, .NET, or Django.",
+        "Good understanding of SQL/NoSQL.",
+        "Knowledge of security and authentication.",
       ],
-      benefits: [
-        'Remote work options',
-        'Annual bonuses',
-        'Team retreats'
-      ]
-    }
+      benefits: ["Remote work options", "Annual bonuses", "Team retreats"],
+    },
   },
   {
-    title: 'Mobile Developer',
-    location: 'Remote',
-    type: 'Full-time',
+    title: "Mobile Developer",
+    location: "Remote",
+    type: "Full-time",
     description: {
-      summary: 'We’re seeking a Mobile Developer for cross-platform development.',
+      summary:
+        "We’re seeking a Mobile Developer for cross-platform development.",
       responsibilities: [
-        'Build apps using React Native or Flutter.',
-        'Deploy to Android and iOS stores.',
-        'Ensure smooth performance and responsiveness.'
+        "Build apps using React Native or Flutter.",
+        "Deploy to Android and iOS stores.",
+        "Ensure smooth performance and responsiveness.",
       ],
       requirements: [
-        'At least 1 year of mobile dev experience.',
-        'Familiar with publishing apps to stores.',
-        'Good debugging and testing skills.'
+        "At least 1 year of mobile dev experience.",
+        "Familiar with publishing apps to stores.",
+        "Good debugging and testing skills.",
       ],
       benefits: [
-        'Fully remote team',
-        'Flexible schedule',
-        'Performance bonuses'
-      ]
-    }
+        "Fully remote team",
+        "Flexible schedule",
+        "Performance bonuses",
+      ],
+    },
   },
   {
-    title: 'QA Tester',
-    location: 'Cairo, Egypt',
-    type: 'Part-time',
+    title: "QA Tester",
+    location: "Cairo, Egypt",
+    type: "Part-time",
     description: {
-      summary: 'Join our QA team to ensure bug-free product delivery.',
+      summary: "Join our QA team to ensure bug-free product delivery.",
       responsibilities: [
-        'Write and run test cases.',
-        'Report and track bugs.',
-        'Work with developers to resolve issues.'
+        "Write and run test cases.",
+        "Report and track bugs.",
+        "Work with developers to resolve issues.",
       ],
       requirements: [
-        'Basic knowledge of QA methodologies.',
-        'Experience with tools like Selenium or Cypress.',
-        'Attention to detail.'
+        "Basic knowledge of QA methodologies.",
+        "Experience with tools like Selenium or Cypress.",
+        "Attention to detail.",
       ],
       benefits: [
-        'Part-time schedule',
-        'Collaborative environment',
-        'Career growth opportunities'
-      ]
-    }
+        "Part-time schedule",
+        "Collaborative environment",
+        "Career growth opportunities",
+      ],
+    },
   },
   {
-    title: 'DevOps Engineer',
-    location: 'Remote',
-    type: 'Full-time',
+    title: "DevOps Engineer",
+    location: "Remote",
+    type: "Full-time",
     description: {
-      summary: 'We need a DevOps expert to support our cloud and CI/CD pipeline.',
+      summary:
+        "We need a DevOps expert to support our cloud and CI/CD pipeline.",
       responsibilities: [
-        'Maintain CI/CD workflows.',
-        'Manage AWS or Azure infrastructure.',
-        'Monitor performance and uptime.'
+        "Maintain CI/CD workflows.",
+        "Manage AWS or Azure infrastructure.",
+        "Monitor performance and uptime.",
       ],
       requirements: [
-        'Strong DevOps tooling experience.',
-        'Familiarity with Docker, Kubernetes.',
-        'Scripting skills (Bash, Python).'
+        "Strong DevOps tooling experience.",
+        "Familiarity with Docker, Kubernetes.",
+        "Scripting skills (Bash, Python).",
       ],
-      benefits: [
-        'Remote-friendly',
-        'Competitive salary',
-        'Tech allowance'
-      ]
-    }
+      benefits: ["Remote-friendly", "Competitive salary", "Tech allowance"],
+    },
   },
   {
-    title: 'Database Administrator',
-    location: 'Cairo, Egypt',
-    type: 'Full-time',
+    title: "Database Administrator",
+    location: "Cairo, Egypt",
+    type: "Full-time",
     description: {
-      summary: 'Seeking a DBA to maintain and optimize databases.',
+      summary: "Seeking a DBA to maintain and optimize databases.",
       responsibilities: [
-        'Manage SQL and NoSQL databases.',
-        'Ensure data integrity and backups.',
-        'Perform tuning and migrations.'
+        "Manage SQL and NoSQL databases.",
+        "Ensure data integrity and backups.",
+        "Perform tuning and migrations.",
       ],
       requirements: [
-        'Experience with MySQL/PostgreSQL.',
-        'Knowledge of indexing, replication.',
-        'Backup and restore strategy skills.'
+        "Experience with MySQL/PostgreSQL.",
+        "Knowledge of indexing, replication.",
+        "Backup and restore strategy skills.",
       ],
       benefits: [
-        'In-office perks',
-        'Health and dental insurance',
-        'Training programs'
-      ]
-    }
-  }
+        "In-office perks",
+        "Health and dental insurance",
+        "Training programs",
+      ],
+    },
+  },
 ];
 export const ClientTabsParent = [
   {
-    id: 1, label: "ERP System", categories: [
+    id: 1,
+    label: "ERP System",
+    categories: [
       "Packaging Industry",
       "Plastic Industries",
       "Food Industries",
@@ -642,37 +779,29 @@ export const ClientTabsParent = [
       "Chemical & Pharmaceutical Industries",
       "Governmental Authorities",
       "Petroleum Industries",
-
-    ]
+    ],
   },
   {
-    id: 2, label: "SaaS Solutions", categories: [
-      "Corporate Sector",
-      "Industrial Sector",
-      "Retail",
-    ]
+    id: 2,
+    label: "SaaS Solutions",
+    categories: ["Corporate Sector", "Industrial Sector", "Retail"],
   },
   {
-    id: 3, label: "Digital Transformation",
-    categories: [
-      "\u200B"
-    ]
+    id: 3,
+    label: "Digital Transformation",
+    categories: ["\u200B"],
   },
   {
-    id: 4, label: "System Integration",
-    categories: [
-      "\u200D"
-
-    ]
+    id: 4,
+    label: "System Integration",
+    categories: ["\u200D"],
   },
   {
-    id: 5, label: "Van Sale",
-    categories: [
-      "\u200C"
-
-    ]
+    id: 5,
+    label: "Van Sale",
+    categories: ["\u200C"],
   },
-]
+];
 
 export const carouselSlides = [
   {
@@ -692,50 +821,40 @@ export const carouselSlides = [
   },
 ];
 
-
 export const blogPosts = [
   {
     id: 1,
     title: "How ERP Software Transforms Businesses",
     content: "Full article content about ERP and digital transformation...",
-    full_desc: " ERP software is a game-changer for businesses, streamlining operations and enhancing efficiency. By integrating various functions into a single system, ERP eliminates data silos and improves collaboration across departments. This leads to better decision-making, reduced operational costs, and increased productivity. With real-time data access, businesses can respond quickly to market changes and customer needs, driving growth and innovation.",
+    full_desc:
+      " ERP software is a game-changer for businesses, streamlining operations and enhancing efficiency. By integrating various functions into a single system, ERP eliminates data silos and improves collaboration across departments. This leads to better decision-making, reduced operational costs, and increased productivity. With real-time data access, businesses can respond quickly to market changes and customer needs, driving growth and innovation.",
     image: "/images/blogimage1.jpg",
     date: "2025-07-13",
     location: "Cairo, Egypt",
     author: "Ahmed Ali",
-    gallery: [
-      "/images/event1.jpg",
-      "/images/event1.jpg",
-      "/images/event1.jpg"
-    ]
+    gallery: ["/images/event1.jpg", "/images/event1.jpg", "/images/event1.jpg"],
   },
   {
     id: 1,
     title: "How ERP Software Transforms Businesses",
     content: "Full article content about ERP and digital transformation...",
-    full_desc: " ERP software is a game-changer for businesses, streamlining operations and enhancing efficiency. By integrating various functions into a single system, ERP eliminates data silos and improves collaboration across departments. This leads to better decision-making, reduced operational costs, and increased productivity. With real-time data access, businesses can respond quickly to market changes and customer needs, driving growth and innovation.",
+    full_desc:
+      " ERP software is a game-changer for businesses, streamlining operations and enhancing efficiency. By integrating various functions into a single system, ERP eliminates data silos and improves collaboration across departments. This leads to better decision-making, reduced operational costs, and increased productivity. With real-time data access, businesses can respond quickly to market changes and customer needs, driving growth and innovation.",
     image: "/images/blogimage1.jpg",
     date: "2025-07-13",
     author: "Ahmed Ali",
-    gallery: [
-      "/images/event1.jpg",
-      "/images/event1.jpg",
-      "/images/event1.jpg"
-    ]
+    gallery: ["/images/event1.jpg", "/images/event1.jpg", "/images/event1.jpg"],
   },
   {
     id: 1,
     title: "How ERP Software Transforms Businesses",
     content: "Full article content about ERP and digital transformation...",
-    full_desc: " ERP software is a game-changer for businesses, streamlining operations and enhancing efficiency. By integrating various functions into a single system, ERP eliminates data silos and improves collaboration across departments. This leads to better decision-making, reduced operational costs, and increased productivity. With real-time data access, businesses can respond quickly to market changes and customer needs, driving growth and innovation.",
+    full_desc:
+      " ERP software is a game-changer for businesses, streamlining operations and enhancing efficiency. By integrating various functions into a single system, ERP eliminates data silos and improves collaboration across departments. This leads to better decision-making, reduced operational costs, and increased productivity. With real-time data access, businesses can respond quickly to market changes and customer needs, driving growth and innovation.",
     image: "/images/blogimage1.jpg",
     date: "2025-07-13",
     author: "Ahmed Ali",
-    gallery: [
-      "/images/event1.jpg",
-      "/images/event1.jpg",
-      "/images/event1.jpg"
-    ]
+    gallery: ["/images/event1.jpg", "/images/event1.jpg", "/images/event1.jpg"],
   },
 ];
 
@@ -752,8 +871,6 @@ export const categories = [
   "Governmental Authorities",
   "Petroleum Industries",
 ];
-
-
 
 export const logos = {
   "Packaging Industry": [
@@ -796,18 +913,14 @@ export const logos = {
     "/saas/Industrial Sector/mirtec.png",
     "/saas/Industrial Sector/perch.png",
     "/saas/Industrial Sector/plastmac.png",
-     "/saas/Industrial Sector/reef.png",
+    "/saas/Industrial Sector/reef.png",
     "/saas/Industrial Sector/rehana.png",
     "/saas/Industrial Sector/safwa.png",
     "/saas/Industrial Sector/solo.png",
     "/saas/Industrial Sector/star.png",
     "/saas/Industrial Sector/tayseer.png",
-   
-
-
-
   ],
-  "Retail": [
+  Retail: [
     "/saas/retail/AIprotien.png",
     "/saas/retail/Aliens.png",
     "/saas/retail/dabbosa.png",
@@ -842,17 +955,14 @@ export const logos = {
     "/saas/retail/aurline.png",
     "/saas/retail/ramsesy.png",
     "/saas/retail/saberFood.png",
-     "/saas/retail/shwarma.png",
-     "/saas/retail/tesla.png",
-     "/saas/retail/speedNet.png",
-     "/saas/retail/carptuire.png",
-     "/saas/retail/rehana.png",
-     "/saas/retail/wokandwalkpng.png",
-     "/saas/retail/sglobal.png",
-     "/saas/retail/monoSuchi.png",
-
-     
-
+    "/saas/retail/shwarma.png",
+    "/saas/retail/tesla.png",
+    "/saas/retail/speedNet.png",
+    "/saas/retail/carptuire.png",
+    "/saas/retail/rehana.png",
+    "/saas/retail/wokandwalkpng.png",
+    "/saas/retail/sglobal.png",
+    "/saas/retail/monoSuchi.png",
   ],
   "Plastic Industries": [
     "/logos/Plastic Industries/acgi.png",
@@ -944,18 +1054,14 @@ export const logos = {
     "/logos/Integration Services/natgas.png",
     "/logos/Integration Services/suez cement.png",
     "/logos/Integration Services/zagazegUniversity.png",
-
   ],
   "Governmental Authorities": [
     "/logos/Governmental Authorities/CanelRpeco.png",
     "/logos/Governmental Authorities/athad.png",
     "/logos/Governmental Authorities/nevertety.png",
   ],
-  "Petroleum Industries": [
-    "/logos/Petroleum Industries/disco.png",
-
-  ],
-"\u200B": [
+  "Petroleum Industries": ["/logos/Petroleum Industries/disco.png"],
+  "\u200B": [
     "/logos/Governmental Authorities/CanelRpeco.png",
     "/logos/Governmental Authorities/athad.png",
     "/logos/Governmental Authorities/nevertety.png",
@@ -1000,52 +1106,314 @@ export const logos = {
 };
 
 export const clients = [
- { id: 1, name: 'Alprotein Tech	', logo: '/clients/AIprotien.png', fontClass: 'font-bold', colorClass: 'text-[#009fe3]' },
-  { id: 2, name: 'Aliens Express', logo: '/clients/alien.png', fontClass: 'font-extrabold', colorClass: 'text-[#e30613]' },
-  { id: 3, name: 'Agora Vending Machines', logo: '/clients/arago.png', fontClass: 'font-semibold', colorClass: 'text-[#009688]' },
-  { id: 4, name: 'ElWan', logo: '/clients/alwan.png', fontClass: 'font-bold', colorClass: 'text-[#bfa46d]' },
-  { id: 5, name: 'Or Line Medical', logo: '/clients/aurline.png', fontClass: 'font-bold', colorClass: 'text-[#1a237e]' },
-  { id: 6, name: 'Carpiture Furniture', logo: '/clients/carptuire.png', fontClass: 'font-bold', colorClass: 'text-[#f7941d]' },
-  { id: 7, name: 'Coffee Island', logo: '/clients/coffeeEslam.png', fontClass: 'font-extrabold', colorClass: 'text-[#7c3aed]' },
-  { id: 8, name: 'Control Group DG', logo: '/clients/controlGroup.png', fontClass: 'font-bold', colorClass: 'text-[#f59e42]' },
-  { id: 9, name: 'Country Hills', logo: '/clients/country.png', fontClass: 'font-semibold', colorClass: 'text-[#009fe3]' },
-  { id: 10, name: 'Dabosa Fried Chicken', logo: '/clients/dabbosa.png', fontClass: 'font-bold', colorClass: 'text-[#1e293b]' },
-  { id: 11, name: 'Daoud Constructions', logo: '/clients/dawad.png', fontClass: 'font-bold', colorClass: 'text-[#009688]' },
-  { id: 12, name: 'Endless Creations', logo: '/clients/endless.png', fontClass: 'font-bold', colorClass: 'text-[#fbbf24]' },
-  { id: 13, name: 'El Helal & El Negma', logo: '/clients/helal.png', fontClass: 'font-semibold', colorClass: 'text-[#16a34a]' },
-  { id: 14, name: 'Haboba Family', logo: '/clients/haboba.png', fontClass: 'font-bold', colorClass: 'text-[#e11d48]' },
-  { id: 15, name: 'Inshape Clinic', logo: '/clients/inshape.png', fontClass: 'italic font-bold', colorClass: 'text-[#a21caf]' },
-  { id: 16, name: 'Jet Express', logo: '/clients/jetExpress.png', fontClass: 'font-bold', colorClass: 'text-[#f59e42]' },
-  { id: 17, name: 'Khalil Pharmacies', logo: '/clients/khalil.png', fontClass: 'font-bold', colorClass: 'text-[#fbbf24]' },
-  { id: 18, name: 'Kimo Store', logo: '/clients/kimo.png', fontClass: 'font-bold', colorClass: 'text-[#f59e42]' },
-  { id: 19, name: 'Koffee Kulture', logo: '/clients/koffee.png', fontClass: 'font-bold', colorClass: 'text-[#1e293b]' },
-  { id: 21, name: 'Kufta', logo: '/clients/kofta.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 22, name: 'Kayan Lab', logo: '/clients/labs.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 23, name: 'LA Roche Furniture', logo: '/clients/laroche.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 24, name: 'Lychee', logo: '/clients/lychee.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 25, name: 'Med Scan', logo: '/clients/medScan.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 26, name: 'Virtual ESC', logo: '/clients/mesc.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 27, name: 'Elwaa Pharmacy', logo: '/clients/pharmacy.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 28, name: 'Principle Pharmacy', logo: '/clients/principle.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 29, name: 'El Ramsisy Pharmacy', logo: '/clients/ramsesy.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 30, name: 'Rehana', logo: '/clients/rehana.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 31, name: 'Saber Foods', logo: '/clients/saberFood.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 32, name: 'Shawerma ElReem', logo: '/clients/shwarma.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 33, name: 'So Pharma Egypt', logo: '/clients/soPharma.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 34, name: 'Speed Net', logo: '/clients/speedNet.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 35, name: 'Trust Labs Sanaa Abd El Shafy', logo: '/clients/trustLab.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 36, name: 'Alfarid Scan', logo: '/clients/farid.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 37, name: 'Holw El Sham', logo: '/clients/Holw El Sham.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 38, name: 'Wok And Walk', logo: '/clients/wokandwalkpng.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 39, name: 'Tesla Pharma', logo: '/clients/tesla.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 40, name: 'Armando', logo: '/clients/armando.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 41, name: '3alfaa7m', logo: '/clients/fa7m.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 42, name: 'Seasonal Global', logo: '/clients/sglobal.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 43, name: 'Mono Sushi', logo: '/clients/monoSuchi.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 44, name: 'Quick Clinic', logo: '/clients/clinic.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-  { id: 45, name: 'Genedy Group Construction', logo: '/clients/gendy.png', fontClass: 'font-bold', colorClass: 'text-[#0ea5e9]' },
-
-
+  {
+    id: 1,
+    name: "Alprotein Tech	",
+    logo: "/clients/AIprotien.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#009fe3]",
+  },
+  {
+    id: 2,
+    name: "Aliens Express",
+    logo: "/clients/alien.png",
+    fontClass: "font-extrabold",
+    colorClass: "text-[#e30613]",
+  },
+  {
+    id: 3,
+    name: "Agora Vending Machines",
+    logo: "/clients/arago.png",
+    fontClass: "font-semibold",
+    colorClass: "text-[#009688]",
+  },
+  {
+    id: 4,
+    name: "ElWan",
+    logo: "/clients/alwan.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#bfa46d]",
+  },
+  {
+    id: 5,
+    name: "Or Line Medical",
+    logo: "/clients/aurline.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#1a237e]",
+  },
+  {
+    id: 6,
+    name: "Carpiture Furniture",
+    logo: "/clients/carptuire.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#f7941d]",
+  },
+  {
+    id: 7,
+    name: "Coffee Island",
+    logo: "/clients/coffeeEslam.png",
+    fontClass: "font-extrabold",
+    colorClass: "text-[#7c3aed]",
+  },
+  {
+    id: 8,
+    name: "Control Group DG",
+    logo: "/clients/controlGroup.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#f59e42]",
+  },
+  {
+    id: 9,
+    name: "Country Hills",
+    logo: "/clients/country.png",
+    fontClass: "font-semibold",
+    colorClass: "text-[#009fe3]",
+  },
+  {
+    id: 10,
+    name: "Dabosa Fried Chicken",
+    logo: "/clients/dabbosa.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#1e293b]",
+  },
+  {
+    id: 11,
+    name: "Daoud Constructions",
+    logo: "/clients/dawad.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#009688]",
+  },
+  {
+    id: 12,
+    name: "Endless Creations",
+    logo: "/clients/endless.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#fbbf24]",
+  },
+  {
+    id: 13,
+    name: "El Helal & El Negma",
+    logo: "/clients/helal.png",
+    fontClass: "font-semibold",
+    colorClass: "text-[#16a34a]",
+  },
+  {
+    id: 14,
+    name: "Haboba Family",
+    logo: "/clients/haboba.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#e11d48]",
+  },
+  {
+    id: 15,
+    name: "Inshape Clinic",
+    logo: "/clients/inshape.png",
+    fontClass: "italic font-bold",
+    colorClass: "text-[#a21caf]",
+  },
+  {
+    id: 16,
+    name: "Jet Express",
+    logo: "/clients/jetExpress.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#f59e42]",
+  },
+  {
+    id: 17,
+    name: "Khalil Pharmacies",
+    logo: "/clients/khalil.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#fbbf24]",
+  },
+  {
+    id: 18,
+    name: "Kimo Store",
+    logo: "/clients/kimo.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#f59e42]",
+  },
+  {
+    id: 19,
+    name: "Koffee Kulture",
+    logo: "/clients/koffee.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#1e293b]",
+  },
+  {
+    id: 21,
+    name: "Kufta",
+    logo: "/clients/kofta.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 22,
+    name: "Kayan Lab",
+    logo: "/clients/labs.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 23,
+    name: "LA Roche Furniture",
+    logo: "/clients/laroche.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 24,
+    name: "Lychee",
+    logo: "/clients/lychee.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 25,
+    name: "Med Scan",
+    logo: "/clients/medScan.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 26,
+    name: "Virtual ESC",
+    logo: "/clients/mesc.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 27,
+    name: "Elwaa Pharmacy",
+    logo: "/clients/pharmacy.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 28,
+    name: "Principle Pharmacy",
+    logo: "/clients/principle.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 29,
+    name: "El Ramsisy Pharmacy",
+    logo: "/clients/ramsesy.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 30,
+    name: "Rehana",
+    logo: "/clients/rehana.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 31,
+    name: "Saber Foods",
+    logo: "/clients/saberFood.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 32,
+    name: "Shawerma ElReem",
+    logo: "/clients/shwarma.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 33,
+    name: "So Pharma Egypt",
+    logo: "/clients/soPharma.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 34,
+    name: "Speed Net",
+    logo: "/clients/speedNet.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 35,
+    name: "Trust Labs Sanaa Abd El Shafy",
+    logo: "/clients/trustLab.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 36,
+    name: "Alfarid Scan",
+    logo: "/clients/farid.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 37,
+    name: "Holw El Sham",
+    logo: "/clients/Holw El Sham.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 38,
+    name: "Wok And Walk",
+    logo: "/clients/wokandwalkpng.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 39,
+    name: "Tesla Pharma",
+    logo: "/clients/tesla.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 40,
+    name: "Armando",
+    logo: "/clients/armando.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 41,
+    name: "3alfaa7m",
+    logo: "/clients/fa7m.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 42,
+    name: "Seasonal Global",
+    logo: "/clients/sglobal.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 43,
+    name: "Mono Sushi",
+    logo: "/clients/monoSuchi.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 44,
+    name: "Quick Clinic",
+    logo: "/clients/clinic.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
+  {
+    id: 45,
+    name: "Genedy Group Construction",
+    logo: "/clients/gendy.png",
+    fontClass: "font-bold",
+    colorClass: "text-[#0ea5e9]",
+  },
 ];
 
 export const sampleReleases = [
@@ -1054,8 +1422,10 @@ export const sampleReleases = [
     name: "Release 2.3.0",
     version: "2.3.0",
     date: "Dec 02, 2024",
-    shortDescription: "Introduces easier attendance setup, geo location tracking, machine integrations, and various enhancements for scheduling, requests, and reports.",
-    fullDescription: "This release brings significant improvements to attendance management with easier policy and shift creation, live map tracking, support for multiple devices, weekly scheduling, enhanced requests and leave management, applicant tracking, mobile enhancements, new reports, and HR support access.",
+    shortDescription:
+      "Introduces easier attendance setup, geo location tracking, machine integrations, and various enhancements for scheduling, requests, and reports.",
+    fullDescription:
+      "This release brings significant improvements to attendance management with easier policy and shift creation, live map tracking, support for multiple devices, weekly scheduling, enhanced requests and leave management, applicant tracking, mobile enhancements, new reports, and HR support access.",
     features: [
       "Attendance Setup: Easier policy and shift creation with copy features and support for new shift types.",
       "Geo Location: Live map tracking and flexible location check-in/out options.",
@@ -1065,17 +1435,19 @@ export const sampleReleases = [
       "Applicant Tracking: Record applicant data and hire directly.",
       "Mobile Enhancements: Email/mobile login, employee search, request notifications.",
       "Reports: New reports for overtime, promotions, transfers, and improved employee list.",
-      "Support: HR role now has access to live support chat."
+      "Support: HR role now has access to live support chat.",
     ],
-    "status": "released" as const
+    status: "released" as const,
   },
- {
-    "id": "2",
+  {
+    id: "2",
     name: "Release 2.4.0",
     version: "2.4.0",
     date: "Dec 02, 2024",
-    shortDescription: "Enhancements to employee data handling, attendance setup, scheduling, tracking, and leave management with new options and improvements.",
-    fullDescription: "This update includes auto-creation of departments/jobs during uploads, calendar-based attendance rules, auto-repeat scheduling, detailed tracking displays, mobile geo attendance views, negative balance options for leaves, printable requests, and various performance and UI enhancements.",
+    shortDescription:
+      "Enhancements to employee data handling, attendance setup, scheduling, tracking, and leave management with new options and improvements.",
+    fullDescription:
+      "This update includes auto-creation of departments/jobs during uploads, calendar-based attendance rules, auto-repeat scheduling, detailed tracking displays, mobile geo attendance views, negative balance options for leaves, printable requests, and various performance and UI enhancements.",
     features: [
       "Employee Data: Auto-creation of undefined departments/jobs during data upload.",
       "Attendance Setup: Control rules based on Gregorian or Payroll calendar; employee attendance history now tracked.",
@@ -1090,17 +1462,19 @@ export const sampleReleases = [
       "Enhancements: Employees can download approved letters as PDFs.",
       "Enhancements: Mission request details enhanced on mobile.",
       "Reports: Attendance report now includes mission/excuse names and hours.",
-      "Employee Profile: Larger profile pictures for better visibility."
+      "Employee Profile: Larger profile pictures for better visibility.",
     ],
-    "status": "released" as const
+    status: "released" as const,
   },
-{
+  {
     id: "3",
     name: "Release 2.4.1",
     version: "2.4.1",
     date: "Mar 05, 2025",
-    shortDescription: "Additions to employee groups, data uploaders, transactions, leave setup, attendance tracking, and new reports with various enhancements.",
-    fullDescription: "This release introduces shift type and work group filters for employee groups, unified data loaders, one-time salary for resigned employees, customizable leave controls, location-based attendance filtering with map views, system update announcements, and improved reports and middleware support.",
+    shortDescription:
+      "Additions to employee groups, data uploaders, transactions, leave setup, attendance tracking, and new reports with various enhancements.",
+    fullDescription:
+      "This release introduces shift type and work group filters for employee groups, unified data loaders, one-time salary for resigned employees, customizable leave controls, location-based attendance filtering with map views, system update announcements, and improved reports and middleware support.",
     features: [
       "Employee Groups: Added shift type and work group filters for more flexible grouping.",
       "Data Uploader: All loaders unified under one button; new bulk Line Manager Loader added.",
@@ -1117,17 +1491,19 @@ export const sampleReleases = [
       "Enhancements: Mobile app shows shift details during clock-in/out.",
       "Enhancements: Overtime request now shows actual attendance, shift end, and calculated hours.",
       "Enhancements: Approved letters downloadable via mobile.",
-      "Enhancements: Attendance report now includes mobile location names."
+      "Enhancements: Attendance report now includes mobile location names.",
     ],
-    "status": "released" as const
+    status: "released" as const,
   },
-   {
+  {
     id: "4",
     name: "Release 2.4.3",
     version: "2.4.3",
     date: "Mar 26, 2025",
-    shortDescription: "Introduces best attendance recognition, new alerts, bulk uploads, expanded requests, and various enhancements.",
-    fullDescription: "This release focuses on rewarding employee performance through attendance metrics, automating alerts for probation and contracts, streamlining applicant onboarding with bulk uploads, adding new request types like loan settlement and work from home, improving request management with role-based controls, enhancing attendance flexibility, and introducing new reports and mobile features.",
+    shortDescription:
+      "Introduces best attendance recognition, new alerts, bulk uploads, expanded requests, and various enhancements.",
+    fullDescription:
+      "This release focuses on rewarding employee performance through attendance metrics, automating alerts for probation and contracts, streamlining applicant onboarding with bulk uploads, adding new request types like loan settlement and work from home, improving request management with role-based controls, enhancing attendance flexibility, and introducing new reports and mobile features.",
     features: [
       "Best Attendance Recognition: New dashboard feature to reward top-performing employees based on attendance metrics.",
       "Probation & Contract Alerts: Auto notifications sent 30 days before expiry.",
@@ -1152,12 +1528,10 @@ export const sampleReleases = [
       "Enhancements: Salary breakdown clarity",
       "Enhancements: ZK DB import now tracks machine details",
       "Enhancements: Payroll table shows employee/pay element groups",
-      "Enhancements: Flexible setup for one-time pay elements (daily/hourly/multiplier)"
+      "Enhancements: Flexible setup for one-time pay elements (daily/hourly/multiplier)",
     ],
-    "status": "released" as const
-  }
-]
-
+    status: "released" as const,
+  },
+];
 
 export default solutions;
-
