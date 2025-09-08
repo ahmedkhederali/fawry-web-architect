@@ -252,73 +252,57 @@ const SolutionParent = () => {
               ))}
             </div>
           )}
-          {/* Features */}
-
-          {activeChild?.isSystemIntegration &&
-            activeChild.whyChooseDirac?.length > 0 && (
-              <div className="bg-[#006b99] text-white rounded-lg shadow-md p-6">
-                <h3 className="text-2xl font-bold mb-6 text-[#ffd400]">
-                  {activeChild?.title_why}
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {activeChild.whyChooseDirac.map((whyuse, i) => (
-                    <div key={i} className="flex items-start gap-4">
-                      <CheckCircleIcon className="h-6 w-6 text-[#ffd400] mt-1 shrink-0" />
-                      <div>
-                        <h4 className="text-lg font-semibold text-white mb-1">
-                          {whyuse.title}
-                        </h4>
-                        <p className="text-sm text-white/80">
-                          {whyuse.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-          {/* Features */}
+             {/* Features */}
           {!activeChild?.isSass && activeChild.benefits?.length > 0 && (
             <div className="bg-[#006b99] text-white rounded-lg shadow-md p-6">
-              <h3 className="text-2xl font-bold mb-6 text-[#ffd400]">
-                {activeChild?.isDigitalTransform
-                  ? `Our ${activeChild.title1} Services`
-                  : `Benefits of ${activeChild.title1}`}
-              </h3>
+<h3 className="text-2xl font-bold mb-6 text-[#ffd400]">
+  {activeChild?.isDigitalTransform
+    ? `Our ${activeChild.title1} Services`
+    : `Benefits of ${activeChild.title1}`}
+</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {activeChild.benefits.map((benefit, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <CheckCircleIcon className="h-6 w-6 text-[#ffd400] mt-1 shrink-0" />
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-1">
-                        {benefit.title}
-                      </h4>
-                      <p className="text-sm text-white/80">
-                        {benefit.description}
-                      </p>
+                      <h4 className="text-lg font-semibold text-white mb-1">{benefit.title}</h4>
+                      <p className="text-sm text-white/80">{benefit.description}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
           )}
-          {activeChild?.isVansale && activeChild.whyChooseDirac?.length > 0 && (
+
+          {activeChild?.isSystemIntegration && activeChild.whyChooseDirac?.length > 0 && (
             <div className="bg-[#f0f8ff] text-white rounded-lg shadow-md p-6">
-              <h3 className="text-2xl font-bold mb-6 text-[#006b99]">
-                {activeChild?.title_why}
-              </h3>
+              <h3 className="text-2xl font-bold mb-6 text-[#006b99]">{activeChild?.title_why}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {activeChild.whyChooseDirac.map((whyuse, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <CheckCircleIcon className="h-6 w-6 text-[#006b99] mt-1 shrink-0" />
                     <div>
-                      <h4 className="text-lg font-semibold text-[#006b99] mb-1">
-                        {whyuse.title}
-                      </h4>
-                      <p className="text-sm text-[#006b99]">
-                        {whyuse.description}
-                      </p>
+                      <h4 className="text-lg font-semibold text-[#006b99] mb-1">{whyuse.title}</h4>
+                      <p className="text-sm text-[#006b99]">{whyuse.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          
+         
+          {activeChild?.isVansale && activeChild.whyChooseDirac?.length > 0 && (
+            <div className="bg-[#f0f8ff] text-white rounded-lg shadow-md p-6">
+              <h3 className="text-2xl font-bold mb-6 text-[#006b99]">{activeChild?.title_why}</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {activeChild.whyChooseDirac.map((whyuse, i) => (
+                  <div key={i} className="flex items-start gap-4">
+                    <CheckCircleIcon className="h-6 w-6 text-[#006b99] mt-1 shrink-0" />
+                    <div>
+                      <h4 className="text-lg font-semibold text-[#006b99] mb-1">{whyuse.title}</h4>
+                      <p className="text-sm text-[#006b99]">{whyuse.description}</p>
                     </div>
                   </div>
                 ))}
