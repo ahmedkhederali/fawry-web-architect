@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 
 const SaaSVideos = () => {
   const videos = [
-    { id: 1, type: "youtube", src: "https://www.youtube.com/embed/P4f6q6IvTso" },
-    { id: 2, type: "mp4", src: "/icons/saas video1.mp4" },
-    { id: 3, type: "mp4", src: "/icons/saas video1.mp4" },
-    { id: 4, type: "youtube", src: "https://www.youtube.com/embed/P4f6q6IvTso" },
+    { id: 1, type: "youtube", src: "https://www.youtube.com/embed/-18z_rJfAjQ" },
+    { id: 2, type: "youtube", src: "https://www.youtube.com/embed/kw9aJ7melEA" },
+    { id: 3, type: "youtube", src: "https://www.youtube.com/embed/eNjp8JWpCtA" },
+    
   ];
 
   const [visibleCount, setVisibleCount] = useState(2);

@@ -28,7 +28,7 @@ const Career = () => {
           {/* Right side image */}
           <div className="md:w-1/2">
             <LazyLoadImage
-              src="/images/career.jpg"
+              src="/images/career.avif"
               alt="career illustration"
               className="h-[300px] rounded-xl shadow-2xl w-full contain-content transform"
               // className="rounded-xl shadow-2xl w-full max-h-[400px] object-cover transform"

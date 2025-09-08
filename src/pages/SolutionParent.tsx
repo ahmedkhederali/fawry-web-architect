@@ -7,6 +7,7 @@ import ContactSection from "@/components/ContactSection";
 import { useLanguage } from "@/components/LanguageContext";
 import { useEffect, useRef, useState } from "react";
 import JustifiedText from "@/components/TextComponents";
+import KeyTechnologies from "@/components/KeyTechnologies";
 
 interface ChildSolution {
   id: string;
@@ -19,8 +20,10 @@ interface ChildSolution {
   whyChooseDirac?: { title: string; description: string }[];
   logos: string[];
   children?: [];
+  techItems?: [];
   DownloadLink: string;
   isSass: boolean;
+  isDigitalTransformation?: boolean;
   isVansale?: boolean;
   isAccounting?: boolean;
   isDigitalTransform?: boolean;
@@ -99,7 +102,7 @@ const SolutionParent = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <div 
+      <div
         className={`w-full bg-[#006b99] text-white mt-10 pt-20 md:pt-[6.5rem] pb-8 relative
     ${parent.ishaveTabs ? 'md:pb-[1rem]' : 'md:pb-[0rem]'}
   `}
@@ -112,10 +115,37 @@ const SolutionParent = () => {
             <p className="text-lg mb-6 leading-relaxed tracking-wide text-white text-justify">
               {parent.description}
             </p>
+            {
+              parent.isDigitalTransformation && <button
+                className="flex items-center gap-2 bg-white text-[#006b99] border border-[#0074d9] px-6 py-2 rounded-md shadow hover:bg-[#ffe066] transition"
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = "/files/case_study.pdf";
+                  link.download = "case_study.pdf";
+                  link.click();
+                }}
+              >
+                <span className="font-semibold">Case study</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-4 h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"
+                  />
+                </svg>
+              </button>
+            }
           </div>
 
           <div className="md:w-1/2">
-            <div className="w-full h-[400px]">
+            <div className="w-full h-[300px]">
               <img
                 src={parent.innerImage}
                 alt={parent.title}
@@ -151,7 +181,7 @@ const SolutionParent = () => {
           ref={descriptionRef}
         >
           {/* Full-width description */}
-          {/* {(!activeChild.isSass && !activeChild.isAccounting) && <JustifiedText text={activeChild.summary} />} */}
+          {(!activeChild.isSass && !activeChild.isAccounting) && <JustifiedText text={activeChild.summary} />}
           {(activeChild.isSass || activeChild.isAccounting) && (
             <div
               className={`flex flex-col md:flex-row items-center justify-between gap-8`}
@@ -252,14 +282,17 @@ const SolutionParent = () => {
               ))}
             </div>
           )}
-             {/* Features */}
+          {(activeChild.techItems?.length > 0 && parent.isDigitalTransformation) && (
+            <KeyTechnologies items={activeChild.techItems} />
+          )}
+          {/* Features */}
           {!activeChild?.isSass && activeChild.benefits?.length > 0 && (
             <div className="bg-[#006b99] text-white rounded-lg shadow-md p-6">
-<h3 className="text-2xl font-bold mb-6 text-[#ffd400]">
-  {activeChild?.isDigitalTransform
-    ? `Our ${activeChild.title1} Services`
-    : `Benefits of ${activeChild.title1}`}
-</h3>
+              <h3 className="text-2xl font-bold mb-6 text-[#ffd400]">
+                {activeChild?.isDigitalTransform
+                  ? `Our ${activeChild.title1} Services`
+                  : `Benefits of ${activeChild.title1}`}
+              </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {activeChild.benefits.map((benefit, i) => (
                   <div key={i} className="flex items-start gap-4">
@@ -291,8 +324,6 @@ const SolutionParent = () => {
             </div>
           )}
 
-          
-         
           {activeChild?.isVansale && activeChild.whyChooseDirac?.length > 0 && (
             <div className="bg-[#f0f8ff] text-white rounded-lg shadow-md p-6">
               <h3 className="text-2xl font-bold mb-6 text-[#006b99]">{activeChild?.title_why}</h3>

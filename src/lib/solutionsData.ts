@@ -407,7 +407,7 @@ This powerful solution gives you real-time, end-to-end visibility into your oper
         id: "fawryaccounting",
         title: "Fawry Business Accounting",
         title1: "Fawry Business Accounting",
-        
+
         description:
           "Online accounting software for managing finances, expenses, and invoicing.",
         summary:
@@ -419,7 +419,7 @@ This powerful solution gives you real-time, end-to-end visibility into your oper
           { title: "Financial Reporting", description: "" },
         ],
         logos: [],
-        DownloadLink: "/files/dirac-enterprise-brochure.pdf",
+        // DownloadLink: "/files/dirac-enterprise-brochure.pdf",
         live_img: "/images/accounting.jfif",
         isSass: false,
         isAccounting: true
@@ -541,12 +541,20 @@ Enterprise Content Management.`,
           { title: "Data-Driven Decision Making", description: "" },
           { title: "Proven Track Record", description: "" },
         ],
+        techItems: [
+      { name: "Microservices", icon: "FaProjectDiagram" },
+      { name: "Process Automation", icon: "AiOutlinePartition" },
+      { name: "Rule Engines", icon: "MdOutlineRule" },
+      { name: "Enterprise Content Management", icon: "HiOutlineDocumentText" },
+    ],
         isDigitalTransform: true,
         logos: [],
         DownloadLink: "",
         isSass: false,
       },
     ],
+    
+    isDigitalTransformation: true
   },
   {
     id: "system-integration",
@@ -1068,7 +1076,7 @@ export const logos = {
   ],
   "\u200D": [
     "/logos/Integration Services/AinShamsUniversity.png",
-    "/logos/Integration Services/Asset 99@4x.png",
+    // "/logos/Integration Services/Asset 99@4x.png",
     "/logos/Integration Services/BenisuefUniversity.png",
     "/logos/Integration Services/alazharuniveristy.png",
     "/logos/Integration Services/beyti.png",
