@@ -25,6 +25,7 @@ import SolutionParent from "./pages/SolutionParent";
 import Apply from "./pages/Apply";
 import AboutIndex from "./pages/AboutUspage/AboutIndex";
 import BlogDetails from "./pages/BlogDetails";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 
@@ -37,6 +38,7 @@ const App = () => (
       <Sonner />
       <LanguageProvider>
         <BrowserRouter>
+            <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/aboutus" element={<AboutIndex/>} />
