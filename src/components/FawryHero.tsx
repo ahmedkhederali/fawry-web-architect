@@ -256,7 +256,7 @@ const FawryHeaderHero: React.FC = () => {
           العربية
         </button> */}
         {/* Carousel */}
-        <div className="relative image-container h-[400px]  custom-md:w-[125%]  xl:h-[20rem] custom-md:h-[20rem] custom-lg:h-[25rem] flex items-center justify-center overflow-hidden rounded-[10px] custom-md:rounded-tl-[80px] shadow-2xl bg-white z-20">
+        <div className="relative image-container h-[400px]  custom-md:w-[125%]  custom-md:h-[15rem] xl:h-[20rem] custom-lg:h-[25rem] flex items-center justify-center overflow-hidden rounded-[10px] custom-md:rounded-tl-[80px] shadow-2xl bg-white z-20">
          
           <img
             key={current}
@@ -286,7 +286,7 @@ const FawryHeaderHero: React.FC = () => {
             ))}
           </div>
         </div>
-        <div className="hidden custom-md:flex custom-md:absolute custom-md:bottom-[1.6rem] custom-lg:bottom-[1.1rem] custom-md:left-1/2 custom-md:-translate-x-1/2 gap-2  bottom-12 ">          <button
+        <div className="hidden custom-md:flex custom-md:absolute custom-md:bottom-[2.5rem] custom-lg:bottom-[3rem] custom-md:left-1/2 custom-md:-translate-x-1/2 gap-2  bottom-12 ">          <button
             onClick={() => setCurrent((prev) => (prev - 1 + carouselSlides.length) % carouselSlides.length)}
             className="bg-[#ffd300] hover:bg-[#f9d853] transition-all duration-300 p-2 rounded-full shadow-lg border-2 border-white"
           >

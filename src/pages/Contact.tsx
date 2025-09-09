@@ -13,7 +13,7 @@ const Contact = () => {
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
        <div className="md:w-1/2 relative z-10">
       <h1 className="text-4xl font-bold mb-6 text-[#ffd400] drop-shadow-lg">
-        {t("ContactUs")}
+        {t("contactUs")}
       </h1>
       <p className="text-lg mb-6 leading-relaxed tracking-wide text-white text-justify">
         {t("contact_desc")}
